@@ -883,10 +883,17 @@ function hideSplash(){
       setTimeout(function(){if(sp&&sp.parentNode)sp.parentNode.removeChild(sp)},700);
     },Math.max(0,minShow-(Date.now()-start)));
   }
-  if(d.readyState==='complete')done();
-  else{window.addEventListener('load',done,{once:true});setTimeout(function(){if(sp&&sp.parentNode)done()},5000)}
+    var finished=false;
+  function finish(){
+    if(finished)return;
+    finished=true;
+    done();
+  }
+  if(d.readyState==='complete'||d.readyState==='interactive')finish();
+  else d.addEventListener('DOMContentLoaded',finish,{once:true});
+  window.addEventListener('load',finish,{once:true});
+  setTimeout(finish,2500);
 }
-
 /* ===== Progress ===== */
 function initReadProgress(){
   var bar=$1('#readProgress');if(!bar)return;
