@@ -1208,7 +1208,11 @@ function showView(name,skipHash){
   var menu=$1('#nav');if(menu)menu.classList.remove('open');
   var mb=$1('#menuBtn');if(mb)mb.setAttribute('aria-expanded','false');
   currentView=name;
-  if(!skipHash){try{history.replaceState(null,'','#'+name)}catch(e){location.hash=name}}
+  if(!skipHash){
+    var routePath={home:'/',about:'/about',services:'/services',portfolio:'/portfolio',packages:'/pricing',payment:'/payment',faq:'/faq',contact:'/contact'};
+    var targetPath=routePath[name]||'/';
+    try{history.replaceState(null,'',targetPath)}catch(e){location.hash=name}
+  }
   window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
   if(name==='faq')reinitFaq();
   if(name==='portfolio')reinitPortfolio();
@@ -1223,7 +1227,17 @@ var TITLES={
 };
 function updateTitle(name){d.title=(TITLES[lang]||TITLES.ar)[name]||'NorDa'}
 function readHash(){var h=(location.hash||'').replace('#','').trim();return h&&$1('#view-'+h)?h:'home'}
+function readPath(){
+  var p=location.pathname.replace(/\\/+$/,'')||'/';
+  var routes={'/':'home','/about':'about','/services':'services','/portfolio':'portfolio','/pricing':'packages','/packages':'packages','/payment':'payment','/faq':'faq','/contact':'contact'};
+  return routes[p]||'home';
+}
+function initialView(){
+  var h=(location.hash||'').replace('#','').trim();
+  return h&&$1('#view-'+h)?h:readPath();
+}
 window.addEventListener('hashchange',function(){showView(readHash(),true)});
+window.addEventListener('popstate',function(){showView(initialView(),true)});
 
 /* ============ الثيم (light / dark فقط) ============ */
 var pref=sget('rose_theme')||'light';if(['light','dark'].indexOf(pref)<0)pref='light';
@@ -1968,7 +1982,7 @@ function init(){
   });
   $('.js-top').forEach(function(b){b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'})})});
   var y=$1('#year');if(y)y.textContent=new Date().getFullYear();
-  showView(readHash(),true);
+  showView(initialView(),true);
   reinitFaq();reinitPortfolio();initCurrencyToggle();
   reinitReveal();reinitSpotlight();reinitSectionColor();
   onScroll();
