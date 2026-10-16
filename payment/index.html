@@ -1232,7 +1232,7 @@ var TITLES={
 function updateTitle(name){d.title=(TITLES[lang]||TITLES.ar)[name]||'NorDa'}
 function readHash(){var h=(location.hash||'').replace('#','').trim();return h&&$1('#view-'+h)?h:'home'}
 function readPath(){
-  var p=location.pathname.replace(/\/+$/,'')||'/';
+  var p=location.pathname.replace(/\/index\.html$/i,'').replace(/\/+$/,'')||'/';
   var routes={'/':'home','/about':'about','/services':'services','/portfolio':'portfolio','/pricing':'packages','/packages':'packages','/payment':'payment','/faq':'faq','/contact':'contact'};
   return routes[p]||'home';
 }
