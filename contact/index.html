@@ -973,9 +973,9 @@ function t(k){return (I18N[lang]&&I18N[lang][k])||k}
 function loc(){return lang==='ar'?'ar-EG':lang==='fr'?'fr-FR':'en-US'}
 
 /* ============ SPA ============ */
-var currentView;
+var currentView='home';
 function showView(name,skipHash){
-  if(!name)name;
+  if(!name)name='home';
   var view=$1('#view-'+name);
   if(!view){view=$1('.view');name=view?view.id.replace('view-',''):'home'}
   $('.view').forEach(function(v){v.classList.remove('active')});
@@ -994,9 +994,9 @@ function showView(name,skipHash){
     try{history.replaceState(null,'',targetPath)}catch(e){location.hash=name}
   }
   window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
-  if(name==)reinitFaq();
-  if(name==)reinitPortfolio();
-  if(name==)initCurrencyToggle();
+  if(name==='faq')reinitFaq();
+  if(name==='portfolio')reinitPortfolio();
+  if(name==='packages')initCurrencyToggle();
   reinitReveal();reinitSpotlight();reinitSectionColor();
   updateTitle(name);
 }
@@ -1094,11 +1094,25 @@ function initCurrencyToggle(){
   var RATE=240;
   var cur=sget('rose_currency')||'usd';
   function paint(){
-    active.textContent=cur==='usd'?'USD $':'DZD دج';
+    active.textContent=cur==='usd'?'USD 
+
+
+
+
+</body>
+</html>
+:'DZD دج';
     $('#pricingGrid .price-value').forEach(function(el){
       var usd=el.getAttribute('data-usd');
       if(!usd)return;
-      el.textContent=cur==='usd'?'$'+usd:(usd*RATE).toLocaleString('en-US')+' دج';
+      el.textContent=cur==='usd'?'
+
+
+
+
+</body>
+</html>
++usd:(usd*RATE).toLocaleString('en-US')+' دج';
     });
   }
   if(!btn.dataset.bound){
