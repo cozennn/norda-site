@@ -1069,6 +1069,7 @@ html{scroll-behavior:auto}
 
 <script>
 
+
 (function(){
 'use strict';
 var d=document,R=d.documentElement;
@@ -1315,25 +1316,11 @@ function initCurrencyToggle(){
   var RATE=240;
   var cur=sget('rose_currency')||'usd';
   function paint(){
-    active.textContent=cur==='usd'?'USD 
-
-
-
-
-</body>
-</html>
-:'DZD دج';
+    active.textContent=cur==='usd'?'USD $':'DZD دج';
     $('#pricingGrid .price-value').forEach(function(el){
       var usd=el.getAttribute('data-usd');
       if(!usd)return;
-      el.textContent=cur==='usd'?'
-
-
-
-
-</body>
-</html>
-+usd:(usd*RATE).toLocaleString('en-US')+' دج';
+      el.textContent=cur==='usd'?'$'+usd:(usd*RATE).toLocaleString('en-US')+' دج';
     });
   }
   if(!btn.dataset.bound){
@@ -2015,6 +2002,7 @@ function bootChat(){
 }
 if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',init);else init();
 })();
+
 
 
 </script>
