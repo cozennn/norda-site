@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#b8326f" id="themeColor">
-<meta name="description" content="Learn about NorDa, a digital freelancer focused on clear web interfaces, landing pages, practical design, and digital support services.">
+<meta name="description" content="تعرفي على NorDa ونهجها في تصميم الواجهات وصفحات الهبوط وتقديم خدمات رقمية عملية وواضحة.">
 <meta name="author" content="NorDa"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
-<meta property="og:type" content="website"><meta property="og:site_name" content="NorDa"><meta property="og:title" content="About NorDa | Digital Freelancer"><meta property="og:description" content="تعرّفي على NorDa ونهجها في تصميم الواجهات وصفحات الهبوط والخدمات الرقمية."><meta property="og:image" content="https://placehold.co/1200x630/1A1025/F4C2D7?text=NorDa"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ar_DZ">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="About NorDa | Digital Freelancer"><meta name="twitter:description" content="Learn about NorDa, a digital freelancer focused on clear web interfaces, landing pages, practical design, and digital support services."><meta name="twitter:image" content="https://placehold.co/1200x630/1A1025/F4C2D7?text=NorDa">
+<meta property="og:type" content="website"><meta property="og:site_name" content="NorDa"><meta property="og:title" content="من أنا | NorDa"><meta property="og:description" content="تعرفي على NorDa ونهجها في تصميم الواجهات وصفحات الهبوط وتقديم خدمات رقمية عملية وواضحة."><meta property="og:image" content="https://placehold.co/1200x630/1A1025/F4C2D7?text=NorDa"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ar_DZ">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="من أنا | NorDa"><meta name="twitter:description" content="تعرفي على NorDa ونهجها في تصميم الواجهات وصفحات الهبوط وتقديم خدمات رقمية عملية وواضحة."><meta name="twitter:image" content="https://placehold.co/1200x630/1A1025/F4C2D7?text=NorDa">
 <link rel="icon" type="image/png" href="https://placehold.co/200x200/1A1025/F4C2D7?text=LOGO">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet"><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" rel="stylesheet">
@@ -594,7 +594,8 @@ html{scroll-behavior:auto}
 .js .reveal:not(.in){opacity:1}
 *,*::before,*::after{animation:none!important;transition:none!important}
 }
-</style><title>About NorDa | Digital Freelancer</title>
+</style><title>من أنا | NorDa للخدمات الرقمية</title>
+
 <link rel="canonical" href="https://norda-site.pages.dev/about">
 </head>
 <body>
@@ -1006,8 +1007,10 @@ function readPath(){
   return routes[p]||'home';
 }
 function initialView(){
+  var path=readPath();
+  if(path!=='home')return path;
   var h=(location.hash||'').replace('#','').trim();
-  return h&&$1('#view-'+h)?h:readPath();
+  return h&&$1('#view-'+h)?h:path;
 }
 window.addEventListener('hashchange',function(){showView(readHash(),true)});
 window.addEventListener('popstate',function(){showView(initialView(),true)});
