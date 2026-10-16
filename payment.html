@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#b8326f" id="themeColor">
+<title>طرق الدفع | NorDa</title>
+<meta name="description" content="طرق الدفع المتاحة للتعامل مع NorDa.">
+<meta name="author" content="NorDa">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NorDa">
+<meta property="og:title" content="طرق الدفع | NorDa">
+<meta property="og:description" content="طرق الدفع المتاحة للتعامل مع NorDa.">
+<meta property="og:image" content="https://placehold.co/1200x630/1A1025/F4C2D7?text=NorDa">
+<meta property="og:locale" content="ar_DZ">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="https://placehold.co/200x200/1A1025/F4C2D7?text=LOGO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:wght@300;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<link rel="stylesheet" href="assets/style.css">
+<script>try{if(localStorage.getItem('rose_theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
+</head>
+<body data-page="payment">
+<div aria-hidden='true' class='bg-fx'><i class='au'></i><i class='au'></i><i class='au'></i><i class='au'></i></div>
+<div aria-hidden='true' class='view-loader' id='viewLoader'></div>
+
+<div aria-hidden='true' class='splash' id='splashScreen' role='status'>
+  <div class='splash-inner'>
+    <div class='splash-logo'><img alt='شعار NorDa' data-i18n-alt='logo_alt' height='100' src='https://placehold.co/200x200/1A1025/F4C2D7?text=LOGO' width='100'></div>
+    <h1 class='splash-title'>NorDa</h1>
+    <p class='splash-tagline' data-i18n='splash_tagline'>حضور رقمي واضح</p>
+    <div class='splash-bar'><span></span></div>
+  </div>
+</div>
+
+<div aria-hidden='true' class='read-progress' id='readProgress'><span></span></div>
+
+<div class='skips'>
+<a data-i18n='skip_nav' href='#nav'>الانتقال للقائمة</a>
+<a data-i18n='skip_main' href='#main'>الانتقال للمحتوى</a>
+<a data-i18n='skip_foot' href='#site-footer'>الانتقال للتذييل</a>
+</div>
+
+<header id='site-header' role='banner'>
+<div class='container header-inner'>
+<a aria-label='Home' class='logo' data-nav='home' href='index.html'>
+<img alt='شعار NorDa' data-i18n-alt='logo_alt' height='37' src='https://placehold.co/200x200/1A1025/F4C2D7?text=LOGO' width='37'>
+<span>NorDa</span>
+</a>
+<nav aria-label='القائمة الرئيسية' data-i18n-aria='nav_label' id='nav'>
+<a data-nav='home' href='index.html'><i aria-hidden='true' class='fa-solid fa-house'></i><span data-i18n='n_home'>الرئيسية</span></a>
+<a data-nav='about' href='about.html'><span data-i18n='n_about'>من أنا</span></a>
+<a data-nav='services' href='services.html'><span data-i18n='n_services'>خدماتي</span></a>
+<a data-nav='portfolio' href='portfolio.html'><span data-i18n='n_portfolio'>أعمالي</span></a>
+<a data-nav='packages' href='packages.html'><span data-i18n='n_packages'>الباقات</span></a>
+<a data-nav='payment' href='payment.html'><span data-i18n='n_payment'>الدفع</span></a>
+<a data-nav='faq' href='faq.html'><span data-i18n='n_faq'>الأسئلة</span></a>
+<a class='nav-cta mag' data-nav='contact' href='contact.html'><i aria-hidden='true' class='fa-solid fa-paper-plane'></i><span data-i18n='n_contact'>تواصل</span></a>
+</nav>
+<div class='tools'>
+<button aria-label='الثيم' class='icon-btn' data-i18n-aria='th_label' id='themeBtn' type='button'><i aria-hidden='true' class='fa-solid fa-sun'></i></button>
+<button aria-label='تغيير اللغة' class='icon-btn' data-i18n-aria='lang_label' id='langBtn' type='button'><i aria-hidden='true' class='fa-solid fa-language'></i><span id='langTxt'>EN</span></button>
+<button aria-controls='nav' aria-expanded='false' aria-label='فتح القائمة' class='icon-btn menu-btn' data-i18n-aria='menu_open' id='menuBtn' type='button'><i aria-hidden='true' class='fa-solid fa-bars'></i></button>
+</div>
+</div>
+</header>
+
+
+<main id="main">
+<div class='view active' id='view-payment'>
+  <section aria-labelledby='h-payment' class='sec page-first' data-section='payment' id='payment'>
+    <div class='container'>
+      <div class='section-head reveal'>
+        <div aria-hidden='true' class='icon-badge'><i class='fa-regular fa-credit-card'></i></div>
+        <h1 data-i18n='pay_title' id='h-payment' style='font-size:var(--h2);margin-bottom:var(--s3)'>طرق <span class='grad'>الدفع</span></h1>
+        <p data-i18n='pay_sub'>خيارات الدفع المتاحة التي يمكن تأكيد تفاصيلها قبل بدء العمل.</p>
+      </div>
+      <div class='payment-list' data-stagger='1'>
+        <div class='pay-item reveal' data-spot='1'><div aria-hidden='true' class='pay-icon'><i class='fa-solid fa-building-columns'></i></div><div><strong data-i18n='pay1_t'>بريدي موب</strong><span class='d' data-i18n='pay1_d'>يتم تأكيد التفاصيل قبل بدء العمل.</span></div></div>
+        <div class='pay-item reveal' data-spot='1'><div aria-hidden='true' class='pay-icon'><i class='fa-solid fa-wallet'></i></div><div><strong data-i18n='pay2_t'>محفظة إلكترونية</strong><span class='d' data-i18n='pay2_d'>ت&#1615;حدد المحفظة المناسبة بالاتفاق المسبق.</span></div></div>
+        <div class='pay-item reveal' data-spot='1'><div aria-hidden='true' class='pay-icon'><i class='fa-brands fa-bitcoin'></i></div><div><strong data-i18n='pay3_t'>Binance</strong><span class='d' data-i18n='pay3_d'>يتم تنسيق طريقة التحويل قبل بدء العمل.</span></div></div>
+        <div class='pay-item reveal' data-spot='1'><div aria-hidden='true' class='pay-icon'><i class='fa-solid fa-earth-africa'></i></div><div><strong data-i18n='pay4_t'>Grey</strong><span class='d' data-i18n='pay4_d'>يتم تأكيد التوفر والتفاصيل قبل بدء العمل.</span></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+</main>
+<footer id='site-footer' role='contentinfo'>
+<div class='container'>
+<div class='footer-grid'>
+<div class='footer-col'>
+<h4><img alt='شعار NorDa' data-i18n-alt='logo_alt' height='31' loading='lazy' src='https://placehold.co/200x200/1A1025/F4C2D7?text=LOGO' width='31'>NorDa</h4>
+<p data-i18n='ft_about'>عمل رقمي مستقل يهتم بتطوير الواجهات الأمامية والتصميم والمهام الرقمية العملية.</p>
+<div class='social'>
+<a aria-label='Instagram' class='s-ig' href='https://instagram.com/your_handle' rel='noopener' target='_blank'><i aria-hidden='true' class='fa-brands fa-instagram'></i></a>
+<a aria-label='Telegram' class='s-tg' href='https://t.me/your_username' rel='noopener' target='_blank'><i aria-hidden='true' class='fa-brands fa-telegram'></i></a>
+</div>
+</div>
+<div class='footer-col'>
+<h4><i aria-hidden='true' class='fa-solid fa-link'></i><span data-i18n='ft_links'>روابط سريعة</span></h4>
+<a data-nav='home' href='index.html'><i aria-hidden='true' class='fa-solid fa-house'></i><span data-i18n='n_home'>الرئيسية</span></a>
+<a data-nav='about' href='about.html'><i aria-hidden='true' class='fa-regular fa-circle-user'></i><span data-i18n='n_about'>من أنا</span></a>
+<a data-nav='services' href='services.html'><i aria-hidden='true' class='fa-solid fa-wand-magic-sparkles'></i><span data-i18n='n_services'>خدماتي</span></a>
+<a data-nav='portfolio' href='portfolio.html'><i aria-hidden='true' class='fa-regular fa-images'></i><span data-i18n='n_portfolio'>أعمالي</span></a>
+</div>
+<div class='footer-col'>
+<h4><i aria-hidden='true' class='fa-solid fa-circle-info'></i><span data-i18n='ft_info'>معلومات</span></h4>
+<a data-nav='packages' href='packages.html'><i aria-hidden='true' class='fa-solid fa-box-open'></i><span data-i18n='n_packages'>الباقات</span></a>
+<a data-nav='payment' href='payment.html'><i aria-hidden='true' class='fa-regular fa-credit-card'></i><span data-i18n='n_payment'>الدفع</span></a>
+<a data-nav='faq' href='faq.html'><i aria-hidden='true' class='fa-regular fa-circle-question'></i><span data-i18n='n_faq'>الأسئلة</span></a>
+</div>
+<div class='footer-col'>
+<h4><i aria-hidden='true' class='fa-solid fa-paper-plane'></i><span data-i18n='ft_contact'>تواصل</span></h4>
+<a data-nav='contact' href='contact.html'><i aria-hidden='true' class='fa-regular fa-envelope'></i><span data-i18n='n_contact'>تواصل</span></a>
+<a href='https://instagram.com/your_handle' rel='noopener' target='_blank'><i aria-hidden='true' class='fa-brands fa-instagram'></i>Instagram</a>
+<a href='https://t.me/your_username' rel='noopener' target='_blank'><i aria-hidden='true' class='fa-brands fa-telegram'></i>Telegram</a>
+</div>
+</div>
+<div class='divider'><button aria-label='للأعلى' class='up js-top' data-i18n-aria='top' type='button'><i aria-hidden='true' class='fa-solid fa-arrow-up'></i></button></div>
+<div class='footer-bottom'>
+<span>&#169; <span id='year'></span> NorDa &#8212; <span data-i18n='ft_made'>ص&#1615;نع بكل</span> <i aria-hidden='true' class='fa-solid fa-heart heart'></i></span>
+</div>
+</div>
+</footer>
+
+<!-- Lightbox -->
+<div aria-hidden='true' class='lightbox' id='lightbox' role='dialog'>
+  <div class='lightbox-scrim' data-lb-close='1'></div>
+  <button aria-label='إغلاق المعرض' class='lightbox-close' data-i18n-aria='lb_close' data-lb-close='1' type='button'><i aria-hidden='true' class='fa-solid fa-xmark'></i></button>
+  <button aria-label='السابق' class='lightbox-nav lightbox-prev' data-i18n-aria='prev' data-lb-prev='1' type='button'><i aria-hidden='true' class='fa-solid fa-chevron-right'></i></button>
+  <button aria-label='التالي' class='lightbox-nav lightbox-next' data-i18n-aria='next' data-lb-next='1' type='button'><i aria-hidden='true' class='fa-solid fa-chevron-left'></i></button>
+  <figure class='lightbox-stage'>
+    <img alt='' class='lightbox-img' id='lbImg' src=''>
+    <figcaption class='lightbox-cap'><h3 id='lbTitle'></h3><span class='lightbox-counter' id='lbCounter'></span></figcaption>
+  </figure>
+  <div class='lightbox-thumbs' id='lbThumbs'></div>
+</div>
+
+<button aria-label='للأعلى' class='js-top' data-i18n-aria='top' id='top-btn' type='button'><i aria-hidden='true' class='fa-solid fa-arrow-up'></i></button>
+
+<!-- Chat -->
+<button aria-controls='chatPanel' aria-expanded='false' aria-label='دردشة' data-i18n-aria='chat_aria' id='chatFab' type='button'>
+<i aria-hidden='true' class='fa-solid fa-comments'></i>
+<span class='fab-badge' id='fabBadge'></span>
+</button>
+
+<div aria-label='دردشة' aria-modal='false' data-i18n-aria='chat_aria' id='chatPanel' role='dialog'>
+<div class='chat-head'>
+<strong><i aria-hidden='true' class='fa-brands fa-telegram'></i><span data-i18n='chat_title'>دردشة مباشرة</span></strong>
+<span class='online'><span data-i18n='online'>عادة ما يتم الرد فورا</span></span>
+<button aria-label='كتم صوت تنبيه الدردشة' aria-pressed='true' class='chat-sound' data-i18n-aria='sound_on' id='soundToggle' type='button'><i aria-hidden='true' class='fa-solid fa-volume-high'></i><span data-i18n='sound_label'>الصوت</span></button>
+<button aria-label='إغلاق' class='chat-x' data-i18n-aria='close' id='chatX' type='button'><i aria-hidden='true' class='fa-solid fa-xmark'></i></button>
+</div>
+<div class='chat-tabs' role='group'>
+<button class='chat-tab active' data-tab='new' id='tabNew' type='button'><i aria-hidden='true' class='fa-solid fa-circle-plus'></i><span data-i18n='tab_new'>جديدة</span></button>
+<button aria-disabled='true' class='chat-tab' data-tab='chat' id='tabChat' type='button'><i aria-hidden='true' class='fa-solid fa-comment-dots'></i><span data-i18n='tab_chat'>دردشة</span></button>
+<button class='chat-tab' data-tab='closed' id='tabClosed' type='button'><i aria-hidden='true' class='fa-solid fa-clock-rotate-left'></i><span data-i18n='tab_closed'>المغلقة</span><span class='tab-count' id='closedCount'></span></button>
+</div>
+<div class='chat-view active' data-view='new' id='viewNew'>
+<div class='chat-empty'>
+<div class='empty-icon'><i aria-hidden='true' class='fa-solid fa-envelope-open-text'></i></div>
+<h3 data-i18n='no_ticket_title'>لا توجد تذكرة مفتوحة</h3>
+<p data-i18n='no_ticket_desc'>لنبدأ محادثة جديدة وسنرد في أقرب وقت</p>
+<input aria-label='الاسم' autocomplete='name' class='name-in' data-i18n-aria='f_name' data-i18n-ph='f_name' id='ch-name' maxlength='60' placeholder='الاسم' type='text'>
+<button class='btn btn-primary btn-sm mag' id='btnNewTicket' type='button'><i aria-hidden='true' class='fa-solid fa-plus'></i><span data-i18n='new_ticket'>محادثة جديدة</span></button>
+</div>
+</div>
+<div class='chat-view' data-view='chat' id='viewChat'>
+<div class='ticket-info'>
+<span class='ticket-id' id='ticketIdLabel'>#---</span>
+<span class='ticket-status'><i aria-hidden='true' class='fa-solid fa-circle'></i><span data-i18n='status_open'>مفتوحة</span></span>
+</div>
+<div aria-live='polite' class='chat-log' id='chatLog' role='log'></div>
+<form class='chat-in' id='chatForm' novalidate='novalidate'>
+<div class='file-preview' id='filePreview' style='display:none'>
+<i aria-hidden='true' class='fa-solid fa-paperclip'></i>
+<span class='file-preview-name' id='fileNamePreview'></span>
+<span class='file-preview-size' id='fileSizePreview'></span>
+<button aria-label='x' class='file-remove' id='fileRemove' type='button'><i aria-hidden='true' class='fa-solid fa-xmark'></i></button>
+</div>
+<div class='chat-row'>
+<button aria-label='إرفاق ملف' class='btn-attach' data-i18n-aria='attach' id='btnAttach' type='button'><i aria-hidden='true' class='fa-solid fa-paperclip'></i></button>
+<input id='fileInput' style='display:none' tabindex='-1' type='file'>
+<textarea aria-label='الرسالة' data-i18n-aria='f_msg' data-i18n-ph='chat_ph' id='ch-msg' maxlength='1000' placeholder='رسالتك…' rows='1'></textarea>
+<button aria-label='إرسال' class='btn-send' data-i18n-aria='f_send' id='chBtn' type='submit'><i aria-hidden='true' class='fa-solid fa-paper-plane'></i></button>
+</div>
+</form>
+<div class='chat-foot'>
+<button class='btn-close-ticket' id='btnCloseTicket' type='button'><i aria-hidden='true' class='fa-solid fa-lock'></i><span data-i18n='close_ticket'>إغلاق التذكرة</span></button>
+</div>
+</div>
+<div class='chat-view' data-view='closed' id='viewClosed'>
+<div class='closed-list' id='closedList'></div>
+</div>
+<div class='chat-view' data-view='detail' id='viewDetail'>
+<div class='detail-head'>
+<button class='btn-back' id='btnBack' type='button'><i aria-hidden='true' class='fa-solid fa-arrow-right'></i><span data-i18n='back'>رجوع</span></button>
+<span class='ticket-id' id='detailTicketId'>#---</span>
+</div>
+<div class='chat-log closed-log' id='detailLog'></div>
+</div>
+<div aria-live='polite' class='toast' id='chatToast' role='status'></div>
+</div>
+
+
+
+<script src="assets/config.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
