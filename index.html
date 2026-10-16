@@ -1208,7 +1208,10 @@ function showView(name,skipHash){
   var menu=$1('#nav');if(menu)menu.classList.remove('open');
   var mb=$1('#menuBtn');if(mb)mb.setAttribute('aria-expanded','false');
   currentView=name;
-  if(!skipHash){try{history.replaceState(null,'','#'+name)}catch(e){location.hash=name}}
+  if(!skipHash){
+    var route=routeFor(name);
+    if(location.pathname!==route||location.hash){history.pushState(null,'',route)}
+  }
   window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
   if(name==='faq')reinitFaq();
   if(name==='portfolio')reinitPortfolio();
@@ -1222,8 +1225,19 @@ var TITLES={
   fr:{home:'NorDa | Freelance Numérique',about:'À propos | NorDa',services:'Services | NorDa',portfolio:'Portfolio | NorDa',packages:'Formules | NorDa',payment:'Paiement | NorDa',faq:'FAQ | NorDa',contact:'Contact | NorDa'}
 };
 function updateTitle(name){d.title=(TITLES[lang]||TITLES.ar)[name]||'NorDa'}
-function readHash(){var h=(location.hash||'').replace('#','').trim();return h&&$1('#view-'+h)?h:'home'}
-window.addEventListener('hashchange',function(){showView(readHash(),true)});
+function routeFor(name){
+  var routes={home:'/',about:'/about',services:'/services',portfolio:'/portfolio',packages:'/pricing',payment:'/payment',faq:'/faq',contact:'/contact'};
+  return routes[name]||'/';
+}
+function readRoute(){
+  var path=(location.pathname||'/').replace(/\/+$/,'')||'/';
+  var routes={'/':'home','/about':'about','/services':'services','/portfolio':'portfolio','/pricing':'packages','/prices':'packages','/packages':'packages','/payment':'payment','/faq':'faq','/contact':'contact'};
+  var h=(location.hash||'').replace('#','').trim();
+  if(h&&$1('#view-'+h))return h;
+  return routes[path]||'home';
+}
+window.addEventListener('hashchange',function(){showView(readRoute(),true)});
+window.addEventListener('popstate',function(){showView(readRoute(),true)});
 
 /* ============ الثيم (light / dark فقط) ============ */
 var pref=sget('rose_theme')||'light';if(['light','dark'].indexOf(pref)<0)pref='light';
@@ -1968,7 +1982,7 @@ function init(){
   });
   $('.js-top').forEach(function(b){b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'})})});
   var y=$1('#year');if(y)y.textContent=new Date().getFullYear();
-  showView(readHash(),true);
+  showView(readRoute(),true);
   reinitFaq();reinitPortfolio();initCurrencyToggle();
   reinitReveal();reinitSpotlight();reinitSectionColor();
   onScroll();
