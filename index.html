@@ -34,6 +34,12 @@
 <link rel="stylesheet" href="/style.css"/>
 </head>
 <body>
+  <script>
+setTimeout(function(){
+  var sp = document.getElementById('splashScreen');
+  if(sp){ sp.classList.add('hide'); setTimeout(function(){ if(sp.parentNode) sp.parentNode.removeChild(sp); }, 800); }
+}, 2500);
+</script>
 
 <div aria-hidden="true" class="bg-fx"><i class="au"></i><i class="au"></i><i class="au"></i><i class="au"></i></div>
 <div aria-hidden="true" class="view-loader" id="viewLoader"></div>
