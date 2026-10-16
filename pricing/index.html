@@ -1725,6 +1725,12 @@ function init(){
   d.addEventListener('click',function(e){
     var trigger=e.target.closest('[data-nav]');
     if(!trigger)return;
+    var href=trigger.getAttribute('href')||'';
+    if(href.charAt(0)==='/' && href.indexOf('//')!==0){
+      e.preventDefault();
+      location.href=href;
+      return;
+    }
     e.preventDefault();
     showView(trigger.getAttribute('data-nav'));
   });
