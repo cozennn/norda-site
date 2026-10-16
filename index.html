@@ -380,5 +380,972 @@
 <button aria-label="للأعلى" class="js-top" id="top-btn" type="button"><i aria-hidden="true" class="fa-solid fa-arrow-up"></i></button>
 
 <script>window.TELEGRAM_API = 'https://lucky-block-975a.houda2004houdaa.workers.dev';</script>
+            (function(){
+'use strict';
+var d=document,R=d.documentElement;
+function $(s,c){return Array.prototype.slice.call((c||d).querySelectorAll(s))}
+function $1(s){return d.querySelector(s)}
+function sget(k){try{return localStorage.getItem(k)}catch(e){return null}}
+function sset(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}}
+function sdel(k){try{localStorage.removeItem(k)}catch(e){}}
+function mq(q){return !!(window.matchMedia&&window.matchMedia(q).matches)}
+var reduce=mq('(prefers-reduced-motion: reduce)');
+var fine=mq('(hover: hover) and (pointer: fine)');
+R.classList.add('js');
+
+var I18N={
+"ar":{
+"skip_nav":"Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ù„Ù„Ù‚Ø§Ø¦Ù…Ø©","skip_main":"Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ù„Ù„Ù…Ø­ØªÙˆÙ‰","skip_foot":"Ø§Ù„Ø§Ù†ØªÙ‚Ø§Ù„ Ù„Ù„ØªØ°ÙŠÙŠÙ„",
+"nav_label":"Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©","n_home":"Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©","n_about":"Ù…Ù† Ø£Ù†Ø§","n_services":"Ø®Ø¯Ù…Ø§ØªÙŠ","n_portfolio":"Ø£Ø¹Ù…Ø§Ù„ÙŠ","n_packages":"Ø§Ù„Ø¨Ø§Ù‚Ø§Øª","n_payment":"Ø§Ù„Ø¯ÙØ¹","n_faq":"Ø§Ù„Ø£Ø³Ø¦Ù„Ø©","n_contact":"ØªÙˆØ§ØµÙ„",
+"th_label":"Ø§Ù„Ø«ÙŠÙ…","lang_label":"ØªØºÙŠÙŠØ± Ø§Ù„Ù„ØºØ©","menu_open":"ÙØªØ­ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©","menu_close":"Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„Ù‚Ø§Ø¦Ù…Ø©","th_light":"ÙØ§ØªØ­","th_dark":"Ø¯Ø§ÙƒÙ†",
+"top":"Ù„Ù„Ø£Ø¹Ù„Ù‰","close":"Ø¥ØºÙ„Ø§Ù‚","prev":"Ø§Ù„Ø³Ø§Ø¨Ù‚","next":"Ø§Ù„ØªØ§Ù„ÙŠ",
+"h_badge":"Ø®Ø¯Ù…Ø§Øª Ø±Ù‚Ù…ÙŠØ© Ù…Ø³ØªÙ‚Ù„Ø©","h_title":"Ù„Ù†Ø¨Ù†Ù Ù…Ø¹Ø§Ù‹ <span class='grad'>Ø­Ø¶ÙˆØ±Ø§Ù‹ Ø±Ù‚Ù…ÙŠØ§Ù‹ ÙˆØ§Ø¶Ø­Ø§Ù‹</span> ÙŠÙ†Ø§Ø³Ø¨ ÙÙƒØ±ØªÙƒ","h_lead":"ØªØ·ÙˆÙŠØ± ÙˆØ§Ø¬Ù‡Ø§Øª Ø£Ù…Ø§Ù…ÙŠØ©ØŒ ÙˆØªØµÙ…ÙŠÙ… ØµÙØ­Ø§Øª Ù‡Ø¨ÙˆØ·ØŒ ÙˆØ®Ø¯Ù…Ø§Øª Ø±Ù‚Ù…ÙŠØ© Ø¹Ù…Ù„ÙŠØ© Ø¨ÙˆØ¶ÙˆØ­ ÙˆØ§Ù‡ØªÙ…Ø§Ù… Ø¨Ø§Ù„ØªÙØ§ØµÙŠÙ„.","h_cta1":"Ø¨Ø¯Ø¡ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹","h_cta2":"Ù…Ø¹Ø±Ø¶ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„","h_c1":"ØªØµÙ…ÙŠÙ… Ù…ØªØ¬Ø§ÙˆØ¨","h_c2":"Ù…Ø­ØªÙˆÙ‰ ÙˆØ§Ø¶Ø­ ÙˆÙ…Ù†Ø¸Ù…","h_c3":"Ù…ÙˆÙ‚Ø¹ Ø´Ø¨Ù‡ ÙƒØ§Ù…Ù„ Ø¨Ø³Ø¹Ø± Ù…Ù†Ø§Ø³Ø¨",
+"f1":"ØªÙ†Ø¸ÙŠÙ… Ø¹Ù…Ù„ÙŠ Ù„Ù„ÙÙƒØ±Ø©","f2":"Ø§Ù‡ØªÙ…Ø§Ù… Ø¨Ø§Ù„ØªÙØ§ØµÙŠÙ„","av1":"Ø³Ù‡ÙˆÙ„Ø© Ø§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…","av2":"ØªØµÙ…ÙŠÙ… Ù…ØªØ¬Ø§ÙˆØ¨",
+"abs_t":"Ø¹Ù† <span class='grad'>Ù†ÙˆØ±Ø¯Ø§</span>","abs_p":"Ø£Ø¹Ù…Ù„ Ø¨Ø´ÙƒÙ„ Ø±Ù‚Ù…ÙŠ Ù…Ø³ØªÙ‚Ù„ ÙˆØ£ØªØ¹Ù„Ù… Ø¹Ø¨Ø± Ù…Ø´Ø§Ø±ÙŠØ¹ Ø¹Ù…Ù„ÙŠØ© ÙÙŠ Ø§Ù„ØªØµÙ…ÙŠÙ… ÙˆØ§Ù„ØªÙ‚Ù†ÙŠØ©ØŒ ÙˆØ£Ø´Ø§Ø±Ùƒ Ù‡Ù†Ø§ Ø§Ù„Ø®Ø¯Ù…Ø§Øª ÙˆØ§Ù„Ø£ÙÙƒØ§Ø± Ø§Ù„ØªÙŠ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø© ÙÙŠÙ‡Ø§.","abs_b":"Ø§Ù„Ù…Ø²ÙŠØ¯ Ø¹Ù†ÙŠ",
+"s_title":"Ø®Ø¯Ù…Ø§ØªÙŠ <span class='grad'>Ø§Ù„Ù…Ù…ÙŠØ²Ø©</span>","s_title_full":"Ø®Ø¯Ù…Ø§ØªÙŠ <span class='grad'>Ø§Ù„Ù…Ù…ÙŠØ²Ø©</span>","s_sub":"Ø®Ø¯Ù…Ø§Øª Ø±Ù‚Ù…ÙŠØ© ÙŠÙ…ÙƒÙ†Ù†Ø§ Ù…Ù†Ø§Ù‚Ø´Ø© Ù†Ø·Ø§Ù‚Ù‡Ø§ Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡","s_sub_full":"Ø®Ø¯Ù…Ø§Øª Ø±Ù‚Ù…ÙŠØ© ÙŠÙ…ÙƒÙ†Ù†Ø§ Ù…Ù†Ø§Ù‚Ø´Ø© Ù†Ø·Ø§Ù‚Ù‡Ø§ Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡",
+"s1_t":"ØªØµÙ…ÙŠÙ… ØµÙØ­Ø§Øª Ø§Ù„Ù‡Ø¨ÙˆØ·","s1_p":"ØªÙ†Ø¸ÙŠÙ… Ø§Ù„Ù…Ø­ØªÙˆÙ‰ ÙˆØªØ®Ø·ÙŠØ· ÙˆØ§Ø¬Ù‡Ø© ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· ÙˆÙÙ‚ Ø§Ù„Ù‡Ø¯Ù ÙˆØ§Ù„Ø¬Ù…Ù‡ÙˆØ± ÙˆØ§Ù„Ù…ÙˆØ§Ø¯ Ø§Ù„Ù…ØªØ§Ø­Ø©.",
+"s2_t":"ØªØ·ÙˆÙŠØ± Ø§Ù„ÙˆØ§Ø¬Ù‡Ø§Øª Ø§Ù„Ø£Ù…Ø§Ù…ÙŠØ©","s2_p":"ØªÙ†ÙÙŠØ° ÙˆØ§Ø¬Ù‡Ø§Øª ÙˆÙŠØ¨ Ù…ØªØ¬Ø§ÙˆØ¨Ø© Ø¶Ù…Ù† Ù†Ø·Ø§Ù‚ ÙˆÙ…ØªØ·Ù„Ø¨Ø§Øª Ù†ØªÙÙ‚ Ø¹Ù„ÙŠÙ‡Ø§ Ù…Ø³Ø¨Ù‚Ø§Ù‹.",
+"s3_t":"ØªØµØ§Ù…ÙŠÙ… Canva Ù„Ù„ØªÙˆØ§ØµÙ„ Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ","s3_p":"Ø¥Ø¹Ø¯Ø§Ø¯ ØªØµØ§Ù…ÙŠÙ… Ø¨ØµØ±ÙŠØ© Ø¨Ø³ÙŠØ·Ø© Ù„Ù…Ù†Ø´ÙˆØ±Ø§Øª Ø§Ù„ØªÙˆØ§ØµÙ„ ÙˆÙÙ‚ Ø§Ù„Ù…Ø­ØªÙˆÙ‰ ÙˆØ§Ù„Ù…Ù‚Ø§Ø³Ø§Øª Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.",
+"s_all":"ÙƒÙ„ Ø§Ù„Ø®Ø¯Ù…Ø§Øª",
+"lw_t":"Ø¢Ø®Ø± <span class='grad'>Ø§Ù„Ø£Ø¹Ù…Ø§Ù„</span>","lw_sub":"Ø«Ù„Ø§Ø«Ø© ØªØµÙˆØ±Ø§Øª ØªØ¬Ø±ÙŠØ¨ÙŠØ© Ù…Ù† Ù…Ø¹Ø±Ø¶ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„","lw_all":"ÙƒÙ„ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„",
+"cta_t":"Ù‡Ù„ Ù†Ø¨Ø¯Ø£ Ù…Ø´Ø±ÙˆØ¹ÙƒØŸ","cta_p":"Ø¨Ø®Ø·ÙˆØ§Øª Ù‚ØµÙŠØ±Ø© ÙŠÙ…ÙƒÙ†Ùƒ ÙˆØµÙ Ø§Ù„ÙÙƒØ±Ø© ÙˆØ§Ù„Ø®Ø¯Ù…Ø§Øª Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©.","cta_b":"Ù„Ù†Ø¨Ø¯Ø£ Ø§Ù„Ø¢Ù†",
+"a_title":"Ù…Ù† <span class='grad'>Ø£Ù†Ø§ØŸ</span>","a_sub":"Ø¹Ù…Ù„ Ø±Ù‚Ù…ÙŠ Ù…Ø³ØªÙ‚Ù„ ÙŠÙ‡ØªÙ… Ø¨Ø§Ù„ÙˆØ§Ø¬Ù‡Ø§Øª Ø§Ù„Ø£Ù…Ø§Ù…ÙŠØ© ÙˆØ§Ù„ØªØµÙ…ÙŠÙ… ÙˆØ§Ù„Ù…Ù‡Ø§Ù… Ø§Ù„Ø±Ù‚Ù…ÙŠØ© Ø§Ù„Ø¹Ù…Ù„ÙŠØ©.",
+"about_intro_title":"Ø¹Ù…Ù„ Ø±Ù‚Ù…ÙŠ Ù…Ø³ØªÙ‚Ù„ØŒ Ø£ØªØ¹Ù„Ù… ÙˆØ£Ø¨Ù†ÙŠ Ø¨Ø®Ø·ÙˆØ§Øª Ø¹Ù…Ù„ÙŠØ©","about_intro":"Ø£Ù‡ØªÙ… Ø¨ØªØ·ÙˆÙŠØ± Ø§Ù„ÙˆØ§Ø¬Ù‡Ø§Øª Ø§Ù„Ø£Ù…Ø§Ù…ÙŠØ© ÙˆØªØµÙ…ÙŠÙ… ØµÙØ­Ø§Øª Ø§Ù„Ù‡Ø¨ÙˆØ·ØŒ Ø¥Ù„Ù‰ Ø¬Ø§Ù†Ø¨ ØªØµØ§Ù…ÙŠÙ… Canva ÙˆØ¥Ø¯Ø®Ø§Ù„ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§Øª ÙˆØ¬Ù…Ø¹Ù‡Ø§ ÙˆØ§Ù„ØªÙØ±ÙŠØº Ø§Ù„ØµÙˆØªÙŠ. Ø£Ø´Ø§Ø±Ùƒ Ù‡Ù†Ø§ Ù…Ø¬Ø§Ù„Ø§Øª Ø¹Ù…Ù„ÙŠ ÙˆØ·Ø±ÙŠÙ‚Ø© ØªØ¹Ø§ÙˆÙ†ÙŠ Ø¨ÙˆØ¶ÙˆØ­.","about_contact":"Ù„Ù†Ù†Ø§Ù‚Ø´ ÙÙƒØ±ØªÙƒ","about_article_aria":"Ù…Ù‚Ø§Ù„ ØªØ¹Ø±ÙŠÙÙŠ Ø¹Ù† Ù†ÙˆØ±Ø¯Ø§",
+"p_title":"ÙƒÙŠÙ <span class='grad'>Ù†Ø³ÙŠØ± ÙÙŠ Ø§Ù„Ø¹Ù…Ù„ØŸ</span>","p_sub":"Ø®Ø·ÙˆØ§Øª Ù…Ø±Ù†Ø© Ù†ØªÙÙ‚ Ø¹Ù„ÙŠÙ‡Ø§ Ø¨Ø­Ø³Ø¨ Ù†Ø·Ø§Ù‚ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹","step":"Ø§Ù„Ø®Ø·ÙˆØ©",
+"p1_t":"Ù†Ø­Ø¯Ø¯ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨","p1_p":"Ù†Ø±Ø§Ø¬Ø¹ Ø§Ù„Ù‡Ø¯Ù ÙˆØ§Ù„Ø¬Ù…Ù‡ÙˆØ± ÙˆØ§Ù„Ù…ÙˆØ§Ø¯ Ø§Ù„Ù…ØªØ§Ø­Ø© Ù„Ù„Ù…Ø´Ø±ÙˆØ¹.","p2_t":"Ù†Ø±ØªØ¨ Ø§Ù„ÙˆØ§Ø¬Ù‡Ø©","p2_p":"Ù†Ø­Ø¯Ø¯ Ø¨Ù†ÙŠØ© Ø§Ù„Ù…Ø­ØªÙˆÙ‰ ÙˆØ§Ù„Ø¹Ù†Ø§ØµØ± Ø§Ù„Ø¨ØµØ±ÙŠØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©.","p3_t":"ØªÙ†ÙÙŠØ° Ø§Ù„Ù†Ø·Ø§Ù‚ Ø§Ù„Ù…ØªÙÙ‚ Ø¹Ù„ÙŠÙ‡","p3_p":"Ø£Ø¹Ù…Ù„ Ø¹Ù„Ù‰ Ø§Ù„Ù…Ø®Ø±Ø¬Ø§Øª Ø§Ù„ØªÙŠ Ø­Ø¯Ø¯Ù†Ø§Ù‡Ø§ Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡.","p4_t":"Ù†Ø±Ø§Ø¬Ø¹ Ø§Ù„ØªØ³Ù„ÙŠÙ…","p4_p":"Ù†ØªØ£ÙƒØ¯ Ù…Ù† Ø§Ù„Ù…Ù„ÙØ§Øª ÙˆØ§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª Ø§Ù„ØªÙŠ Ø§ØªÙÙ‚Ù†Ø§ Ø¹Ù„ÙŠÙ‡Ø§.",
+"pf_title":"Ù…Ø¹Ø±Ø¶ <span class='grad'>Ø£Ø¹Ù…Ø§Ù„ÙŠ</span>","pf_sub":"10 Ø£Ø¹Ù…Ø§Ù„ Ù…ØªÙ†ÙˆØ¹Ø© Ø¨ÙŠÙ† ØµÙØ­Ø§Øª Ø§Ù„Ù‡Ø¨ÙˆØ· ÙˆØ§Ù„Ù…ØªØ§Ø¬Ø± Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ© ÙˆØ§Ù„Ù…ÙˆØ§Ù‚Ø¹ Ø§Ù„Ø´Ø®ØµÙŠØ©.",
+"tg_land":"ØµÙØ­Ø§Øª Ù‡Ø¨ÙˆØ·","tg_shop":"Ù…ØªØ§Ø¬Ø± Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ©","tg_pers":"Ù…ÙˆØ§Ù‚Ø¹ Ø´Ø®ØµÙŠØ©","review":"Ø§Ø³ØªØ¹Ø±Ø§Ø¶","proj":"ØªØµÙˆØ±Ø§Øª",
+"cat_label":"ÙØ¦Ø§Øª Ø§Ù„Ø£Ø¹Ù…Ø§Ù„","cat_all":"ÙƒÙ„ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„","cat_all_d":"ÙƒÙ„ Ø§Ù„Ø£Ø¹Ù…Ø§Ù„ ÙÙŠ Ù…ÙƒØ§Ù† ÙˆØ§Ø­Ø¯","cat_land_d":"ØµÙØ­Ø§Øª Ù‡Ø¨ÙˆØ· Ù…ØªÙ†ÙˆØ¹Ø©","cat_shop_d":"Ù…ØªØ§Ø¬Ø± Ø¨Ø£ÙÙƒØ§Ø± ÙˆÙˆØ§Ø¬Ù‡Ø§Øª Ù…Ø®ØªÙ„ÙØ©","cat_pers_d":"Ù…ÙˆØ§Ù‚Ø¹ Ø´Ø®ØµÙŠØ© ÙˆÙ…Ø¹Ø§Ø±Ø¶ Ø£Ø¹Ù…Ø§Ù„",
+"pf1_t":"Mochi Moonlet | Ù…ØªØ¬Ø± Ù‡Ø¯Ø§ÙŠØ§ ÙƒØ§ÙˆØ§ÙŠ","pf1_p":"Ù…ØªØ¬Ø± Ù‡Ø¯Ø§ÙŠØ§ ÙƒØ§ÙˆØ§ÙŠ Ø¨Ø£Ù„ÙˆØ§Ù† Ø§Ù„ÙˆØ±Ø¯ÙŠ ÙˆØ§Ù„Ù„Ø§ÙÙ†Ø¯Ø±: Ù…Ù†ØªØ¬Ø§Øª Ù…Ù…ÙŠØ²Ø©ØŒ ÙØ¦Ø§ØªØŒ Ø¹Ø±ÙˆØ¶ØŒ ØªÙ‚ÙŠÙŠÙ…Ø§Øª ÙˆØªØ¨Ø¯ÙŠÙ„ Ù„ØºØ© EN/FR.",
+"pf2_t":"Ù„ÙŠÙ†Ø§ Ù…Ø§Ø±Ø³Ùˆ | Ù…ØµÙˆÙ‘Ø±Ø© Ø¨Ø§Ù„Ø£Ø¨ÙŠØ¶ ÙˆØ§Ù„Ø£Ø³ÙˆØ¯","pf2_p":"Ù…ÙˆÙ‚Ø¹ Ù…ØµÙˆÙ‘Ø±Ø© Ø¨Ø§Ù„Ø£Ø¨ÙŠØ¶ ÙˆØ§Ù„Ø£Ø³ÙˆØ¯: Ù…Ø¹Ø±Ø¶ Ø¨ÙÙ„Ø§ØªØ± ÙˆØ¹Ø±Ø¶ Ù…ÙƒØ¨Ù‘Ø±ØŒ Ø¬Ù„Ø³Ø§ØªØŒ Ø¨Ø§Ù‚Ø§Øª Ø£Ø³Ø¹Ø§Ø± ÙˆÙ†Ù…ÙˆØ°Ø¬ Ø­Ø¬Ø².",
+"pf3_t":"NEURA.EDGE | Ø£Ø¯Ø§Ø© Ø°ÙƒØ§Ø¡ Ø§ØµØ·Ù†Ø§Ø¹ÙŠ","pf3_p":"ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· Ù„Ø£Ø¯Ø§Ø© Ø°ÙƒØ§Ø¡ Ø§ØµØ·Ù†Ø§Ø¹ÙŠ Ø¨ØªØµÙ…ÙŠÙ… Ø³Ø§ÙŠØ¨Ø±Ø¨Ù†Ùƒ ÙˆØªØ¬Ø±Ø¨Ø© ØªÙØ§Ø¹Ù„ÙŠØ© ØªÙƒØªØ¨ Ø§Ù„Ø±Ø¯ Ø­Ø±ÙØ§Ù‹ Ø­Ø±ÙØ§Ù‹.",
+"pf4_t":"Natura Essence | Ø¹Ù†Ø§ÙŠØ© Ø·Ø¨ÙŠØ¹ÙŠØ©","pf4_p":"Ù…ØªØ¬Ø± Ø¹Ù†Ø§ÙŠØ© Ø·Ø¨ÙŠØ¹ÙŠ ÙˆÙ†Ø¨Ø§ØªÙŠ: ÙÙ„ØªØ±Ø© Ø§Ù„Ù…Ù†ØªØ¬Ø§ØªØŒ Ø¹Ø±Ø¶ Ø³Ø±ÙŠØ¹ØŒ Ø³Ù„Ø© ÙˆÙ‚ØµØ© Ø§Ù„Ø¹Ù„Ø§Ù…Ø©.",
+"pf5_t":"Ananya | Ù…Ø¹Ø±Ø¶ Ù…Ø·ÙˆÙ‘Ø±Ø© ÙˆÙ…ØµÙ…Ù‘Ù…Ø©","pf5_p":"Ù…Ø¹Ø±Ø¶ Ø£Ø¹Ù…Ø§Ù„ ÙˆØ±Ø¯ÙŠ Ù„Ù…Ø·ÙˆÙ‘Ø±Ø© ÙˆÙ…ØµÙ…Ù‘Ù…Ø©: Ù…Ø´Ø§Ø±ÙŠØ¹ Ø¨ÙÙ„Ø§ØªØ±ØŒ Ø¨Ø§Ù‚Ø§ØªØŒ Ø¢Ø±Ø§Ø¡ Ø¹Ù…Ù„Ø§Ø¡ ÙˆÙ†Ø§ÙØ°Ø© Ø·Ù„Ø¨ Ù…Ø´Ø±ÙˆØ¹.",
+"pf6_t":"Brutal Barber | ØµØ§Ù„ÙˆÙ† Ø­Ù„Ø§Ù‚Ø©","pf6_p":"ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· Ù„ØµØ§Ù„ÙˆÙ† Ø­Ù„Ø§Ù‚Ø© Ø¨Ø£Ø³Ù„ÙˆØ¨ Ø§Ù„Ù†ÙŠÙˆ-Ø¨Ø±ÙˆØªØ§Ù„ÙŠØ²Ù…: Ø®Ø¯Ù…Ø§Øª ÙˆØ£Ø³Ø¹Ø§Ø±ØŒ Ù…Ø¹Ø±Ø¶ ÙˆØ®Ø·ÙˆØ§Øª ÙˆØ­Ø¬Ø².",
+"pf7_t":"GOLDENHUE | Ù…Ø¬ÙˆÙ‡Ø±Ø§Øª ÙØ§Ø®Ø±Ø©","pf7_p":"Ù…ØªØ¬Ø± Ù…Ø¬ÙˆÙ‡Ø±Ø§Øª ÙØ§Ø®Ø± Ø¨Ø§Ù„Ø£Ø³ÙˆØ¯ ÙˆØ§Ù„Ø°Ù‡Ø¨ÙŠ: Ù…Ù†ØªØ¬Ø§Øª Ù…Ù…ÙŠØ²Ø©ØŒ Ù‚ØµØ© Ø§Ù„Ø¹Ù„Ø§Ù…Ø©ØŒ Ø¢Ø±Ø§Ø¡ ÙˆØ´Ø§Ø±Ø§Øª Ø«Ù‚Ø©.",
+"pf8_t":"Marginalia | Ù…Ø¯ÙˆÙ†Ø© Ø£Ø¯Ø¨ÙŠØ©","pf8_p":"Ù…Ø¯ÙˆÙ†Ø© Ø£Ø¯Ø¨ÙŠØ© Ø¨Ø£Ø³Ù„ÙˆØ¨ Ù…ÙƒØªØ¨ Ø§Ù„Ù‚Ø±Ø§Ø¡Ø©: Ù…Ø±Ø§Ø¬Ø¹Ø§ØªØŒ Ø§Ù‚ØªØ¨Ø§Ø³Ø§ØªØŒ Ù…Ù‚Ø§Ù„Ø§Øª ÙˆÙˆØ¶Ø¹ Ù„ÙŠÙ„ÙŠ Ø¨Ù…ØµØ¨Ø§Ø­.",
+"pf9_t":"TaskFlow | Ø¥Ø¯Ø§Ø±Ø© Ø§Ù„Ù…Ù‡Ø§Ù…","pf9_p":"ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· Ù„ØªØ·Ø¨ÙŠÙ‚ Ø¥Ø¯Ø§Ø±Ø© Ù…Ù‡Ø§Ù… Ø¨ØªØµÙ…ÙŠÙ… ØªØ­Ø±ÙŠØ±ÙŠ Ø¨Ø³ÙŠØ·: Ù…ÙŠØ²Ø§ØªØŒ Ù…Ø¹Ø§ÙŠÙ†Ø© Ù„ÙˆØ­Ø©ØŒ Ø£Ø³Ø¹Ø§Ø± ÙˆØªØ³Ø¬ÙŠÙ„.",
+"pf10_t":"Atelier Marchal | Ù†Ø¬Ø§Ø±Ø© ÙÙ†ÙŠØ©","pf10_p":"Ù…ÙˆÙ‚Ø¹ ÙˆØ±Ø´Ø© Ù†Ø¬Ø§Ø±Ø© ÙÙ†ÙŠØ©: Ø£Ù†ÙˆØ§Ø¹ Ø§Ù„Ø£Ø®Ø´Ø§Ø¨ØŒ Ø®Ø¯Ù…Ø§ØªØŒ Ø£Ù„Ø¨ÙˆÙ…Ø§Øª Ù…Ø´Ø§Ø±ÙŠØ¹ Ø¨Ø¹Ø§Ø±Ø¶ ØµÙˆØ± ÙˆØ®Ø±ÙŠØ·Ø©.",
+"pkg_title":"Ø§Ù„Ø¨Ø§Ù‚Ø§Øª <span class='grad'>ÙˆØ§Ù„Ø£Ø³Ø¹Ø§Ø±</span>","pkg_sub":"Ù„ÙƒÙ„ Ù…Ø´Ø±ÙˆØ¹ Ø¨Ø§Ù‚Ø© ØªÙ†Ø§Ø³Ø¨Ù‡ØŒ ÙˆÙŠÙ…ÙƒÙ†Ù†Ø§ Ø¯Ø§Ø¦Ù…Ø§Ù‹ Ù…Ù†Ø§Ù‚Ø´Ø© Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡.",
+"cur_label":"Ø§Ù„Ø¹Ù…Ù„Ø©","cur_toggle_label":"ØªØ¨Ø¯ÙŠÙ„ Ø§Ù„Ø¹Ù…Ù„Ø©","pkg_period":"/ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹","pkg_badge":"Ø§Ù„Ø£ÙƒØ«Ø± Ø·Ù„Ø¨Ø§Ù‹","pkg_choose":"Ø§Ø®ØªÙŠØ§Ø± Ù‡Ø°Ù‡ Ø§Ù„Ø¨Ø§Ù‚Ø©","pkg_discuss":"Ù„Ù†Ù†Ø§Ù‚Ø´ Ù…Ø´Ø±ÙˆØ¹Ùƒ",
+"pkg_note":"Ø§Ù„Ø£Ø³Ø¹Ø§Ø± ØªÙ‚Ø¯ÙŠØ±ÙŠØ© ÙˆÙ‚Ø§Ø¨Ù„Ø© Ù„Ù„ØªØ¹Ø¯ÙŠÙ„ Ø­Ø³Ø¨ Ù†Ø·Ø§Ù‚ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹. ÙŠØªÙ… ØªØ£ÙƒÙŠØ¯ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ø§Ù„Ù†Ù‡Ø§Ø¦ÙŠØ© Ù‚Ø¨Ù„ Ø¨Ø¯Ø¡ Ø§Ù„Ø¹Ù…Ù„.",
+"pkg1_t":"Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ©","pkg1_d":"Ù…Ø«Ø§Ù„ÙŠØ© Ù„Ù„Ø¨Ø¯Ø§ÙŠØ© Ø§Ù„Ø³Ø±ÙŠØ¹Ø© Ø¨ØµÙØ­Ø© ÙˆØ§Ø­Ø¯Ø© Ø¨Ø³ÙŠØ·Ø©.","pkg2_t":"Ø§Ù„Ù‚ÙŠØ§Ø³ÙŠØ©","pkg2_d":"ØªÙˆØ§Ø²Ù† Ù…Ø«Ø§Ù„ÙŠ Ø¨ÙŠÙ† Ø§Ù„Ø³Ø¹Ø± ÙˆØ§Ù„Ù…Ø®Ø±Ø¬Ø§Øª Ù„Ù…Ø´Ø±ÙˆØ¹ Ø§Ø­ØªØ±Ø§ÙÙŠ.","pkg3_t":"Ø§Ù„Ø¨Ø±ÙŠÙ…ÙŠÙˆÙ…","pkg3_d":"Ø­Ù„ Ù…ØªÙƒØ§Ù…Ù„ Ù„Ù…Ø´Ø±ÙˆØ¹ Ø£ÙƒØ¨Ø± Ù…Ø¹ Ù…Ø­ØªÙˆÙ‰ ÙˆØªØµØ§Ù…ÙŠÙ… Ø¥Ø¶Ø§ÙÙŠØ©.","pkg4_t":"Ø§Ù„Ù…Ø®ØµØµØ©","pkg4_d":"Ø¹Ù†Ø¯Ù…Ø§ ÙŠØ­ØªØ§Ø¬ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ Ø¥Ù„Ù‰ Ù†Ø·Ø§Ù‚ ÙˆÙ…ÙŠØ²Ø§Øª Ø®Ø§ØµØ©.","pkg4_price":"Ø­Ø³Ø¨ Ø§Ù„Ø·Ù„Ø¨",
+"pf_page":"ØµÙØ­Ø© Ù‡Ø¨ÙˆØ· (Ø­ØªÙ‰ 4 Ø£Ù‚Ø³Ø§Ù…)","pf_responsive":"ØªØµÙ…ÙŠÙ… Ù…ØªØ¬Ø§ÙˆØ¨","pf_multipage":"Ù…ÙˆÙ‚Ø¹ Ù…ØªØ¹Ø¯Ø¯ Ø§Ù„ØµÙØ­Ø§Øª (3 ØµÙØ­Ø§Øª)","pf_chat":"Ø²Ø± Ø¯Ø±Ø¯Ø´Ø© (Chat Widget)","pf_contact":"Ù†Ù…ÙˆØ°Ø¬ ØªÙˆØ§ØµÙ„","pf_domain_free":"Ø¯ÙˆÙ…ÙŠÙ† Ù…Ø¬Ø§Ù†ÙŠ (Ø³Ù†Ø©)","pf_domain_custom":"Ø±Ø¨Ø· Ø¯ÙˆÙ…ÙŠÙ† Ù…Ø®ØµØµ","pf_ssl":"Ø´Ù‡Ø§Ø¯Ø© SSL","pf_email":"Ø¥ÙŠÙ…ÙŠÙ„ Ø§Ø­ØªØ±Ø§ÙÙŠ","pf_analytics":"ØªØ­Ù„ÙŠÙ„Ø§Øª (Analytics)","pf_backup":"Ù†Ø³Ø® Ø§Ø­ØªÙŠØ§Ø·ÙŠ","pf_speed":"ØªØ­Ø³ÙŠÙ† Ø§Ù„Ø³Ø±Ø¹Ø©","pf_rev1":"ØªØ¹Ø¯ÙŠÙ„ ÙˆØ§Ø­Ø¯","pf_rev3":"3 ØªØ¹Ø¯ÙŠÙ„Ø§Øª","pf_rev_unlimited":"ØªØ¹Ø¯ÙŠÙ„Ø§Øª ØºÙŠØ± Ù…Ø­Ø¯ÙˆØ¯Ø©","pf_deliv3":"ØªØ³Ù„ÙŠÙ… Ø®Ù„Ø§Ù„ 3 Ø£ÙŠØ§Ù…","pf_deliv5":"ØªØ³Ù„ÙŠÙ… Ø®Ù„Ø§Ù„ 5 Ø£ÙŠØ§Ù…","pf_deliv7":"ØªØ³Ù„ÙŠÙ… Ø®Ù„Ø§Ù„ 7 Ø£ÙŠØ§Ù…","pf_support":"Ø¯Ø¹Ù… ÙÙ†ÙŠ Ø¨Ø¹Ø¯ Ø§Ù„ØªØ³Ù„ÙŠÙ…","pf_support15":"Ø¯Ø¹Ù… ÙÙ†ÙŠ 15 ÙŠÙˆÙ…","pf_support30":"Ø¯Ø¹Ù… ÙÙ†ÙŠ 30 ÙŠÙˆÙ…","pf_content":"ÙƒØªØ§Ø¨Ø© Ø§Ù„Ù…Ø­ØªÙˆÙ‰",
+"pkg4_f1":"Ù†Ø·Ø§Ù‚ Ù…Ø®ØµØµ Ø¨Ø§Ù„ÙƒØ§Ù…Ù„","pkg4_f2":"Ù…ÙŠØ²Ø§Øª Ø¥Ø¶Ø§ÙÙŠØ© Ø­Ø³Ø¨ Ø§Ù„Ø­Ø§Ø¬Ø©","pkg4_f3":"Ø¬Ø¯ÙˆÙ„ ØªØ³Ù„ÙŠÙ… Ù…Ø±Ù†","pkg4_f4":"ØªØ³Ø¹ÙŠØ± Ø­Ø³Ø¨ Ø§Ù„Ù…ØªØ·Ù„Ø¨Ø§Øª","pkg4_f5":"Ø§Ø³ØªØ´Ø§Ø±Ø© Ù…Ø¬Ø§Ù†ÙŠØ© Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡",
+"pay_title":"Ø·Ø±Ù‚ <span class='grad'>Ø§Ù„Ø¯ÙØ¹</span>","pay_sub":"Ø®ÙŠØ§Ø±Ø§Øª Ø§Ù„Ø¯ÙØ¹ Ø§Ù„Ù…ØªØ§Ø­Ø© Ø§Ù„ØªÙŠ ÙŠÙ…ÙƒÙ† ØªØ£ÙƒÙŠØ¯ ØªÙØ§ØµÙŠÙ„Ù‡Ø§ Ù‚Ø¨Ù„ Ø¨Ø¯Ø¡ Ø§Ù„Ø¹Ù…Ù„.",
+"pay1_t":"Ø¨Ø±ÙŠØ¯ÙŠ Ù…ÙˆØ¨","pay1_d":"ÙŠØªÙ… ØªØ£ÙƒÙŠØ¯ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ù‚Ø¨Ù„ Ø¨Ø¯Ø¡ Ø§Ù„Ø¹Ù…Ù„.","pay2_t":"Ù…Ø­ÙØ¸Ø© Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ©","pay2_d":"ØªÙØ­Ø¯Ø¯ Ø§Ù„Ù…Ø­ÙØ¸Ø© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø© Ø¨Ø§Ù„Ø§ØªÙØ§Ù‚ Ø§Ù„Ù…Ø³Ø¨Ù‚.","pay3_t":"Binance","pay3_d":"ÙŠØªÙ… ØªÙ†Ø³ÙŠÙ‚ Ø·Ø±ÙŠÙ‚Ø© Ø§Ù„ØªØ­ÙˆÙŠÙ„ Ù‚Ø¨Ù„ Ø¨Ø¯Ø¡ Ø§Ù„Ø¹Ù…Ù„.","pay4_t":"Grey","pay4_d":"ÙŠØªÙ… ØªØ£ÙƒÙŠØ¯ Ø§Ù„ØªÙˆÙØ± ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ Ù‚Ø¨Ù„ Ø¨Ø¯Ø¡ Ø§Ù„Ø¹Ù…Ù„.",
+"q_title":"Ø§Ù„Ø£Ø³Ø¦Ù„Ø© <span class='grad'>Ø§Ù„Ø´Ø§Ø¦Ø¹Ø©</span>","q_sub":"ÙƒÙ„ Ù…Ø§ ÙŠÙ„Ø²Ù… Ù…Ø¹Ø±ÙØªÙ‡ Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡",
+"q1":"Ù…Ø§ Ø§Ù„Ù…Ø¯Ø© Ø§Ù„Ù„Ø§Ø²Ù…Ø© Ù„ØªÙ†ÙÙŠØ° Ø§Ù„Ù…Ø´Ø±ÙˆØ¹ØŸ","a1":"ØªØªØ­Ø¯Ø¯ Ø§Ù„Ù…Ø¯Ø© Ø¨Ø¹Ø¯ Ù…Ø±Ø§Ø¬Ø¹Ø© Ù†Ø·Ø§Ù‚ Ø§Ù„Ø¹Ù…Ù„ ÙˆØ§Ù„Ù…ÙˆØ§Ø¯ Ø§Ù„Ù…ØªØ§Ø­Ø©ØŒ Ø«Ù… Ù†ØªÙÙ‚ Ø¹Ù„ÙŠÙ‡Ø§ Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡.",
+"q2":"Ù‡Ù„ ÙŠÙ…ÙƒÙ† Ø·Ù„Ø¨ ØªØ¹Ø¯ÙŠÙ„Ø§ØªØŸ","a2":"Ù†Ø¹Ù…ØŒ Ù†ØªÙÙ‚ Ø¹Ù„Ù‰ Ù†Ø·Ø§Ù‚ Ø§Ù„ØªØ¹Ø¯ÙŠÙ„Ø§Øª ÙˆØ·Ø±ÙŠÙ‚Ø© ØªØ³Ù„ÙŠÙ…Ù‡Ø§ Ù‚Ø¨Ù„ Ø¨Ø¯Ø¡ Ø§Ù„Ø¹Ù…Ù„.",
+"q3":"Ù…Ø§ Ø·Ø±Ù‚ Ø§Ù„Ø¯ÙØ¹ Ø§Ù„Ù…ØªØ§Ø­Ø©ØŸ","a3":"ØªØªÙˆÙØ± Ø¨Ø±ÙŠØ¯ÙŠ Ù…ÙˆØ¨ ÙˆÙ…Ø­ÙØ¸Ø© Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠØ© ÙˆBinance ÙˆGreyØŒ ÙˆØªÙØ¤ÙƒØ¯ Ø§Ù„ØªÙØ§ØµÙŠÙ„ Ù‚Ø¨Ù„ Ø¨Ø¯Ø¡ Ø§Ù„Ø¹Ù…Ù„.",
+"q4":"Ù‡Ù„ ÙŠÙ…ÙƒÙ† ØªÙ†ÙÙŠØ° Ù…ÙˆÙ‚Ø¹ ÙƒØ§Ù…Ù„ØŸ","a4":"ÙŠÙ…ÙƒÙ† Ù…Ù†Ø§Ù‚Ø´Ø© ØµÙØ­Ø§Øª Ø§Ù„Ù‡Ø¨ÙˆØ· ÙˆÙ…Ø´Ø§Ø±ÙŠØ¹ Ø§Ù„ÙˆØ§Ø¬Ù‡Ø§Øª Ø§Ù„Ø£Ù…Ø§Ù…ÙŠØ© Ø¨Ø­Ø³Ø¨ Ù†Ø·Ø§Ù‚ Ø§Ù„Ù…Ø´Ø±ÙˆØ¹.",
+"q5":"Ù…Ø§ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§Øª Ø§Ù„Ù„Ø§Ø²Ù…Ø© Ù„Ø¨Ø¯Ø¡ Ø§Ù„Ø·Ù„Ø¨ØŸ","a5":"ÙŠÙƒÙÙŠ Ø¥Ø±Ø³Ø§Ù„ ÙˆØµÙ Ø§Ù„ÙÙƒØ±Ø© ÙˆØ§Ù„Ø¬Ù…Ù‡ÙˆØ± ÙˆØ§Ù„Ù…Ø®Ø±Ø¬Ø§Øª Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø© ÙˆØ£ÙŠ Ù…ÙˆØ¹Ø¯ Ù…Ù‡Ù…ØŒ Ø«Ù… Ù†Ø­Ø¯Ø¯ Ù†Ø·Ø§Ù‚ Ø§Ù„Ø¹Ù…Ù„ Ù‚Ø¨Ù„ Ø§Ù„Ø¨Ø¯Ø¡.",
+"q6":"Ù‡Ù„ ÙŠÙ…ÙƒÙ† Ø±Ø¤ÙŠØ© Ù…Ø´Ø±ÙˆØ¹ Ø­ÙŠÙ‘ØŸ","a6":"Ù„Ù„Ø§Ø·Ù„Ø§Ø¹ Ø¹Ù„Ù‰ Ù…Ø´Ø±ÙˆØ¹ Ø­ÙŠÙ‘ ØªÙˆØ§ØµÙ„ Ù…Ø¹ÙŠ Ù…Ø¨Ø§Ø´Ø±Ø© ÙˆØ³Ø£Ø±Ø³Ù„ Ù„Ùƒ Ø§Ù„ØªÙØ§ØµÙŠÙ„.",
+"faq_form_title":"Ù„Ø¯ÙŠÙƒ Ø³Ø¤Ø§Ù„ØŸ","faq_question":"Ø§Ù„Ø³Ø¤Ø§Ù„",
+"c_title":"<span class='grad'>Ù„Ù†ØªÙˆØ§ØµÙ„</span>","c_sub":"ÙŠÙƒÙÙŠ Ø¥Ø±Ø³Ø§Ù„ ØªÙØ§ØµÙŠÙ„ Ø§Ù„ÙÙƒØ±Ø©ØŒ ÙˆØ³Ø£Ø±Ø§Ø¬Ø¹ Ù†Ø·Ø§Ù‚Ù‡Ø§ ÙˆØ·Ø±ÙŠÙ‚Ø© Ø§Ù„ØªÙˆØ§ØµÙ„ Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©.","c_form_t":"Ø¥Ø±Ø³Ø§Ù„ Ø±Ø³Ø§Ù„Ø©",
+"f_name":"Ø§Ù„Ø§Ø³Ù…","f_email":"Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ","f_subject":"Ø§Ù„Ù…ÙˆØ¶ÙˆØ¹","f_msg":"Ø§Ù„Ø±Ø³Ø§Ù„Ø©","f_send":"Ø¥Ø±Ø³Ø§Ù„",
+"ph_subject":"Ù…ÙˆØ¶ÙˆØ¹ Ø§Ù„Ø±Ø³Ø§Ù„Ø©","ph_message":"ØªÙØ§ØµÙŠÙ„ Ø±Ø³Ø§Ù„ØªÙƒ Ù‡Ù†Ø§","ph_question":"Ø³Ø¤Ø§Ù„Ùƒ Ù‡Ù†Ø§",
+"ft_about":"Ø¹Ù…Ù„ Ø±Ù‚Ù…ÙŠ Ù…Ø³ØªÙ‚Ù„ ÙŠÙ‡ØªÙ… Ø¨ØªØ·ÙˆÙŠØ± Ø§Ù„ÙˆØ§Ø¬Ù‡Ø§Øª Ø§Ù„Ø£Ù…Ø§Ù…ÙŠØ© ÙˆØ§Ù„ØªØµÙ…ÙŠÙ… ÙˆØ§Ù„Ù…Ù‡Ø§Ù… Ø§Ù„Ø±Ù‚Ù…ÙŠØ© Ø§Ù„Ø¹Ù…Ù„ÙŠØ©.","ft_links":"Ø±ÙˆØ§Ø¨Ø· Ø³Ø±ÙŠØ¹Ø©","ft_info":"Ù…Ø¹Ù„ÙˆÙ…Ø§Øª","ft_contact":"ØªÙˆØ§ØµÙ„","ft_made":"ØµÙÙ†Ø¹ Ø¨ÙƒÙ„",
+"logo_alt":"Ø´Ø¹Ø§Ø± NorDa","profile_alt":"ØµÙˆØ±Ø© ØªØ¹Ø±ÙŠÙÙŠØ© Ù…Ø¤Ù‚ØªØ©","splash_tagline":"Ø­Ø¶ÙˆØ± Ø±Ù‚Ù…ÙŠ ÙˆØ§Ø¶Ø­",
+"chat_aria":"Ø¯Ø±Ø¯Ø´Ø©","chat_title":"Ø¯Ø±Ø¯Ø´Ø© Ù…Ø¨Ø§Ø´Ø±Ø©","online":"Ø¹Ø§Ø¯Ø© Ù…Ø§ ÙŠØªÙ… Ø§Ù„Ø±Ø¯ ÙÙˆØ±Ø§",
+"tab_new":"Ø¬Ø¯ÙŠØ¯Ø©","tab_chat":"Ø¯Ø±Ø¯Ø´Ø©","tab_closed":"Ø§Ù„Ù…ØºÙ„Ù‚Ø©","status_open":"Ù…ÙØªÙˆØ­Ø©","status_closed":"Ù…ØºÙ„Ù‚Ø©",
+"no_ticket_title":"Ù„Ø§ ØªÙˆØ¬Ø¯ ØªØ°ÙƒØ±Ø© Ù…ÙØªÙˆØ­Ø©","no_ticket_desc":"Ù„Ù†Ø¨Ø¯Ø£ Ù…Ø­Ø§Ø¯Ø«Ø© Ø¬Ø¯ÙŠØ¯Ø© ÙˆØ³Ù†Ø±Ø¯ ÙÙŠ Ø£Ù‚Ø±Ø¨ ÙˆÙ‚Øª","new_ticket":"Ù…Ø­Ø§Ø¯Ø«Ø© Ø¬Ø¯ÙŠØ¯Ø©","close_ticket":"Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„ØªØ°ÙƒØ±Ø©","back":"Ø±Ø¬ÙˆØ¹",
+"no_closed":"Ù„Ø§ ØªÙˆØ¬Ø¯ ØªØ°Ø§ÙƒØ± Ù…ØºÙ„Ù‚Ø© Ø¨Ø¹Ø¯","view_ticket":"Ø¹Ø±Ø¶","chat_hello":"Ù…Ø±Ø­Ø¨Ø§Ù‹! ÙƒÙŠÙ ÙŠÙ…ÙƒÙ†Ù†ÙŠ Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø©ØŸ","chat_ph":"Ø±Ø³Ø§Ù„ØªÙƒâ€¦","attach":"Ø¥Ø±ÙØ§Ù‚ Ù…Ù„Ù","guest":"Ø²Ø§Ø¦Ø±",
+"msg_ok":"ØªÙ… Ø§Ù„Ø¥Ø±Ø³Ø§Ù„ Ø¨Ù†Ø¬Ø§Ø­","msg_err":"ØªØ¹Ø°Ù‘Ø± Ø§Ù„Ø¥Ø±Ø³Ø§Ù„ØŒ ÙŠØ±Ø¬Ù‰ Ø§Ù„Ù…Ø­Ø§ÙˆÙ„Ø© Ù…Ø±Ø© Ø£Ø®Ø±Ù‰","msg_req":"ÙŠØ±Ø¬Ù‰ ØªØ¹Ø¨Ø¦Ø© Ø§Ù„Ø­Ù‚ÙˆÙ„ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨Ø©","msg_email":"ÙŠØ±Ø¬Ù‰ Ø¥Ø¯Ø®Ø§Ù„ Ø¨Ø±ÙŠØ¯ Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ ØµØ­ÙŠØ­","msg_wait":"Ø¬Ø§Ø±Ù Ø§Ù„Ø¥Ø±Ø³Ø§Ù„â€¦",
+"file_too_big":"Ø§Ù„Ù…Ù„Ù ÙƒØ¨ÙŠØ± Ø¬Ø¯Ø§Ù‹ (Ø§Ù„Ø­Ø¯ 2 Ù…ÙŠØºØ§)","ticket_closed_msg":"Ù‡Ø°Ù‡ Ø§Ù„ØªØ°ÙƒØ±Ø© Ù…ØºÙ„Ù‚Ø©","ticket_new_msg":"Ø¨Ø¯Ø£Øª ØªØ°ÙƒØ±Ø© Ø¬Ø¯ÙŠØ¯Ø©ØŒ Ø±Ø³Ø§Ù„ØªÙƒ Ø§Ù„Ø£ÙˆÙ„Ù‰ Ø¨Ø§Ù†ØªØ¸Ø§Ø±Ùƒ","ticket_close_confirm":"Ø¥ØºÙ„Ø§Ù‚ Ù‡Ø°Ù‡ Ø§Ù„ØªØ°ÙƒØ±Ø©ØŸ","ticket_closed_ok":"ØªÙ… Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„ØªØ°ÙƒØ±Ø© Ø¨Ù†Ø¬Ø§Ø­",
+"builder_title":"NorDa â€” ØªØµÙˆØ± Ù…Ø´Ø±ÙˆØ¹Ùƒ","builder_intro":"Ø¨Ø®Ø·ÙˆØ§Øª Ù‚ØµÙŠØ±Ø© ÙŠÙ…ÙƒÙ†Ùƒ Ø¥Ø±Ø³Ø§Ù„ ÙˆØµÙ ÙÙƒØ±ØªÙƒ Ø¹Ø¨Ø± Ø§Ù„Ø¯Ø±Ø¯Ø´Ø©.","builder_step_label":"Ø§Ù„Ø®Ø·ÙˆØ©","builder_prev":"Ø§Ù„Ø³Ø§Ø¨Ù‚","builder_next":"Ø§Ù„ØªØ§Ù„ÙŠ","builder_send":"Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„ØªØµÙˆØ±","builder_sent":"ØªÙ… Ø¥Ø±Ø³Ø§Ù„ ÙˆØµÙ Ø§Ù„ÙÙƒØ±Ø© Ø¹Ø¨Ø± Ø§Ù„Ù…Ø­Ø§Ø¯Ø«Ø©.","builder_send_error":"ØªØ¹Ø°Ø± Ø§Ù„Ø¥Ø±Ø³Ø§Ù„. ÙŠØ±Ø¬Ù‰ Ø§Ù„ØªØ­Ù‚Ù‚ Ù…Ù† Ø§Ù„Ø§ØªØµØ§Ù„ ÙˆØ§Ù„Ù…Ø­Ø§ÙˆÙ„Ø© Ù…Ø±Ø© Ø£Ø®Ø±Ù‰.",
+"builder_s1":"Ù…Ø§ Ø§Ù„ØºØ±Ø¶ Ù…Ù† Ø§Ù„Ù…ÙˆÙ‚Ø¹ØŸ","builder_s1_help":"Ø¨Ø§Ø®ØªØµØ§Ø±ØŒ Ù…Ø§ Ø§Ù„Ø°ÙŠ ÙŠÙÙØªØ±Ø¶ Ø£Ù† ÙŠØ­Ù‚Ù‚Ù‡ Ø§Ù„Ù…ÙˆÙ‚Ø¹ØŸ","builder_purpose_ph":"Ù…Ø«Ø§Ù„: Ø§Ù„ØªØ¹Ø±ÙŠÙ Ø¨Ø®Ø¯Ù…Ø© Ø£Ùˆ Ø¹Ø±Ø¶ Ù…Ù†ØªØ¬Ø§Øª",
+"builder_s2":"Ù…Ø§ Ø§Ù„Ø£Ø³Ù„ÙˆØ¨ Ø§Ù„Ø¨ØµØ±ÙŠ Ø§Ù„Ù…ÙØ¶Ù„ØŸ","build_style_soft":"Ù†Ø§Ø¹Ù… ÙˆØ£Ù†ÙŠÙ‚","build_style_bold":"Ø¬Ø±ÙŠØ¡ ÙˆØ­Ø¯ÙŠØ«","build_style_minimal":"Ø¨Ø³ÙŠØ· ÙˆÙ‡Ø§Ø¯Ø¦","build_style_playful":"Ù…Ø±Ø­ ÙˆØ­ÙŠÙˆÙŠ",
+"builder_s3":"Ù…Ø§ Ø§Ù„Ù„ÙˆÙ† Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØŸ","builder_color_label":"Ù„ÙˆÙ† ØªÙ‚Ø±ÙŠØ¨ÙŠ",
+"builder_s4":"Ù…Ø§ ØªØ®Ø·ÙŠØ· Ø§Ù„ØµÙØ­Ø© Ø§Ù„Ø£Ù†Ø³Ø¨ØŸ","build_layout_long":"ØµÙØ­Ø© ÙˆØ§Ø­Ø¯Ø© Ø·ÙˆÙŠÙ„Ø©","build_layout_sections":"Ø£Ù‚Ø³Ø§Ù… ÙˆØ§Ø¶Ø­Ø© ÙˆØ¨Ø·Ø§Ù‚Ø§Øª","build_layout_gallery":"Ù…Ø¹Ø±Ø¶ Ù…Ø±Ø¦ÙŠ ÙˆØ§Ø³Ø¹",
+"builder_s5":"Ù…Ø§ Ù…Ø³ØªÙˆÙ‰ Ø§Ù„Ø­Ø±ÙƒØ© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨ØŸ","build_motion_subtle":"Ø­Ø±ÙƒØ© Ø®ÙÙŠÙØ©","build_motion_none":"Ø¨Ø¯ÙˆÙ† Ø­Ø±ÙƒØ© ØªÙ‚Ø±ÙŠØ¨Ø§Ù‹","build_motion_lively":"Ø­Ø±ÙƒØ© Ù…Ù„Ø­ÙˆØ¸Ø©",
+"builder_s6":"Ù‡Ù„ Ù‡Ù†Ø§Ùƒ Ù…ØµØ¯Ø± Ø¥Ù„Ù‡Ø§Ù…ØŸ","builder_s6_help":"ÙŠÙ…ÙƒÙ† ÙˆØµÙ Ù…ÙˆÙ‚Ø¹ Ø£Ùˆ Ø¥Ø­Ø³Ø§Ø³ Ø£Ùˆ Ù…Ø«Ø§Ù„ Ù‚Ø±ÙŠØ¨ Ù…Ù…Ø§ ØªØ±ÙŠØ¯Ù‡.","builder_inspiration_ph":"Ø£Ù„ÙˆØ§Ù†ØŒ Ø±Ø§Ø¨Ø· Ù…Ø±Ø¬Ø¹ÙŠØŒ Ø£Ùˆ ÙˆØµÙ Ù‚ØµÙŠØ±",
+"builder_s7":"Ù…Ø§ Ø£Ø³Ù„ÙˆØ¨ Ø§Ù„Ø®Ø·ÙˆØ· Ø§Ù„Ù…ÙØ¶Ù„ØŸ","build_type_modern":"Ø­Ø¯ÙŠØ« ÙˆÙˆØ§Ø¶Ø­","build_type_editorial":"ØªØ­Ø±ÙŠØ±ÙŠ ÙˆØ£Ù†ÙŠÙ‚","build_type_friendly":"ÙˆØ¯ÙˆØ¯ ÙˆØ¨Ø³ÙŠØ·",
+"builder_s8":"Ù…Ø§ Ø§Ù„Ù…ÙŠØ²Ø§Øª Ø£Ùˆ Ø§Ù„Ø£Ù‚Ø³Ø§Ù… Ø§Ù„Ù…Ù‡Ù…Ø©ØŸ","builder_s8_help":"ÙƒÙ„ Ù…Ø§ ÙŠØ®Ø·Ø± Ø¨Ø¨Ø§Ù„ÙƒØ› Ø§Ù„Ù‚Ø§Ø¦Ù…Ø© Ù„ÙŠØ³Øª Ù†Ù‡Ø§Ø¦ÙŠØ©.","builder_features_ph":"Ù†Ù…ÙˆØ°Ø¬ ØªÙˆØ§ØµÙ„ØŒ Ù…Ø¹Ø±Ø¶ØŒ Ø£Ø³Ø¦Ù„Ø© Ø´Ø§Ø¦Ø¹Ø©...",
+"builder_s9":"ÙƒÙŠÙ Ù†ØªÙˆØ§ØµÙ„ Ù…Ø¹ÙƒØŸ",
+"sound_label":"Ø§Ù„ØµÙˆØª","sound_on":"ÙƒØªÙ… ØµÙˆØª ØªÙ†Ø¨ÙŠÙ‡ Ø§Ù„Ø¯Ø±Ø¯Ø´Ø©","sound_off":"ØªØ´ØºÙŠÙ„ ØµÙˆØª ØªÙ†Ø¨ÙŠÙ‡ Ø§Ù„Ø¯Ø±Ø¯Ø´Ø©","lb_close":"Ø¥ØºÙ„Ø§Ù‚ Ø§Ù„Ù…Ø¹Ø±Ø¶",
+"about_article":"<p>Ø£Ø¹Ù…Ù„ Ø¨Ø´ÙƒÙ„ Ø±Ù‚Ù…ÙŠ Ù…Ø³ØªÙ‚Ù„ØŒ ÙˆØ£Ø³ØªÙƒØ´Ù ÙƒÙŠÙ ÙŠÙ…ÙƒÙ† Ù„Ù„ØªØµÙ…ÙŠÙ… ÙˆØ§Ù„ØªÙ‚Ù†ÙŠØ© Ø£Ù† ÙŠØ¬Ø¹Ù„Ø§ Ø§Ù„Ø£ÙÙƒØ§Ø± Ø§Ù„ÙŠÙˆÙ…ÙŠØ© Ø£Ø³Ù‡Ù„ ÙÙŠ Ø§Ù„ÙÙ‡Ù… ÙˆØ§Ù„Ø§Ø³ØªØ®Ø¯Ø§Ù…. ÙŠØ¹Ø±Ù‘Ù Ù‡Ø°Ø§ Ø§Ù„Ù…ÙˆÙ‚Ø¹ Ø¨Ø§Ù„Ù…Ø¬Ø§Ù„Ø§Øª Ø§Ù„ØªÙŠ Ø£ØªØ¹Ù„Ù…Ù‡Ø§ ÙˆÙŠÙ…ÙƒÙ†Ù†ÙŠ ØªÙ‚Ø¯ÙŠÙ… Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø© ÙÙŠÙ‡Ø§: ØªØ·ÙˆÙŠØ± Ø§Ù„ÙˆØ§Ø¬Ù‡Ø§Øª Ø§Ù„Ø£Ù…Ø§Ù…ÙŠØ©ØŒ ØªØµÙ…ÙŠÙ… ØµÙØ­Ø§Øª Ø§Ù„Ù‡Ø¨ÙˆØ·ØŒ Ø¥Ø¹Ø¯Ø§Ø¯ ØªØµØ§Ù…ÙŠÙ… Ø§Ù„ØªÙˆØ§ØµÙ„ Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ Ø¨Ø§Ø³ØªØ®Ø¯Ø§Ù… CanvaØŒ Ø¥Ø¯Ø®Ø§Ù„ Ø§Ù„Ø¨ÙŠØ§Ù†Ø§ØªØŒ Ø¬Ù…Ø¹ Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø§ØªØŒ ÙˆØ§Ù„ØªÙØ±ÙŠØº Ø§Ù„ØµÙˆØªÙŠ.</p><p>ÙÙŠ ØªØ·ÙˆÙŠØ± Ø§Ù„ÙˆØ§Ø¬Ù‡Ø§ØªØŒ ÙŠÙ‡Ù…Ù†ÙŠ Ø£Ù† ØªÙƒÙˆÙ† Ø§Ù„ØµÙØ­Ø© Ù…ÙÙ‡ÙˆÙ…Ø© Ø¹Ù„Ù‰ Ø§Ù„Ù‡Ø§ØªÙ ÙˆØ§Ù„Ø­Ø§Ø³ÙˆØ¨ØŒ ÙˆØ£Ù† ÙŠØ¬Ø¯ Ø§Ù„Ø²Ø§Ø¦Ø± Ø§Ù„Ù…Ø¹Ù„ÙˆÙ…Ø© Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© Ø¯ÙˆÙ† Ø¨Ø­Ø« Ø·ÙˆÙŠÙ„. Ø£ØªØ¹Ø§Ù…Ù„ Ù…Ø¹ ØªØ±ØªÙŠØ¨ Ø§Ù„Ù…Ø­ØªÙˆÙ‰ØŒ ÙˆÙˆØ¶ÙˆØ­ Ø§Ù„Ø£Ø²Ø±Ø§Ø±ØŒ ÙˆØ³Ù‡ÙˆÙ„Ø© Ø§Ù„ØªÙ†Ù‚Ù„ØŒ ÙˆØ§ØªØ³Ø§Ù‚ Ø§Ù„Ø£Ù„ÙˆØ§Ù† Ø¨ÙˆØµÙÙ‡Ø§ Ø£Ø¬Ø²Ø§Ø¡ Ù…Ù† Ø§Ù„ØªØ¬Ø±Ø¨Ø© Ù†ÙØ³Ù‡Ø§.</p><p>Ø£Ù‡ØªÙ… Ø£ÙŠØ¶Ø§Ù‹ Ø¨ØªØµÙ…ÙŠÙ… Ù…Ù†Ø´ÙˆØ±Ø§Øª ÙˆÙ…ÙˆØ§Ø¯ Ø¨Ø³ÙŠØ·Ø© Ù„ÙˆØ³Ø§Ø¦Ù„ Ø§Ù„ØªÙˆØ§ØµÙ„ Ø§Ù„Ø§Ø¬ØªÙ…Ø§Ø¹ÙŠ Ø¹Ø¨Ø± Canva. ÙŠÙ…ÙƒÙ†Ù†ÙŠ ØªØ­ÙˆÙŠÙ„ ÙÙƒØ±Ø© Ø£Ùˆ Ù†Øµ Ù…ÙˆØ¬ÙˆØ¯ Ø¥Ù„Ù‰ ØªØ®Ø·ÙŠØ· Ø¨ØµØ±ÙŠ Ù…Ù†Ø¸Ù…ØŒ Ù…Ø¹ Ù…Ø±Ø§Ø¹Ø§Ø© Ø§Ù„Ø£Ù„ÙˆØ§Ù† ÙˆØ§Ù„Ù…Ù‚Ø§Ø³Ø§Øª ÙˆØ§Ù„Ù…Ù†ØµØ© Ø§Ù„ØªÙŠ Ø³ØªÙÙ†Ø´Ø± Ø¹Ù„ÙŠÙ‡Ø§ Ø§Ù„Ù…Ø§Ø¯Ø©.</p><p>Ø£ÙˆØ§ØµÙ„ Ø§Ù„ØªØ¹Ù„Ù… Ù…Ù† Ø®Ù„Ø§Ù„ Ø§Ù„ØªØ¬Ø±Ø¨Ø© ÙˆØ§Ù„Ù…Ù…Ø§Ø±Ø³Ø© ÙˆÙ…Ø±Ø§Ø¬Ø¹Ø© Ù…Ø§ Ø£Ù†Ø¬Ø²Ù‡. Ø£Ø±ÙŠØ¯ Ø£Ù† ÙŠÙƒÙˆÙ† Ø§Ù„ØªØ¹Ø§ÙˆÙ† Ù…Ø¨Ø§Ø´Ø±Ø§Ù‹ ÙˆÙ…Ø±ÙŠØ­Ø§Ù‹: ØªØµÙ„Ù†ÙŠ Ø§Ù„ÙÙƒØ±Ø© Ø£Ùˆ Ø§Ù„Ù…Ù„ÙØ§Øª Ø°Ø§Øª Ø§Ù„ØµÙ„Ø©ØŒ Ø£Ø±Ø§Ø¬Ø¹ Ø§Ù„Ù…Ø·Ù„ÙˆØ¨ØŒ Ø«Ù… Ø£ÙˆØ¶Ø­ Ù…Ø§ ÙŠÙ…ÙƒÙ† ØªÙ†ÙÙŠØ°Ù‡ ÙˆØ§Ù„Ø®Ø·ÙˆØ© Ø§Ù„ØªØ§Ù„ÙŠØ©.</p>"
+},
+"en":{
+"skip_nav":"Skip to menu","skip_main":"Skip to content","skip_foot":"Skip to footer",
+"nav_label":"Main menu","n_home":"Home","n_about":"About","n_services":"Services","n_portfolio":"Portfolio","n_packages":"Packages","n_payment":"Payment","n_faq":"FAQ","n_contact":"Contact",
+"th_label":"Theme","lang_label":"Change language","menu_open":"Open menu","menu_close":"Close menu","th_light":"Light","th_dark":"Dark",
+"top":"Back to top","close":"Close","prev":"Previous","next":"Next",
+"h_badge":"Independent digital services","h_title":"Let's build a <span class='grad'>clear digital presence</span> around your idea","h_lead":"Front-end development, landing page design, and practical digital services with clear scope and attention to detail.","h_cta1":"Start your project","h_cta2":"View portfolio","h_c1":"Responsive layout","h_c2":"Clear content structure","h_c3":"Near-complete site at a fair price",
+"f1":"Practical project planning","f2":"Attention to detail","av1":"Usability in mind","av2":"Responsive design",
+"abs_t":"About <span class='grad'>NorDa</span>","abs_p":"I work as an independent digital freelancer, learning through practical projects in design and technology. This site shares the areas where I can help.","abs_b":"Get to know me",
+"s_title":"My <span class='grad'>Services</span>","s_title_full":"My <span class='grad'>Services</span>","s_sub":"Digital services whose scope we can discuss before work begins","s_sub_full":"Digital services whose scope we can discuss before work begins",
+"s1_t":"Landing page design","s1_p":"Organizing content and planning a landing page interface around its purpose, audience, and available materials.",
+"s2_t":"Front-end development","s2_p":"Building responsive web interfaces within a scope and requirements agreed in advance.",
+"s3_t":"Canva social media design","s3_p":"Creating simple visual designs for social posts using the agreed content and dimensions.",
+"s_all":"All services",
+"lw_t":"Latest <span class='grad'>Work</span>","lw_sub":"Three of my projects","lw_all":"All work",
+"cta_t":"Ready to start a project?","cta_p":"In a few short steps, describe your idea and what you need.","cta_b":"Start now",
+"a_title":"About <span class='grad'>me</span>","a_sub":"An independent digital freelancer interested in front-end interfaces, design, and practical digital tasks.",
+"about_intro_title":"Independent digital work, learning through practice","about_intro":"My interests include front-end development and landing page design, along with Canva graphics, data entry, data collection, and transcription. I share my work areas and process clearly.","about_contact":"Let's discuss your idea","about_article_aria":"About NorDa",
+"p_title":"How the <span class='grad'>work proceeds</span>","p_sub":"Flexible steps agreed around the project scope","step":"Step",
+"p1_t":"Define the request","p1_p":"Review the goal, audience, and materials available.","p2_t":"Plan the interface","p2_p":"Agree on the content structure and useful visual elements.","p3_t":"Work to the agreed scope","p3_p":"I work on the deliverables identified before starting.","p4_t":"Review the handoff","p4_p":"Check the files and requirements agreed for delivery.",
+"pf_title":"My <span class='grad'>Portfolio</span>","pf_sub":"10 projects across landing pages, online stores and personal websites.",
+"tg_land":"Landing pages","tg_shop":"Online stores","tg_pers":"Personal websites","review":"Preview","proj":"concepts",
+"cat_label":"Work categories","cat_all":"All work","cat_all_d":"Browse all work in one place","cat_land_d":"Landing pages of different types","cat_shop_d":"Storefronts with varied layouts","cat_pers_d":"Personal sites and portfolios",
+"pf1_t":"Mochi Moonlet Kawaii Store","pf1_p":"A pink and lavender kawaii gift store with featured products, categories, promo banner, reviews and EN/FR switch.",
+"pf2_t":"Lina Marceau Photography","pf2_p":"A black-and-white photographer site with a filterable lightbox gallery, sessions, pricing and a booking form.",
+"pf3_t":"NEURA.EDGE AI Tool","pf3_p":"A cyberpunk landing page for an AI tool with an interactive demo that types its reply live.",
+"pf4_t":"Natura Essence Skincare","pf4_p":"A natural vegan skincare store with product filters, quick view, cart and brand story.",
+"pf5_t":"Ananya Portfolio","pf5_p":"A soft-pink portfolio for a developer and designer with a project carousel, pricing, testimonials and a request modal.",
+"pf6_t":"Brutal Barber","pf6_p":"A neo-brutalist landing page for a barbershop with services, prices, gallery, steps and booking.",
+"pf7_t":"GOLDENHUE Jewelry","pf7_p":"A luxury black-and-gold jewelry store with featured pieces, brand story, testimonials and trust badges.",
+"pf8_t":"Marginalia Literary Journal","pf8_p":"A literary journal styled as a reading desk with reviews, quotes, essays and a reading-lamp night mode.",
+"pf9_t":"TaskFlow Task Manager","pf9_p":"A minimalist editorial landing page for a task app with features, dashboard preview, pricing and signup.",
+"pf10_t":"Atelier Marchal Woodworking","pf10_p":"A fine woodworking workshop site with wood species, services, project albums with a slider and a map.",
+"pkg_title":"Packages <span class='grad'>& Pricing</span>","pkg_sub":"Every project has a package that fits. We can always discuss the details before starting.",
+"cur_label":"Currency","cur_toggle_label":"Toggle currency","pkg_period":"/ project","pkg_badge":"Most popular","pkg_choose":"Choose this package","pkg_discuss":"Discuss your project",
+"pkg_note":"Prices are estimates and can be adjusted based on project scope. Final details are confirmed before work begins.",
+"pkg1_t":"Basic","pkg1_d":"Perfect for a quick start with a simple single page.","pkg2_t":"Standard","pkg2_d":"The ideal balance between price and output for a professional project.","pkg3_t":"Premium","pkg3_d":"A complete solution for a larger project with extra content and designs.","pkg4_t":"Custom","pkg4_d":"When a project needs a special scope and features.","pkg4_price":"On request",
+"pf_page":"Landing page (up to 4 sections)","pf_responsive":"Responsive design","pf_multipage":"Multi-page website (3 pages)","pf_chat":"Chat widget","pf_contact":"Contact form","pf_domain_free":"Free domain (1 year)","pf_domain_custom":"Custom domain connection","pf_ssl":"SSL certificate","pf_email":"Professional email","pf_analytics":"Analytics","pf_backup":"Backup","pf_speed":"Speed optimization","pf_rev1":"One revision","pf_rev3":"3 revisions","pf_rev_unlimited":"Unlimited revisions","pf_deliv3":"Delivery within 3 days","pf_deliv5":"Delivery within 5 days","pf_deliv7":"Delivery within 7 days","pf_support":"Post-delivery support","pf_support15":"15-day support","pf_support30":"30-day support","pf_content":"Content writing",
+"pkg4_f1":"Fully custom scope","pkg4_f2":"Extra features as needed","pkg4_f3":"Flexible delivery schedule","pkg4_f4":"Pricing based on requirements","pkg4_f5":"Free consultation before starting",
+"pay_title":"Payment <span class='grad'>Methods</span>","pay_sub":"Payment options whose details can be confirmed before work begins.",
+"pay1_t":"BaridiMob","pay1_d":"Details are confirmed before work begins.","pay2_t":"Digital wallet","pay2_d":"The suitable wallet is agreed in advance.","pay3_t":"Binance","pay3_d":"Transfer details are agreed before work begins.","pay4_t":"Grey","pay4_d":"Availability and details are confirmed before work begins.",
+"q_title":"Frequently asked <span class='grad'>questions</span>","q_sub":"Everything worth knowing before starting",
+"q1":"How long will the project take?","a1":"Timing depends on the scope and available materials; we agree on it before starting.",
+"q2":"Can revisions be requested?","a2":"Yes. We agree on the revision scope and handoff process before work begins.",
+"q3":"Which payment methods are available?","a3":"BaridiMob, a digital wallet, Binance, and Grey may be available; details are confirmed before work begins.",
+"q4":"Can you build a complete website?","a4":"Landing pages and front-end projects can be discussed based on the project scope.",
+"q5":"What information is needed to start a request?","a5":"Just send the idea, audience, requested deliverables, and any important timing, and we will define the scope before starting.",
+"q6":"Can I see a live project?","a6":"To see a live project, contact me directly and I will share the details.",
+"faq_form_title":"Have a question?","faq_question":"Question",
+"c_title":"<span class='grad'>Let's talk</span>","c_sub":"Share the project details and I will review the scope and a suitable way to communicate.","c_form_t":"Send a message",
+"f_name":"Name","f_email":"Email","f_subject":"Subject","f_msg":"Message","f_send":"Send",
+"ph_subject":"Enter a subject","ph_message":"Write the details of your message","ph_question":"Write your question",
+"ft_about":"Independent digital freelancer interested in front-end development, design, and practical digital tasks.","ft_links":"Quick links","ft_info":"Info","ft_contact":"Contact","ft_made":"Made with",
+"logo_alt":"NorDa logo","profile_alt":"Temporary profile image","splash_tagline":"A clear digital presence",
+"chat_aria":"Chat","chat_title":"Live chat","online":"You can message us",
+"tab_new":"New","tab_chat":"Chat","tab_closed":"Closed","status_open":"Open","status_closed":"Closed",
+"no_ticket_title":"No open ticket","no_ticket_desc":"Let's start a new conversation; we will reply as soon as possible","new_ticket":"New conversation","close_ticket":"Close ticket","back":"Back",
+"no_closed":"No closed tickets yet","view_ticket":"View","chat_hello":"Hi! How can I help?","chat_ph":"Write your messageâ€¦","attach":"Attach file","guest":"Guest",
+"msg_ok":"Sent successfully","msg_err":"Could not send, please try again","msg_req":"Please fill in the required fields","msg_email":"Enter a valid email","msg_wait":"Sendingâ€¦",
+"file_too_big":"File too large (max 2MB)","ticket_closed_msg":"This ticket is closed","ticket_new_msg":"New ticket started! Your first message is welcome","ticket_close_confirm":"Close this ticket?","ticket_closed_ok":"Ticket closed successfully",
+"builder_title":"NorDa â€” Shape your idea","builder_intro":"Answer a few short questions to send your project outline through the chat.","builder_step_label":"Step","builder_prev":"Previous","builder_next":"Next","builder_send":"Send concept","builder_sent":"Your project outline was sent through the chat.","builder_send_error":"Could not send. Check your connection and try again.",
+"builder_s1":"What is the website for?","builder_s1_help":"Briefly describe what the site should do.","builder_purpose_ph":"For example: introduce a service or present products",
+"builder_s2":"Which visual style do you prefer?","build_style_soft":"Soft and elegant","build_style_bold":"Bold and modern","build_style_minimal":"Simple and calm","build_style_playful":"Playful and lively",
+"builder_s3":"What should the main color be?","builder_color_label":"Choose an approximate color",
+"builder_s4":"Which page layout fits best?","build_layout_long":"One long page","build_layout_sections":"Clear sections and cards","build_layout_gallery":"A visual, gallery-led layout",
+"builder_s5":"How much motion would you like?","build_motion_subtle":"Subtle motion","build_motion_none":"Very little motion","build_motion_lively":"Noticeable motion",
+"builder_s6":"Any inspiration?","builder_s6_help":"Describe a website, feeling, or example to reference.","builder_inspiration_ph":"Colors, a reference link, or a short description",
+"builder_s7":"Which typography style do you prefer?","build_type_modern":"Modern and clear","build_type_editorial":"Editorial and elegant","build_type_friendly":"Friendly and simple",
+"builder_s8":"Which features or sections matter?","builder_s8_help":"List anything that comes to mind; the list does not need to be final.","builder_features_ph":"Contact form, gallery, FAQ...",
+"builder_s9":"How can we contact you?",
+"sound_label":"Sound","sound_on":"Mute chat notification sound","sound_off":"Enable chat notification sound","lb_close":"Close gallery",
+"about_article":"<p>I work as an independent digital freelancer, exploring how design and technology can make everyday ideas easier to understand and use. This site introduces the areas I am learning and can help with: front-end development, landing page design, Canva social media graphics, data entry, information gathering, and transcription.</p><p>In front-end development, I care about making a page understandable on both phones and computers, and helping visitors find the main information without a long search. Content order, button clarity, easy navigation, and consistent colors are all parts of the same experience.</p><p>I am also interested in creating simple social media posts and materials with Canva. I can turn an existing idea or text into an organized visual layout, while considering its colors, dimensions, and intended platform.</p><p>I continue learning through practice, experimentation, and reviewing my work. I want collaboration to be direct and comfortable: the idea or related files reach me, I review the request, then explain what can be done and the next step.</p>"
+},
+"fr":{
+"skip_nav":"Aller au menu","skip_main":"Aller au contenu","skip_foot":"Aller au pied de page",
+"nav_label":"Menu principal","n_home":"Accueil","n_about":"Ã€ propos","n_services":"Services","n_portfolio":"Portfolio","n_packages":"Formules","n_payment":"Paiement","n_faq":"FAQ","n_contact":"Contact",
+"th_label":"ThÃ¨me","lang_label":"Changer de langue","menu_open":"Ouvrir le menu","menu_close":"Fermer le menu","th_light":"Clair","th_dark":"Sombre",
+"top":"Haut de page","close":"Fermer","prev":"PrÃ©cÃ©dent","next":"Suivant",
+"h_badge":"Services numÃ©riques indÃ©pendants","h_title":"Construisons une <span class='grad'>prÃ©sence numÃ©rique claire</span> autour de votre idÃ©e","h_lead":"DÃ©veloppement front-end, design de pages d'atterrissage et services numÃ©riques pratiques, avec un pÃ©rimÃ¨tre clair et le souci du dÃ©tail.","h_cta1":"DÃ©marrer le projet","h_cta2":"Voir le portfolio","h_c1":"Mise en page responsive","h_c2":"Structure de contenu claire","h_c3":"Site quasi complet Ã  prix juste",
+"f1":"Planification pratique du projet","f2":"Souci du dÃ©tail","av1":"ConvivialitÃ© avant tout","av2":"Design responsive",
+"abs_t":"Ã€ propos de <span class='grad'>NorDa</span>","abs_p":"Je travaille en freelance dans le numÃ©rique et j'apprends par des projets pratiques en design et technologie. Ce site prÃ©sente les domaines oÃ¹ je peux aider.","abs_b":"En savoir plus",
+"s_title":"Mes <span class='grad'>Services</span>","s_title_full":"Mes <span class='grad'>Services</span>","s_sub":"Services numÃ©riques dont nous pouvons discuter le pÃ©rimÃ¨tre avant de commencer","s_sub_full":"Services numÃ©riques dont nous pouvons discuter le pÃ©rimÃ¨tre avant de commencer",
+"s1_t":"Design de pages d'atterrissage","s1_p":"Organiser le contenu et planifier une page d'atterrissage selon son objectif, son public et les ressources disponibles.",
+"s2_t":"DÃ©veloppement front-end","s2_p":"CrÃ©er des interfaces web responsives dans un pÃ©rimÃ¨tre dÃ©fini Ã  l'avance.",
+"s3_t":"Design Canva pour rÃ©seaux sociaux","s3_p":"CrÃ©er des visuels simples pour les rÃ©seaux sociaux selon le contenu et les dimensions convenus.",
+"s_all":"Tous les services",
+"lw_t":"Derniers <span class='grad'>travaux</span>","lw_sub":"Trois de mes projets","lw_all":"Tous les travaux",
+"cta_t":"PrÃªt Ã  dÃ©marrer un projet ?","cta_p":"En quelques Ã©tapes courtes, dÃ©crivez votre idÃ©e et vos besoins.","cta_b":"Commencer",
+"a_title":"Ã€ propos de <span class='grad'>moi</span>","a_sub":"Freelance numÃ©rique indÃ©pendant, intÃ©ressÃ© par le front-end, le design et les tÃ¢ches numÃ©riques pratiques.",
+"about_intro_title":"Travail numÃ©rique indÃ©pendant, apprentissage par la pratique","about_intro":"Mes intÃ©rÃªts incluent le dÃ©veloppement front-end et le design de pages d'atterrissage, ainsi que les visuels Canva, la saisie et la collecte de donnÃ©es, et la transcription. Je prÃ©sente clairement mes domaines et ma faÃ§on de collaborer.","about_contact":"Parlons de votre idÃ©e","about_article_aria":"Ã€ propos de NorDa",
+"p_title":"Comment se dÃ©roule le <span class='grad'>travail</span>","p_sub":"Ã‰tapes flexibles convenues selon le pÃ©rimÃ¨tre du projet","step":"Ã‰tape",
+"p1_t":"DÃ©finir la demande","p1_p":"Examiner l'objectif, le public et les ressources disponibles.","p2_t":"Planifier l'interface","p2_p":"Convenir de la structure du contenu et des Ã©lÃ©ments visuels utiles.","p3_t":"Travailler selon le pÃ©rimÃ¨tre convenu","p3_p":"Je travaille sur les livrables identifiÃ©s avant de commencer.","p4_t":"VÃ©rifier la livraison","p4_p":"VÃ©rifier les fichiers et exigences convenus pour la livraison.",
+"pf_title":"Mon <span class='grad'>Portfolio</span>","pf_sub":"10 projets : pages d'atterrissage, boutiques en ligne et sites personnels.",
+"tg_land":"Pages d'atterrissage","tg_shop":"Boutiques en ligne","tg_pers":"Sites personnels","review":"AperÃ§u","proj":"concepts",
+"cat_label":"CatÃ©gories","cat_all":"Tous les travaux","cat_all_d":"Tous les projets au mÃªme endroit","cat_land_d":"Pages d'atterrissage variÃ©es","cat_shop_d":"Boutiques aux mises en page variÃ©es","cat_pers_d":"Sites personnels et portfolios",
+"pf1_t":"Boutique Kawaii Mochi Moonlet","pf1_p":"Boutique kawaii rose et lavande : produits vedettes, catÃ©gories, promo, avis et bascule EN/FR.",
+"pf2_t":"Lina Marceau Photographie","pf2_p":"Site de photographe en noir et blanc : galerie filtrable avec lightbox, sÃ©ances, forfaits et rÃ©servation.",
+"pf3_t":"NEURA.EDGE, outil IA","pf3_p":"Page d'atterrissage cyberpunk pour un outil IA avec dÃ©mo interactive qui Ã©crit sa rÃ©ponse en direct.",
+"pf4_t":"Natura Essence, soins naturels","pf4_p":"Boutique de soins naturels et vegan : filtres, aperÃ§u rapide, panier et histoire de la marque.",
+"pf5_t":"Portfolio Ananya","pf5_p":"Portfolio rose pastel pour dÃ©veloppeuse et designeuse : carrousel de projets, formules, tÃ©moignages et demande de projet.",
+"pf6_t":"Brutal Barber, salon de coiffure","pf6_p":"Page nÃ©o-brutaliste pour un salon de coiffure : services, tarifs, galerie, Ã©tapes et rÃ©servation.",
+"pf7_t":"GOLDENHUE, joaillerie","pf7_p":"Boutique de joaillerie noir et or : piÃ¨ces vedettes, histoire de la marque, avis et badges de confiance.",
+"pf8_t":"Marginalia, journal littÃ©raire","pf8_p":"Journal littÃ©raire faÃ§on bureau de lecture : critiques, citations, essais et mode nuit Ã  la lampe.",
+"pf9_t":"TaskFlow, gestion de tÃ¢ches","pf9_p":"Page minimaliste Ã©ditoriale pour une app de tÃ¢ches : fonctions, aperÃ§u du tableau de bord, tarifs et inscription.",
+"pf10_t":"Atelier Marchal, Ã©bÃ©nisterie d'art","pf10_p":"Site d'atelier d'Ã©bÃ©nisterie d'art : essences, savoir-faire, albums avec slider et carte.",
+"pkg_title":"Formules <span class='grad'>& Tarifs</span>","pkg_sub":"Chaque projet a sa formule. Nous pouvons toujours en discuter avant de commencer.",
+"cur_label":"Devise","cur_toggle_label":"Changer la devise","pkg_period":"/ projet","pkg_badge":"Le plus populaire","pkg_choose":"Choisir cette formule","pkg_discuss":"Discuter de votre projet",
+"pkg_note":"Les prix sont estimatifs et ajustables selon le pÃ©rimÃ¨tre du projet. Les dÃ©tails finaux sont confirmÃ©s avant de commencer.",
+"pkg1_t":"Basique","pkg1_d":"Parfait pour dÃ©marrer rapidement avec une page simple.","pkg2_t":"Standard","pkg2_d":"L'Ã©quilibre idÃ©al entre prix et rÃ©sultat pour un projet professionnel.","pkg3_t":"Premium","pkg3_d":"Une solution complÃ¨te pour un projet plus grand avec contenu et designs supplÃ©mentaires.","pkg4_t":"Sur mesure","pkg4_d":"Quand un projet nÃ©cessite un pÃ©rimÃ¨tre et des fonctionnalitÃ©s spÃ©cifiques.","pkg4_price":"Sur devis",
+"pf_page":"Page d'atterrissage (jusqu'Ã  4 sections)","pf_responsive":"Design responsive","pf_multipage":"Site multi-pages (3 pages)","pf_chat":"Widget de chat","pf_contact":"Formulaire de contact","pf_domain_free":"Domaine gratuit (1 an)","pf_domain_custom":"Connexion de domaine personnalisÃ©","pf_ssl":"Certificat SSL","pf_email":"Email professionnel","pf_analytics":"Analytics","pf_backup":"Sauvegarde","pf_speed":"Optimisation de la vitesse","pf_rev1":"Une rÃ©vision","pf_rev3":"3 rÃ©visions","pf_rev_unlimited":"RÃ©visions illimitÃ©es","pf_deliv3":"Livraison en 3 jours","pf_deliv5":"Livraison en 5 jours","pf_deliv7":"Livraison en 7 jours","pf_support":"Support aprÃ¨s livraison","pf_support15":"Support 15 jours","pf_support30":"Support 30 jours","pf_content":"RÃ©daction de contenu",
+"pkg4_f1":"PÃ©rimÃ¨tre entiÃ¨rement personnalisÃ©","pkg4_f2":"FonctionnalitÃ©s supplÃ©mentaires selon les besoins","pkg4_f3":"Calendrier de livraison flexible","pkg4_f4":"Tarification selon les besoins","pkg4_f5":"Consultation gratuite avant de commencer",
+"pay_title":"Moyens de <span class='grad'>paiement</span>","pay_sub":"Options de paiement dont les dÃ©tails peuvent Ãªtre confirmÃ©s avant de commencer.",
+"pay1_t":"BaridiMob","pay1_d":"Les dÃ©tails sont confirmÃ©s avant de commencer.","pay2_t":"Portefeuille numÃ©rique","pay2_d":"Le portefeuille adaptÃ© est convenu Ã  l'avance.","pay3_t":"Binance","pay3_d":"Les dÃ©tails du transfert sont convenus avant de commencer.","pay4_t":"Grey","pay4_d":"DisponibilitÃ© et dÃ©tails confirmÃ©s avant de commencer.",
+"q_title":"Questions <span class='grad'>frÃ©quentes</span>","q_sub":"Tout ce qu'il faut savoir avant de commencer",
+"q1":"Combien de temps prend un projet ?","a1":"La durÃ©e dÃ©pend du pÃ©rimÃ¨tre et des ressources ; nous en convenons avant de commencer.",
+"q2":"Peut-on demander des rÃ©visions ?","a2":"Oui. Nous convenons du pÃ©rimÃ¨tre des rÃ©visions et du processus de livraison avant de commencer.",
+"q3":"Quels moyens de paiement sont disponibles ?","a3":"BaridiMob, portefeuille numÃ©rique, Binance et Grey peuvent Ãªtre disponibles ; les dÃ©tails sont confirmÃ©s avant de commencer.",
+"q4":"Pouvez-vous crÃ©er un site complet ?","a4":"Les pages d'atterrissage et projets front-end peuvent Ãªtre discutÃ©s selon le pÃ©rimÃ¨tre.",
+"q5":"Quelles informations pour dÃ©marrer une demande ?","a5":"Il suffit d'envoyer l'idÃ©e, le public, les livrables souhaitÃ©s et toute Ã©chÃ©ance importante ; nous dÃ©finirons le pÃ©rimÃ¨tre avant de commencer.",
+"q6":"Puis-je voir un projet en ligne ?","a6":"Pour voir un projet en ligne, contactez-moi directement et je vous envoie les dÃ©tails.",
+"faq_form_title":"Une question ?","faq_question":"Question",
+"c_title":"<span class='grad'>Parlons-en</span>","c_sub":"Partagez les dÃ©tails du projet et j'examinerai le pÃ©rimÃ¨tre et un moyen de communication adaptÃ©.","c_form_t":"Envoyer un message",
+"f_name":"Nom","f_email":"Email","f_subject":"Sujet","f_msg":"Message","f_send":"Envoyer",
+"ph_subject":"Entrez un sujet","ph_message":"Ã‰crivez les dÃ©tails de votre message","ph_question":"Ã‰crivez votre question",
+"ft_about":"Freelance numÃ©rique indÃ©pendant, intÃ©ressÃ© par le dÃ©veloppement front-end, le design et les tÃ¢ches numÃ©riques pratiques.","ft_links":"Liens rapides","ft_info":"Infos","ft_contact":"Contact","ft_made":"Fait avec",
+"logo_alt":"Logo NorDa","profile_alt":"Image de profil temporaire","splash_tagline":"Une prÃ©sence numÃ©rique claire",
+"chat_aria":"Chat","chat_title":"Chat en direct","online":"Ã‰crivez-nous",
+"tab_new":"Nouveau","tab_chat":"Chat","tab_closed":"FermÃ©s","status_open":"Ouvert","status_closed":"FermÃ©",
+"no_ticket_title":"Aucun ticket ouvert","no_ticket_desc":"DÃ©marrons une nouvelle conversation ; nous rÃ©pondrons dÃ¨s que possible","new_ticket":"Nouvelle conversation","close_ticket":"Fermer le ticket","back":"Retour",
+"no_closed":"Aucun ticket fermÃ© pour le moment","view_ticket":"Voir","chat_hello":"Bonjour ! Comment puis-je aider ?","chat_ph":"Ã‰crivez votre messageâ€¦","attach":"Joindre un fichier","guest":"InvitÃ©",
+"msg_ok":"EnvoyÃ© avec succÃ¨s","msg_err":"Ã‰chec de l'envoi, veuillez rÃ©essayer","msg_req":"Veuillez remplir les champs requis","msg_email":"Entrez un email valide","msg_wait":"Envoiâ€¦",
+"file_too_big":"Fichier trop volumineux (max 2 Mo)","ticket_closed_msg":"Ce ticket est fermÃ©","ticket_new_msg":"Nouveau ticket crÃ©Ã© ! Votre premier message est attendu","ticket_close_confirm":"Fermer ce ticket ?","ticket_closed_ok":"Ticket fermÃ© avec succÃ¨s",
+"builder_title":"NorDa â€” FaÃ§onnez votre idÃ©e","builder_intro":"RÃ©pondez Ã  quelques questions pour envoyer votre projet via le chat.","builder_step_label":"Ã‰tape","builder_prev":"PrÃ©cÃ©dent","builder_next":"Suivant","builder_send":"Envoyer le concept","builder_sent":"Votre projet a Ã©tÃ© envoyÃ© via le chat.","builder_send_error":"Ã‰chec de l'envoi. VÃ©rifiez votre connexion et rÃ©essayez.",
+"builder_s1":"Ã€ quoi sert le site ?","builder_s1_help":"DÃ©crivez briÃ¨vement ce que le site doit accomplir.","builder_purpose_ph":"Exemple : prÃ©senter un service ou des produits",
+"builder_s2":"Quel style visuel prÃ©fÃ©rez-vous ?","build_style_soft":"Doux et Ã©lÃ©gant","build_style_bold":"Audacieux et moderne","build_style_minimal":"Simple et calme","build_style_playful":"Ludique et vivant",
+"builder_s3":"Quelle doit Ãªtre la couleur principale ?","builder_color_label":"Choisissez une couleur approximative",
+"builder_s4":"Quelle mise en page convient le mieux ?","build_layout_long":"Une longue page","build_layout_sections":"Sections claires et cartes","build_layout_gallery":"Mise en page galerie visuelle",
+"builder_s5":"Quel niveau de mouvement souhaitez-vous ?","build_motion_subtle":"Mouvement subtil","build_motion_none":"TrÃ¨s peu de mouvement","build_motion_lively":"Mouvement notable",
+"builder_s6":"Une source d'inspiration ?","builder_s6_help":"DÃ©crivez un site, une ambiance ou un exemple de rÃ©fÃ©rence.","builder_inspiration_ph":"Couleurs, lien de rÃ©fÃ©rence ou courte description",
+"builder_s7":"Quel style typographique prÃ©fÃ©rez-vous ?","build_type_modern":"Moderne et clair","build_type_editorial":"Ã‰ditorial et Ã©lÃ©gant","build_type_friendly":"Amical et simple",
+"builder_s8":"Quelles fonctionnalitÃ©s ou sections comptent ?","builder_s8_help":"Listez ce qui vous vient Ã  l'esprit ; la liste n'a pas besoin d'Ãªtre finale.","builder_features_ph":"Formulaire de contact, galerie, FAQ...",
+"builder_s9":"Comment pouvons-nous vous contacter ?",
+"sound_label":"Son","sound_on":"Couper le son des notifications","sound_off":"Activer le son des notifications","lb_close":"Fermer la galerie",
+"about_article":"<p>Je travaille en freelance dans le numÃ©rique et j'explore comment le design et la technologie peuvent rendre les idÃ©es du quotidien plus faciles Ã  comprendre et Ã  utiliser. Ce site prÃ©sente les domaines que j'apprends et oÃ¹ je peux aider : dÃ©veloppement front-end, pages d'atterrissage, visuels Canva pour les rÃ©seaux sociaux, saisie de donnÃ©es, recherche d'informations et transcription.</p><p>En dÃ©veloppement front-end, je tiens Ã  ce qu'une page soit comprÃ©hensible sur tÃ©lÃ©phone comme sur ordinateur, et que le visiteur trouve l'information principale sans longue recherche. L'ordre du contenu, la clartÃ© des boutons, la navigation et la cohÃ©rence des couleurs font partie d'une mÃªme expÃ©rience.</p><p>Je m'intÃ©resse aussi Ã  la crÃ©ation de visuels simples pour les rÃ©seaux sociaux avec Canva. Je peux transformer une idÃ©e ou un texte existant en mise en page visuelle organisÃ©e, en tenant compte des couleurs, des dimensions et de la plateforme visÃ©e.</p><p>Je continue d'apprendre par la pratique, l'expÃ©rimentation et la rÃ©vision de mon travail. Je souhaite une collaboration directe et agrÃ©able : l'idÃ©e ou les fichiers me parviennent, j'examine la demande, puis j'explique ce qui est faisable et la suite.</p>"
+}
+};
+
+/* ============ Ø§Ù„Ù„ØºØ© ============ */
+var LANGS=['ar','en','fr'];
+function detectLang(){
+  var urlLang=new URLSearchParams(location.search).get('lang');
+  if(urlLang&&I18N[urlLang])return urlLang;
+  var saved=sget('rose_lang');
+  if(saved&&I18N[saved])return saved;
+  var nav=String((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();
+  if(nav.indexOf('ar')===0)return 'ar';
+  if(nav.indexOf('fr')===0)return 'fr';
+  if(nav.indexOf('en')===0)return 'en';
+  return 'ar';
+}
+var lang=detectLang();
+function t(k){return (I18N[lang]&&I18N[lang][k])||k}
+function loc(){return lang==='ar'?'ar-EG':lang==='fr'?'fr-FR':'en-US'}
+
+/* ============ SPA ============ */
+var currentView='home';
+function showView(name,skipHash){
+  if(!name)name='home';
+  var view=$1('#view-'+name);
+  if(!view){name='home';view=$1('#view-home')}
+  $('.view').forEach(function(v){v.classList.remove('active')});
+  view.classList.add('active');
+  $('[data-nav]').forEach(function(a){
+    a.classList.toggle('active',a.getAttribute('data-nav')===name);
+    a.removeAttribute('aria-current');
+    if(a.getAttribute('data-nav')===name)a.setAttribute('aria-current','page');
+  });
+  var menu=$1('#nav');if(menu)menu.classList.remove('open');
+  var mb=$1('#menuBtn');if(mb)mb.setAttribute('aria-expanded','false');
+  currentView=name;
+  if(!skipHash){try{history.replaceState(null,'','#'+name)}catch(e){location.hash=name}}
+  window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
+  if(name==='faq')reinitFaq();
+  if(name==='portfolio')reinitPortfolio();
+  if(name==='packages')initCurrencyToggle();
+  reinitReveal();reinitSpotlight();reinitSectionColor();
+  updateTitle(name);
+}
+var TITLES={
+  ar:{home:'NorDa | Ù…Ø³ØªÙ‚Ù„ Ø±Ù‚Ù…ÙŠ ÙˆØªØµÙ…ÙŠÙ… Ù…ÙˆØ§Ù‚Ø¹',about:'Ù…Ù† Ø£Ù†Ø§ | NorDa',services:'Ø®Ø¯Ù…Ø§ØªÙŠ | NorDa',portfolio:'Ø£Ø¹Ù…Ø§Ù„ÙŠ | NorDa',packages:'Ø§Ù„Ø¨Ø§Ù‚Ø§Øª | NorDa',payment:'Ø§Ù„Ø¯ÙØ¹ | NorDa',faq:'Ø§Ù„Ø£Ø³Ø¦Ù„Ø© | NorDa',contact:'ØªÙˆØ§ØµÙ„ | NorDa'},
+  en:{home:'NorDa | Digital Freelancer',about:'About | NorDa',services:'Services | NorDa',portfolio:'Portfolio | NorDa',packages:'Packages | NorDa',payment:'Payment | NorDa',faq:'FAQ | NorDa',contact:'Contact | NorDa'},
+  fr:{home:'NorDa | Freelance NumÃ©rique',about:'Ã€ propos | NorDa',services:'Services | NorDa',portfolio:'Portfolio | NorDa',packages:'Formules | NorDa',payment:'Paiement | NorDa',faq:'FAQ | NorDa',contact:'Contact | NorDa'}
+};
+function updateTitle(name){d.title=(TITLES[lang]||TITLES.ar)[name]||'NorDa'}
+function readHash(){var h=(location.hash||'').replace('#','').trim();return h&&$1('#view-'+h)?h:'home'}
+window.addEventListener('hashchange',function(){showView(readHash(),true)});
+
+/* ============ Ø§Ù„Ø«ÙŠÙ… ============ */
+var pref=sget('rose_theme')||'light';if(['light','dark'].indexOf(pref)<0)pref='light';
+var THEME_ICON={light:'fa-sun',dark:'fa-moon'};
+function paintThemeBtn(){
+  var b=$1('#themeBtn');if(!b)return;
+  b.firstChild.className='fa-solid '+THEME_ICON[pref];
+  b.setAttribute('aria-label',t('th_label')+': '+t('th_'+pref));
+}
+function applyTheme(p,anim){
+  pref=p;
+  if(anim&&!reduce){R.classList.add('theme-anim');setTimeout(function(){R.classList.remove('theme-anim')},500)}
+  R.setAttribute('data-theme',p);R.setAttribute('data-pref',p);
+  var m=$1('#themeColor');if(m)m.setAttribute('content',p==='dark'?'#1a1118':'#b8326f');
+  paintThemeBtn();
+}
+var themeBtnEl=$1('#themeBtn');
+if(themeBtnEl)themeBtnEl.addEventListener('click',function(){
+  var n=pref==='light'?'dark':'light';
+  sset('rose_theme',n);applyTheme(n,true);
+});
+
+/* ============ ØªØ·Ø¨ÙŠÙ‚ Ø§Ù„Ù„ØºØ© ============ */
+function applyLang(l){
+  lang=l;
+  R.lang=l;R.dir=l==='ar'?'rtl':'ltr';
+  $('[data-i18n]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n')];if(v!==undefined)el.innerHTML=v});
+  $('[data-i18n-ph]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n-ph')];if(v!==undefined)el.setAttribute('placeholder',v)});
+  $('[data-i18n-aria]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n-aria')];if(v!==undefined)el.setAttribute('aria-label',v)});
+  $('[data-i18n-alt]').forEach(function(el){var v=I18N[l][el.getAttribute('data-i18n-alt')];if(v!==undefined)el.setAttribute('alt',v)});
+  var og=d.querySelector('meta[property="og:locale"]');if(og)og.setAttribute('content',l==='ar'?'ar_DZ':l==='fr'?'fr_FR':'en_US');
+  paintSoundButton();
+  var lt=$1('#langTxt');if(lt)lt.textContent=l==='ar'?'EN':l==='en'?'FR':'Ø¹Ø±Ø¨ÙŠ';
+  paintThemeBtn();
+  var mb=$1('#menuBtn'),nv=$1('#nav');
+  if(mb&&nv)mb.setAttribute('aria-label',nv.classList.contains('open')?t('menu_close'):t('menu_open'));
+  updateTitle(currentView);
+  if(typeof lbRefresh==='function')lbRefresh();
+  if(typeof refreshChatLang==='function')refreshChatLang();
+}
+var langBtnEl=$1('#langBtn');
+if(langBtnEl)langBtnEl.addEventListener('click',function(){
+  var n=LANGS[(LANGS.indexOf(lang)+1)%LANGS.length];
+  sset('rose_lang',n);applyLang(n);
+});
+
+/* ============ Ø£Ø¯ÙˆØ§Øª ============ */
+function setBusy(btn,on){
+  if(!btn)return;
+  btn.disabled=on;
+  var i=btn.querySelector('i');
+  if(i){if(on){i.setAttribute('data-old',i.className);i.className='fa-solid fa-spinner fa-spin'}else if(i.getAttribute('data-old'))i.className=i.getAttribute('data-old')}
+}
+function fmtSize(b){return b<1024?b+' B':b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(2)+' MB'}
+function fmtTime(ts){return new Date(ts).toLocaleTimeString(loc(),{hour:'2-digit',minute:'2-digit'})}
+function fmtDate(ts){return new Date(ts).toLocaleDateString(loc(),{year:'numeric',month:'short',day:'numeric'})}
+function escapeHtml(s){var x=d.createElement('div');x.textContent=String(s==null?'':s);return x.innerHTML}
+function fileIcon(f){
+  var ty=f.type||'',n=(f.name||'').toLowerCase();
+  if(ty.indexOf('image/')===0)return 'fa-image';
+  if(ty==='application/pdf'||/\.pdf$/.test(n))return 'fa-file-pdf';
+  if(/zip|rar|7z|tar/.test(ty+n))return 'fa-file-zipper';
+  if(ty.indexOf('video/')===0)return 'fa-file-video';
+  if(ty.indexOf('audio/')===0)return 'fa-file-audio';
+  if(ty.indexOf('text/')===0||/\.(docx?|txt)$/.test(n))return 'fa-file-lines';
+  return 'fa-file';
+}
+function validEmail(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)}
+
+/* ============ Ø§Ù„Ø¹Ù…Ù„Ø© ============ */
+function initCurrencyToggle(){
+  var btn=$1('#currencyToggle'),active=$1('#curActive');
+  if(!btn)return;
+  var RATE=240;
+  var cur=sget('rose_currency')||'usd';
+  function paint(){
+    active.textContent=cur==='usd'?'USD $':'DZD Ø¯Ø¬';
+    $('#pricingGrid .price-value').forEach(function(el){
+      var usd=el.getAttribute('data-usd');
+      if(!usd)return;
+      el.textContent=cur==='usd'?'$'+usd:(usd*RATE).toLocaleString('en-US')+' Ø¯Ø¬';
+    });
+  }
+  if(!btn.dataset.bound){
+    btn.dataset.bound='1';
+    btn.addEventListener('click',function(){cur=cur==='usd'?'dzd':'usd';sset('rose_currency',cur);paint()});
+  }
+  paint();
+}
+
+/* ============ Ù†Ø¸Ø§Ù… Ø§Ù„ØªØ°Ø§ÙƒØ± ============ */
+var userId=sget('rose_uid');
+if(!userId){userId='u_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);sset('rose_uid',userId)}
+var API=window.TELEGRAM_API||'';
+var currentTicket=null,pendingFile=null,lastCount=0,shown=0,typing=false,typingTimer=null,sending=false;
+var closedCache=[],detailTicket=null,unread=0,view='new',remoteHistoryReady=false;
+var cp=$1('#chatPanel'),fab=$1('#chatFab'),clog=$1('#chatLog'),cf=$1('#chatForm'),badge=$1('#fabBadge');
+var tabs={'new':$1('#tabNew'),'chat':$1('#tabChat'),'closed':$1('#tabClosed')};
+var ta=$1('#ch-msg'),fileInput=$1('#fileInput');
+var soundToggle=$1('#soundToggle'),soundEnabled=sget('rose_chat_sound')!=='off',audioContext=null;
+function paintSoundButton(){
+  if(!soundToggle)return;
+  soundToggle.setAttribute('aria-pressed',soundEnabled?'true':'false');
+  soundToggle.setAttribute('aria-label',t(soundEnabled?'sound_on':'sound_off'));
+  var si=soundToggle.querySelector('i');if(si)si.className='fa-solid '+(soundEnabled?'fa-volume-high':'fa-volume-xmark');
+}
+function unlockSound(){
+  if(!soundEnabled)return;
+  var AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  try{if(!audioContext)audioContext=new AC();if(audioContext.state==='suspended')audioContext.resume()}catch(e){}
+}
+function playTone(freq,delay){
+  if(!soundEnabled||!audioContext||audioContext.state!=='running')return;
+  try{
+    var now=audioContext.currentTime+delay,osc=audioContext.createOscillator(),gain=audioContext.createGain();
+    osc.type='sine';osc.frequency.setValueAtTime(freq,now);
+    gain.gain.setValueAtTime(.0001,now);gain.gain.exponentialRampToValueAtTime(.12,now+.025);gain.gain.exponentialRampToValueAtTime(.0001,now+.2);
+    osc.connect(gain);gain.connect(audioContext.destination);osc.start(now);osc.stop(now+.21);
+  }catch(e){}
+}
+function playIncomingSound(){playTone(880,0);playTone(1174,.1)}
+if(soundToggle)soundToggle.addEventListener('click',function(){
+  soundEnabled=!soundEnabled;sset('rose_chat_sound',soundEnabled?'on':'off');paintSoundButton();if(soundEnabled)unlockSound();
+});
+d.addEventListener('pointerdown',unlockSound,{capture:true,once:true});
+d.addEventListener('keydown',unlockSound,{capture:true,once:true});
+
+function hasOpen(){return !!(currentTicket&&currentTicket.status!=='closed')}
+function toast(k){var el=$1('#chatToast');if(!el)return;el.textContent=t(k);el.classList.add('show');clearTimeout(toast.h);toast.h=setTimeout(function(){el.classList.remove('show')},2800)}
+function setBadge(){if(!badge)return;badge.textContent=unread>9?'9+':unread;badge.classList.toggle('show',unread>0)}
+function persist(){
+  if(!currentTicket)return;
+  var c=JSON.parse(JSON.stringify(currentTicket));
+  (c.messages||[]).forEach(function(m){if(m.file)m.file={name:m.file.name,type:m.file.type}});
+  sset('rose_last_ticket',JSON.stringify(c));
+}
+function updateTabs(){if(tabs.chat)tabs.chat.setAttribute('aria-disabled',hasOpen()?'false':'true')}
+function setChatView(v){
+  if(v==='chat'&&!hasOpen())v='new';
+  view=v;
+  $('.chat-view').forEach(function(el){el.classList.toggle('active',el.getAttribute('data-view')===v)});
+  var tk=v==='detail'?'closed':v;
+  Object.keys(tabs).forEach(function(k){tabs[k].classList.toggle('active',k===tk)});
+  if(v==='chat'){unread=0;setBadge();scrollLog()}
+}
+function scrollLog(){if(clog)setTimeout(function(){clog.scrollTop=clog.scrollHeight},40)}
+
+function buildBub(m){
+  var b=d.createElement('div');
+  b.className='bub '+(m.from==='user'?'me':'bot');
+  if(m.text){var p=d.createElement('div');p.innerHTML=escapeHtml(m.text).replace(/\n/g,'<br>');b.appendChild(p)}
+  var f=m.file;
+  if(f&&(f.name||f.data)){
+    var safe=f.data&&/^(data:|https?:)/i.test(f.data);
+    if(safe&&f.type&&f.type.indexOf('image/')===0){
+      var img=d.createElement('img');img.className='bub-img';img.src=f.data;img.alt=f.name||'';img.loading='lazy';b.appendChild(img);
+    }
+    var a=d.createElement(safe?'a':'div');a.className='bub-file';
+    if(safe){a.href=f.data;a.download=f.name||'file'}
+    a.innerHTML='<span class="bf-ico"><i class="fa-solid '+fileIcon(f)+'"></i></span><span class="bf-name">'+escapeHtml(f.name||'file')+'</span>';
+    b.appendChild(a);
+  }
+  var tm=d.createElement('span');tm.className='bub-time';tm.textContent=fmtTime(m.time||Date.now());b.appendChild(tm);
+  return b;
+}
+function typingEl(){var e=d.createElement('div');e.className='typing';e.setAttribute('aria-hidden','true');e.innerHTML='<i></i><i></i><i></i>';return e}
+function renderMessages(msgs,force){
+  if(!clog)return;
+  msgs=msgs||[];
+  var tp=clog.querySelector('.typing');if(tp)tp.remove();
+  if(force||!shown||msgs.length<shown){
+    clog.innerHTML='';shown=0;
+    if(!msgs.length)clog.appendChild(buildBub({from:'bot',text:t('chat_hello'),time:Date.now()}));
+  }
+  for(var i=shown;i<msgs.length;i++)clog.appendChild(buildBub(msgs[i]));
+  shown=msgs.length;
+  if(typing)clog.appendChild(typingEl());
+  scrollLog();
+}
+function setTyping(on){
+  typing=on;clearTimeout(typingTimer);
+  if(on)typingTimer=setTimeout(function(){typing=false;var tp=clog.querySelector('.typing');if(tp)tp.remove()},12000);
+}
+function renderChat(){
+  if(!hasOpen())return;
+  $1('#ticketIdLabel').textContent='#'+currentTicket.ticketId;
+  renderMessages(currentTicket.messages||[],true);
+}
+async function createTicket(name){
+  try{
+    var r=await fetch(API+'/ticket/new',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({userId:userId,userName:name})});
+    var j=await r.json();
+    if(j.ok&&j.ticket){
+      currentTicket=j.ticket;persist();
+      lastCount=(currentTicket.messages||[]).length;
+      updateTabs();renderChat();
+      return j;
+    }
+  }catch(e){}
+  return null;
+}
+async function startNew(){
+  var nm=$1('#ch-name'),btn=$1('#btnNewTicket');
+  var custom=(nm.value||'').trim()||sget('rose_name')||'';
+  if(custom)sset('rose_name',custom);
+  setBusy(btn,true);
+  var j=await createTicket(custom||t('guest'));
+  setBusy(btn,false);
+  if(j){setChatView('chat');if(!j.existing)toast('ticket_new_msg');setTimeout(function(){ta.focus()},120)}
+  else toast('msg_err');
+}
+async function apiSend(payload){
+  var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/message?userId='+encodeURIComponent(userId),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  return r.json();
+}
+async function loadMessages(){
+  if(!hasOpen()||sending)return;
+  try{
+    var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/messages?userId='+encodeURIComponent(userId));
+    var j=await r.json();
+    if(!j.ok||sending)return;
+    var historyWasReady=remoteHistoryReady;
+    if(j.ticketId&&j.ticketId!==currentTicket.ticketId){currentTicket.ticketId=j.ticketId;$1('#ticketIdLabel').textContent='#'+j.ticketId}
+    if(j.status==='closed'){onClosedRemote();return}
+    var ms=j.messages||[];
+    if(ms.length!==lastCount){
+      var added=ms.length-lastCount,last=ms[ms.length-1];
+      lastCount=ms.length;currentTicket.messages=ms;
+      if(last&&last.from!=='user')typing=false;
+      renderMessages(ms);persist();
+      if(last&&last.from!=='user'&&added>0){
+        if(!cp.classList.contains('open')||view!=='chat'){unread+=Math.max(added,1);setBadge()}
+        if(historyWasReady)playIncomingSound();
+      }
+    }
+    remoteHistoryReady=true;
+  }catch(e){}
+}
+function onClosedRemote(){
+  currentTicket=null;sdel('rose_last_ticket');setTyping(false);shown=0;updateTabs();
+  setChatView('closed');loadClosed();toast('ticket_closed_msg');
+}
+function poll(){
+  if(!d.hidden&&hasOpen()&&!sending)loadMessages();
+  setTimeout(poll,cp&&cp.classList.contains('open')?1500:8000);
+}
+if(cf)cf.addEventListener('submit',async function(e){
+  e.preventDefault();
+  if(!hasOpen()){toast('ticket_closed_msg');setChatView('new');return}
+  var btn=$1('#chBtn'),msg=ta.value.trim(),file=pendingFile;
+  if(!msg&&!file)return;
+  var payload={text:msg,file:file?file.data:null,fileName:file?file.name:null,fileType:file?file.type:null};
+  ta.value='';grow();pendingFile=null;clearFilePreview();
+  currentTicket.messages=currentTicket.messages||[];
+  currentTicket.messages.push({from:'user',text:msg,time:Date.now(),file:file?{name:file.name,type:file.type,data:file.data}:null});
+  typing=false;
+  renderMessages(currentTicket.messages);
+  sending=true;setBusy(btn,true);
+  try{
+    var j=await apiSend(payload);
+    if(j&&j.ok){
+      currentTicket.messages=j.messages||currentTicket.messages;
+      lastCount=currentTicket.messages.length;
+      renderMessages(currentTicket.messages);
+      setTyping(true);renderMessages(currentTicket.messages);persist();
+    }else toast('msg_err');
+  }catch(err){toast('msg_err')}
+  sending=false;setBusy(btn,false);ta.focus();
+});
+function grow(){if(!ta)return;ta.style.height='auto';ta.style.height=Math.min(ta.scrollHeight,110)+'px'}
+if(ta){ta.addEventListener('input',grow);ta.addEventListener('keydown',function(e){
+  if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();if(cf.requestSubmit)cf.requestSubmit();else cf.dispatchEvent(new Event('submit',{cancelable:true}))}
+})}
+
+var btnClose=$1('#btnCloseTicket');
+if(btnClose)btnClose.addEventListener('click',async function(){
+  if(!hasOpen())return;
+  if(!confirm(t('ticket_close_confirm')))return;
+  try{
+    var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/close?userId='+encodeURIComponent(userId),{method:'POST'});
+    var j=await r.json();
+    if(j.ok){
+      currentTicket=null;sdel('rose_last_ticket');setTyping(false);shown=0;updateTabs();
+      setChatView('closed');loadClosed();toast('ticket_closed_ok');
+    }else toast('msg_err');
+  }catch(e){toast('msg_err')}
+});
+
+var btnAtt=$1('#btnAttach');
+if(btnAtt)btnAtt.addEventListener('click',function(){fileInput.click()});
+if(fileInput)fileInput.addEventListener('change',function(){
+  var f=fileInput.files[0];if(!f)return;
+  if(f.size>2*1024*1024){toast('file_too_big');fileInput.value='';return}
+  var rd=new FileReader();
+  rd.onload=function(){pendingFile={name:f.name,type:f.type,size:f.size,data:rd.result};
+    $1('#filePreview').style.display='flex';$1('#fileNamePreview').textContent=f.name;$1('#fileSizePreview').textContent=fmtSize(f.size)};
+  rd.readAsDataURL(f);
+});
+function clearFilePreview(){var p=$1('#filePreview');if(p){p.style.display='none';$1('#fileNamePreview').textContent='';$1('#fileSizePreview').textContent='';if(fileInput)fileInput.value=''}}
+var fr=$1('#fileRemove');if(fr)fr.addEventListener('click',function(){pendingFile=null;clearFilePreview()});
+
+async function loadClosed(){
+  try{
+    var r=await fetch(API+'/ticket/closed/closed?userId='+encodeURIComponent(userId));
+    var j=await r.json();
+    if(j.ok&&j.tickets)closedCache=j.tickets;
+  }catch(e){}
+  renderClosed();
+}
+function renderClosed(){
+  var list=$1('#closedList'),cnt=$1('#closedCount');if(!list)return;
+  list.innerHTML='';
+  if(!closedCache.length){
+    list.innerHTML='<div class="chat-empty"><div class="empty-icon"><i class="fa-solid fa-box-open"></i></div><p>'+escapeHtml(t('no_closed'))+'</p></div>';
+    if(cnt)cnt.classList.remove('show');return;
+  }
+  if(cnt){cnt.textContent=closedCache.length;cnt.classList.add('show')}
+  closedCache.forEach(function(tk){
+    var ms=tk.messages||[],prev='';
+    for(var i=ms.length-1;i>=0;i--){if(ms[i].text){prev=ms[i].text;break}if(ms[i].file){prev=ms[i].file.name||'';break}}
+    var el=d.createElement('div');el.className='closed-item';
+    el.innerHTML='<div class="ci-top"><span class="ci-ico"><i class="fa-solid fa-ticket"></i></span><div class="ci-body"><div class="ci-title">#'+escapeHtml(tk.ticketId)+'</div><div class="ci-meta">'+escapeHtml(fmtDate(tk.closedAt||tk.updatedAt||Date.now()))+'</div></div><span class="ci-count"><i class="fa-regular fa-comment"></i>'+ms.length+'</span></div>'+(prev?'<div class="ci-prev">'+escapeHtml(prev.slice(0,70))+'</div>':'')+'<button class="ci-view" type="button"><i class="fa-regular fa-eye"></i><span>'+escapeHtml(t('view_ticket'))+'</span></button>';
+    el.querySelector('.ci-view').addEventListener('click',function(){openClosed(tk)});
+    list.appendChild(el);
+  });
+}
+function renderDetail(){
+  if(!detailTicket)return;
+  $1('#detailTicketId').textContent='#'+detailTicket.ticketId;
+  var log=$1('#detailLog');log.innerHTML='';
+  (detailTicket.messages||[]).forEach(function(m){log.appendChild(buildBub(m))});
+  setTimeout(function(){log.scrollTop=log.scrollHeight},40);
+}
+function openClosed(tk){detailTicket=tk;renderDetail();setChatView('detail')}
+var btnBack=$1('#btnBack');if(btnBack)btnBack.addEventListener('click',function(){setChatView('closed')});
+function refreshChatLang(){
+  if(!clog)return;
+  if(hasOpen())renderMessages(currentTicket.messages||[],true);
+  renderClosed();
+  if(detailTicket&&view==='detail')renderDetail();
+}
+
+if(tabs['new'])tabs['new'].addEventListener('click',function(){
+  if(hasOpen())setChatView('chat');
+  else if(sget('rose_name'))startNew();
+  else{setChatView('new');$1('#ch-name').focus()}
+});
+if(tabs.chat)tabs.chat.addEventListener('click',function(){if(hasOpen())setChatView('chat')});
+if(tabs.closed)tabs.closed.addEventListener('click',function(){setChatView('closed');loadClosed()});
+var btnNew=$1('#btnNewTicket');if(btnNew)btnNew.addEventListener('click',startNew);
+var chname=$1('#ch-name');if(chname)chname.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();startNew()}});
+
+function chatOpen(o){
+  if(!cp||!fab)return;
+  cp.classList.toggle('open',o);
+  fab.setAttribute('aria-expanded',o?'true':'false');
+  fab.classList.toggle('hidden',o);
+  if(o){
+    unread=0;setBadge();
+    var nm=$1('#ch-name');if(nm&&!nm.value)nm.value=sget('rose_name')||'';
+    if(hasOpen()){loadMessages();if(view==='new')setChatView('chat')}
+    setTimeout(function(){if(view==='chat'&&ta)ta.focus();else if(view==='new'&&nm)nm.focus()},150);
+  }
+}
+if(fab)fab.addEventListener('click',function(){chatOpen(!cp.classList.contains('open'))});
+var chatX=$1('#chatX');if(chatX)chatX.addEventListener('click',function(){chatOpen(false);fab.focus()});
+
+async function sendTicketRequest(name,email,text){
+  sset('rose_name',name);
+  sending=true;
+  try{
+    if(!hasOpen()&&!(await createTicket(name)))throw new Error('ticket');
+    var j=await apiSend({text:text+'\n\n'+t('f_name')+': '+name+'\n'+t('f_email')+': '+email,file:null,fileName:null,fileType:null});
+    if(!j||!j.ok)throw new Error('send');
+    currentTicket.messages=j.messages||currentTicket.messages||[];
+    lastCount=currentTicket.messages.length;persist();renderMessages(currentTicket.messages,true);
+    return true;
+  }finally{sending=false}
+}
+
+var cform=$1('#contactForm');
+if(cform)cform.addEventListener('submit',async function(e){
+  e.preventDefault();
+  var nm=$1('#cf-name').value.trim(),em=$1('#cf-email').value.trim(),subject=$1('#cf-subject').value.trim(),ms=$1('#cf-msg').value.trim(),out=$1('#cfMsg'),btn=$1('#cfBtn');
+  out.className='form-msg';
+  if($1('#cf-site').value)return;
+  if(!nm||!em||!subject||!ms){out.textContent=t('msg_req');out.classList.add('err');return}
+  if(!validEmail(em)){out.textContent=t('msg_email');out.classList.add('err');return}
+  out.textContent=t('msg_wait');setBusy(btn,true);
+  try{
+    await sendTicketRequest(nm,em,t('f_subject')+': '+subject+'\n'+t('f_msg')+': '+ms);
+    out.textContent=t('msg_ok');out.classList.add('ok');cform.reset();
+    setChatView('chat');chatOpen(true);
+  }catch(err){out.textContent=t('msg_err');out.classList.add('err')}
+  setBusy(btn,false);
+});
+var fqform=$1('#faqQuestionForm');
+if(fqform)fqform.addEventListener('submit',async function(e){
+  e.preventDefault();
+  var nm=$1('#fq-name').value.trim(),em=$1('#fq-email').value.trim(),question=$1('#fq-question').value.trim(),out=$1('#fqMsg'),btn=fqform.querySelector('button[type=submit]');
+  out.className='form-msg';
+  if(!nm||!em||!question){out.textContent=t('msg_req');out.classList.add('err');return}
+  if(!validEmail(em)){out.textContent=t('msg_email');out.classList.add('err');return}
+  out.textContent=t('msg_wait');setBusy(btn,true);
+  try{await sendTicketRequest(nm,em,t('faq_question')+': '+question);out.textContent=t('msg_ok');out.classList.add('ok');fqform.reset()}
+  catch(err){out.textContent=t('msg_err');out.classList.add('err')}
+  setBusy(btn,false);
+});
+
+/* ============ Builder ============ */
+var builder=$1('#builderOverlay'),builderStep=1,builderOpenBtn=$1('#builderOpen'),builderPrev=$1('#builderPrev'),builderNext=$1('#builderNext'),builderSubmit=$1('#builderSubmit'),builderMsg=$1('#builderMessage');
+function paintBuilder(){
+  if(!builder)return;
+  $('.builder-step',builder).forEach(function(el){el.hidden=+el.getAttribute('data-builder-step')!==builderStep});
+  $1('#builderStepNumber').textContent=builderStep;
+  $1('#builderProgress').style.width=(builderStep/9*100)+'%';
+  builderPrev.hidden=builderStep===1;builderNext.hidden=builderStep===9;builderSubmit.hidden=builderStep!==9;
+}
+function closeBuilder(){
+  if(!builder)return;
+  builder.classList.remove('open');builder.setAttribute('aria-hidden','true');builder.setAttribute('hidden','hidden');
+  if(builderOpenBtn)builderOpenBtn.focus();
+}
+if(builderOpenBtn&&builder){
+  builderOpenBtn.addEventListener('click',function(e){e.preventDefault();builderStep=1;paintBuilder();builder.removeAttribute('hidden');builder.setAttribute('aria-hidden','false');builder.classList.add('open');builderMsg.textContent='';setTimeout(function(){$1('.builder-dialog').focus()},40)});
+  $('[data-builder-close]',builder).forEach(function(el){el.addEventListener('click',closeBuilder)});
+  builderPrev.addEventListener('click',function(){if(builderStep>1){builderStep--;paintBuilder()}});
+  builderNext.addEventListener('click',function(){if(builderStep<9){builderStep++;paintBuilder()}});
+  builderSubmit.addEventListener('click',async function(){
+    var name=$1('#buildName').value.trim(),email=$1('#buildEmail').value.trim();
+    builderMsg.textContent='';
+    if(!name||!email){builderMsg.textContent=t('msg_req');return}
+    if(!validEmail(email)){builderMsg.textContent=t('msg_email');return}
+    var val=function(id){var el=$1(id);if(!el)return '';if(el.tagName==='SELECT'){var op=el.options[el.selectedIndex],key=op&&op.getAttribute('data-i18n');return key?t(key):el.value}return el.value.trim()};
+    var rows=[
+      [t('builder_s1'),val('#buildPurpose')],[t('builder_s2'),val('#buildStyle')],[t('builder_s3'),val('#buildColor')],
+      [t('builder_s4'),val('#buildLayout')],[t('builder_s5'),val('#buildMotion')],[t('builder_s6'),val('#buildInspiration')],
+      [t('builder_s7'),val('#buildType')],[t('builder_s8'),val('#buildFeatures')]
+    ];
+    var summary=t('builder_title')+'\n'+rows.map(function(r){return r[0]+': '+(r[1]||'â€”')}).join('\n');
+    builderMsg.textContent=t('msg_wait');setBusy(builderSubmit,true);
+    try{
+      await sendTicketRequest(name,email,summary);
+      builderMsg.textContent=t('builder_sent');setTimeout(function(){closeBuilder();setChatView('chat');chatOpen(true)},900);
+    }catch(err){builderMsg.textContent=t('builder_send_error')}
+    setBusy(builderSubmit,false);
+  });
+  paintBuilder();
+}
+
+/* ============ FAQ / Portfolio filter ============ */
+function reinitFaq(){
+  var items=$('.faq-item');
+  items.forEach(function(item){
+    if(item.dataset.bound)return;
+    item.dataset.bound='1';
+    var q=item.querySelector('.faq-q');
+    if(!q)return;
+    q.addEventListener('click',function(){
+      var willOpen=!item.classList.contains('open');
+      items.forEach(function(i){i.classList.remove('open');var qq=i.querySelector('.faq-q');if(qq)qq.setAttribute('aria-expanded','false')});
+      if(willOpen){item.classList.add('open');q.setAttribute('aria-expanded','true')}
+    });
+  });
+}
+function reinitPortfolio(){
+  $('.cat').forEach(function(b){
+    if(b.dataset.bound)return;
+    b.dataset.bound='1';
+    b.addEventListener('click',function(){
+      var c=b.getAttribute('data-cat');
+      $('.cat').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      $('#pfGrid .pf').forEach(function(p){
+        if(c==='all'||p.getAttribute('data-cat')===c){p.removeAttribute('hidden');p.classList.add('in')}else p.setAttribute('hidden','');
+      });
+    });
+  });
+}
+
+/* ============ Lightbox ============ */
+var PROJECT_IMAGES=[
+ ["https://i.ibb.co/G4HBGGgp/mochi-moonlet-cover-v2.png","https://i.ibb.co/3ygqZCj8/image.png","https://i.ibb.co/W47sfd4Q/image.png","https://i.ibb.co/WvjS08PZ/image.png"],
+ ["https://i.ibb.co/7x7vFFk5/lina-marceau-cover.png","https://i.ibb.co/bRKRzjvL/image.png","https://i.ibb.co/BbBKw8N/image.png","https://i.ibb.co/p6m5Q5mw/image.png"],
+ ["https://i.ibb.co/r2FZ5VF7/neura-edge-cover.png","https://i.ibb.co/6c4NkgLB/image.png","https://i.ibb.co/7dzWtZ62/image.png","https://i.ibb.co/fGMJZYQF/image.png"],
+ ["https://i.ibb.co/hxn3LLNT/natura-essence-cover.png","https://i.ibb.co/kVzGbDFp/image.png","https://i.ibb.co/Hff5MKzx/image.png","https://i.ibb.co/GQKpJXVB/image.png"],
+ ["https://i.ibb.co/QFBcs8Dg/ananya-portfolio-cover-1280x769.png","https://i.ibb.co/Z6hkcr1F/image.png","https://i.ibb.co/TBb7fd7n/image.png","https://i.ibb.co/s9hGbVvK/image.png"],
+ ["https://i.ibb.co/j9jKMmYX/promo-cover-v2.png","https://i.ibb.co/NdM8HwMM/image.png","https://i.ibb.co/fV4nq8Kg/image.png","https://i.ibb.co/kVS8xpTk/image.png"],
+ ["https://i.ibb.co/xt3KrZq9/goldenhue-cover-v2.png","https://i.ibb.co/F42nWyCZ/image.png","https://i.ibb.co/Gvzk0nkh/image.png","https://i.ibb.co/DPGZjM75/image.png"],
+ ["https://i.ibb.co/czf61kc/marginalia-portfolio-cover.png","https://i.ibb.co/9mNcht0w/image.png","https://i.ibb.co/V0bJ6QZT/image.png","https://i.ibb.co/LhHhpTc1/image.png"],
+ ["https://i.ibb.co/Fb9m1hcj/promo-cover-taskflow-2x.png","https://i.ibb.co/vvZPmqt4/image.png","https://i.ibb.co/vxFyRsJy/image.png","https://i.ibb.co/nqDyGhKS/image.png"],
+ ["https://i.ibb.co/NdT3YyYk/atelier-marchal-cover-en.png","https://i.ibb.co/wrj76F0X/image.png","https://i.ibb.co/WvSs6kvZ/image.png","https://i.ibb.co/qLRt3zrC/image.png"]
+];
+var LB={el:null,img:null,title:null,counter:null,thumbs:null,idx:0,proj:-1,images:[]};
+function lbTitle(){
+  var cards=$('#pfGrid .pf'),c=cards[LB.proj],h=c&&c.querySelector('.pf-info h3');
+  return h?h.textContent.trim():'';
+}
+function lbRefresh(){if(LB.el&&LB.el.classList.contains('open'))lbSet(LB.idx)}
+function lbInit(){
+  LB.el=$1('#lightbox');
+  if(!LB.el)return;
+  LB.img=$1('#lbImg');LB.title=$1('#lbTitle');LB.counter=$1('#lbCounter');LB.thumbs=$1('#lbThumbs');
+  d.addEventListener('click',function(e){
+    var trigger=e.target.closest('[data-project-idx]');
+    if(trigger){e.preventDefault();e.stopPropagation();lbOpen(parseInt(trigger.getAttribute('data-project-idx'),10));return}
+    if(!LB.el.classList.contains('open'))return;
+    if(e.target.closest('[data-lb-close]')){lbClose();return}
+    if(e.target.closest('[data-lb-prev]')){lbGo(-1);return}
+    if(e.target.closest('[data-lb-next]')){lbGo(1);return}
+    var th=e.target.closest('#lbThumbs img');
+    if(th){var i=parseInt(th.getAttribute('data-i'),10);if(!isNaN(i))lbSet(i)}
+  });
+  d.addEventListener('keydown',function(e){
+    if(!LB.el.classList.contains('open'))return;
+    var s=R.dir==='rtl'?-1:1;
+    if(e.key==='Escape')lbClose();
+    else if(e.key==='ArrowRight')lbGo(s);
+    else if(e.key==='ArrowLeft')lbGo(-s);
+  });
+  var x0=0;
+  LB.el.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  LB.el.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)lbGo(dx<0?1:-1)},{passive:true});
+}
+function lbOpen(p){
+  if(isNaN(p)||p<0||p>=PROJECT_IMAGES.length)return;
+  LB.proj=p;LB.images=PROJECT_IMAGES[p];LB.thumbs.innerHTML='';
+  LB.images.forEach(function(src,i){
+    var im=d.createElement('img');im.src=src;im.alt='';im.setAttribute('data-i',i);im.loading='lazy';LB.thumbs.appendChild(im);
+  });
+  lbSet(0);LB.el.classList.add('open');LB.el.setAttribute('aria-hidden','false');d.body.style.overflow='hidden';
+}
+function lbClose(){LB.el.classList.remove('open');LB.el.setAttribute('aria-hidden','true');d.body.style.overflow=''}
+function lbGo(dir){lbSet((LB.idx+dir+LB.images.length)%LB.images.length)}
+function lbSet(i){
+  LB.idx=i;var title=lbTitle();
+  LB.img.src=LB.images[i];LB.img.alt=title+' '+(i+1);LB.title.textContent=title;
+  LB.counter.textContent=(i+1)+' / '+LB.images.length;
+  $('#lbThumbs img').forEach(function(im,k){im.classList.toggle('on',k===i)});
+}
+
+var revealIo=null;
+function reinitReveal(){
+  var els=$('.reveal');
+  if(!('IntersectionObserver' in window)||reduce){els.forEach(function(e){e.classList.add('in')});return}
+  if(revealIo)revealIo.disconnect();
+  revealIo=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');revealIo.unobserve(x.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
+  els.forEach(function(e){if(!e.classList.contains('in'))revealIo.observe(e)});
+  $('[data-stagger]').forEach(function(g){Array.prototype.forEach.call(g.children,function(c,i){c.style.setProperty('--d',(i*90)+'ms')})});
+}
+function reinitSpotlight(){
+  if(!fine||reduce)return;
+  $('[data-spot]').forEach(function(c){
+    if(c.dataset.spotBound)return;
+    c.dataset.spotBound='1';
+    var isCard=c.classList.contains('card');
+    if(isCard)c.classList.add('tilt');
+    c.addEventListener('pointermove',function(e){
+      var r=c.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;
+      c.style.setProperty('--mx',x+'px');c.style.setProperty('--my',y+'px');
+      if(isCard){c.style.setProperty('--ry',((x/r.width-.5)*7)+'deg');c.style.setProperty('--rx',((.5-y/r.height)*7)+'deg')}
+    });
+    c.addEventListener('pointerleave',function(){c.style.setProperty('--rx','0deg');c.style.setProperty('--ry','0deg')});
+  });
+}
+function reinitSectionColor(){
+  var ss=$('[data-section]');
+  if(!ss.length||!('IntersectionObserver' in window))return;
+  var so=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){var v=getComputedStyle(x.target).getPropertyValue('--acc');if(v)R.style.setProperty('--acc',v.trim())}})},{threshold:.35});
+  ss.forEach(function(s){so.observe(s)});
+}
+
+/* ============ Ø³ÙƒØ±ÙˆÙ„ + Ripple ============ */
+var hd=$1('#site-header'),tp=$1('#top-btn'),tick=false;
+function onScroll(){
+  var y=window.pageYOffset||0;
+  if(hd)hd.classList.toggle('scrolled',y>8);
+  if(tp)tp.classList.toggle('show',y>500);
+  tick=false;
+}
+window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});
+if(!reduce)d.addEventListener('pointerdown',function(e){
+  var el=e.target.closest&&e.target.closest('.btn,.card[data-spot]');
+  if(!el)return;
+  var r=el.getBoundingClientRect(),s=Math.max(r.width,r.height),sp=d.createElement('span');
+  sp.className='rip';sp.style.cssText='width:'+s+'px;height:'+s+'px;left:'+(e.clientX-r.left-s/2)+'px;top:'+(e.clientY-r.top-s/2)+'px';
+  el.appendChild(sp);setTimeout(function(){if(sp.parentNode)sp.parentNode.removeChild(sp)},700);
+});
+
+/* ===== Splash ===== */
+function hideSplash(){
+  var sp=$1('#splashScreen');
+  if(!sp)return;
+  var seen=false;
+  try{seen=sessionStorage.getItem('norda_splash_seen')==='1'}catch(e){}
+  if(seen){sp.remove();return}
+  try{sessionStorage.setItem('norda_splash_seen','1')}catch(e){}
+  var minShow=reduce?800:2000,start=Date.now();
+  function done(){
+    setTimeout(function(){
+      sp.classList.add('hide');
+      setTimeout(function(){if(sp&&sp.parentNode)sp.parentNode.removeChild(sp)},700);
+    },Math.max(0,minShow-(Date.now()-start)));
+  }
+    var finished=false;
+  function finish(){
+    if(finished)return;
+    finished=true;
+    done();
+  }
+  if(d.readyState==='complete'||d.readyState==='interactive')finish();
+  else d.addEventListener('DOMContentLoaded',finish,{once:true});
+  window.addEventListener('load',finish,{once:true});
+  setTimeout(finish,2500);
+}
+/* ===== Progress ===== */
+function initReadProgress(){
+  var bar=$1('#readProgress');if(!bar)return;
+  var fill=bar.querySelector('span');if(!fill)return;
+  var raf=false;
+  function update(){
+    var doc=d.documentElement,st=window.pageYOffset||doc.scrollTop||0,h=(doc.scrollHeight||0)-(doc.clientHeight||0);
+    fill.style.width=Math.max(0,Math.min(100,h>0?st/h*100:0))+'%';raf=false;
+  }
+  function on(){if(!raf){raf=true;requestAnimationFrame(update)}}
+  window.addEventListener('scroll',on,{passive:true});
+  window.addEventListener('resize',on,{passive:true});
+  update();
+}
+
+/* ============ init ============ */
+function init(){
+  hideSplash();
+  applyLang(lang);applyTheme(pref,false);
+  initReadProgress();
+  d.addEventListener('click',function(e){
+    var trigger=e.target.closest('[data-nav]');
+    if(!trigger)return;
+    e.preventDefault();
+    showView(trigger.getAttribute('data-nav'));
+  });
+  var mb=$1('#menuBtn'),nv=$1('#nav');
+  function setMenu(open,back){
+    if(!mb||!nv)return;
+    nv.classList.toggle('open',open);
+    mb.setAttribute('aria-expanded',open?'true':'false');
+    mb.setAttribute('aria-label',open?t('menu_close'):t('menu_open'));
+    mb.firstChild.className=open?'fa-solid fa-xmark':'fa-solid fa-bars';
+    if(open){var f=nv.querySelector('a');if(f)f.focus()}else if(back)mb.focus();
+  }
+  if(mb&&nv){
+    mb.addEventListener('click',function(){setMenu(!nv.classList.contains('open'),true)});
+    $('a',nv).forEach(function(a){a.addEventListener('click',function(){setMenu(false,false)})});
+  }
+  d.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){
+      if(LB.el&&LB.el.classList.contains('open'))return;
+      if(builder&&builder.classList.contains('open')){closeBuilder();return}
+      if(cp&&cp.classList.contains('open')){chatOpen(false);if(fab)fab.focus();return}
+      if(nv&&nv.classList.contains('open'))setMenu(false,true);
+    }
+    if(e.key==='Tab'&&builder&&builder.classList.contains('open')){
+      var focusable=$('.builder-dialog button:not([hidden]),.builder-dialog input:not([hidden]),.builder-dialog select:not([hidden]),.builder-dialog textarea:not([hidden])').filter(function(el){return !el.disabled&&el.offsetParent!==null});
+      if(focusable.length){var first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey&&d.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&d.activeElement===last){e.preventDefault();first.focus()}}
+    }
+  });
+  $('.js-top').forEach(function(b){b.addEventListener('click',function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'})})});
+  var y=$1('#year');if(y)y.textContent=new Date().getFullYear();
+  showView(readHash(),true);
+  reinitFaq();reinitPortfolio();initCurrencyToggle();
+  reinitReveal();reinitSpotlight();reinitSectionColor();
+  onScroll();
+  lbInit();
+  bootChat();
+}
+function bootChat(){
+  var last=sget('rose_last_ticket');
+  if(last){try{
+    var tk=JSON.parse(last);
+    if(tk&&tk.status==='open'&&tk.ticketId){currentTicket=tk;lastCount=(tk.messages||[]).length;remoteHistoryReady=lastCount>0;updateTabs();renderChat();setChatView('chat');loadMessages()}
+  }catch(e){}}
+  loadClosed();
+  poll();
+}
+if(d.readyState==='loading')d.addEventListener('DOMContentLoaded',init);else init();
+})();
 </body>
 </html>
