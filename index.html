@@ -1336,7 +1336,7 @@ function initCurrencyToggle(){
 /* ============ نظام التذاكر ============ */
 var userId=sget('rose_uid');
 if(!userId){userId='u_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);sset('rose_uid',userId)}
-var API='/api';
+var API='https://lucky-block-975a.houda2004houdaa.workers.dev';
 var currentTicket=null,pendingFile=null,lastCount=0,shown=0,typing=false,typingTimer=null,sending=false;
 var closedCache=[],detailTicket=null,unread=0,view='new',remoteHistoryReady=false;
 var cp=$1('#chatPanel'),fab=$1('#chatFab'),clog=$1('#chatLog'),cf=$1('#chatForm'),badge=$1('#fabBadge');
@@ -1685,9 +1685,9 @@ if(builderOpenBtn&&builder){
     var summary=t('builder_title')+'\n'+rows.map(function(r){return r[0]+': '+(r[1]||'—')}).join('\n');
     builderMsg.textContent=t('msg_wait');setBusy(builderSubmit,true);
     try{
-      var requestResponse=await fetch('/api/requests',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:name,email:email,subject:'Project concept',message:summary,form_data:{purpose:val('#buildPurpose'),style:val('#buildStyle'),color:val('#buildColor'),layout:val('#buildLayout'),motion:val('#buildMotion'),inspiration:val('#buildInspiration'),typography:val('#buildType'),features:val('#buildFeatures')}})});
-      var requestJson=await requestResponse.json();if(!requestResponse.ok||!requestJson.ok)throw new Error('request');
-      builderMsg.textContent=t('builder_sent')+' '+requestJson.requestId;setTimeout(function(){closeBuilder()},1800);
+      var sent=await sendTicketRequest(name,email,summary);
+      if(!sent)throw new Error('request');
+      builderMsg.textContent=t('builder_sent');setTimeout(function(){closeBuilder()},1800);
     }catch(err){builderMsg.textContent=t('builder_send_error')}
     setBusy(builderSubmit,false);
   });
