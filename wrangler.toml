@@ -1,0 +1,13 @@
+name = "norda-site"
+pages_build_output_dir = "."
+compatibility_date = "2026-10-16"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "norda-db"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+
+# Optional: create an R2 bucket named norda-uploads and uncomment this binding.
+# [[r2_buckets]]
+# binding = "UPLOADS"
+# bucket_name = "norda-uploads"
