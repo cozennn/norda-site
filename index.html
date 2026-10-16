@@ -1955,6 +1955,8 @@ function init(){
   applyLang(lang);applyTheme(pref,false);
   initReadProgress();
   d.addEventListener('click',function(e){
+    var paymentLink=e.target.closest('a[href="/payment"],a[href="/payment/"],a[href="/payment/index.html"]');
+    if(paymentLink){e.preventDefault();location.href='/payment/';return;}
     var trigger=e.target.closest('[data-nav]');
     if(!trigger)return;
     var href=trigger.getAttribute('href')||'';
