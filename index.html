@@ -1230,7 +1230,7 @@ function routeFor(name){
   return routes[name]||'/';
 }
 function readRoute(){
-  var path=(location.pathname||'/').replace(/\\/+$/,'')||'/';
+  var path=(location.pathname||'/').replace(/\/+$/,'')||'/';
   var routes={'/':'home','/about':'about','/services':'services','/portfolio':'portfolio','/pricing':'packages','/prices':'packages','/packages':'packages','/payment':'payment','/faq':'faq','/contact':'contact'};
   if(routes[path])return routes[path];
   var h=(location.hash||'').replace('#','').trim();
