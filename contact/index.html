@@ -594,6 +594,137 @@ html{scroll-behavior:auto}
 .js .reveal:not(.in){opacity:1}
 *,*::before,*::after{animation:none!important;transition:none!important}
 }
+
+/* ===== NorDa: floating glass navigation refresh ===== */
+header#site-header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  padding-block:14px;
+  background:transparent;
+  border:0;
+  -webkit-backdrop-filter:none;
+  backdrop-filter:none;
+  transition:padding var(--t),background var(--t);
+}
+header#site-header.scrolled{border:0;box-shadow:none}
+header#site-header .header-inner{
+  width:calc(100% - 2 * var(--gutter));
+  max-width:1100px;
+  min-height:62px;
+  padding:8px 18px;
+  gap:clamp(8px,1.3vw,16px);
+  border:1px solid rgba(245,154,192,.28);
+  border-radius:var(--r-full);
+  background:rgba(26,17,24,.88);
+  -webkit-backdrop-filter:blur(22px) saturate(155%);
+  backdrop-filter:blur(22px) saturate(155%);
+  box-shadow:0 14px 38px rgba(26,17,24,.18),inset 0 1px 0 rgba(255,255,255,.07);
+  transition:background var(--t),border-color var(--t),box-shadow var(--t);
+}
+header#site-header .logo{
+  color:#fff1f6;
+  flex-shrink:0;
+  gap:10px;
+  font-size:1.04rem;
+}
+header#site-header .logo img{
+  border-radius:50%;
+  border:1px solid rgba(245,154,192,.38);
+  box-shadow:0 3px 12px rgba(217,68,131,.2);
+}
+header#site-header nav#nav{gap:3px}
+header#site-header nav#nav a{
+  color:#e8d5df;
+  font-size:clamp(.69rem,.74vw,.78rem);
+  font-weight:500;
+  min-height:39px;
+  padding:0 clamp(7px,.8vw,12px);
+  border:1px solid transparent;
+  background:transparent;
+  transition:background var(--t),color var(--t),border-color var(--t),transform var(--t);
+}
+header#site-header nav#nav a:hover,
+header#site-header nav#nav a[aria-current]{
+  color:#fff1f6;
+  background:rgba(217,68,131,.16);
+  border-color:rgba(245,154,192,.18);
+}
+header#site-header nav#nav a[aria-current]::after{display:none}
+header#site-header nav#nav a.nav-cta{
+  color:#fff;
+  margin-inline-start:5px;
+  padding-inline:15px;
+  border:1px solid rgba(255,241,246,.16);
+  background:linear-gradient(135deg,#d94483,#962a5c);
+  box-shadow:0 5px 16px rgba(184,50,111,.25);
+}
+header#site-header nav#nav a.nav-cta:hover{
+  background:linear-gradient(135deg,#ea6ba2,#b8326f);
+  box-shadow:0 7px 20px rgba(184,50,111,.32);
+  transform:translateY(-1px);
+}
+header#site-header .tools{gap:6px;flex-shrink:0}
+header#site-header .icon-btn{
+  min-width:36px;
+  height:36px;
+  padding-inline:9px;
+  color:#fbc2d8;
+  background:rgba(255,241,246,.07);
+  border-color:rgba(245,154,192,.22);
+  box-shadow:none;
+}
+header#site-header .icon-btn:hover{
+  color:#fff1f6;
+  background:rgba(217,68,131,.18);
+  border-color:rgba(245,154,192,.38);
+  box-shadow:0 4px 14px rgba(26,17,24,.16);
+  transform:translateY(-1px);
+}
+@media(max-width:1024px){
+  header#site-header{padding-block:10px}
+  header#site-header .header-inner{
+    width:calc(100% - 2 * var(--gutter));
+    min-height:58px;
+    padding:7px 12px;
+    border-radius:26px;
+  }
+  header#site-header nav#nav{
+    top:calc(100% + 9px);
+    inset-inline:var(--gutter);
+    width:auto;
+    padding:12px;
+    gap:5px;
+    border:1px solid rgba(245,154,192,.24);
+    border-radius:22px;
+    background:rgba(26,17,24,.97);
+    -webkit-backdrop-filter:blur(22px) saturate(155%);
+    backdrop-filter:blur(22px) saturate(155%);
+    box-shadow:0 18px 42px rgba(26,17,24,.25);
+  }
+  header#site-header nav#nav a{
+    justify-content:flex-start;
+    min-height:44px;
+    padding-inline:14px;
+    font-size:.88rem;
+    border-radius:14px;
+  }
+  header#site-header nav#nav a.nav-cta{
+    justify-content:center;
+    margin:5px 0 0;
+  }
+}
+@media(max-width:520px){
+  header#site-header .header-inner{gap:6px;padding-inline:10px}
+  header#site-header .logo{gap:7px;font-size:.98rem}
+  header#site-header .logo img{width:33px;height:33px}
+  header#site-header .tools{gap:4px}
+  header#site-header .icon-btn{min-width:34px;height:34px;padding-inline:7px}
+}
+@media(prefers-reduced-motion:reduce){
+  header#site-header,header#site-header *{transition:none!important}
+}
+
 </style><title>تواصلي مع NorDa | ابدئي مشروعك</title>
 
 <link rel="canonical" href="https://norda-site.pages.dev/contact/">
