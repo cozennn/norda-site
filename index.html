@@ -729,6 +729,61 @@ header#site-header .icon-btn:hover{
   header#site-header,header#site-header *{transition:none!important}
 }
 
+
+/* ===== NorDa Studio refresh: charcoal / ivory / marigold ===== */
+:root{
+ --rose-50:#fff9e9;--rose-100:#fff0bd;--rose-200:#ffe28a;--rose-300:#ffd45a;
+ --rose-400:#f6c445;--rose-500:#eab52f;--rose-600:#d9a51e;--rose-700:#b88912;--rose-800:#87640b;
+ --lilac-100:#f5eddf;--lilac-300:#dfcfb2;--lilac-500:#9b8a6a;--lilac-600:#746348;--lilac-700:#51442f;
+ --gold-300:#ffe07a;--gold-500:#f0bd32;--gold-700:#80600b;
+ --c-rose:44,88%,54%;--c-lilac:38,25%,52%;--c-gold:44,88%,56%;--c-cyan:190,20%,35%;--c-emerald:152,20%,35%;--c-amber:32,75%,48%;--c-pink:42,85%,52%;
+ --gr-rl:linear-gradient(135deg,#f6c445,#d9a51e);--gr-rg:linear-gradient(135deg,#f6c445,#f9df8a);--gr-lc:linear-gradient(135deg,#d9a51e,#8d7c5a);--gr-ga:linear-gradient(135deg,#f0bd32,#b88912);--gr-rp:linear-gradient(135deg,#f6c445,#eab52f);
+ --sh:30,15%,10%;--k:1;--shine:.28;
+ --bg:#f5f2eb;--bg-alt:#ece7dc;--alt-ov:rgba(244,240,231,.8);--surface:#fffdf8;--glass:rgba(255,253,248,.86);--tint:#fff5d6;--tint-2:#f9e9b5;
+ --text:#171915;--text-soft:#5e6158;--line:#ded9ce;
+ --brand:#d9a51e;--brand-hover:#b88912;--brand-text:#171915;--on-brand:#171915;
+ --g1:#f6c445;--g2:#d9a51e;--header-bg:rgba(18,20,17,.94);--gold-t:#87640b;
+ --r-xs:8px;--r-sm:12px;--r-md:16px;--r-lg:22px;--r-xl:30px;
+ --f-display:'IBM Plex Sans Arabic','Segoe UI',sans-serif;
+ --f-body:'IBM Plex Sans Arabic','Segoe UI',Tahoma,sans-serif;
+}
+:root[data-theme=dark]{
+ --bg:#171915;--bg-alt:#20221c;--alt-ov:rgba(25,27,22,.8);--surface:#23251f;--glass:rgba(31,33,27,.88);--tint:#2c2b21;--tint-2:#3b3624;
+ --text:#f5f1e8;--text-soft:#c9c5b9;--line:#3c3d33;--brand:#f6c445;--brand-hover:#ffe07a;--brand-text:#ffe07a;--on-brand:#171915;
+ --g1:#ffe07a;--g2:#f6c445;--header-bg:rgba(18,20,17,.94);--gold-t:#ffe07a;--sh:0,0%,0%;--k:2;
+}
+.bg-fx{background:linear-gradient(145deg,#f5f2eb 0%,#eee8da 58%,#f8f5ee 100%)!important}
+.bg-fx .au{opacity:.16!important;filter:blur(90px)}
+:root[data-theme=dark] .bg-fx{background:linear-gradient(145deg,#171915 0%,#20221c 58%,#191b16 100%)!important}
+header{color:#f5f1e8;border-bottom:1px solid rgba(255,255,255,.09)}
+header .logo,header nav#nav a,header .icon-btn{color:#f5f1e8}
+header nav#nav a:hover,header nav#nav a[aria-current],header nav#nav a[data-nav].active{background:rgba(246,196,69,.13);color:#ffe07a}
+header nav#nav a.nav-cta{background:#f6c445;color:#171915;box-shadow:none}
+header .icon-btn{border-color:rgba(255,255,255,.18);background:rgba(255,255,255,.06)}
+.logo i{background:#f6c445;color:#171915;box-shadow:none}
+.btn-primary{background:#f6c445;color:#171915;box-shadow:none}
+.btn-primary:hover{background:#ffe07a;box-shadow:0 10px 24px rgba(217,165,30,.2)}
+.btn-outline{border-color:#c5a13d;color:var(--text);background:transparent}
+.badge{border-color:#e2c66c;background:rgba(255,253,248,.84);color:#4a3b16;box-shadow:none}
+:root[data-theme=dark] .badge{background:#29271f;color:#ffe07a}
+.hero{background:#171915;color:#f5f1e8;padding-block:clamp(64px,9vw,112px);border-bottom:1px solid rgba(255,255,255,.08)}
+.hero :where(h1,h2,h3,h4),.hero p{color:#f5f1e8}
+.hero p{color:#c9c5b9}
+.hero::before{background:radial-gradient(55% 70% at 12% 10%,rgba(246,196,69,.12),transparent 70%),radial-gradient(45% 60% at 92% 20%,rgba(246,196,69,.08),transparent 70%)}
+.hero .grad{background:linear-gradient(120deg,#ffe07a,#f6c445);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero .btn-outline{color:#f5f1e8;border-color:#8d7b45;background:rgba(255,255,255,.04)}
+.hero .badge{background:rgba(246,196,69,.09);border-color:rgba(246,196,69,.35);color:#ffe07a}
+.hero .badge .sp{color:#ffe07a}
+.card,.service-card,.pf,.package-card,.faq-item{box-shadow:0 8px 28px rgba(25,24,18,.045)}
+.card:hover,.service-card:hover,.pf:hover{border-color:rgba(217,165,30,.45)}
+::selection{background:#f6c445;color:#171915}
+a:hover{color:var(--brand-hover)}
+@media(max-width:760px){
+ header nav#nav{background:#171915;border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 40px rgba(0,0,0,.24)}
+ header nav#nav a{color:#f5f1e8}
+}
+@media(prefers-reduced-motion:reduce){.bg-fx .au{animation:none!important}}
+
 </style><title>NorDa | خدمات رقمية وتصميم مواقع</title>
 
 <link rel="canonical" href="https://norda-site.pages.dev/">
