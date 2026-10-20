@@ -1,0 +1,61 @@
+/* NorDa Editorial Redesign — shared visual layer */
+:root{
+ --rose-50:#f7f2e8;--rose-100:#eee5d5;--rose-200:#e2d3bb;--rose-300:#d7bd8a;--rose-400:#c6a45e;--rose-500:#b38b3d;--rose-600:#98712b;--rose-700:#76551f;--rose-800:#57401d;
+ --gold-300:#ead7a7;--gold-500:#c8a45c;--gold-700:#846525;
+ --bg:#f3f0e8;--bg-alt:#e9e4d8;--alt-ov:rgba(236,231,219,.65);--surface:#fbf9f4;--glass:rgba(251,249,244,.84);--tint:#e9e2d3;--tint-2:#ded3bd;
+ --text:#24241f;--text-soft:#626158;--line:#d8d2c4;
+ --brand:#a47d34;--brand-hover:#76551f;--brand-text:#76551f;--on-brand:#fffdf8;
+ --g1:#b38b3d;--g2:#e1c990;--header-bg:rgba(243,240,232,.86);--gold-t:#76551f;
+ --sh:40,25%,12%;--k:1;--shine:.16;
+ --r-xs:5px;--r-sm:10px;--r-md:15px;--r-lg:21px;--r-xl:28px;
+ --section-y:clamp(64px,8vw,112px);--gutter:clamp(20px,5vw,76px);
+}
+:root[data-theme=dark]{
+ --bg:#171815;--bg-alt:#20211c;--alt-ov:rgba(24,25,21,.72);--surface:#24251f;--glass:rgba(34,35,29,.82);--tint:#303128;--tint-2:#414132;
+ --text:#f2efe6;--text-soft:#c2c0b5;--line:#414137;
+ --brand:#d5b46a;--brand-hover:#ead7a7;--brand-text:#e2c77f;--on-brand:#1b1b16;
+ --g1:#d5b46a;--g2:#f0e0b5;--header-bg:rgba(23,24,21,.86);--gold-t:#e8d39d;
+ --sh:0,0%,0%;--k:2;--shine:.1;
+}
+:root[data-theme=light]{color-scheme:light}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{background:var(--bg);color:var(--text);letter-spacing:-.012em}
+body::before{opacity:.12!important;pointer-events:none}
+::selection{background:var(--brand);color:var(--on-brand)}
+a{transition:color .2s ease,background .2s ease,border-color .2s ease}
+:where(button,.btn,[role=button],input,textarea,select){border-radius:var(--r-sm)}
+:where(button,.btn,[role=button]){transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+:where(button,.btn,[role=button]):hover{transform:translateY(-2px)}
+header, .site-header, #header, nav#nav{backdrop-filter:blur(22px);-webkit-backdrop-filter:blur(22px)}
+header,.site-header,#header{border-bottom:1px solid var(--line)!important}
+nav#nav a[data-nav]{border-radius:8px!important}
+nav#nav a[data-nav].active{background:var(--tint)!important;color:var(--brand-text)!important}
+h1,h2,h3,h4{letter-spacing:-.045em;line-height:1.18}
+h1{font-weight:700}
+h2{font-weight:650}
+p{line-height:1.9}
+:where(section,.section,.view) :where(.container,.wrap,.inner,.section-inner){width:min(100% - 2*var(--gutter),1240px);margin-inline:auto}
+:where(.card,.service-card,.project-card,.work-card,.price-card,.pricing-card,.feature-card,.about-card,.faq-item,.contact-card,.step-card){
+ border:1px solid var(--line)!important;border-radius:var(--r-lg)!important;background:var(--surface)!important;box-shadow:0 12px 34px rgba(25,25,18,.045)!important;
+}
+:where(.card,.service-card,.project-card,.work-card,.price-card,.pricing-card,.feature-card,.about-card,.faq-item,.contact-card,.step-card):hover{
+ border-color:color-mix(in srgb,var(--brand) 45%,var(--line))!important;box-shadow:0 18px 42px rgba(25,25,18,.09)!important;
+}
+:where(.btn,.button,.primary-btn,button[type=submit],a.button){border:1px solid var(--brand)!important;box-shadow:none!important;font-weight:600}
+:where(.btn-primary,.primary-btn,.button-primary,button[type=submit]){background:var(--brand)!important;color:var(--on-brand)!important}
+:where(.btn-secondary,.button-secondary){background:transparent!important;color:var(--text)!important;border-color:var(--line)!important}
+:where(input,textarea,select){background:var(--surface)!important;border:1px solid var(--line)!important;color:var(--text)!important}
+:where(input,textarea,select):focus{outline:2px solid color-mix(in srgb,var(--brand) 30%,transparent);border-color:var(--brand)!important}
+:where(.hero,.hero-section,[data-section=home]){position:relative;isolation:isolate}
+:where(.hero,.hero-section,[data-section=home])::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 15% 20%,color-mix(in srgb,var(--brand) 12%,transparent),transparent 42%),linear-gradient(180deg,transparent 70%,var(--bg));}
+:where(.hero h1,.hero-section h1,[data-section=home] h1){max-width:14ch}
+:where(.eyebrow,.section-kicker,.kicker,.badge){letter-spacing:.09em}
+hr{border:0;border-top:1px solid var(--line)}
+footer,.site-footer,#footer{border-top:1px solid var(--line)!important}
+img{border-radius:inherit}
+@media(max-width:760px){
+ :root{--gutter:20px;--section-y:58px}
+ :where(.card,.service-card,.project-card,.work-card,.price-card,.pricing-card,.feature-card,.about-card,.faq-item,.contact-card,.step-card){border-radius:14px!important}
+ h1{letter-spacing:-.035em}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
