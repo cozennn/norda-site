@@ -312,3 +312,8 @@ footer a:hover,.site-footer a:hover,#footer a:hover{color:#f5c542!important}
  .hero .mock{width:100%!important}
  .sec{padding-block:56px!important}
 }
+/* Error page */
+.error-page{min-height:100vh;display:grid;align-content:center;justify-items:center;text-align:center;padding-block:clamp(40px,8vw,88px);gap:12px}
+.error-page h1{font-size:clamp(2rem,6vw,4rem);max-width:16ch}
+.error-page p{max-width:48ch}
+.error-page .btn{display:inline-flex;align-items:center;justify-content:center;margin-top:12px;padding:12px 22px;text-decoration:none}
