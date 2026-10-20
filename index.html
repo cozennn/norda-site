@@ -7,8 +7,8 @@
 <meta name="google-site-verification" content="AjHY7gi3PoXa__nmXXSYz1Vj_xcAt6EUDPM_SXm9hcU" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light dark">
-<meta name="theme-color" content="#b8326f" id="themeColor">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0c0c0c" id="themeColor">
 <meta name="description" content="NorDa تقدم خدمات رقمية تشمل تصميم صفحات الهبوط، واجهات المواقع، التصاميم الرقمية، وإدخال البيانات.">
 <meta name="author" content="NorDa"><meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta property="og:type" content="website"><meta property="og:site_name" content="NorDa"><meta property="og:title" content="NorDa | خدمات رقمية وتصميم مواقع"><meta property="og:description" content="NorDa تقدم خدمات رقمية تشمل تصميم صفحات الهبوط، واجهات المواقع، التصاميم الرقمية، وإدخال البيانات."><meta property="og:image" content="https://placehold.co/1200x630/1A1025/F4C2D7?text=NorDa"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:locale" content="ar_DZ">
@@ -732,8 +732,7 @@ header#site-header .icon-btn:hover{
 </style><title>NorDa | خدمات رقمية وتصميم مواقع</title>
 
 <link rel="canonical" href="https://norda-site.pages.dev/">
-<link rel="stylesheet" href="/norda-editorial.css?v=1">
-<link rel="stylesheet" href="/norda-editorial.css?v=1">
+<link rel="stylesheet" href="/norda-editorial.css?v=2">
 </head>
 <body>
 
@@ -776,7 +775,6 @@ header#site-header .icon-btn:hover{
 <a class='nav-cta mag' href='/contact'><i aria-hidden='true' class='fa-solid fa-paper-plane'></i><span data-i18n='n_contact'>تواصل</span></a>
 </nav>
 <div class='tools'>
-<button aria-label='الثيم' class='icon-btn' data-i18n-aria='th_label' id='themeBtn' type='button'><i aria-hidden='true' class='fa-solid fa-sun'></i></button>
 <button aria-label='تغيير اللغة' class='icon-btn' data-i18n-aria='lang_label' id='langBtn' type='button'><i aria-hidden='true' class='fa-solid fa-language'></i><span id='langTxt'>EN</span></button>
 <button aria-controls='nav' aria-expanded='false' aria-label='فتح القائمة' class='icon-btn menu-btn' data-i18n-aria='menu_open' id='menuBtn' type='button'><i aria-hidden='true' class='fa-solid fa-bars'></i></button>
 </div>
@@ -1381,26 +1379,16 @@ function initialView(){
 window.addEventListener('hashchange',function(){showView(readHash(),true)});
 window.addEventListener('popstate',function(){showView(initialView(),true)});
 
-/* ============ الثيم (light / dark فقط) ============ */
-var pref=sget('rose_theme')||'light';if(['light','dark'].indexOf(pref)<0)pref='light';
-var THEME_ICON={light:'fa-sun',dark:'fa-moon'};
-function paintThemeBtn(){
-  var b=$1('#themeBtn');if(!b)return;
-  b.firstChild.className='fa-solid '+THEME_ICON[pref];
-  b.setAttribute('aria-label',t('th_label')+': '+t('th_'+pref));
-}
+/* ============ ثيم ثابت مطابق للتصميم ============ */
+var pref='light';
+function paintThemeBtn(){}
 function applyTheme(p,anim){
-  pref=p;
-  if(anim&&!reduce){R.classList.add('theme-anim');setTimeout(function(){R.classList.remove('theme-anim')},500)}
-  R.setAttribute('data-theme',p);R.setAttribute('data-pref',p);
-  var m=$1('#themeColor');if(m)m.setAttribute('content',p==='dark'?'#1a1118':'#b8326f');
-  paintThemeBtn();
+  pref='light';
+  R.setAttribute('data-theme','light');
+  R.setAttribute('data-pref','light');
+  var m=$1('#themeColor');
+  if(m)m.setAttribute('content','#0c0c0c');
 }
-var themeBtnEl=$1('#themeBtn');
-if(themeBtnEl)themeBtnEl.addEventListener('click',function(){
-  var n=pref==='light'?'dark':'light';
-  sset('rose_theme',n);applyTheme(n,true);
-});
 
 /* ============ تطبيق اللغة ============ */
 function applyLang(l){
