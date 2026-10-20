@@ -174,26 +174,16 @@ function initialView(){
 window.addEventListener('hashchange',function(){showView(readHash(),true)});
 window.addEventListener('popstate',function(){showView(initialView(),true)});
 
-/* ============ الثيم (light / dark فقط) ============ */
-var pref=sget('rose_theme')||'light';if(['light','dark'].indexOf(pref)<0)pref='light';
-var THEME_ICON={light:'fa-sun',dark:'fa-moon'};
-function paintThemeBtn(){
-  var b=$1('#themeBtn');if(!b)return;
-  b.firstChild.className='fa-solid '+THEME_ICON[pref];
-  b.setAttribute('aria-label',t('th_label')+': '+t('th_'+pref));
-}
+/* ============ ثيم ثابت: أسود وعاجي وأصفر ============ */
+var pref='light';
+function paintThemeBtn(){}
 function applyTheme(p,anim){
-  pref=p;
-  if(anim&&!reduce){R.classList.add('theme-anim');setTimeout(function(){R.classList.remove('theme-anim')},500)}
-  R.setAttribute('data-theme',p);R.setAttribute('data-pref',p);
-  var m=$1('#themeColor');if(m)m.setAttribute('content',p==='dark'?'#1a1118':'#b8326f');
-  paintThemeBtn();
+  pref='light';
+  R.setAttribute('data-theme','light');
+  R.setAttribute('data-pref','light');
+  var m=$1('#themeColor');
+  if(m)m.setAttribute('content','#0c0c0c');
 }
-var themeBtnEl=$1('#themeBtn');
-if(themeBtnEl)themeBtnEl.addEventListener('click',function(){
-  var n=pref==='light'?'dark':'light';
-  sset('rose_theme',n);applyTheme(n,true);
-});
 
 /* ============ تطبيق اللغة ============ */
 function applyLang(l){
