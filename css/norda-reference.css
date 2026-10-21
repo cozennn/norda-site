@@ -82,7 +82,7 @@ input:focus,textarea:focus,select:focus{border-color:#d5a51d!important;box-shado
 .hero .m-btn{background:#f5c542!important;border-radius:7px!important}
 .hero .float{background:#fff!important;color:#1b1b1b!important;border-color:#e6e0d8!important;box-shadow:0 12px 30px #0002!important}
 .hero .float i{background:#f5c542!important;color:#111!important}
-@keyframes refScreenFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes refScreenFloat{0%,100%{transform:perspective(1200px) rotateY(-2deg) translateY(0)}50%{transform:perspective(1200px) rotateY(-2deg) translateY(-7px)}}
 @media(max-width:760px){
  .hero .hero-grid{grid-template-columns:1fr!important;gap:20px!important}
  .hero .mock{width:min(100%,470px)!important;margin:12px auto 30px!important}
@@ -256,7 +256,7 @@ details p{color:var(--ref-muted)!important;padding-top:10px!important}
 .hero-grid{align-items:center!important;gap:clamp(32px,5vw,72px)!important}
 .hero-grid>div:first-child{min-width:0}
 .mock{position:relative!important;isolation:isolate;min-width:0;overflow:visible!important;padding:clamp(12px,2vw,22px)!important}
-.mock .browser{position:relative!important;z-index:1;width:100%!important;max-width:600px;margin-inline:auto!important;background:#171717!important;border:1px solid #444!important;border-radius:15px!important;padding:8px!important;box-shadow:0 26px 65px #0005,0 4px 0 #444!important;transform:perspective(1200px) rotateY(-2deg)!important;overflow:hidden}
+.mock .browser{position:relative!important;z-index:1;width:100%!important;max-width:600px;margin-inline:auto!important;background:#171717!important;border:1px solid #444!important;border-radius:15px!important;padding:8px!important;box-shadow:0 26px 65px #0005,0 4px 0 #444!important;overflow:hidden}
 .mock .browser-bar{min-height:25px!important;display:flex!important;align-items:center!important;gap:6px!important;padding:0 8px!important}
 .mock .browser-bar span{width:7px!important;height:7px!important;border-radius:50%!important;background:#f5c542!important;display:block!important}
 .mock .browser-bar span:nth-child(2){background:#e9a49a!important}
