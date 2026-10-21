@@ -208,3 +208,45 @@ details p{color:var(--ref-muted)!important;padding-top:10px!important}
 
 
 @media(max-width:480px){#chatPanel.open{bottom:84px!important;right:12px!important;left:12px!important}}
+
+
+/* Page-specific selectors used by the existing NorDa markup */
+.grid-2,.grid-3,.grid-4{gap:18px!important}
+.grid-2>.card,.grid-3>.card,.grid-4>.card{height:100%}
+.builder-step{background:#fff!important;border:1px solid var(--ref-line)!important;border-radius:14px!important;padding:22px!important}
+.builder-step .s-num,.builder-step .step-num{background:var(--ref-yellow)!important;color:#171717!important;border-radius:9px!important}
+.au{background:#fff!important;border:1px solid var(--ref-line)!important;border-radius:16px!important;padding:clamp(20px,3vw,32px)!important}
+.about-split .about-txt p{color:var(--ref-muted)!important}
+.about-split .about-vis{border-radius:18px!important;overflow:hidden!important}
+.pf-more{background:#171717!important;color:#fff!important;border-radius:8px!important}
+.pf-more:hover{background:#f5c542!important;color:#171717!important}
+.faq-item{padding:0!important;overflow:hidden}
+.faq-q{width:100%;display:flex!important;align-items:center;justify-content:space-between;gap:14px;text-align:start!important;padding:17px 19px!important;background:#fff!important;color:var(--ref-ink)!important;font-weight:750!important}
+.faq-q:hover{background:#fffaf0!important}
+.faq-q .q-ico{flex-shrink:0;background:#f5c542!important;color:#171717!important;border-radius:8px!important}
+.faq-a{padding:0 19px 18px!important;color:var(--ref-muted)!important;line-height:1.85!important}
+.pay-item{display:flex!important;align-items:center;gap:14px!important;background:#fff!important;border:1px solid var(--ref-line)!important;border-radius:13px!important;padding:18px!important}
+.pay-icon{flex-shrink:0;background:#fbe3dc!important;color:#80531b!important;border-radius:10px!important}
+.field{margin-bottom:16px!important}
+.field label{display:block;margin-bottom:7px!important;font-weight:700!important;color:var(--ref-ink)!important}
+.field input,.field textarea,.field select,.form input,.form textarea,.form select{width:100%;min-width:0;background:#faf8f5!important;border:1px solid #ded7cd!important;border-radius:9px!important;padding:12px 13px!important;color:#1b1b1b!important}
+.field input:focus,.field textarea:focus,.field select:focus,.form input:focus,.form textarea:focus,.form select:focus{border-color:#d4a91f!important;box-shadow:0 0 0 3px #f5c5422b!important;outline:0!important}
+.field textarea,.form textarea{min-height:125px;resize:vertical}
+.form-card .btn,.form .btn{min-height:45px}
+.cat{background:#fff!important;border:1px solid var(--ref-line)!important;border-radius:10px!important;padding:10px 14px!important}
+.cat:hover{border-color:#d5a51c!important}
+.cat.is-on,.cat.active{background:#fff8df!important;border-color:#d5a51c!important;color:#171717!important}
+.price-card .pkg-features,.price-card .pkg-features li{color:var(--ref-muted)!important}
+.price-card.featured,.price-card.is-featured{position:relative;border:1px solid #d5a51c!important}
+.price-card.featured:before,.price-card.is-featured:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--ref-yellow)}
+.price-card .pkg-desc{color:var(--ref-muted)!important}
+#site-footer .footer-col,footer .footer-col{min-width:0}
+#site-footer .footer-col a,footer .footer-col a{transition:color .2s ease}
+@media(max-width:760px){
+ .grid-2,.grid-3,.grid-4{grid-template-columns:1fr!important;gap:12px!important}
+ .faq-q{padding:15px!important}
+ .faq-a{padding:0 15px 15px!important}
+ .pay-item{align-items:flex-start;padding:15px!important}
+ .builder-step{padding:18px!important}
+}
+@media(min-width:520px) and (max-width:760px){.grid-2,.grid-3,.grid-4{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
