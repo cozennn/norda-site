@@ -110,6 +110,8 @@ input:focus,textarea:focus,select:focus{border-color:#d5a51d!important;box-shado
 .hero .ref-phone-cards span{height:23px;border-radius:4px;background:#faf8f5;border:1px solid #e9e3da}
 .hero .ref-phone-button{height:11px;width:58%;margin-top:9px;border-radius:4px;background:#f5c542}
 @media(max-width:760px){.hero .ref-phone{width:clamp(70px,20%,94px);inset-inline-end:0;bottom:0;transform:rotate(4deg)}}
+/* Keep the overlapping phone angled on mobile too; the shared mockup scale rule otherwise overrides its rotation. */
+@media(max-width:760px){.hero .mock .ref-phone{transform:rotate(4deg) scale(.78)!important;transform-origin:bottom right!important}}
 @media(max-width:390px){.hero .ref-phone{width:70px;inset-inline-end:-2px;bottom:-3px}.hero .float.f1{bottom:12px!important}}
 
 
