@@ -258,7 +258,7 @@ function initCurrencyToggle(){
 /* ============ نظام التذاكر ============ */
 var userId=sget('rose_uid');
 if(!userId){userId='u_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);sset('rose_uid',userId)}
-var API='/api';
+var API='https://lucky-block-975a.houdaa2004houdaa.workers.dev';
 var currentTicket=null,pendingFile=null,lastCount=0,shown=0,typing=false,typingTimer=null,sending=false;
 var closedCache=[],detailTicket=null,unread=0,view='new',remoteHistoryReady=false;
 var cp=$1('#chatPanel'),fab=$1('#chatFab'),clog=$1('#chatLog'),cf=$1('#chatForm'),badge=$1('#fabBadge');
