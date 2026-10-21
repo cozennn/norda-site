@@ -65,3 +65,34 @@ section:not(.hero) .container>p{color:var(--ref-muted)}
 input,textarea,select{border-radius:9px!important;border-color:var(--ref-line)!important}
 input:focus,textarea:focus,select:focus{border-color:#d5a51d!important;box-shadow:0 0 0 3px #f5c54226!important}
 @media(max-width:760px){.tools{gap:6px!important}.icon-btn{min-width:36px}.hero h1{font-size:clamp(30px,8vw,42px)!important}}
+
+
+/* Hero display screen: framed desktop monitor preview */
+.hero .hero-grid{display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr)!important;gap:clamp(28px,5vw,72px)!important;align-items:center!important}
+.hero .mock{width:min(100%,540px)!important;max-width:540px!important;margin:28px auto 40px!important;isolation:isolate;padding-bottom:24px}
+.hero .mock::before{content:"";position:absolute;z-index:-1;left:35%;right:35%;height:28px;bottom:-2px;background:linear-gradient(90deg,#242424,#555,#242424);border-radius:0 0 8px 8px;box-shadow:0 13px 0 -7px #222}
+.hero .browser{background:#fff!important;border:9px solid #171717!important;border-bottom-width:12px!important;border-radius:17px!important;overflow:hidden!important;box-shadow:0 0 0 1px #4b4b4b,0 28px 65px #0006!important;animation:refScreenFloat 7s ease-in-out infinite!important}
+.hero .browser-bar{padding:10px 12px!important;background:#f3f1ed!important;border-bottom:1px solid #ded9d1!important}
+.hero .browser-bar span{width:8px!important;height:8px!important}
+.hero .browser-bar em{height:18px!important;background:#fff!important;border-color:#e5e0d9!important}
+.hero .browser-body{padding:clamp(14px,2.2vw,24px)!important;background:#fff!important}
+.hero .m-hero{height:clamp(88px,13vw,130px)!important;background:linear-gradient(125deg,#f5c542,#fbe3dc 58%,#e5d9fa)!important;color:#171717!important}
+.hero .m-line{background:#e8e3db!important}
+.hero .m-box{background:#faf8f5!important;border-color:#e9e3da!important;color:#9b7613!important}
+.hero .m-btn{background:#f5c542!important;border-radius:7px!important}
+.hero .float{background:#fff!important;color:#1b1b1b!important;border-color:#e6e0d8!important;box-shadow:0 12px 30px #0002!important}
+.hero .float i{background:#f5c542!important;color:#111!important}
+@keyframes refScreenFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@media(max-width:760px){
+ .hero .hero-grid{grid-template-columns:1fr!important;gap:20px!important}
+ .hero .mock{width:min(100%,470px)!important;margin:12px auto 30px!important}
+ .hero .browser{border-width:6px!important;border-bottom-width:8px!important;border-radius:13px!important}
+ .hero .browser-bar{padding:7px 9px!important}
+ .hero .browser-bar em{height:14px!important}
+ .hero .m-row{gap:7px!important}
+ .hero .m-box{height:44px!important}
+ .hero .float{font-size:11px!important;padding:7px 9px!important}
+ .hero .float.f1{inset-inline-start:-4px!important;bottom:24px!important}
+ .hero .float.f2{inset-inline-end:-4px!important;top:12px!important}
+}
+@media(prefers-reduced-motion:reduce){.hero .browser{animation:none!important}}
