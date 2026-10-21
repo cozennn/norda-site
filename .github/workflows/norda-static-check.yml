@@ -120,7 +120,7 @@ jobs:
                       errors.append(f"{page}: local reference {ref} does not resolve to {target}")
 
           if errors:
-              print("\\n".join(errors))
+              print("\n".join(errors))
               sys.exit(1)
           print(f"Passed static checks for {len(pages)} HTML pages and both JavaScript entry points.")
           PY
