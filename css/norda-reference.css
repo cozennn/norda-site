@@ -1,0 +1,53 @@
+/* NorDa reference redesign layer, preserves existing route, i18n and ticket DOM */
+:root{--ref-bg:#f7f3ee;--ref-card:#fff;--ref-ink:#1b1b1b;--ref-muted:#6d6862;--ref-line:#e6e0d8;--ref-yellow:#f5c542;--ref-black:#0c0c0c;--ref-pink:#fbe3dc}
+html{scroll-padding-top:82px}
+body{background:var(--ref-bg)!important;color:var(--ref-ink)!important;font-family:Tajawal,"IBM Plex Sans Arabic",Tahoma,Arial,sans-serif!important;line-height:1.7}
+#site-header{background:var(--ref-black)!important;color:#fff!important;backdrop-filter:none!important;border-bottom:0!important;box-shadow:0 5px 24px #00000012!important}
+#site-header .header-inner{max-width:1100px!important;min-height:68px!important;gap:16px}
+#site-header .logo{color:#fff!important;font-weight:800;letter-spacing:.03em}
+#site-header .logo img{border-radius:10px}
+#nav{gap:clamp(8px,1.5vw,22px)!important}
+#nav a{color:#d0ceca!important;border-radius:0!important;background:transparent!important}
+#nav a:hover,#nav a.active,#nav a[aria-current=page]{color:var(--ref-yellow)!important}
+#nav a.active:after,#nav a[aria-current=page]:after{background:var(--ref-yellow)!important}
+.icon-btn,.currency-toggle{border:1px solid #ffffff35!important;background:#ffffff0b!important;color:#fff!important;border-radius:9px!important}
+.icon-btn:hover,.currency-toggle:hover{border-color:var(--ref-yellow)!important;color:var(--ref-yellow)!important}
+.container{width:min(1100px,calc(100% - 40px))!important;max-width:1100px!important}
+.hero{background:var(--ref-black)!important;color:#fff!important;border-radius:0!important;min-height:0!important;padding:62px 0 54px!important}
+.hero:before,.hero:after{opacity:.14!important}
+.hero h1{color:#fff!important;letter-spacing:-.035em!important;line-height:1.25!important}
+.hero .grad{background:none!important;color:var(--ref-yellow)!important;-webkit-text-fill-color:var(--ref-yellow)!important}
+.hero .lead,.hero p{color:#d2cfca!important}
+.badge,.chip{border:1px solid #ffffff26!important;background:#ffffff0b!important;color:#f4f0e9!important;box-shadow:none!important}
+.btn,.btn-primary,.nav-cta{border-radius:8px!important;font-weight:700!important;box-shadow:none!important;transition:transform .2s ease,background .2s ease!important}
+.btn-primary,.nav-cta{background:var(--ref-yellow)!important;color:#111!important;border-color:var(--ref-yellow)!important}
+.btn-outline{background:transparent!important;color:var(--ref-yellow)!important;border:1px solid var(--ref-yellow)!important}
+.sec,main section.sec{padding-top:58px!important;padding-bottom:58px!important}
+h2,h3{letter-spacing:-.02em}
+h2 .grad{background:none!important;color:#a66b00!important;-webkit-text-fill-color:#a66b00!important}
+.card,.price-card,.faq details,.contact-card,.service-card,.portfolio-card,.stat-card,.builder-dialog,.modal-card{background:var(--ref-card)!important;border:1px solid var(--ref-line)!important;border-radius:16px!important;box-shadow:0 10px 35px #2a1d0b08!important}
+.card:hover,.price-card:hover,.portfolio-card:hover{transform:translateY(-3px);border-color:#e3c96f!important;box-shadow:0 16px 38px #2a1d0b12!important}
+.pricing-grid{gap:18px!important}
+.price-card{padding:25px!important}
+.price-value{color:var(--ref-ink)!important;font-weight:800!important}
+.pkg-icon,.icon-badge,.about-vis{background:var(--ref-pink)!important;color:#80531b!important}
+.currency-toggle{background:var(--ref-black)!important;color:#fff!important;padding:10px 16px!important}
+footer,#site-footer{background:var(--ref-black)!important;color:#e9e5df!important;border-top:0!important}
+footer a,#site-footer a{color:#d8d3cb!important}
+footer a:hover,#site-footer a:hover{color:var(--ref-yellow)!important}
+#chatPanel{background:#fff!important;color:#1b1b1b!important;border:1px solid var(--ref-line)!important;border-radius:18px!important;box-shadow:0 20px 65px #0003!important;overflow:hidden}
+.chat-head{background:var(--ref-black)!important;color:#fff!important;border-bottom:0!important}
+.chat-head strong i{color:var(--ref-yellow)!important}
+.chat-tabs{background:#f7f3ee!important;border-bottom:1px solid var(--ref-line)!important}
+.chat-tab{color:#6d6862!important}
+.chat-tab.active{background:#fff!important;color:#1b1b1b!important;border-color:var(--ref-yellow)!important}
+.chat-view{background:#fff!important}
+.chat-empty .empty-icon{background:var(--ref-pink)!important;color:#8b5e20!important}
+.chat-in,.chat-row{background:#fff!important;border-color:var(--ref-line)!important}
+#ch-msg{background:#faf8f5!important;border:1px solid var(--ref-line)!important;border-radius:10px!important}
+.btn-send{background:var(--ref-yellow)!important;color:#111!important;border-radius:10px!important}
+#chatFab{background:var(--ref-yellow)!important;color:#111!important;box-shadow:0 10px 30px #0002!important}
+.chat-foot{background:#faf8f5!important;border-top:1px solid var(--ref-line)!important}
+:focus-visible{outline:3px solid #d5a51c!important;outline-offset:3px!important}
+@media(max-width:760px){#site-header .header-inner{min-height:62px!important}.hero{padding:42px 0!important}.sec,main section.sec{padding-top:42px!important;padding-bottom:42px!important}.container{width:min(100% - 28px,1100px)!important}#nav{background:var(--ref-black)!important}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
