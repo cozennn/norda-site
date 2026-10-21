@@ -348,3 +348,11 @@ html:not(.js) #preloader{display:none}
   #preloader .pl-logo,#preloader .pl-logo::after{animation:none}
   #preloader .pl-logo{opacity:1}
 }
+
+
+/* نموذج التواصل: موافقة الخصوصية الإلزامية */
+.fm .consent-row{display:flex;align-items:flex-start;gap:10px;font-size:14px;line-height:1.8;color:var(--mu);cursor:pointer}
+.fm .consent-row input{width:18px;height:18px;min-width:18px;margin-top:5px;accent-color:var(--yl);cursor:pointer}
+.fm .consent-row a{display:inline;text-decoration:underline;text-underline-offset:3px;color:#7b5a00;font-weight:700}
+header .w{height:56px}
+@media(max-width:720px){header .w{height:52px}}
