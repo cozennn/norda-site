@@ -1,0 +1,126 @@
+name: NorDa static checks
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main, publish/norda-reference-site-clean]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check JavaScript syntax
+        run: |
+          node --check js/pages/index.js
+          node --check js/script.js
+
+      - name: Validate page metadata, IDs, and local references
+        run: |
+          python - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlsplit
+          import sys
+
+          pages = [
+              Path("index.html"),
+              Path("about/index.html"),
+              Path("services/index.html"),
+              Path("portfolio/index.html"),
+              Path("contact/index.html"),
+              Path("pricing/index.html"),
+              Path("payment/index.html"),
+              Path("faq/index.html"),
+          ]
+          errors = []
+
+          class Audit(HTMLParser):
+              def __init__(self, page):
+                  super().__init__(convert_charrefs=True)
+                  self.page = page
+                  self.ids = set()
+                  self.title_open = False
+                  self.has_title = False
+                  self.canonicals = 0
+                  self.refs = []
+                  self.css_v5 = False
+                  self.js_v2 = False
+
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  item_id = attrs.get("id")
+                  if item_id:
+                      if item_id in self.ids:
+                          errors.append(f"{self.page}: duplicate id #{item_id}")
+                      self.ids.add(item_id)
+                  if tag == "title":
+                      self.title_open = True
+                  if tag == "link" and attrs.get("rel", "").lower() == "canonical":
+                      self.canonicals += 1
+                  for key in ("href", "src"):
+                      value = attrs.get(key)
+                      if value:
+                          self.refs.append(value)
+                          if key == "href" and "norda-reference.css?v=5" in value:
+                              self.css_v5 = True
+                          if key == "src" and ("/js/pages/index.js?v=2" in value or "/js/script.js?v=2" in value):
+                              self.js_v2 = True
+
+              def handle_endtag(self, tag):
+                  if tag == "title":
+                      self.title_open = False
+
+              def handle_data(self, data):
+                  if self.title_open and data.strip():
+                      self.has_title = True
+
+          for page in pages:
+              if not page.is_file():
+                  errors.append(f"Missing page: {page}")
+                  continue
+              audit = Audit(page)
+              audit.feed(page.read_text(encoding="utf-8"))
+              if not audit.has_title:
+                  errors.append(f"{page}: missing title")
+              if audit.canonicals != 1:
+                  errors.append(f"{page}: expected exactly one canonical URL, found {audit.canonicals}")
+              if not audit.css_v5:
+                  errors.append(f"{page}: norda-reference.css?v=5 not referenced")
+              if not audit.js_v2:
+                  errors.append(f"{page}: versioned site JavaScript (?v=2) not referenced")
+
+              for ref in audit.refs:
+                  parsed = urlsplit(ref)
+                  if parsed.scheme or parsed.netloc or not parsed.path.startswith("/"):
+                      continue
+                  path = parsed.path
+                  if path == "/":
+                      target = Path("index.html")
+                  elif path in ("/services", "/services/", "/portfolio", "/portfolio/", "/about", "/about/", "/contact", "/contact/", "/pricing", "/pricing/", "/payment", "/payment/", "/faq", "/faq/"):
+                      target = Path(path.strip("/")) / "index.html"
+                  elif path == "/packages":
+                      continue  # Existing Pages redirect is defined in _redirects.
+                  else:
+                      target = Path(path.lstrip("/"))
+                      if path.endswith("/"):
+                          target = target / "index.html"
+                  if not target.is_file():
+                      errors.append(f"{page}: local reference {ref} does not resolve to {target}")
+
+          if errors:
+              print("\\n".join(errors))
+              sys.exit(1)
+          print(f"Passed static checks for {len(pages)} HTML pages and both JavaScript entry points.")
+          PY
