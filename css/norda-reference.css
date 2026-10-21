@@ -337,3 +337,15 @@ details p{color:var(--ref-muted)!important;padding-top:10px!important}
   .hero .mock .browser{border-width:6px!important;border-bottom-width:8px!important;border-radius:13px!important;padding:5px!important}
   .hero .mock .browser-body{border-radius:6px!important}
 }
+
+
+/* Contact page: balanced single-column composition after removing placeholder social links */
+#view-contact .form-card{width:min(100%,760px)!important;margin-inline:auto!important;padding:clamp(20px,4vw,38px)!important}
+#view-contact .form-card h3{display:flex!important;align-items:center!important;gap:10px!important;margin-bottom:22px!important}
+#view-contact #contactForm{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:16px!important}
+#view-contact #contactForm .field{min-width:0!important;margin:0!important}
+#view-contact #contactForm .field:has(#cf-msg){grid-column:1/-1!important}
+#view-contact #contactForm #cfBtn,#view-contact #contactForm #cfMsg{grid-column:1/-1!important}
+#view-contact #contactForm textarea{min-height:150px!important;resize:vertical!important}
+#view-contact #contactForm input,#view-contact #contactForm textarea{width:100%!important;max-width:100%!important;box-sizing:border-box!important}
+@media(max-width:560px){#view-contact #contactForm{grid-template-columns:minmax(0,1fr)!important;gap:13px!important}#view-contact #contactForm .field:has(#cf-msg){grid-column:auto!important}#view-contact .form-card{padding:20px!important}}
