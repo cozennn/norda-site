@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="720" viewBox="0 0 960 720" fill="none">
+  <rect width="960" height="720" rx="28" fill="#EEE5D5"/>
+  <circle cx="694" cy="174" r="145" fill="#E7C6D3"/>
+  <circle cx="244" cy="584" r="118" fill="#D8B66C" opacity=".68"/>
+  <path d="M86 720V390C86 252 198 140 336 140H624C762 140 874 252 874 390V720H86Z" fill="#F8F4EC"/>
+  <path d="M244 720C257 592 334 514 461 514C590 514 671 591 686 720H244Z" fill="#171717"/>
+  <path d="M365 464C384 435 394 405 394 369V337H526V369C526 405 537 435 558 464L461 538L365 464Z" fill="#C99A78"/>
+  <path d="M350 292C350 218 398 174 461 174C525 174 572 221 572 294V350C572 430 526 480 461 480C397 480 350 430 350 350V292Z" fill="#D8AA88"/>
+  <path d="M342 322C310 256 337 184 390 151C434 123 501 127 544 163C589 202 601 266 575 324L552 283L536 239C497 255 440 256 395 236L369 285L342 322Z" fill="#25201F"/>
+  <path d="M395 345C407 336 421 336 433 345M489 345C501 336 515 336 527 345" stroke="#4A3027" stroke-width="7" stroke-linecap="round"/>
+  <path d="M441 399C454 409 469 409 482 399" stroke="#7E4B42" stroke-width="7" stroke-linecap="round"/>
+  <path d="M360 487L461 557L563 487L611 720H311L360 487Z" fill="#F4C2D7"/>
+  <path d="M415 528L461 570L507 528" stroke="#171717" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="738" cy="510" r="44" fill="#F5C542"/>
+  <circle cx="210" cy="236" r="20" fill="#171717"/>
+  <path d="M720 110L747 136L720 162L693 136L720 110Z" fill="#F5C542"/>
+  <path d="M142 494L176 528M176 494L142 528" stroke="#C99A78" stroke-width="8" stroke-linecap="round"/>
+  <text x="480" y="675" fill="#171717" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="5" text-anchor="middle">NORDA · DIGITAL STUDIO</text>
+</svg>
