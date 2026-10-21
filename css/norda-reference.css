@@ -304,3 +304,14 @@ details p{color:var(--ref-muted)!important;padding-top:10px!important}
  .mock .ref-phone-screen{min-height:215px!important}
  .mock .ref-phone{transform:scale(.78)!important}
 }
+
+
+/* Keep the monitor stand visible outside the screen bezel without clipping the screen content */
+.mock .browser{overflow:visible!important}
+.mock .browser-body{overflow:hidden!important;border-radius:7px!important}
+.mock .browser:after{pointer-events:none!important}
+.mock .browser:before{pointer-events:none!important}
+.mock .ref-phone{position:absolute!important;right:0!important;bottom:0!important}
+@media(max-width:760px){
+ .mock .ref-phone{right:0!important;bottom:-4px!important}
+}
