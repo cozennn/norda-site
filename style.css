@@ -325,8 +325,8 @@ html:not(.js) #preloader{display:none}
 }
 
 /* ===== شريط تقدم القراءة ===== */
-#readProgress{position:fixed;top:env(safe-area-inset-top,0);left:0;right:0;height:1px;background:transparent;z-index:1000;pointer-events:none}
-#readProgress .bar{height:100%;width:0;background:linear-gradient(90deg,#f5c542,#d4a017);box-shadow:0 0 3px rgba(245,197,66,.25);transition:width .1s linear;border-radius:0}
+#readProgress{position:fixed;top:env(safe-area-inset-top,0);left:0;right:0;height:1px;background:transparent;z-index:1000;pointer-events:none;overflow:hidden}
+#readProgress .bar{height:1px;width:0;background:linear-gradient(90deg,#f5c542,#d4a017);box-shadow:none;transform:scaleY(.35);transform-origin:top;transition:width .1s linear;border-radius:0}
 [dir="rtl"] #readProgress .bar{background:linear-gradient(270deg,#f5c542,#d4a017)}
 
 /* ===== زر العودة للأعلى ===== */
