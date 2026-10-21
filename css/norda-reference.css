@@ -281,3 +281,26 @@ details p{color:var(--ref-muted)!important;padding-top:10px!important}
  .mock .float{font-size:12px!important;padding:8px 10px!important}
 }
 @media(prefers-reduced-motion:reduce){.mock,.mock *{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+/* Final polish for the showcase device: address bar, monitor stand and stable mobile layout */
+.mock .browser{margin-bottom:34px!important}
+.mock .browser-bar em{position:relative!important;display:flex!important;align-items:center!important;justify-content:center!important;color:#e8e5df!important;font:500 9px/1.2 Arial,sans-serif!important;letter-spacing:.02em!important}
+.mock .browser-bar em:after{content:"norda-site.pages.dev";display:block!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important;max-width:100%!important}
+.mock .browser:after{content:"";position:absolute;z-index:-1;left:39%;right:39%;bottom:-26px;height:25px;background:linear-gradient(90deg,#292929,#555 48%,#292929);clip-path:polygon(18% 0,82% 0,100% 100%,0 100%)}
+.mock .browser:before{content:"";position:absolute;z-index:-1;left:31%;right:31%;bottom:-33px;height:8px;border-radius:50%;background:#292929;box-shadow:0 4px 10px #0003}
+.mock .browser-body{position:relative!important}
+.mock .browser-body:before{content:"NORDA";position:absolute;top:12px;inset-inline-start:16px;font:800 9px/1 Arial,sans-serif;letter-spacing:.16em;color:#242424;opacity:.6}
+.mock .ref-phone{border:5px solid #242424!important;border-radius:24px!important;background:#242424!important;padding:3px!important}
+.mock .ref-phone-screen{border-radius:17px!important;overflow:hidden!important;min-height:260px}
+.mock .ref-phone-top{position:relative!important;padding-top:12px!important}
+.mock .ref-phone-top:after{content:"";position:absolute;top:3px;left:50%;transform:translateX(-50%);width:35px;height:5px;border-radius:9px;background:#242424}
+@media(max-width:480px){
+ .mock .browser{border-radius:11px!important;padding:5px!important;margin-bottom:25px!important}
+ .mock .browser-bar{min-height:21px!important}
+ .mock .browser-body{padding:15px!important;gap:10px!important;min-height:155px!important}
+ .mock .m-row{gap:6px!important}
+ .mock .m-box{min-height:38px!important}
+ .mock .ref-phone-screen{min-height:215px!important}
+ .mock .ref-phone{transform:scale(.78)!important}
+}
