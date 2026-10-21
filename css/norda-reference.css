@@ -349,3 +349,16 @@ details p{color:var(--ref-muted)!important;padding-top:10px!important}
 #view-contact #contactForm textarea{min-height:150px!important;resize:vertical!important}
 #view-contact #contactForm input,#view-contact #contactForm textarea{width:100%!important;max-width:100%!important;box-sizing:border-box!important}
 @media(max-width:560px){#view-contact #contactForm{grid-template-columns:minmax(0,1fr)!important;gap:13px!important}#view-contact #contactForm .field:has(#cf-msg){grid-column:auto!important}#view-contact .form-card{padding:20px!important}}
+
+
+/* Accessibility: respect reduced-motion preferences and keep reveal content readable */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .reveal,.reveal.in,.in{opacity:1!important;transform:none!important;filter:none!important}
+}
+/* Visible keyboard focus for interactive controls */
+:where(a,button,input,textarea,select,[tabindex]):focus-visible{
+  outline:3px solid #c99b12!important;
+  outline-offset:3px!important;
+}
