@@ -234,25 +234,27 @@ function validEmail(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)}
 
 /* ============ العملة ============ */
 function initCurrencyToggle(){
-  var btn=$1('#currencyToggle'),active=$1('#curActive');
-  if(!btn)return;
+  var btns=[$1('#currencyToggle'),$1('#currencyToggleHeader')].filter(Boolean);
+  var labels=[$1('#curActive'),$1('#curActiveHeader')].filter(Boolean);
+  if(!btns.length)return;
   var RATE=240;
   var cur=sget('rose_currency')||'usd';
   function paint(){
-    active.textContent=cur==='usd'?'USD $':'DZD دج';
-    $('#pricingGrid .price-value').forEach(function(el){
+    labels.forEach(function(el){el.textContent=cur==='usd'?'USD $':'DZD دج'});
+    $('.price-value,[data-usd].price-value').forEach(function(el){
       var usd=el.getAttribute('data-usd');
       if(!usd)return;
-      el.textContent=cur==='usd'?'$'+usd:(usd*RATE).toLocaleString('en-US')+' دج';
+      el.textContent=cur==='usd'?'$'+usd:(Number(usd)*RATE).toLocaleString('en-US')+' دج';
     });
+    btns.forEach(function(btn){btn.setAttribute('aria-label',cur==='usd'?'Currency: US dollars, switch to Algerian dinars':'العملة: الدينار الجزائري، التبديل إلى الدولار')});
   }
-  if(!btn.dataset.bound){
+  btns.forEach(function(btn){
+    if(btn.dataset.bound)return;
     btn.dataset.bound='1';
     btn.addEventListener('click',function(){cur=cur==='usd'?'dzd':'usd';sset('rose_currency',cur);paint()});
-  }
+  });
   paint();
 }
-
 /* ============ نظام التذاكر ============ */
 var userId=sget('rose_uid');
 if(!userId){userId='u_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);sset('rose_uid',userId)}
