@@ -205,3 +205,6 @@ details p{color:var(--ref-muted)!important;padding-top:10px!important}
 /* Preserve the widget's original closed/open state behavior */
 #chatPanel{display:none!important}
 #chatPanel.open{display:flex!important}
+
+
+@media(max-width:480px){#chatPanel.open{bottom:84px!important;right:12px!important;left:12px!important}}
