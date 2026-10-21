@@ -6,12 +6,18 @@
    إذا حدث خطأ في الكود الرئيسي، (2) ليُترجَم aria-label لزر toTop عبر applyLang.
    ====================================================================== */
 
-/* ===== Preloader: شاشة افتتاحية مدتها 3 ثوانٍ ===== */
+/* ===== Preloader: 3 ثوانٍ عند أول زيارة للجلسة، ثم 1.2 ثانية بين الصفحات ===== */
 (function(){
-  var started=Date.now(),done=false,loaded=document.readyState==='complete';
+  var started=Date.now(),done=false,loaded=document.readyState==='complete',duration=1200;
+  try{
+    if(!sessionStorage.getItem('norda_preloader_seen')){
+      duration=3000;
+      sessionStorage.setItem('norda_preloader_seen','1');
+    }
+  }catch(e){duration=3000}
   function finishWhenReady(){
     if(done||!loaded)return;
-    var wait=Math.max(0,3000-(Date.now()-started));
+    var wait=Math.max(0,duration-(Date.now()-started));
     setTimeout(function(){
       if(done)return;done=true;
       var p=document.getElementById('preloader');
