@@ -70,7 +70,7 @@ input:focus,textarea:focus,select:focus{border-color:#d5a51d!important;box-shado
 /* Hero display screen: framed desktop monitor preview */
 .hero .hero-grid{display:grid!important;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr)!important;gap:clamp(28px,5vw,72px)!important;align-items:center!important}
 .hero .mock{width:min(100%,540px)!important;max-width:540px!important;margin:28px auto 40px!important;isolation:isolate;padding-bottom:24px}
-.hero .mock::before{content:"";position:absolute;z-index:-1;left:35%;right:35%;height:28px;bottom:-2px;background:linear-gradient(90deg,#242424,#555,#242424);border-radius:0 0 8px 8px;box-shadow:0 13px 0 -7px #222}
+/* The monitor stand is drawn by .mock .browser:after / :before below, so avoid a duplicate stand here. */
 .hero .browser{background:#fff!important;border:9px solid #171717!important;border-bottom-width:12px!important;border-radius:17px!important;overflow:hidden!important;box-shadow:0 0 0 1px #4b4b4b,0 28px 65px #0006!important;animation:refScreenFloat 7s ease-in-out infinite!important}
 .hero .browser-bar{padding:10px 12px!important;background:#f3f1ed!important;border-bottom:1px solid #ded9d1!important}
 .hero .browser-bar span{width:8px!important;height:8px!important}
