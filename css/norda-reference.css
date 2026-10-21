@@ -315,3 +315,23 @@ details p{color:var(--ref-muted)!important;padding-top:10px!important}
 @media(max-width:760px){
  .mock .ref-phone{right:0!important;bottom:-4px!important}
 }
+
+
+/* Final monitor-bezel correction: the shared mock rules must not flatten the desktop screen frame. */
+.hero .mock .browser{
+  border:9px solid #171717!important;
+  border-bottom-width:12px!important;
+  border-radius:17px!important;
+  background:#171717!important;
+  padding:8px!important;
+  box-shadow:0 0 0 1px #4b4b4b,0 28px 65px #0006!important;
+  overflow:visible!important;
+}
+.hero .mock .browser-body{
+  border-radius:7px!important;
+  overflow:hidden!important;
+}
+@media(max-width:760px){
+  .hero .mock .browser{border-width:6px!important;border-bottom-width:8px!important;border-radius:13px!important;padding:5px!important}
+  .hero .mock .browser-body{border-radius:6px!important}
+}
