@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -25,6 +27,56 @@ jobs:
         run: |
           node --check js/pages/index.js
           node --check js/script.js
+
+
+      - name: Check NorDa hero, support integration, and protected files
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          errors = []
+          home = Path("index.html").read_text(encoding="utf-8")
+          scripts = {
+              "js/pages/index.js": Path("js/pages/index.js").read_text(encoding="utf-8"),
+              "js/script.js": Path("js/script.js").read_text(encoding="utf-8"),
+          }
+
+          if "class='browser'" not in home and 'class="browser"' not in home:
+              errors.append("Home page is missing the desktop browser/monitor mockup.")
+          if "class='ref-phone'" not in home and 'class="ref-phone"' not in home:
+              errors.append("Home page is missing the overlapping phone mockup.")
+
+          endpoints = {}
+          for filename, source in scripts.items():
+              match = re.search(r"var\\s+API\\s*=\\s*['\"]([^'\"]+)", source)
+              endpoints[filename] = match.group(1) if match else None
+              for feature in ("function detectLang", "function initCurrencyToggle", "function sendTicketRequest", "function bootChat"):
+                  if feature not in source:
+                      errors.append(f"{filename}: missing expected integration {feature}.")
+
+          if not all(endpoints.values()) or len(set(endpoints.values())) != 1:
+              errors.append(f"Root and inner-page scripts do not share the same support API endpoint: {endpoints}")
+          elif not endpoints["js/script.js"].startswith("https://lucky-block-975a.houda2004houdaa.workers.dev"):
+              errors.append("Inner-page support script no longer points to the existing Cloudflare Worker.")
+
+          placeholders = ("placehold.co", "your_handle", "your_username", "example.com/images/profile.jpg")
+          for filename in ["index.html", "about/index.html", "services/index.html", "portfolio/index.html", "contact/index.html", "pricing/index.html", "payment/index.html", "faq/index.html"]:
+              source = Path(filename).read_text(encoding="utf-8")
+              for placeholder in placeholders:
+                  if placeholder in source:
+                      errors.append(f"{filename}: placeholder remains: {placeholder}")
+
+          if errors:
+              print("\\n".join(errors))
+              sys.exit(1)
+          print("Hero mockups, shared Worker endpoint, language/currency/chat hooks, and placeholder audit passed.")
+          PY
+
+      - name: Ensure production routing and backend configuration were not changed
+        run: |
+          git diff --exit-code origin/main...HEAD -- wrangler.toml _redirects robots.txt sitemap.xml
 
       - name: Validate page metadata, IDs, and local references
         run: |
