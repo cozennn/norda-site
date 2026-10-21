@@ -50,7 +50,7 @@ jobs:
 
           endpoints = {}
           for filename, source in scripts.items():
-              match = re.search(r"var\\s+API\\s*=\\s*['\"]([^'\"]+)", source)
+              match = re.search(r"var\s+API\s*=\s*['\"]([^'\"]+)", source)
               endpoints[filename] = match.group(1) if match else None
               for feature in ("function detectLang", "function initCurrencyToggle", "function sendTicketRequest", "function bootChat"):
                   if feature not in source:
@@ -69,7 +69,7 @@ jobs:
                       errors.append(f"{filename}: placeholder remains: {placeholder}")
 
           if errors:
-              print("\\n".join(errors))
+              print("\n".join(errors))
               sys.exit(1)
           print("Hero mockups, shared Worker endpoint, language/currency/chat hooks, and placeholder audit passed.")
           PY
