@@ -261,7 +261,7 @@ if(cform)cform.addEventListener('submit',async function(e){
   if(!consent||!consent.checked){out.textContent='يرجى الموافقة على سياسة الخصوصية قبل الإرسال.';out.classList.add('err');if(consent)consent.focus();return}
   out.textContent=t('msg_wait');setBusy(btn,true);
   try{
-    var response=await fetch('/api/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:nm,email:em,subject:sj,message:ms,privacyConsent:consent.checked,website:$1('#cf-site').value})});
+    var response=await fetch(API+'/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:nm,email:em,subject:sj,message:ms,privacyConsent:consent.checked,website:$1('#cf-site').value})});
     var result=await response.json();
     if(!response.ok||!result||!result.ok)throw new Error('send');
     out.textContent=t('msg_ok');out.classList.add('ok');cform.reset();
