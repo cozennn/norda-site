@@ -389,3 +389,36 @@ header .btn:hover{background:#ffda68;color:#111}
 /* Keep navigation scrollable when needed without showing a nested scrollbar */
 nav{scrollbar-width:none;-ms-overflow-style:none}
 nav::-webkit-scrollbar{display:none}
+
+
+/* NorDa scrollbar and interactive link underline */
+html{scrollbar-width:thin;scrollbar-color:#f5c542 #111}
+html::-webkit-scrollbar{width:10px}
+html::-webkit-scrollbar-track{background:#111;border-left:1px solid #242424}
+html::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#f5c542,#b88712);border:2px solid #111;border-radius:999px}
+html::-webkit-scrollbar-thumb:hover{background:#ffda68}
+footer a{position:relative;width:fit-content;max-width:100%;text-decoration:none;transition:color .2s ease}
+footer a::after{content:"";position:absolute;right:0;bottom:-2px;width:100%;height:2px;background:var(--yl);border-radius:2px;transform:scaleX(0);transform-origin:right center;transition:transform .22s ease}
+footer a:hover,footer a:focus-visible{color:#fff}
+footer a:hover::after,footer a:focus-visible::after{transform:scaleX(1)}
+.steps{display:flex;flex-direction:column;align-items:center;gap:0;max-width:720px;margin:38px auto 0}
+.step-item{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 76px;align-items:center;gap:22px;width:100%;padding:22px 26px;text-align:right;border:1px solid #292929;border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.012));box-shadow:0 8px 28px rgba(0,0,0,.12);transition:border-color .25s ease,background .25s ease,transform .25s ease}
+.step-item:hover{border-color:rgba(245,197,66,.55);background:linear-gradient(135deg,rgba(245,197,66,.07),rgba(255,255,255,.015));transform:translateY(-2px)}
+.step-copy h3{margin:0 0 5px;font-size:21px;font-weight:800;color:#fff}
+.step-copy p{margin:0;color:var(--mu);font-size:14px;line-height:1.9}
+.step-icon{grid-column:2;grid-row:1;width:68px;height:68px;display:grid;place-items:center;border-radius:18px;border:1px solid rgba(245,197,66,.35);background:rgba(245,197,66,.09);color:var(--yl);transition:background .25s ease,transform .25s ease}
+.step-icon svg{width:31px;height:31px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.step-item:hover .step-icon{background:rgba(245,197,66,.16);transform:scale(1.05)}
+.step-arrow{height:48px;display:grid;place-items:center;color:var(--yl);opacity:.75}
+.step-arrow svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:step-pulse 1.8s ease-in-out infinite}
+.step-item:last-child .step-arrow{display:none}
+.js .step-item.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
+.js .step-item.rv.in{opacity:1;transform:translateY(0)}
+.step-item.rv .step-copy h3{opacity:0;transform:translateY(8px);transition:opacity .45s ease .12s,transform .45s ease .12s}
+.step-item.rv .step-copy p{opacity:0;transform:translateY(8px);transition:opacity .45s ease .28s,transform .45s ease .28s}
+.step-item.rv .step-icon{opacity:0;transform:scale(.82);transition:opacity .45s ease .42s,transform .45s ease .42s}
+.step-item.rv.in .step-copy h3,.step-item.rv.in .step-copy p{opacity:1;transform:translateY(0)}
+.step-item.rv.in .step-icon{opacity:1;transform:scale(1)}
+@keyframes step-pulse{0%,100%{transform:translateY(-2px);opacity:.55}50%{transform:translateY(3px);opacity:1}}
+@media(max-width:600px){.steps{margin-top:28px}.step-item{grid-template-columns:minmax(0,1fr) 58px;gap:14px;padding:18px 16px;border-radius:15px}.step-copy h3{font-size:18px}.step-copy p{font-size:13px}.step-icon{width:54px;height:54px;border-radius:15px}.step-icon svg{width:26px;height:26px}.step-arrow{height:38px}}
+@media(prefers-reduced-motion:reduce){.step-item,.step-copy h3,.step-copy p,.step-icon,.step-arrow svg,footer a,footer a::after{transition:none!important;animation:none!important}.js .step-item.rv,.js .step-item.rv .step-copy h3,.js .step-item.rv .step-copy p,.js .step-item.rv .step-icon{opacity:1;transform:none}}
