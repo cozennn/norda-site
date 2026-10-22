@@ -360,7 +360,6 @@ header .w{height:56px}
 
 /* ===== NorDa navigation refinement ===== */
 header{isolation:isolate}
-header .w{position:relative}
 .logo{display:inline-flex;align-items:center;letter-spacing:1.4px;transition:color .2s,transform .2s}
 .logo:hover{color:var(--yl);transform:translateY(-1px)}
 nav a{position:relative;transition:color .2s ease}
