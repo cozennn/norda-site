@@ -89,7 +89,7 @@ footer h4{color:#fff;margin-bottom:8px}
 footer a{display:block;padding:2px 0}
 footer a:hover{color:var(--yl)}
 footer .cp{border-top:1px solid #2a2a2a;margin-top:26px;padding-top:14px;text-align:center;font-size:12px}
-header{background:rgba(12,12,12,.72);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(245,197,66,.12);transition:background .3s,border-color .3s,box-shadow .3s}
+header{background:#0c0c0c;backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);border-bottom:1px solid rgba(245,197,66,.12);transition:background .3s,border-color .3s,box-shadow .3s}
 header.scrolled{background:rgba(12,12,12,.94);border-bottom-color:rgba(245,197,66,.28);box-shadow:0 6px 30px rgba(0,0,0,.4)}
 .dk.ph{background:radial-gradient(60% 140% at 50% -20%,#3a2e10,transparent 70%),var(--bk)}
 .dk.hero{background:radial-gradient(70% 60% at 50% 38%,#33270c,transparent 70%),var(--bk)}
