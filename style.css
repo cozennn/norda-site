@@ -385,3 +385,7 @@ header .btn:hover{background:#ffda68;color:#111}
 @media(prefers-reduced-motion:reduce){
   .logo,nav a,nav a::after,.mb,header .btn,header,header.scrolled{transition:none!important}
 }
+
+/* Keep navigation scrollable when needed without showing a nested scrollbar */
+nav{scrollbar-width:none;-ms-overflow-style:none}
+nav::-webkit-scrollbar{display:none}
