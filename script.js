@@ -353,7 +353,7 @@ var pf=$1('#pf');
 if(pf)pf.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;$('button',pf).forEach(function(x){x.classList.remove('on')});b.classList.add('on');$('#wk .wkc').forEach(function(w){w.hidden=!(b.dataset.f==='all'||w.dataset.c===b.dataset.f)})});
 if('IntersectionObserver' in window&&!reduce){
   var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
-  $('main h2.t,main p.st,main .card,main .pk,main .wkc,main .steps>div,main .vals>div,main .feat>div,main .faq details,main .split>*,main .dash,main .stats').forEach(function(el,i){el.classList.add('rv');el.style.animationDelay=(i%4)*90+'ms';io.observe(el)});
+  $('main h2.t,main p.st,main .card,main .pk,main .wkc,main .steps>.step-item,main .vals>div,main .feat>div,main .faq details,main .split>*,main .dash,main .stats').forEach(function(el,i){el.classList.add('rv');el.style.animationDelay=(i%4)*90+'ms';io.observe(el)});
 }
 /* ===== بطاقات المعرض: تصبح رابطًا عند وجود data-href ===== */
 $('.wkc[data-href]').forEach(function(c){var u=c.getAttribute('data-href');if(!/^https?:\/\//i.test(u))return;c.setAttribute('role','link');c.tabIndex=0;c.style.cursor='pointer';
