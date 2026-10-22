@@ -250,15 +250,7 @@ function chatOpen(o){
 if(fab)fab.addEventListener('click',function(){chatOpen(!cp.classList.contains('open'))});
 var cx=$1('#chatX');if(cx)cx.addEventListener('click',function(){chatOpen(false);fab.focus()});
 d.addEventListener('keydown',function(e){if(e.key==='Escape'&&cp&&cp.classList.contains('open')){chatOpen(false);fab.focus()}});
-/* إرسال طلب عبر التذكرة (نموذج التواصل والأسئلة) */
-async function sendTicketRequest(name,email,text){
-  sset('norda_name',name);sending=true;
-  try{if(!hasOpen()&&!(await createTicket(name)))throw new Error('ticket');
-    var j=await apiSend({text:text+'\n\n'+t('f_name')+': '+name+'\n'+t('f_email')+': '+email,file:null,fileName:null,fileType:null});
-    if(!j||!j.ok)throw new Error('send');
-    currentTicket.messages=j.messages||currentTicket.messages||[];lastCount=currentTicket.messages.length;persist();renderMessages(currentTicket.messages,true);return true}
-  finally{sending=false}
-}
+/* نموذج التواصل المستقل عن نظام التذاكر */
 var cform=$1('#contactForm');
 if(cform)cform.addEventListener('submit',async function(e){
   e.preventDefault();
@@ -276,17 +268,9 @@ if(cform)cform.addEventListener('submit',async function(e){
   }catch(err){out.textContent=t('msg_err');out.classList.add('err')}
   setBusy(btn,false);
 });
-var fq=$1('#faqQuestionForm');
-if(fq)fq.addEventListener('submit',async function(e){
-  e.preventDefault();
-  var nm=$1('#fq-name').value.trim(),em=$1('#fq-email').value.trim(),q=$1('#fq-question').value.trim(),out=$1('#fqMsg'),btn=fq.querySelector('button[type=submit]');
-  out.className='fmsg';
-  if(!nm||!em||!q){out.textContent=t('msg_req');out.classList.add('err');return}
-  if(!validEmail(em)){out.textContent=t('msg_email');out.classList.add('err');return}
-  out.textContent=t('msg_wait');setBusy(btn,true);
-  try{await sendTicketRequest(nm,em,t('faq_question')+': '+q);out.textContent=t('msg_ok');out.classList.add('ok');fq.reset()}catch(err){out.textContent=t('msg_err');out.classList.add('err')}
-  setBusy(btn,false);
-});
+/* زر الأسئلة الشائعة يفتح دردشة التذاكر الحالية */
+var faqOpenChat=$1('#faqOpenChat');
+if(faqOpenChat&&fab)faqOpenChat.addEventListener('click',function(){chatOpen(true)});
 /* ===== فلترة الأعمال + ظهور الأقسام ===== */
 var pf=$1('#pf');
 if(pf)pf.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;$('button',pf).forEach(function(x){x.classList.remove('on')});b.classList.add('on');$('#wk .wkc').forEach(function(w){w.hidden=!(b.dataset.f==='all'||w.dataset.c===b.dataset.f)})});
