@@ -129,6 +129,41 @@ function validEmail(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)}
 var userId=sget('norda_uid');if(!userId){userId='u_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);sset('norda_uid',userId)}
 var API=CFG.TELEGRAM_API||window.TELEGRAM_API||'';
 var currentTicket=null,pendingFile=null,lastCount=0,shown=0,typing=false,typingTimer=null,sending=false,closedCache=[],detailTicket=null,unread=0,view='new',remoteReady=false;
+            
+var CLOSED_ARCHIVE_KEY='norda_closed_archive';
+
+function archiveClosed(ticket){
+  if(!ticket||!ticket.ticketId)return;
+  var archived=[];
+  try{
+    archived=JSON.parse(sget(CLOSED_ARCHIVE_KEY)||'[]');
+    if(!Array.isArray(archived))archived=[];
+  }catch(e){archived=[]}
+
+  var saved=JSON.parse(JSON.stringify(ticket));
+  saved.status='closed';
+  saved.closedAt=saved.closedAt||Date.now();
+
+  // حفظ معلومات الملفات دون بياناتها الكبيرة
+  (saved.messages||[]).forEach(function(m){
+    if(m.file){
+      m.file={name:m.file.name||'',type:m.file.type||''};
+    }
+  });
+
+  var id=String(saved.ticketId);
+  var index=archived.findIndex(function(t){
+    return String(t.ticketId)===id;
+  });
+
+  if(index>=0)archived[index]=saved;
+  else archived.unshift(saved);
+
+  try{
+    sset(CLOSED_ARCHIVE_KEY,JSON.stringify(archived));
+    closedCache=archived;
+  }catch(e){}
+}
 var cp=$1('#chatPanel'),fab=$1('#chatFab'),clog=$1('#chatLog'),cf=$1('#chatForm'),badge=$1('#fabBadge'),ta=$1('#ch-msg'),fileInput=$1('#fileInput');
 var tabs={'new':$1('#tabNew'),'chat':$1('#tabChat'),'closed':$1('#tabClosed')};
 var soundToggle=$1('#soundToggle'),soundOn=sget('norda_chat_sound')!=='off',ac=null;
@@ -223,7 +258,26 @@ if(fileInput)fileInput.addEventListener('change',function(){
   var rd=new FileReader();rd.onload=function(){pendingFile={name:f.name,type:f.type,size:f.size,data:rd.result};$1('#filePreview').style.display='flex';$1('#fileNamePreview').textContent=f.name;$1('#fileSizePreview').textContent=fmtSize(f.size)};rd.readAsDataURL(f);
 });
 var fr=$1('#fileRemove');if(fr)fr.addEventListener('click',function(){pendingFile=null;clearFile()});
-async function loadClosed(){try{var r=await fetch(API+'/ticket/closed/closed?userId='+encodeURIComponent(userId));var j=await r.json();if(j.ok&&j.tickets)closedCache=j.tickets}catch(e){}renderClosed()}
+
+async function loadClosed(){
+  try{
+    var archived=JSON.parse(sget(CLOSED_ARCHIVE_KEY)||'[]');
+    if(!Array.isArray(archived))archived=[];
+    closedCache=archived;
+
+    var r=await fetch(
+      API+'/ticket/closed/closed?userId='+encodeURIComponent(userId)
+    );
+    var j=await r.json();
+
+    if(j.ok&&Array.isArray(j.tickets)){
+      j.tickets.forEach(function(ticket){
+        archiveClosed(ticket);
+      });
+    }
+  }catch(e){}
+  renderClosed();
+}
 function renderClosed(){
   var list=$1('#closedList'),cnt=$1('#closedCount');if(!list)return;list.innerHTML='';
   if(!closedCache.length){list.innerHTML='<p style="text-align:center;color:#6d6862;margin:auto">'+esc(t('no_closed'))+'</p>';if(cnt)cnt.classList.remove('show');return}
