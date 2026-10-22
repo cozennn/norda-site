@@ -227,7 +227,18 @@ async function loadMessages(){
       if(last&&last.from!=='user'&&added>0){if(!cp.classList.contains('open')||view!=='chat'){unread+=Math.max(added,1);setBadge()}if(was)ding()}}
     remoteReady=true;}catch(e){}
 }
-function onClosedRemote(){currentTicket=null;sdel('norda_last_ticket');setTyping(false);shown=0;updateTabs();setView('closed');loadClosed();toast('ticket_closed_msg')}
+
+function onClosedRemote(){
+  archiveClosed(currentTicket);
+  currentTicket=null;
+  sdel('norda_last_ticket');
+  setTyping(false);
+  shown=0;
+  updateTabs();
+  setView('closed');
+  loadClosed();
+  toast('ticket_closed_msg');
+}
 function poll(){if(!d.hidden&&hasOpen()&&!sending)loadMessages();setTimeout(poll,cp.classList.contains('open')?1500:8000)}
 function grow(){if(!ta)return;ta.style.height='auto';ta.style.height=Math.min(ta.scrollHeight,110)+'px'}
 function clearFile(){var p=$1('#filePreview');if(p){p.style.display='none';$1('#fileNamePreview').textContent='';$1('#fileSizePreview').textContent='';fileInput.value=''}}
@@ -247,7 +258,19 @@ var bc=$1('#btnCloseTicket');
 if(bc)bc.addEventListener('click',async function(){
   if(!hasOpen())return;if(!confirm(t('ticket_close_confirm')))return;
   try{var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/close?userId='+encodeURIComponent(userId),{method:'POST'});var j=await r.json();
-    if(j.ok){currentTicket=null;sdel('norda_last_ticket');setTyping(false);shown=0;updateTabs();setView('closed');loadClosed();toast('ticket_closed_ok')}else toast('msg_err')}catch(e){toast('msg_err')}
+    
+if(j.ok){
+  archiveClosed(currentTicket);
+  currentTicket=null;
+  sdel('norda_last_ticket');
+  setTyping(false);
+  shown=0;
+  updateTabs();
+  setView('closed');
+  loadClosed();
+  toast('ticket_close_ok');
+}else toast('msg_err')
+}catch(e){toast('msg_err')}
 });
 /* إرفاق ملف: PDF وصور فقط، الحد 2 ميغا */
 var ba=$1('#btnAttach');if(ba)ba.addEventListener('click',function(){fileInput.click()});
