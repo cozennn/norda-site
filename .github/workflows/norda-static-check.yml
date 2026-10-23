@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -128,7 +130,7 @@ jobs:
               errors.append("Missing sitemap.xml")
 
           if errors:
-              print("\\n".join(errors))
+              print("\n".join(errors))
               sys.exit(1)
           print(f"Passed static checks for {len(pages)} pages, JSON-LD, local file references, sitemap XML and JavaScript syntax.")
           PY
