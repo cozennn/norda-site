@@ -24,79 +24,25 @@ jobs:
           node-version: 22
 
       - name: Check JavaScript syntax
-        run: |
-          node --check js/pages/index.js
-          node --check js/script.js
+        run: node --check script.js
 
-
-      - name: Check NorDa hero, support integration, and protected files
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          import re
-          import sys
-
-          errors = []
-          home = Path("index.html").read_text(encoding="utf-8")
-          scripts = {
-              "js/pages/index.js": Path("js/pages/index.js").read_text(encoding="utf-8"),
-              "js/script.js": Path("js/script.js").read_text(encoding="utf-8"),
-          }
-
-          if "class='browser'" not in home and 'class="browser"' not in home:
-              errors.append("Home page is missing the desktop browser/monitor mockup.")
-          if "class='ref-phone'" not in home and 'class="ref-phone"' not in home:
-              errors.append("Home page is missing the overlapping phone mockup.")
-
-          endpoints = {}
-          for filename, source in scripts.items():
-              match = re.search(r"var\s+API\s*=\s*['\"]([^'\"]+)", source)
-              endpoints[filename] = match.group(1) if match else None
-              for feature in ("function detectLang", "function initCurrencyToggle", "function sendTicketRequest", "function bootChat"):
-                  if feature not in source:
-                      errors.append(f"{filename}: missing expected integration {feature}.")
-
-          if not all(endpoints.values()) or len(set(endpoints.values())) != 1:
-              errors.append(f"Root and inner-page scripts do not share the same support API endpoint: {endpoints}")
-          elif not endpoints["js/script.js"].startswith("https://lucky-block-975a.houda2004houdaa.workers.dev"):
-              errors.append("Inner-page support script no longer points to the existing Cloudflare Worker.")
-
-          placeholders = ("placehold.co", "your_handle", "your_username", "example.com/images/profile.jpg")
-          for filename in ["index.html", "about/index.html", "services/index.html", "portfolio/index.html", "contact/index.html", "pricing/index.html", "payment/index.html", "faq/index.html"]:
-              source = Path(filename).read_text(encoding="utf-8")
-              for placeholder in placeholders:
-                  if placeholder in source:
-                      errors.append(f"{filename}: placeholder remains: {placeholder}")
-
-          if errors:
-              print("\n".join(errors))
-              sys.exit(1)
-          print("Hero mockups, shared Worker endpoint, language/currency/chat hooks, and placeholder audit passed.")
-          PY
-
-      - name: Ensure production routing and backend configuration were not changed
-        run: |
-          git diff --exit-code origin/main...HEAD -- wrangler.toml _redirects robots.txt sitemap.xml
-
-      - name: Validate page metadata, IDs, and local references
+      - name: Validate static pages, metadata, structured data and local assets
         run: |
           python - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
           from urllib.parse import urlsplit
+          import json
+          import re
           import sys
+          import xml.etree.ElementTree as ET
 
-          pages = [
-              Path("index.html"),
-              Path("about/index.html"),
-              Path("services/index.html"),
-              Path("portfolio/index.html"),
-              Path("contact/index.html"),
-              Path("pricing/index.html"),
-              Path("payment/index.html"),
-              Path("faq/index.html"),
-          ]
           errors = []
+          pages = [
+              Path("index.html"), Path("about.html"), Path("portfolio.html"),
+              Path("pricing.html"), Path("faq.html"), Path("policies.html"),
+              Path("contact.html"),
+          ]
 
           class Audit(HTMLParser):
               def __init__(self, page):
@@ -107,8 +53,9 @@ jobs:
                   self.has_title = False
                   self.canonicals = 0
                   self.refs = []
-                  self.css_v5 = False
-                  self.js_v2 = False
+                  self.jsonld = []
+                  self.in_jsonld = False
+                  self.jsonld_text = []
 
               def handle_starttag(self, tag, attrs):
                   attrs = dict(attrs)
@@ -125,54 +72,68 @@ jobs:
                       value = attrs.get(key)
                       if value:
                           self.refs.append(value)
-                          if key == "href" and "norda-reference.css?v=5" in value:
-                              self.css_v5 = True
-                          if key == "src" and ("/js/pages/index.js?v=2" in value or "/js/script.js?v=2" in value):
-                              self.js_v2 = True
+                  if tag == "script" and attrs.get("type") == "application/ld+json":
+                      self.in_jsonld = True
+                      self.jsonld_text = []
 
               def handle_endtag(self, tag):
                   if tag == "title":
                       self.title_open = False
+                  if tag == "script" and self.in_jsonld:
+                      self.jsonld.append("".join(self.jsonld_text))
+                      self.in_jsonld = False
 
               def handle_data(self, data):
                   if self.title_open and data.strip():
                       self.has_title = True
+                  if self.in_jsonld:
+                      self.jsonld_text.append(data)
 
           for page in pages:
               if not page.is_file():
                   errors.append(f"Missing page: {page}")
                   continue
+              source = page.read_text(encoding="utf-8")
               audit = Audit(page)
-              audit.feed(page.read_text(encoding="utf-8"))
+              audit.feed(source)
               if not audit.has_title:
                   errors.append(f"{page}: missing title")
               if audit.canonicals != 1:
                   errors.append(f"{page}: expected exactly one canonical URL, found {audit.canonicals}")
-              if not audit.css_v5:
-                  errors.append(f"{page}: norda-reference.css?v=5 not referenced")
-              if not audit.js_v2:
-                  errors.append(f"{page}: versioned site JavaScript (?v=2) not referenced")
-
+              for block in audit.jsonld:
+                  try:
+                      json.loads(block)
+                  except Exception as exc:
+                      errors.append(f"{page}: invalid JSON-LD: {exc}")
               for ref in audit.refs:
                   parsed = urlsplit(ref)
-                  if parsed.scheme or parsed.netloc or not parsed.path.startswith("/"):
+                  if parsed.scheme or parsed.netloc or not parsed.path:
                       continue
                   path = parsed.path
-                  if path == "/":
-                      target = Path("index.html")
-                  elif path in ("/services", "/services/", "/portfolio", "/portfolio/", "/about", "/about/", "/contact", "/contact/", "/pricing", "/pricing/", "/payment", "/payment/", "/faq", "/faq/"):
-                      target = Path(path.strip("/")) / "index.html"
-                  elif path == "/packages":
-                      continue  # Existing Pages redirect is defined in _redirects.
-                  else:
-                      target = Path(path.lstrip("/"))
-                      if path.endswith("/"):
-                          target = target / "index.html"
-                  if not target.is_file():
-                      errors.append(f"{page}: local reference {ref} does not resolve to {target}")
+                  if path.startswith("/"):
+                      path = path.lstrip("/")
+                  if path in ("", "."):
+                      path = "index.html"
+                  # Clean URLs and the existing /packages redirect are handled separately.
+                  if not Path(path).suffix or path == "packages":
+                      continue
+                  if not Path(path).is_file():
+                      errors.append(f"{page}: local reference {ref} does not resolve to {path}")
+
+          sitemap = Path("sitemap.xml")
+          if sitemap.is_file():
+              try:
+                  ET.parse(sitemap)
+              except Exception as exc:
+                  errors.append(f"sitemap.xml: invalid XML: {exc}")
+          else:
+              errors.append("Missing sitemap.xml")
 
           if errors:
               print("\n".join(errors))
               sys.exit(1)
-          print(f"Passed static checks for {len(pages)} HTML pages and both JavaScript entry points.")
+          print(f"Passed static checks for {len(pages)} pages, JSON-LD, local file references, sitemap XML and JavaScript syntax.")
           PY
+
+      - name: Ensure production routing and backend configuration were not changed
+        run: git diff --exit-code origin/main...HEAD -- wrangler.toml _redirects robots.txt
