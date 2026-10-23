@@ -46,10 +46,6 @@ p.st{text-align:center;color:var(--mu);margin:4px 0 30px}
 .card h3{font-size:18px}
 .card p{color:var(--mu);font-size:14px;margin:6px 0 10px}
 .card a.m{color:#8a6508;font-size:14px;font-weight:700}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px}
-.steps div{text-align:center}
-.steps b{font-size:30px;display:block;color:var(--yl);background:var(--bk);width:56px;height:56px;line-height:56px;border-radius:50%;margin:0 auto 8px}
-.steps p{color:var(--mu);font-size:14px}
 .band{text-align:center;padding:44px 0}
 .band h3{font-size:24px;margin-bottom:14px}
 .feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;text-align:center}
@@ -401,17 +397,68 @@ footer a{position:relative;width:fit-content;max-width:100%;text-decoration:none
 footer a::after{content:"";position:absolute;right:0;bottom:-2px;width:100%;height:2px;background:var(--yl);border-radius:2px;transform:scaleX(0);transform-origin:right center;transition:transform .22s ease}
 footer a:hover,footer a:focus-visible{color:#fff}
 footer a:hover::after,footer a:focus-visible::after{transform:scaleX(1)}
-.steps{display:flex;flex-direction:column;align-items:center;gap:0;max-width:720px;margin:38px auto 0}
-.step-item{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 76px;align-items:center;gap:22px;width:100%;padding:22px 26px;text-align:right;border:1px solid #292929;border-radius:18px;background:linear-gradient(135deg,rgba(255,255,255,.035),rgba(255,255,255,.012));box-shadow:0 8px 28px rgba(0,0,0,.12);transition:border-color .25s ease,background .25s ease,transform .25s ease}
-.step-item:hover{border-color:rgba(245,197,66,.55);background:linear-gradient(135deg,rgba(245,197,66,.07),rgba(255,255,255,.015));transform:translateY(-2px)}
-.step-copy h3{margin:0 0 5px;font-size:21px;font-weight:800;color:#fff}
-.step-copy p{margin:0;color:var(--mu);font-size:14px;line-height:1.9}
-.step-icon{grid-column:2;grid-row:1;width:68px;height:68px;display:grid;place-items:center;border-radius:18px;border:1px solid rgba(245,197,66,.35);background:rgba(245,197,66,.09);color:var(--yl);transition:background .25s ease,transform .25s ease}
-.step-icon svg{width:31px;height:31px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.step-item:hover .step-icon{background:rgba(245,197,66,.16);transform:scale(1.05)}
-.step-arrow{height:48px;display:grid;place-items:center;color:var(--yl);opacity:.75}
-.step-arrow svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:step-pulse 1.8s ease-in-out infinite}
-.step-item:last-child .step-arrow{display:none}
+/* NorDa process section: zigzag timeline */
+.process-section{
+  --accent:var(--yl);
+  --bg:var(--cr);
+  --line:rgba(0,0,0,.12);
+  padding-top:0;
+}
+.steps{
+  list-style:none;margin:56px auto 0;padding:0;
+  max-width:860px;position:relative;
+  counter-reset:step;
+}
+.steps::before{
+  content:"";position:absolute;
+  top:28px;bottom:28px;left:50%;width:2px;
+  transform:translateX(-50%);
+  background:linear-gradient(to bottom,var(--accent),var(--line));
+  border-radius:2px;
+}
+.step-item{
+  counter-increment:step;
+  display:grid;
+  grid-template-columns:1fr 56px 1fr;
+  column-gap:28px;
+  align-items:center;
+  padding-block:22px;
+  position:relative;
+}
+.step-icon{
+  grid-column:2;grid-row:1;
+  width:56px;height:56px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--bg);
+  border:2px solid var(--accent);
+  color:#9b7600;
+  position:relative;z-index:1;
+  transition:background .3s,color .3s,transform .3s,box-shadow .3s;
+}
+.step-icon svg{
+  width:24px;height:24px;
+  fill:none;stroke:currentColor;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
+}
+.step-item:hover .step-icon{
+  background:var(--accent);color:#111;
+  transform:scale(1.1);
+  box-shadow:0 0 0 8px color-mix(in srgb,var(--accent) 18%,transparent);
+}
+.step-copy{grid-row:1}
+.step-item:nth-child(odd) .step-copy{grid-column:1;text-align:end}
+.step-item:nth-child(even) .step-copy{grid-column:3;text-align:start}
+.step-copy::before{
+  content:"0" counter(step);
+  display:block;margin-bottom:4px;
+  font-size:.85rem;font-weight:700;letter-spacing:.08em;
+  color:#9b7600;
+}
+.step-copy h3{margin:0 0 6px;font-size:1.25rem;color:var(--tx);font-weight:800}
+.step-copy p{margin:0;line-height:1.8;font-size:.95rem;color:var(--mu);opacity:1;max-width:34ch}
+.step-item:nth-child(odd) .step-copy p{margin-inline-start:auto}
+.step-arrow{display:none}
+/* Preserve the existing scroll reveal, with staggered copy/icon entrance. */
 .js .step-item.rv{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.7,.2,1)}
 .js .step-item.rv.in{opacity:1;transform:translateY(0)}
 .step-item.rv .step-copy h3{opacity:0;transform:translateY(8px);transition:opacity .45s ease .12s,transform .45s ease .12s}
@@ -419,9 +466,20 @@ footer a:hover::after,footer a:focus-visible::after{transform:scaleX(1)}
 .step-item.rv .step-icon{opacity:0;transform:scale(.82);transition:opacity .45s ease .42s,transform .45s ease .42s}
 .step-item.rv.in .step-copy h3,.step-item.rv.in .step-copy p{opacity:1;transform:translateY(0)}
 .step-item.rv.in .step-icon{opacity:1;transform:scale(1)}
-@keyframes step-pulse{0%,100%{transform:translateY(-2px);opacity:.55}50%{transform:translateY(3px);opacity:1}}
-@media(max-width:600px){.steps{margin-top:28px}.step-item{grid-template-columns:minmax(0,1fr) 58px;gap:14px;padding:18px 16px;border-radius:15px}.step-copy h3{font-size:18px}.step-copy p{font-size:13px}.step-icon{width:54px;height:54px;border-radius:15px}.step-icon svg{width:26px;height:26px}.step-arrow{height:38px}}
-@media(prefers-reduced-motion:reduce){.step-item,.step-copy h3,.step-copy p,.step-icon,.step-arrow svg,footer a,footer a::after{transition:none!important;animation:none!important}.js .step-item.rv,.js .step-item.rv .step-copy h3,.js .step-item.rv .step-copy p,.js .step-item.rv .step-icon{opacity:1;transform:none}}
+@media(max-width:700px){
+  .steps{margin-top:28px}
+  .steps::before{left:auto;inset-inline-start:28px;transform:none}
+  .step-item{grid-template-columns:56px minmax(0,1fr);column-gap:18px;padding-block:18px}
+  .step-icon{grid-column:1}
+  .step-item:nth-child(odd) .step-copy,
+  .step-item:nth-child(even) .step-copy{grid-column:2;text-align:start}
+  .step-item:nth-child(odd) .step-copy p{margin-inline-start:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .step-icon,.step-copy h3,.step-copy p{transition:none!important}
+  .js .step-item.rv,.js .step-item.rv .step-copy h3,.js .step-item.rv .step-copy p,.js .step-item.rv .step-icon{opacity:1;transform:none}
+  footer a,footer a::after{transition:none!important;animation:none!important}
+}
 
 
 /* NorDa pricing: show independent local and international prices */
