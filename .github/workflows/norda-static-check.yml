@@ -27,6 +27,7 @@ jobs:
         run: |
           node --check js/pages/index.js
           node --check js/script.js
+          node --check script.js
 
 
       - name: Check NorDa hero, support integration, and protected files
@@ -74,9 +75,9 @@ jobs:
           print("Hero mockups, shared Worker endpoint, language/currency/chat hooks, and placeholder audit passed.")
           PY
 
-      - name: Ensure production routing and backend configuration were not changed
+      - name: Ensure production routing and backend configuration were not changed (sitemap SEO metadata may be updated)
         run: |
-          git diff --exit-code origin/main...HEAD -- wrangler.toml _redirects robots.txt sitemap.xml
+          git diff --exit-code origin/main...HEAD -- wrangler.toml _redirects robots.txt
 
       - name: Validate page metadata, IDs, and local references
         run: |
