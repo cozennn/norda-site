@@ -422,3 +422,16 @@ footer a:hover::after,footer a:focus-visible::after{transform:scaleX(1)}
 @keyframes step-pulse{0%,100%{transform:translateY(-2px);opacity:.55}50%{transform:translateY(3px);opacity:1}}
 @media(max-width:600px){.steps{margin-top:28px}.step-item{grid-template-columns:minmax(0,1fr) 58px;gap:14px;padding:18px 16px;border-radius:15px}.step-copy h3{font-size:18px}.step-copy p{font-size:13px}.step-icon{width:54px;height:54px;border-radius:15px}.step-icon svg{width:26px;height:26px}.step-arrow{height:38px}}
 @media(prefers-reduced-motion:reduce){.step-item,.step-copy h3,.step-copy p,.step-icon,.step-arrow svg,footer a,footer a::after{transition:none!important;animation:none!important}.js .step-item.rv,.js .step-item.rv .step-copy h3,.js .step-item.rv .step-copy p,.js .step-item.rv .step-icon{opacity:1;transform:none}}
+
+
+/* NorDa pricing: show independent local and international prices */
+.price-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start;margin:8px 0 2px}
+.price-option{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
+.price-audience{font-size:12px;line-height:1.4;color:var(--mu)}
+.pk .price-option b.pc{font-size:clamp(23px,2vw,32px);line-height:1.2;white-space:nowrap}
+.price-pair .pp{grid-column:1/-1}
+/* Match the yellow hover underline in the footer for every header navigation link */
+header nav a{position:relative;text-decoration:none}
+header nav a::after{content:"";position:absolute;right:0;bottom:-2px;width:100%;height:2px;border-radius:2px;background:var(--yl);transform:scaleX(0);transform-origin:right center;transition:transform .22s ease}
+header nav a:hover::after,header nav a:focus-visible::after,header nav a.on::after{transform:scaleX(1)}
+@media(prefers-reduced-motion:reduce){header nav a::after{transition:none!important}}
