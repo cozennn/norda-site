@@ -851,7 +851,7 @@ header.scrolled{border-bottom:1px solid var(--bd)}
 .project-overview .project-disclosure{margin-top:14px;padding-top:12px;border-top:1px solid var(--bd);font-size:13px}
 .project-excerpts-title{margin:0 0 28px;font-size:clamp(26px,3vw,36px)}
 .project-excerpts{display:grid;gap:clamp(28px,5vw,56px)}
-.project-excerpt{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,48px);min-width:0}
+.project-excerpt{direction:ltr;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,48px);min-width:0}
 .project-excerpt-image{grid-column:2;display:block;width:100%;aspect-ratio:1280/769;object-fit:cover;border:1px solid var(--bd);border-radius:5px;background:#e8e7df}
 .project-excerpt-copy{grid-column:1;max-width:42ch}
 .project-excerpt-copy>span{display:inline-block;margin-bottom:10px;color:#947a35;font-size:13px;font-weight:800;letter-spacing:.08em}
