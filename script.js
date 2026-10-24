@@ -114,6 +114,7 @@ function applyLang(l){
   while((n=w.nextNode()))list.push(n);
   list.forEach(function(n){if(n._o===undefined)n._o=n.nodeValue;var k=n._o.trim();if(!k)return;var m=n._o.match(/^(\s*)[\s\S]*?(\s*)$/);n.nodeValue=m[1]+tr(k,l)+m[2]});
   ['placeholder','aria-label','title','alt'].forEach(function(a){$('['+a+']').forEach(function(el){var o='_o'+a;if(el[o]===undefined)el[o]=el.getAttribute(a);el.setAttribute(a,tr(el[o].trim(),l))})});
+  var motion=d.getElementById('nordaMotion');if(motion)motion.setAttribute('aria-label',_nordaMotionLabel[l]||_nordaMotionLabel.ar);
   if(d._ot===undefined)d._ot=d.title;d.title=tr(d._ot.trim(),l);
   var md=d.querySelector('meta[name=description]');if(md){if(md._o===undefined)md._o=md.content;md.content=tr(md._o.trim(),l)}
   var lt=$1('#langTxt');if(lt)lt.textContent=l==='ar'?'EN':l==='en'?'FR':'عربي';
