@@ -4,6 +4,7 @@
   var root=document.getElementById('projectDetail');
   if(!root)return;
   var lang=document.documentElement.lang||'ar';
+  var textDir=lang==='ar'?'rtl':'ltr';
   var c={
     ar:{back:'العودة إلى المعرض',label:'مشروع تجريبي من نوردا',description:'وصف الموقع',request:'طلب العميل',requestNote:'طلب تخيلي أُعدّ لهذا النموذج، ولا يمثّل عميلًا أو مشروعًا حقيقيًا.',result:'النتيجة',excerpts:'مقتطفات من الموقع',demo:'لايف ديمو',demoHint:'سيُتاح العرض المباشر لاحقًا',contact:'ناقش مشروعك معنا',ask:'هل تريد موقعًا بفكرة مشابهة؟',unknown:'المشروع غير موجود',backHome:'العودة للأعمال',excerptFallback:'مقتطف تجريبي من تصميم الموقع.'},
     en:{back:'Back to portfolio',label:'NORDA studio concept',description:'Website description',request:'Client request',requestNote:'A fictional brief created for this concept; it does not represent a real client or project.',result:'Result',excerpts:'Website excerpts',demo:'Live demo',demoHint:'The live preview will be available later',contact:'Discuss your project',ask:'Planning a similar website?',unknown:'Project not found',backHome:'Back to portfolio',excerptFallback:'A temporary excerpt from the website concept.'},
@@ -39,7 +40,7 @@
         var alt=item.alt||p.title+' — '+caption;
         return '<article class="project-excerpt'+(index%2?' is-reversed':'')+'">'+ 
           '<img class="project-excerpt-image" src="'+esc(image)+'" alt="'+esc(alt)+'" loading="lazy" width="1280" height="769">'+ 
-          '<div class="project-excerpt-copy"><span>'+String(index+1).padStart(2,'0')+'</span><h3>'+esc(caption)+'</h3></div>'+ 
+          '<div class="project-excerpt-copy" dir="'+textDir+'"><span>'+String(index+1).padStart(2,'0')+'</span><h3>'+esc(caption)+'</h3></div>'+ 
         '</article>';
       }).join('')+'</div>'+ 
     '</div></section>'+ 
