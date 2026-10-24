@@ -597,3 +597,8 @@ html[dir=ltr] .dk.hero::before{inset:0 0 0 42%}
  html[dir=rtl] .dev,html[dir=ltr] .dev{grid-column:1;grid-row:2}
 }
 
+
+
+/* Responsive NORDA wordmark in the section navigation */
+header .logo img{display:block;width:min(136px,12vw);height:auto;max-height:42px;object-fit:contain}
+@media(max-width:720px){header .logo img{width:108px;max-height:33px}}
