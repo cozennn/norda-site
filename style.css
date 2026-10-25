@@ -907,3 +907,21 @@ header.scrolled{border-bottom:1px solid var(--bd)}
  .project-demo-button small{padding-inline-start:0;border-inline-start:0}
  .project-cta .w{align-items:flex-start;flex-direction:column}
 }
+/* 1) لا تباعد حروف في العربية */
+[dir=rtl] :is(h1,h2,h3,h4,h5,.sc h4){letter-spacing:0}
+
+/* 2) نصف قطر موحّد */
+:root{--r:8px}
+.btn,.card,.pk,details,.fm,.pbody,.pcard,.wkc,
+.portfolio-switch button,.project-demo-button,.pf button,
+.project-overview article,.project-excerpt-image{border-radius:var(--r)}
+#chatPanel{border-radius:calc(var(--r) * 1.5)}
+
+/* 3) توحيد البقايا القديمة مع لون العلامة */
+#preloader{background:var(--bk)}
+#preloader .pl-spinner,#preloader .pl-logo::before{border-top-color:var(--yl)}
+html{scrollbar-color:var(--yl) var(--bk)}
+.project-hero{background:linear-gradient(145deg,var(--bk),var(--bk2))}
+
+/* 4) ضبط الذهبي: علامات القوائم بلون الحبر بدل الذهبي */
+.pk li::before{color:var(--tx)}
