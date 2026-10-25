@@ -38,6 +38,7 @@
 </head>
 <body>
 <div id="preloader"><div class="pl-spinner" aria-label="Loading"></div></div>
+<script>/* Safety fallback: never leave the loading overlay stuck if the main script fails. */setTimeout(function(){var p=document.getElementById("preloader");if(p){p.classList.add("done");setTimeout(function(){if(p.parentNode)p.remove();},700);}},8000);</script>
 <a class="skip" href="#main">تخطي إلى المحتوى</a>
 <header><div class="w">
 <a class="logo" href="index.html" aria-label="الصفحة الرئيسية - نوردا"><img src="norda-wordmark-white-letters.png" alt="NORDA"></a>
