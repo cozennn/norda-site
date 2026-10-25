@@ -645,7 +645,7 @@ footer a:hover::after,footer a:focus-visible::after{transform:scaleX(1)}
 
 
 /* NorDa pricing: show independent local and international prices */
-.price-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:start;margin:8px 0 2px}
+.price-pair{display:flex;justify-content:center;align-items:center;gap:8px;text-align:center;margin:8px 0 2px}
 .price-option{display:flex;flex-direction:column;align-items:center;gap:5px;min-width:0}
 .price-audience{font-size:12px;line-height:1.4;color:var(--mu)}
 .pk .price-option b.pc{font-size:clamp(23px,2vw,32px);line-height:1.2;white-space:nowrap}
