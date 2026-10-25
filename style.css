@@ -125,7 +125,7 @@
   --color-rgba-255-255-255-15: rgba(255,255,255,.15);
   --color-rgba-21-29-25-25: rgba(21,29,25,.25);
 }
-:root{--bk:var(--color-0c0c0c);--bk2:var(--color-161616);--cr:var(--color-f7f3ee);--cr2:var(--color-fff);--yl:var(--color-f5c542);--tx:var(--color-1b1b1b);--mu:var(--color-6d6862);--bd:var(--color-e6e0d8);--pk:var(--color-fbe3dc);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bk:var(--color-0c0c0c);--bk2:var(--color-161616);--cr:var(--color-f4f2ea);--cr2:var(--color-fffef9);--yl:var(--color-dfb94f);--tx:var(--color-1a2420);--mu:var(--color-5c675f);--bd:var(--color-deded4);--pk:var(--color-fffef9);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-padding-top:env(safe-area-inset-top,0px)}
 body{font-family:Tajawal,Tahoma,Arial,sans-serif;background:var(--cr);color:var(--tx);line-height:1.7}
@@ -925,3 +925,23 @@ html{scrollbar-color:var(--yl) var(--bk)}
 
 /* 4) ضبط الذهبي: علامات القوائم بلون الحبر بدل الذهبي */
 .pk li::before{color:var(--tx)}
+
+
+/* NORDA core visual tokens shared by every page */
+:root{
+  --color-f7f3ee:#F4F2EA;
+  --color-fff:#FFFEF9;
+  --color-f5c542:#DFB94F;
+  --color-1b1b1b:#1A2420;
+  --color-6d6862:#5C675F;
+  --color-e6e0d8:#DEDED4;
+  --color-151d19:#0C0C0C;
+  --color-202a24:#161616;
+  --color-rgba-21-29-25-96:rgba(12,12,12,.96);
+}
+html,body{max-width:100%;overflow-x:clip}
+.price-pair{display:flex;justify-content:center;align-items:center;gap:8px;text-align:center}
+.price-pair .price-option,.price-pair .pc{min-width:0;text-align:center}
+#chatFab{border-radius:50%;width:58px;height:58px;background:var(--yl);color:var(--bk)}
+#chatFab:focus-visible{outline:3px solid var(--yl);outline-offset:4px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
