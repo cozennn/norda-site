@@ -15,15 +15,17 @@ export async function onRequestPost({ request, env }) {
   if (typeof data.website === "string" && data.website.trim()) return json({ ok: true });
   const name = String(data.name || "").trim().slice(0, 80);
   const email = String(data.email || "").trim().slice(0, 120);
+  const country = String(data.country || "").trim().slice(0, 80);
   const subject = String(data.subject || "").trim().slice(0, 120);
   const message = String(data.message || "").trim().slice(0, 1500);
-  if (!name || !email || !subject || !message || data.privacyConsent !== true) return json({ ok: false }, 400);
+  if (!name || !email || !country || !subject || !message || data.privacyConsent !== true) return json({ ok: false }, 400);
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ ok: false }, 400);
 
   const text = [
     "📩 رسالة تواصل جديدة | NORDA", "",
     "الاسم: " + name,
     "البريد الإلكتروني: " + email,
+    "الدولة: " + country,
     "الموضوع: " + subject, "",
     "الرسالة:", message, "",
     "موافقة سياسة الخصوصية: نعم"
