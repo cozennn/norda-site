@@ -1,5 +1,5 @@
 /* NORDA design layer v2 — load AFTER style.css. Delete this file to revert. */
-:root{--ink:#151d19;--ink-2:#202a24;--ink-3:#0f1512;--paper:#f4f2ea;--paper-2:#fffef9;--gold:#dfb94f;--text:#1a2420;--muted:#5c675f;--line:#deded4;--focus:#836824;--r:8px;--r-lg:12px;--ease:cubic-bezier(.2,.6,.2,1);
+:root{--ink:#0C0C0C;--ink-2:#161616;--ink-3:#1B1B1B;--paper:#f4f2ea;--paper-2:#fffef9;--gold:#dfb94f;--text:#1a2420;--muted:#5c675f;--line:#deded4;--focus:#836824;--r:8px;--r-lg:12px;--ease:cubic-bezier(.2,.6,.2,1);
 --bk:var(--ink);--bk2:var(--ink-2);--cr:var(--paper);--cr2:var(--paper-2);--yl:var(--gold);--tx:var(--text);--mu:var(--muted);--bd:var(--line);
 --font-head:"IBM Plex Sans Arabic",Tajawal,Tahoma,Arial,sans-serif}
 
@@ -11,8 +11,8 @@ h1,h2,h3,h4,.btn,.pc,.stats b,.hero-stat strong,.wkc b,.pcard b,summary,footer .
 [dir=rtl] :is(h1,h2,h3,h4,h5,.sc h4){letter-spacing:0}
 
 /* Header */
-header,header.scrolled{background:rgba(21,29,25,.94);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid rgba(255,255,255,.08);box-shadow:none}
-header.scrolled{box-shadow:0 8px 24px rgba(15,21,18,.28)}
+header,header.scrolled{background:rgba(12,12,12,.96);backdrop-filter:none;-webkit-backdrop-filter:none;border-bottom:1px solid rgba(255,255,255,.08);box-shadow:none}
+header.scrolled{box-shadow:0 6px 18px rgba(0,0,0,.18)}
 
 /* Hero: one dark field, blueprint grid fading out behind the animation */
 .dk.hero{background:var(--ink)}
@@ -56,7 +56,7 @@ p.st{max-width:52ch;margin:12px auto 44px}
 /* One radius, restrained gold */
 .btn{border-radius:var(--r);padding:12px 24px}
 .card,.pk,details,.fm,.pbody,.pcard,.pf button,.portfolio-switch button,.project-demo-button,.project-overview article,.project-excerpt-image{border-radius:var(--r)}
-#chatPanel,#chatFab,#chatFab::before{border-radius:var(--r-lg)}
+#chatPanel{border-radius:var(--r-lg)}\n#chatFab,#chatFab::before{border-radius:50%}
 .card:hover,.pk:hover,.pk.pop:hover{transform:none;box-shadow:none}
 .pk li::before{color:var(--ink)}
 .pk.pop{background:var(--ink);color:#fbfaf5;border-color:var(--ink);box-shadow:none}
@@ -68,9 +68,9 @@ p.st{max-width:52ch;margin:12px auto 44px}
 footer{background:var(--ink-3)}
 footer h4{font-size:15px;font-weight:600;margin-bottom:12px}
 footer .logo{font-size:26px;font-weight:700;letter-spacing:.14em}
-html{scrollbar-color:#46524a var(--ink-3)}
-html::-webkit-scrollbar-track{background:var(--ink-3);border-inline-start:0}
-html::-webkit-scrollbar-thumb{background:#46524a;border-color:var(--ink-3)}
+html{scrollbar-color:#454545 var(--ink)}
+html::-webkit-scrollbar-track{background:var(--ink);border-inline-start:0}
+html::-webkit-scrollbar-thumb{background:#454545;border-color:var(--ink)}
 html::-webkit-scrollbar-thumb:hover{background:var(--gold)}
 #preloader{background:var(--ink)}
 #preloader .pl-spinner{border-color:rgba(223,185,79,.2);border-top-color:var(--gold)}
@@ -84,3 +84,59 @@ html::-webkit-scrollbar-thumb:hover{background:var(--gold)}
 /* Focus rings visible on both light and dark areas */
 a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,.btn:focus-visible{outline:2px solid var(--focus);outline-offset:3px}
 :is(header,footer,.dk) :is(a,button,summary):focus-visible{outline-color:var(--gold)}
+
+
+/* NORDA visual refinement: consistent charcoal palette and safe responsive surfaces */
+:root{
+  --ink:#0C0C0C;
+  --ink-2:#161616;
+  --ink-3:#1B1B1B;
+  --paper:#F4F2EA;
+  --paper-2:#FFFEF9;
+  --gold:#DFB94F;
+  --text:#1A2420;
+  --muted:#5C675F;
+  --line:#DEDED4;
+  --focus:#DFB94F;
+  --bk:var(--ink);
+  --bk2:var(--ink-2);
+  --cr:var(--paper);
+  --cr2:var(--paper-2);
+  --yl:var(--gold);
+  --tx:var(--text);
+  --mu:var(--muted);
+  --bd:var(--line);
+  --font-head:"IBM Plex Sans Arabic",Tajawal,Tahoma,Arial,sans-serif;
+}
+body{font-family:var(--font-head);font-size:17px;line-height:1.8}
+html,body{max-width:100%;overflow-x:clip}
+img,svg,video,iframe{max-width:100%}
+header,header.scrolled{background:rgba(12,12,12,.96)}
+header nav a::after,footer a::after{background:var(--gold)}
+.price-pair{display:flex;justify-content:center;align-items:center;gap:8px;text-align:center}
+.price-pair .price-option,.price-pair .pc{min-width:0;text-align:center}
+.pk .price-option b.pc{display:block;text-align:center}
+.btn,.portfolio-switch button,.project-demo-button{border-radius:8px}
+#chatFab{width:58px;height:58px;border-radius:50%;background:var(--gold);color:var(--ink);box-shadow:0 5px 18px rgba(0,0,0,.22)}
+#chatFab:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+#chatPanel{border-radius:12px;max-width:calc(100vw - 24px);overflow:hidden}
+.tk-log{min-width:0;overflow-x:hidden;overflow-y:auto}
+.tk-row{min-width:0}
+.tk-row textarea{min-width:0;max-width:100%;overflow-x:hidden;overflow-wrap:anywhere}
+input[type="email"],input[type="url"],input[name*="email" i],input[name*="url" i]{direction:ltr;text-align:left}
+:where(a,button,input,textarea,select,summary):focus-visible{outline:2px solid var(--focus);outline-offset:3px}
+@media(max-width:720px){
+  .hero h1{font-size:clamp(32px,8vw,46px);line-height:1.3}
+  .hero .bt{display:flex;flex-wrap:wrap;gap:10px}
+  .hero .bt .btn{flex:0 1 auto;max-width:100%}
+  .pk.pop{transform:none}
+  .pk.pop:hover{transform:translateY(-2px)}
+}
+@media(max-width:380px){
+  .w{padding-inline:16px}
+  #chatPanel{inset-inline:12px;width:auto;max-width:none;bottom:calc(12px + env(safe-area-inset-bottom,0px))}
+  #chatFab{width:54px;height:54px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
