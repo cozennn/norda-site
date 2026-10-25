@@ -98,9 +98,7 @@
 <script src="script.js" defer></script>
 
 <script>
-(function(){var key='norda-price-currency';var btn=document.getElementById('currencyToggle');if(!btn)return;function apply(v){document.querySelectorAll('.currency-price').forEach(function(el){el.textContent=el.getAttribute(v==='usd'?'data-usd':'data-dzd')||''});btn.setAttribute('aria-pressed',String(v==='usd'));btn.textContent=v==='usd'?'$ ⇄ دج':'دج ⇄ 
-</html>
-;try{localStorage.setItem(key,v)}catch(e){}}var saved='dzd';try{saved=localStorage.getItem(key)||'dzd'}catch(e){}apply(saved);btn.addEventListener('click',function(){apply((function(){try{return localStorage.getItem(key)==='usd'?'dzd':'usd'}catch(e){return btn.getAttribute('aria-pressed')==='true'?'dzd':'usd'}})())})})();
+(function(){var key='norda-price-currency';var btn=document.getElementById('currencyToggle');if(!btn)return;function apply(v){document.querySelectorAll('.currency-price').forEach(function(el){el.textContent=el.getAttribute(v==='usd'?'data-usd':'data-dzd')||''});btn.setAttribute('aria-pressed',String(v==='usd'));btn.textContent=v==='usd'?'USD ⇄ DZD':'DZD ⇄ USD';try{localStorage.setItem(key,v)}catch(e){}}var saved='dzd';try{saved=localStorage.getItem(key)||'dzd'}catch(e){}apply(saved);btn.addEventListener('click',function(){var next='usd';try{next=localStorage.getItem(key)==='usd'?'dzd':'usd'}catch(e){next=btn.getAttribute('aria-pressed')==='true'?'dzd':'usd'}apply(next)})})();;
 </script>
 </body>
 </html>
