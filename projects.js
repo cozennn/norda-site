@@ -27,5 +27,9 @@ window.NORDA_PROJECTS.forEach(function(project){
       caption:feature
     };
   });
+  project.excerpts.push(
+    {image:project.image,alt:project.title+' — نص تجريبي 03',caption:'نص تجريبي 03 — عدّلي العنوان لاحقًا'},
+    {image:project.image,alt:project.title+' — نص تجريبي 04',caption:'نص تجريبي 04 — عدّلي العنوان لاحقًا'}
+  );
 });
 
