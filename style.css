@@ -945,3 +945,7 @@ html,body{max-width:100%;overflow-x:clip}
 #chatFab{border-radius:50%;width:58px;height:58px;background:var(--yl);color:var(--bk)}
 #chatFab:focus-visible{outline:3px solid var(--yl);outline-offset:4px}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+
+/* Arabic contact form: keep the email placeholder aligned to the right while email input stays LTR. */
+html[dir="rtl"] #cf-email::placeholder{direction:rtl;text-align:right}
