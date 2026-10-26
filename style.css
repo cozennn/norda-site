@@ -947,5 +947,19 @@ html,body{max-width:100%;overflow-x:clip}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
 
 
+/* Restore the original NorDa deep-green palette from the earlier design history. */
+:root{
+  --color-0c0c0c:#151d19;
+  --color-161616:#202a24;
+  --color-1b1b1b:#0f1512;
+  --color-151d19:#151d19;
+  --color-202a24:#202a24;
+  --color-rgba-12-12-12-94:rgba(21,29,25,.94);
+  --color-rgba-12-12-12-97:rgba(21,29,25,.97);
+}
+html{scrollbar-color:#46524a #0f1512}
+html::-webkit-scrollbar-track{background:#0f1512}
+html::-webkit-scrollbar-thumb{background:#46524a;border-color:#0f1512}
+
 /* Arabic contact form: keep the email placeholder aligned to the right while email input stays LTR. */
 html[dir="rtl"] #cf-email::placeholder{direction:rtl;text-align:right}
