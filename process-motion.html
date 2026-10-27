@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -157,8 +157,7 @@ body{background:#050505;display:grid;place-items:center}
 (function(){
  var st=document.getElementById('stage'),svg=document.getElementById('svg'),line=document.getElementById('line'),
  scs=[1,2,3,4,5].map(function(i){return document.getElementById('sc'+i)}),
- nds=[].slice.call(document.querySelectorAll('.nd')),T=[],cur=-1,
- motion=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):null;
+ nds=[].slice.call(document.querySelectorAll('.nd')),T=[],cur=-1;
  function at(ms,f){T.push(setTimeout(f,ms))}
  function go(k){
   var prev=cur;cur=k;
@@ -169,17 +168,9 @@ body{background:#050505;display:grid;place-items:center}
   nds.forEach(function(n,i){n.classList.toggle('cur',i===k);n.classList.toggle('dn',i<k)});
   line.style.strokeDashoffset=1-k/4;
  }
- function reduced(){
-  T.forEach(clearTimeout);T=[];cur=-1;
-  st.classList.remove('fade');svg.classList.add('go');
-  scs.forEach(function(s){s.classList.remove('on','show')});
-  nds.forEach(function(n){n.classList.remove('cur','dn')});
-  line.style.strokeDashoffset=0;go(4);
- }
  function play(){
-  T.forEach(clearTimeout);T=[];
-  if(motion&&motion.matches){reduced();return}
-  cur=-1;st.classList.remove('fade');svg.classList.remove('go');
+  T.forEach(clearTimeout);T=[];cur=-1;
+  st.classList.remove('fade');svg.classList.remove('go');
   scs.forEach(function(s){s.classList.remove('on','show')});
   nds.forEach(function(n){n.classList.remove('cur','dn')});
   line.style.strokeDashoffset=1;
@@ -190,9 +181,7 @@ body{background:#050505;display:grid;place-items:center}
   at(19700,play);
  }
  st.addEventListener('click',play);
- if(motion&&motion.addEventListener)motion.addEventListener('change',function(e){if(e.matches)reduced();else play()});
- else if(motion&&motion.addListener)motion.addListener(function(e){if(e.matches)reduced();else play()});
- if(motion&&motion.matches)reduced();else play();
+ play();
 })();
 </script>
 </body>

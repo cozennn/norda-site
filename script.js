@@ -368,7 +368,7 @@ $('.wkc[data-href]').forEach(function(c){var u=c.getAttribute('data-href');if(!/
 /* ===== حسابات التواصل (من config.js) ===== */
 var SOC={instagram:'https://instagram.com/',telegram:'https://t.me/'},soc=CFG.SOCIAL||{};
 $('[data-social]').forEach(function(a){var k=a.getAttribute('data-social'),h=String(soc[k]||'').trim().split('/').filter(Boolean).pop()||'';h=h.replace(/^@/,'').replace(/[^\w.]/g,'');if(!h||!SOC[k])return;a.href=SOC[k]+h;a.hidden=false;var x=a.querySelector('[data-social-handle]');if(x)x.textContent='@'+h});
-var sc=$1('#socialCards');if(sc&&!sc.querySelector('a:not([hidden])'))sc.hidden=true;
+var sc=$1('#socialCards');if(sc&&!sc.querySelector('[data-social]:not([hidden])'))sc.hidden=true;
 /* ===== قائمة الجوال ===== */
 var mbtn=$1('#menuBtn');
 function menuOpen(o){d.body.classList.toggle('nav-open',o);if(mbtn)mbtn.setAttribute('aria-expanded',o?'true':'false')}
