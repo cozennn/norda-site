@@ -1,7 +1,7 @@
 /* NORDA design layer v2 — load AFTER style.css. Delete this file to revert. */
 :root{--ink:#0C0C0C;--ink-2:#161616;--ink-3:#1B1B1B;--paper:#f4f2ea;--paper-2:#fffef9;--gold:#dfb94f;--text:#1a2420;--muted:#5c675f;--line:#deded4;--focus:#836824;--r:8px;--r-lg:12px;--ease:cubic-bezier(.2,.6,.2,1);
 --bk:var(--ink);--bk2:var(--ink-2);--cr:var(--paper);--cr2:var(--paper-2);--yl:var(--gold);--tx:var(--text);--mu:var(--muted);--bd:var(--line);
---font-head:"IBM Plex Sans Arabic",Tajawal,Tahoma,Arial,sans-serif}
+--font-head:"Tajawal",Tahoma,Arial,sans-serif}
 
 /* Type */
 body{font-size:17px;line-height:1.8}
@@ -106,7 +106,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   --tx:var(--text);
   --mu:var(--muted);
   --bd:var(--line);
-  --font-head:"IBM Plex Sans Arabic",Tajawal,Tahoma,Arial,sans-serif;
+  --font-head:"Tajawal",Tahoma,Arial,sans-serif;
 }
 body{font-family:var(--font-head);font-size:17px;line-height:1.8}
 html,body{max-width:100%;overflow-x:clip}
