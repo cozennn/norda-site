@@ -15,7 +15,7 @@
       '<button class="portfolio-switch-locked" type="button" disabled aria-disabled="true">'+copy.real+' <span>'+copy.soon+'</span></button>'+ 
     '</div>'+ 
     '<div class="g4 works-grid portfolio-grid">'+projects.map(function(p){
-      return '<a class="wkc project-card" href="project.html?id='+encodeURIComponent(p.id)+'">'+ 
+      return '<a class="wkc project-card" href="projects/'+encodeURIComponent(p.id)+'.html">'+ 
         '<img class="cv" src="'+esc(p.image)+'" alt="'+esc(p.title)+'" loading="lazy" width="1280" height="769">'+ 
         '<span class="project-kind">'+copy.kind+'</span><b>'+esc(p.title)+'</b>'+ 
         '<div>'+esc(p.type)+'</div><span class="project-open">'+copy.open+' ←</span></a>';

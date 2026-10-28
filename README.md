@@ -57,3 +57,8 @@ The code enforces a 2 MiB attachment limit. R2 files are only served to the owni
 ## Browser-only workflow
 
 You do not need to install Node.js, Wrangler, or VS Code. You can edit files with GitHub's web editor and run the D1 migration in Cloudflare's SQL console. If you later need to make many edits, GitHub's web editor can handle small changes; larger edits are easier with a local editor but are not required for this setup.
+
+
+## Static project detail pages
+
+Each portfolio project has a pre-generated page at projects/<id>.html. The pages include project-specific canonical URLs, Open Graph and Twitter Card metadata, JSON-LD, and visible project content in the HTML response, so previews do not depend on JavaScript. The source of truth remains projects.js. After editing projects.js or project.html, regenerate the pages with node scripts/generate-project-pages.js and commit the generated files.

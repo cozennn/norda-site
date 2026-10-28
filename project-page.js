@@ -1,5 +1,5 @@
 (function(){
-  var id=new URLSearchParams(location.search).get('id');
+  var id=window.NORDA_PROJECT_PAGE_ID||new URLSearchParams(location.search).get('id');
   var p=(window.NORDA_PROJECTS||[]).find(function(item){return item.id===id;});
   var root=document.getElementById('projectDetail');
   if(!root)return;
@@ -25,7 +25,7 @@
     if(!element){element=document.createElement('meta');element.setAttribute(attribute,key);document.head.appendChild(element);}
     element.setAttribute('content',value);
   }
-  var canonicalUrl='https://norda-site.pages.dev/project.html?id='+encodeURIComponent(p.id);
+  var canonicalUrl='https://norda-site.pages.dev/projects/'+encodeURIComponent(p.id)+'.html';
   var projectTitle=p.title+' | NORDA';
   var projectDescription=p.siteDescription||p.summary||'';
   var projectImage=p.image||'https://norda-site.pages.dev/og.png';
@@ -38,12 +38,14 @@
   upsertMeta('property','og:description',projectDescription);
   upsertMeta('property','og:image',projectImage);
   upsertMeta('property','og:image:alt',p.title);
+  upsertMeta('property','og:image:alt',p.title);
   upsertMeta('property','og:url',canonicalUrl);
   upsertMeta('property','og:locale','ar_DZ');
   upsertMeta('name','twitter:card','summary_large_image');
   upsertMeta('name','twitter:title',projectTitle);
   upsertMeta('name','twitter:description',projectDescription);
   upsertMeta('name','twitter:image',projectImage);
+  upsertMeta('name','twitter:image:alt',p.title);
   upsertMeta('name','twitter:image:alt',p.title);
   root.innerHTML=
     '<section class="project-hero"><div class="w">'+
