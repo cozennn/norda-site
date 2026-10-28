@@ -735,7 +735,7 @@ footer{background:var(--color-111814);color:var(--color-c7cec8)}footer .cp{borde
  .stats div{min-width:0;padding-inline:10px}.stats div:first-child{padding-inline-start:0}.stats div+div{padding-inline-end:10px}
  .stats b{font-size:24px}.stats span{font-size:12px;line-height:1.5;display:block}
  .dk.ph{padding:42px 0 36px}.dk.ph .w{padding-inline-start:18px}.ph p{font-size:15px}
- .pf{overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:12px}.pf button{flex:0 0 auto}
+ .pf{overflow:visible;flex-wrap:wrap;justify-content:flex-start;padding-bottom:12px}.pf button{flex:0 1 auto}
  .pr{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:420px){.hero .bt{display:grid;grid-template-columns:1fr 1fr}.hero .bt .btn{padding-inline:12px;text-align:center;font-size:14px}.stats{margin-top:0}.stats div{padding-inline:7px}.stats div+div{padding-inline-end:7px}}
@@ -884,7 +884,16 @@ header.scrolled{border-bottom:1px solid var(--bd)}
 .project-overview h2{margin:0 0 12px;font-size:24px}
 .project-overview p{margin:0;color:var(--mu);line-height:1.95}
 .project-overview .project-disclosure{margin-top:14px;padding-top:12px;border-top:1px solid var(--bd);font-size:13px}
-.project-excerpts-title{margin:0 0 28px;font-size:clamp(26px,3vw,36px)}
+.project-details-title{margin:0 0 24px;font-size:clamp(26px,3vw,36px)}
+.project-details-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.project-detail-card{padding:24px;border:1px solid var(--bd);border-radius:var(--r);background:var(--cr2)}
+.project-detail-card h3{margin:0 0 12px;font-size:20px}
+.project-detail-card p{margin:0;color:var(--mu);line-height:1.9}
+.project-feature-list{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.project-feature-list li{position:relative;padding-inline-start:22px;line-height:1.8}
+.project-feature-list li::before{content:"";position:absolute;inset-inline-start:0;top:.72em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+.project-design-card{grid-column:1/-1}
+.project-fallback{max-width:60ch;margin:0 auto;padding:32px 20px;text-align:center;color:var(--mu)}
 .project-excerpts{display:grid;gap:clamp(28px,5vw,56px)}
 .project-excerpt{direction:ltr;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(20px,4vw,48px);min-width:0}
 .project-excerpt-image{grid-column:2;display:block;width:100%;aspect-ratio:1280/769;object-fit:cover;border:1px solid var(--bd);border-radius:5px;background:#e8e7df}
@@ -896,10 +905,25 @@ header.scrolled{border-bottom:1px solid var(--bd)}
 .project-cta{padding:42px 0;background:var(--bk);color:#fff}
 .project-cta .w{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .project-missing{padding:90px 0;text-align:center}
+.currency-switch{display:flex;justify-content:flex-end;gap:8px;margin-bottom:20px}
+.price-action{text-align:center}
+.custom-price-value{font-size:30px;line-height:2.2}
+.extra-revision-note,.revision-count-note{max-width:560px;margin-inline:auto;color:var(--mu);font-size:14px;text-align:center}
+.extra-revision-note{margin-top:48px}
+.revision-count-note{margin-top:8px}
+.contact-social-cards{margin-bottom:24px}
+.contact-form-card{max-width:760px;margin-inline:auto}
+.contact-form-fields{display:grid;gap:12px}
+.footer-brand{color:#fff}
+.footer-description{margin-top:8px}
+.wkc .project-open{display:inline-block;margin-top:12px;color:var(--ink);font-size:14px;font-weight:700;text-underline-offset:3px}
+.wkc .project-open:hover{text-decoration:underline}
 @media(max-width:760px){
  .portfolio-switch{gap:8px}.portfolio-switch button{padding-inline:14px}
  .project-heading{padding-top:24px}
  .project-overview{grid-template-columns:1fr;gap:14px}
+  .project-details-grid{grid-template-columns:1fr}
+  .project-design-card{grid-column:auto}
  .project-excerpt,.project-excerpt.is-reversed{grid-template-columns:minmax(0,1fr);gap:14px}
  .project-excerpt-image,.project-excerpt.is-reversed .project-excerpt-image{grid-column:1;grid-row:1}
  .project-excerpt-copy,.project-excerpt.is-reversed .project-excerpt-copy{grid-column:1;grid-row:2}
