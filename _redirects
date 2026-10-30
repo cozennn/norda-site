@@ -1,7 +1,0 @@
-/packages /index.html 200
-/store/templates /store/templates.html 200
-/store/components /store/components.html 200
-/templates /store/templates.html 200
-/templates/* /store/templates/:splat 200
-/components /store/components.html 200
-/components/* /store/components/:splat 200
