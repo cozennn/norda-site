@@ -1239,3 +1239,6 @@ input::placeholder,textarea::placeholder{color:#92929f}
 .contact-info .contact-social-cards .card{margin:0}
 .contact-form-card{direction:rtl;max-width:none;margin:0}
 @media(max-width:760px){.contact-layout{grid-template-columns:1fr;gap:18px}.contact-info{padding:20px}}
+
+/* FAQ and policy navigation is kept in the footer, not inside the package cards. */
+.packages-section .lk{display:none!important}
