@@ -6,13 +6,13 @@
     <!-- Google shows a site's icon in results only at a multiple of 48px, so
          48 and 96 are listed; favicon.ico is for anything that asks for it by name. -->
     <!-- Every reel and poster comes from here (shared/reel-versions.ts); connect while the HTML is still arriving. -->
-    <link rel="preconnect" href="">
+    
     <!-- Every page waits on the catalogue (CatalogProvider); fetch it beside the JS, not after it. -->
-    <link rel="preload" href="api/products" as="fetch" crossorigin="">
+    <link rel="preload" href="/api/products" as="fetch" crossorigin="">
     <!-- seo — the server swaps this block for a product's own tags (server/src/routes/pages.ts) -->
     <title>Animated one-page website templates · NORDA</title>
     <meta name="description" content="One-page website templates with real motion: landing pages, dashboards, shops and sign-in screens in HTML, CSS and JavaScript. Try the live preview first.">
-    <link rel="canonical" href="templates-1.html">
+    <link rel="canonical" href="https://norda-site.pages.dev/store/templates.html">
     <meta property="og:site_name" content="NORDA">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Animated one-page website templates · NORDA">
