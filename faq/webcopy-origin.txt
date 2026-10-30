@@ -1,0 +1,72 @@
+Uri: https://codeandchill.store/api/products
+File Name: C:\Downloaded Web Sites\codeandchill.store\api\products
+Content Type: application/json
+
+Uri: https://codeandchill.store/apple-touch-icon.png
+File Name: C:\Downloaded Web Sites\codeandchill.store\apple-touch-icon.png
+Content Type: image/png
+
+Uri: https://codeandchill.store/assets/api-DyNtFBqj.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\api-DyNtFBqj.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/assets/cart-context-DFCLoM72.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\cart-context-DFCLoM72.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/assets/cart-EA3Sb5ra.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\cart-EA3Sb5ra.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/assets/catalog-context-C0PMVCvs.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\catalog-context-C0PMVCvs.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/assets/format-oxO2bVi2.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\format-oxO2bVi2.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/assets/index-BsrZ-G8W.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\index-BsrZ-G8W.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/assets/index-CEStJGuw.css
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\index-CEStJGuw.css
+Content Type: text/css
+
+Uri: https://codeandchill.store/assets/pricing-D8Bm94Qz.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\pricing-D8Bm94Qz.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/assets/reel-shapes-DSWnnfGp.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\reel-shapes-DSWnnfGp.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/assets/useDocumentTitle-BYm7ZW0c.js
+File Name: C:\Downloaded Web Sites\codeandchill.store\assets\useDocumentTitle-BYm7ZW0c.js
+Content Type: application/javascript
+
+Uri: https://codeandchill.store/faq
+File Name: C:\Downloaded Web Sites\codeandchill.store\faq.html
+Content Type: text/html
+
+Uri: https://codeandchill.store/favicon-48.png
+File Name: C:\Downloaded Web Sites\codeandchill.store\favicon-48.png
+Content Type: image/png
+
+Uri: https://codeandchill.store/favicon-96.png
+File Name: C:\Downloaded Web Sites\codeandchill.store\favicon-96.png
+Content Type: image/png
+
+Uri: https://codeandchill.store/favicon.ico
+File Name: C:\Downloaded Web Sites\codeandchill.store\favicon.ico
+Content Type: image/vnd.microsoft.icon
+
+Uri: https://codeandchill.store/favicon.svg
+File Name: C:\Downloaded Web Sites\codeandchill.store\favicon.svg
+Content Type: image/svg+xml
+
+Uri: https://codeandchill.store/site.webmanifest
+File Name: C:\Downloaded Web Sites\codeandchill.store\site.webmanifest
+Content Type: application/manifest+json
+
