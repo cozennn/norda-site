@@ -1229,3 +1229,13 @@ input::placeholder,textarea::placeholder{color:#92929f}
   .card,.pk,.pcard,.wkc{border-radius:var(--demo-radius-md)}
   .band .w{gap:18px}
 }
+
+/* Contact page: information on the left, standard message form on the right. */
+.contact-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:28px;align-items:start;direction:ltr}
+.contact-info,.contact-form-card{min-width:0}
+.contact-info{direction:rtl;padding:26px;border:1px solid var(--demo-hair);border-radius:var(--demo-radius-lg);background:var(--demo-panel)}
+.contact-info>p{margin:8px 0 22px;color:var(--mu)}
+.contact-info .contact-social-cards{display:grid;grid-template-columns:1fr;gap:12px;margin:0}
+.contact-info .contact-social-cards .card{margin:0}
+.contact-form-card{direction:rtl;max-width:none;margin:0}
+@media(max-width:760px){.contact-layout{grid-template-columns:1fr;gap:18px}.contact-info{padding:20px}}
