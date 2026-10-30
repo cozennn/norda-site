@@ -6,13 +6,13 @@
     <!-- Google shows a site's icon in results only at a multiple of 48px, so
          48 and 96 are listed; favicon.ico is for anything that asks for it by name. -->
     <!-- Every reel and poster comes from here (shared/reel-versions.ts); connect while the HTML is still arriving. -->
-    <link rel="preconnect" href="">
+    
     <!-- Every page waits on the catalogue (CatalogProvider); fetch it beside the JS, not after it. -->
-    <link rel="preload" href="api/products-1" as="fetch" crossorigin="">
+    <link rel="preload" href="/api/products" as="fetch" crossorigin="">
     <!-- seo — the server swaps this block for a product's own tags (server/src/routes/pages.ts) -->
     <title>Animated UI components in HTML, CSS &amp; JS · NORDA</title>
     <meta name="description" content="Animated interface components — buttons, navigation, forms, loaders and more — in plain HTML, CSS and JavaScript. Watch each one running before you buy it.">
-    <link rel="canonical" href="components-1.html">
+    <link rel="canonical" href="https://norda-site.pages.dev/store/components.html">
     <meta property="og:site_name" content="NORDA">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Animated UI components in HTML, CSS &amp; JS · NORDA">
@@ -36,16 +36,16 @@
         } catch {}
       })();
     </script>
-    <script type="module" crossorigin="" src="assets/index-Cs5AEx2n-1.js"></script>
-    <link rel="modulepreload" crossorigin="" href="assets/useDocumentTitle-BYm7ZW0c-1.js">
-    <link rel="modulepreload" crossorigin="" href="assets/reel-shapes-KBFR3M98-1.js">
-    <link rel="modulepreload" crossorigin="" href="assets/pricing-D8Bm94Qz-1.js">
-    <link rel="modulepreload" crossorigin="" href="assets/catalog-context-C0PMVCvs-1.js">
-    <link rel="modulepreload" crossorigin="" href="assets/format-oxO2bVi2-1.js">
-    <link rel="modulepreload" crossorigin="" href="assets/cart-EA3Sb5ra-1.js">
-    <link rel="modulepreload" crossorigin="" href="assets/cart-context-DFCLoM72-1.js">
-    <link rel="modulepreload" crossorigin="" href="assets/api-DyNtFBqj-1.js">
-    <link rel="stylesheet" crossorigin="" href="assets/index-CEStJGuw-1.css">
+    <script type="module" crossorigin="" src="assets/index-Cs5AEx2n.js"></script>
+    <link rel="modulepreload" crossorigin="" href="assets/useDocumentTitle-BYm7ZW0c.js">
+    <link rel="modulepreload" crossorigin="" href="assets/reel-shapes-KBFR3M98.js">
+    <link rel="modulepreload" crossorigin="" href="assets/pricing-D8Bm94Qz.js">
+    <link rel="modulepreload" crossorigin="" href="assets/catalog-context-C0PMVCvs.js">
+    <link rel="modulepreload" crossorigin="" href="assets/format-oxO2bVi2.js">
+    <link rel="modulepreload" crossorigin="" href="assets/cart-EA3Sb5ra.js">
+    <link rel="modulepreload" crossorigin="" href="assets/cart-context-DFCLoM72.js">
+    <link rel="modulepreload" crossorigin="" href="assets/api-DyNtFBqj.js">
+    <link rel="stylesheet" crossorigin="" href="assets/index-CEStJGuw.css">
   </head>
   <body>
     <!-- Painted before any script runs; React replaces it. Mirrors src/components/Boot.tsx. -->
