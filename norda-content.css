@@ -325,7 +325,7 @@ a:hover{-webkit-text-decoration-color:var(--accent);text-decoration-color:var(--
   --font-ui:var(--font-body);
 }
 body{font:400 var(--step-0)/1.6 var(--font-body);-webkit-font-smoothing:antialiased}
-html[dir=rtl] body,html[dir=rtl] button,html[dir=rtl] input,html[dir=rtl] textarea{font-family:"Tajawal","Archivo Variable",system-ui,sans-serif}
+html[dir=rtl] body,html[dir=rtl] button,html[dir=rtl] input,html[dir=rtl] select,html[dir=rtl] textarea{font-family:"Tajawal","Archivo Variable",system-ui,sans-serif}
 .page{width:min(100% - 2.5rem,var(--page))}
 .header__inner{grid-template-columns:1fr auto 1fr;min-height:4rem;gap:var(--space-3)}
 .header__nav{gap:var(--space-1)}
