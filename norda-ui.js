@@ -24,6 +24,8 @@
     theme=theme==='dark'?'dark':'light';
     root.dataset.theme=theme;
     root.style.colorScheme=theme;
+    var themeMeta=document.querySelector('meta[name=theme-color]');
+    if(themeMeta)themeMeta.setAttribute('content',theme==='dark'?'#171615':'#f0eee9');
     if(!button)return;
     button.setAttribute('aria-pressed',theme==='dark'?'true':'false');
     localize();
