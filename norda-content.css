@@ -428,3 +428,14 @@ html[dir=rtl] body,html[dir=rtl] button,html[dir=rtl] input,html[dir=rtl] select
 .currency-toggle[aria-pressed=true]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent-ink)}
 .currency-toggle:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 [data-price-dzd][data-price-usd]{display:inline-block;white-space:nowrap}
+
+@media(max-width:560px){
+  .header__tools{gap:.35rem}
+  #themeToggle{width:2.15rem;height:2.15rem;min-height:2.15rem}
+  .currency-toggle{min-width:2.35rem;height:2.15rem;min-height:2.15rem;padding-inline:.35rem}
+  .lang-trigger{min-width:3.65rem;padding-inline:.55rem}
+  .header__tools>a.btn--fill{min-height:2.15rem;padding-inline:.65rem;font-size:.75rem}
+}
+@media(max-width:380px){
+  .header__tools>a.btn--fill{display:none}
+}
