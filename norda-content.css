@@ -73,7 +73,7 @@ a:hover{-webkit-text-decoration-color:var(--accent);text-decoration-color:var(--
   transition:transform .28s cubic-bezier(.2,.7,.2,1),background .28s,color .28s,border-color .28s,box-shadow .28s;
 }
 .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
-.btn--fill{--btn-bg:var(--accent);--btn-fg:#fff;border-color:var(--accent);color:var(--on-accent)}
+.btn--fill{--btn-bg:var(--accent);--btn-fg:var(--on-accent);border-color:var(--accent);color:var(--on-accent)}
 .btn--fill:hover{--btn-bg:var(--accent-ink);background:var(--accent-ink);border-color:var(--accent-ink);box-shadow:4px 4px 0 var(--ink)}
 .btn--ghost{background:transparent}
 .btn--ghost:hover{background:var(--accent-soft);box-shadow:4px 4px 0 var(--accent)}
@@ -172,7 +172,7 @@ a:hover{-webkit-text-decoration-color:var(--accent);text-decoration-color:var(--
 .footer .wordmark,.footer .header__mark{color:var(--paper)}
 .footer .prose{color:var(--on-ink-65);margin-top:1rem}
 .footer__grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
-.footer__grid>div>strong{display:block;color:var(--on-accent)fff;font-weight:900;margin-bottom:1rem}
+.footer__grid>div>strong{display:block;color:var(--paper);font-weight:900;margin-bottom:1rem}
 .footer__list{display:grid;gap:.6rem}
 .footer__list a{color:var(--on-ink-65);text-decoration:none;transition:color .2s}
 .footer__list a:hover{color:var(--accent-hover)}
@@ -280,7 +280,7 @@ a:hover{-webkit-text-decoration-color:var(--accent);text-decoration-color:var(--
 .norda-chat-ticket button{margin-inline-start:auto;border:1px solid var(--ink-25);background:transparent;color:var(--ink);padding:.35rem .55rem;font:700 .72rem var(--font-body);cursor:pointer}
 .norda-chat-log{flex:1;min-height:10rem;overflow:auto;display:flex;flex-direction:column;gap:.6rem;padding:.7rem;background:var(--paper);border:1px solid var(--ink-25)}
 .bub{max-width:88%;padding:.65rem .8rem;border:1px solid var(--ink-25);background:var(--surface);font-size:.85rem;line-height:1.65;overflow-wrap:anywhere}
-.bub.me{align-self:flex-start;background:var(--accent);color:var(--on-accent);border-color:#017a5f}
+.bub.me{align-self:flex-start;background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
 .bub.bot{align-self:flex-end}
 .bub-time{display:block;margin-top:.25rem;font-size:.65rem;opacity:.65}
 .bub-file{display:block;margin-top:.35rem}
