@@ -101,6 +101,8 @@ Object.assign(DICT,{"نفهم فكرتك، وهدف مشروعك، والجمه�
 /* ===== اللغة ===== */
 Object.assign(DICT,{"آخر تحديث: 22 أكتوبر 2026":["Last updated: October 22, 2026","Dernière mise à jour : 22 octobre 2026"],"تعديلان":["2 revisions","2 révisions"],"4 تعديلات":["4 revisions","4 révisions"],"6 تعديلات":["6 revisions","6 révisions"],"موقع متعدد الصفحات":["Multi-page website","Site multipage"],"موقع متعدد الصفحات (حتى 6 صفحات و 4 أقسام فرعية)":["Multi-page website (up to 3 pages)","Site multipage (jusqu’à 3 pages)"],"موقع متعدد الصفحات: 8 صفحات رئيسية وحتى 16 قسمًا فرعيًا":["Multi-page website: 8 main pages and up to 16 sub-sections","Site multipage : 8 pages principales et jusqu’à 16 sous-sections"],"تحسين SEO أساسي (عناوين وأوصاف)":["Basic SEO (titles and descriptions)","SEO de base (titres et descriptions)"],"تصميم متجاوب مع الأجهزة المحمولة":["Responsive design for mobile devices","Design adaptatif pour les appareils mobiles"],"ربط أداة قياس الزيارات":["Analytics tool integration","Intégration d’un outil d’analyse"],"نسخة احتياطية من ملفات المشروع خلال فترة الدعم":["Backup copy of project files during the support period","Copie de sauvegarde des fichiers du projet pendant la période d’assistance"],"دليل مختصر للنشر وربط الدومين":["Brief guide to publishing and connecting the domain","Guide succinct pour publier le site et connecter le domaine"],"يُحدَّد السعر بعد مناقشة طلباتك ونطاق المشروع، ولا يوجد سعر ثابت مسبقًا.":["The price is agreed after discussing your project scope; there is no fixed minimum price.","Le tarif est convenu après discussion du périmètre du projet ; il n’y a pas de prix minimum fixe."],"التسليم السريع متاح عند الطلب بسعر يُتفق عليه قبل بدء العمل.":["Rush delivery is available on request at a price agreed before work begins.","La livraison express est possible sur demande, à un prix convenu avant le début du travail."],"العربون 35% يُدفع عند بدء العمل، والباقي 65% عند الرضا عن المعاينة. التفاصيل في سياسة الدفع والاسترداد.":["A 35% deposit is paid when work begins, and the remaining 65% after you approve the preview. See the Payment & Refund Policy for details.","Un acompte de 35 % est versé au début du travail, puis les 65 % restants après validation de l’aperçu. Consultez la politique de paiement et de remboursement."],"تُسلَّم الباقات خلال يومين (الأساسية) و3 أيام (القياسية) و4 أيام (البريميوم). تبدأ المدة بعد دفع العربون واستلام كل المحتوى والمعلومات اللازمة. وأي تأخير من العميل في إرسال المحتوى يمدّ مدة التسليم بقدره.":["Delivery takes 2 days for Basic, 3 days for Standard and 4 days for Premium. The timeline starts after the deposit is paid and all required content and information are received. Any delay by the client in providing content extends the delivery time accordingly.","La livraison prend 2 jours pour Essentielle, 3 jours pour Standard et 4 jours pour Premium. Le délai commence après le paiement de l’acompte et la réception de tous les contenus et renseignements nécessaires. Tout retard du client dans l’envoi des contenus prolonge le délai d’autant."],"تشمل الأساسية تعديلين، والقياسية 4 تعديلات، والبريميوم 6 تعديلات، وكل رسالة واحدة تضم طلباتك تُحسب تعديلًا واحدًا. التعديل الإضافي بعد استنفاد الباقة بسعر 1$. وفي الباقة المخصصة يُحدَّد عدد التعديلات مع كل عميل حسب السعر والنطاق.":["Basic includes 2 revisions, Standard 4 and Premium 6. One message containing your requested changes counts as one revision. Additional revisions cost $1 each. For custom packages, the revision count is agreed with each client according to price and scope.","L’offre Essentielle comprend 2 révisions, Standard 4 et Premium 6. Un message regroupant vos demandes compte comme une révision. Chaque révision supplémentaire coûte 1 $. Pour une offre sur mesure, le nombre de révisions est convenu selon le prix et le périmètre."],"عبر بريدي موب أو محفظة إلكترونية أو Binance أو Grey، ونتفق على الطريقة قبل البدء. عربون 35% عند البدء، ثم 65% بعد معاينة الموقع وقبل تسليمه. التفاصيل في سياسة الدفع والاسترداد.":["Payment is accepted via BaridiMob, an e-wallet, Binance or Grey; we agree on the method before work begins. A 35% deposit is due at the start, and the remaining 65% after previewing the site and before delivery. See the Payment & Refund Policy for details.","Le paiement est possible via BaridiMob, un portefeuille électronique, Binance ou Grey ; le mode est convenu avant le début. Un acompte de 35 % est versé au démarrage, puis les 65 % restants après l’aperçu du site et avant la livraison. Consultez la politique de paiement et de remboursement."],"بالتأكيد. الباقة المخصصة لمن لم يجد في الباقات الخصائص التي يحتاجها. يُحدَّد السعر بعد مناقشة طلباتك ونطاق المشروع، ولا يوجد سعر ثابت مسبقًا.":["Absolutely. The custom package is for anyone who cannot find the required features in the listed packages, not only for large projects. There is no fixed minimum price; the price is agreed after discussing your project scope.","Bien sûr. L’offre sur mesure s’adresse à toute personne qui ne trouve pas les fonctionnalités nécessaires dans les offres proposées, et pas uniquement aux grands projets. Elle commence à 35 $ (7 000 DZD), sans plafond."],"خدمتنا هي تصميم الموقع وتسليمه كملفات جاهزة. النشر والاستضافة والدومين مسؤولية العميل، ويمكننا إرشاده إلى طريقة النشر حسب باقته. لا نضمن نتائج بعد الإطلاق كعدد الزيارات أو المبيعات أو ترتيب الموقع في محركات البحث.":["Our service is to design the website and deliver it as ready-to-use files. Publishing, hosting and the domain are the client's responsibility; we can provide publishing guidance according to the package. We do not guarantee post-launch results such as traffic, sales or search-engine rankings.","Notre service consiste à concevoir le site et à le livrer sous forme de fichiers prêts à l’emploi. La publication, l’hébergement et le domaine relèvent du client ; nous pouvons le guider selon son offre. Nous ne garantissons pas les résultats après lancement, tels que le trafic, les ventes ou le classement dans les moteurs de recherche."],"تمر البيانات التي ترسلها عبر Cloudflare ثم تصل إلينا لمعالجة طلبك. تُحمى البيانات أثناء النقل وفق وسائل الحماية المتاحة لدى الخدمة، وقد نستخدم تطبيق مراسلة لإيصال الرسائل ومتابعتها.":["The data you send passes through Cloudflare and then reaches us so we can process your request. It is protected in transit using the security measures available from the service; we may also use a messaging app to deliver and follow up on messages.","Les données que vous envoyez passent par Cloudflare avant de nous parvenir pour traiter votre demande. Elles sont protégées pendant le transfert selon les mesures de sécurité proposées par le service ; nous pouvons également utiliser une application de messagerie pour recevoir et suivre les messages."],"الدفعة الأولى (العربون 35%)":["First payment (35% deposit)","Premier paiement (acompte de 35 %)"],"الدفعة الثانية (65%)":["Second payment (65%)","Deuxième paiement (65 %)"],"إذا لم يرد العميل خلال 7 أيام، يُوقف المشروع مؤقتًا. يمكن استئنافه خلال 30 يومًا برسوم إعادة جدولة $5. بعد ذلك يُلغى المشروع ولا يُسترد العربون.":["If the client does not respond within 7 days, the project is paused. It can be resumed within 30 days for a $5 rescheduling fee. After that, the project is cancelled and the deposit is not refunded.","Sans réponse du client dans les 7 jours, le projet est suspendu. Il peut reprendre dans les 30 jours moyennant des frais de replanification de 5 $. Passé ce délai, le projet est annulé et l’acompte n’est pas remboursé."],});
 Object.assign(DICT,{"من الفكرة إلى موقع جاهز":["From idea to a ready website","De l’idée au site prêt"],"تصميم نوردا يتحول من فكرة إلى موقع متجاوب":["NORDA transforms an idea into a responsive website","NORDA transforme une idée en site web adaptatif"]});
+Object.assign(DICT,{"لأصحاب المشاريع الصغيرة. نحوّل فكرتك إلى موقع احترافي يعبّر عن هويتك ويجذب عملاءك ويدعم نموّ مشروعك.":["For small businesses. We turn your idea into a professional website that reflects your identity, attracts customers and supports your growth.","Pour les petites entreprises. Nous transformons votre idée en un site professionnel qui reflète votre identité, attire des clients et soutient votre croissance."],"استكشف القوالب":["Explore templates","Découvrir les modèles"],"خطوات واضحة لتحويل فكرتك إلى حضور رقمي متكامل.":["Clear steps to turn your idea into a complete digital presence.","Des étapes claires pour transformer votre idée en une présence numérique complète."],"نفهم فكرتك وهدف مشروعك والجمهور الذي تريد الوصول إليه.":["We understand your idea, your project goals and the audience you want to reach.","Nous comprenons votre idée, les objectifs de votre projet et le public que vous souhaitez atteindre."],"نرتب المحتوى ونبني واجهة متناسقة مع هوية مشروعك.":["We organize the content and create an interface that fits your brand identity.","Nous organisons le contenu et créons une interface cohérente avec votre identité de marque."],"نحوّل التصميم إلى موقع متجاوب مع الأجهزة المختلفة.":["We turn the design into a website that works across devices.","Nous transformons le design en un site adapté à tous les appareils."],"نراجع العمل ونسلّمك ملفات المشروع بعد إتمام الاتفاق.":["We review the work and deliver the project files once the agreement is complete.","Nous vérifions le travail et livrons les fichiers du projet une fois l’accord finalisé."],"اختر الباقة المناسبة لمشروعك.":["Choose the package that suits your project.","Choisissez la formule adaptée à votre projet."],"مناسبة للمشاريع الصغيرة.":["Suitable for small projects.","Adaptée aux petits projets."],"صفحة هبوط، حتى 4 صفحات":["Landing page, up to 4 pages","Page d’accueil, jusqu’à 4 pages"],"تحسين SEO أساسي":["Basic SEO","SEO de base"],"ملفات المصدر ZIP":["Source files (ZIP)","Fichiers source (ZIP)"],"اختيار الباقة":["Choose package","Choisir cette formule"],"تشمل كل ما في الأساسية، بالإضافة إلى.":["Includes everything in Basic, plus:","Comprend tout ce qui est inclus dans Essentielle, plus :"],"حتى 6 صفحات و4 أقسام فرعية":["Up to 6 pages and 4 sub-sections","Jusqu’à 6 pages et 4 sous-sections"],"زر دردشة":["Chat button","Bouton de chat"],"نسخة احتياطية خلال الدعم":["Project backup during support","Sauvegarde du projet pendant l’assistance"],"تسليم خلال 10 أيام":["Delivered within 10 days","Livraison sous 10 jours"],"دعم فني 14 يومًا":["14 days of technical support","14 jours d’assistance technique"],"تشمل كل ما في القياسية، بالإضافة إلى.":["Includes everything in Standard, plus:","Comprend tout ce qui est inclus dans Standard, plus :"],"حتى 8 صفحات رئيسية و16 قسمًا فرعيًا":["Up to 8 main pages and 16 sub-sections","Jusqu’à 8 pages principales et 16 sous-sections"],"تسليم خلال 15 يومًا":["Delivered within 15 days","Livraison sous 15 jours"],"دعم فني 30 يومًا":["30 days of technical support","30 jours d’assistance technique"],"للمشاريع ذات المتطلبات الخاصة.":["For projects with specific requirements.","Pour les projets ayant des besoins spécifiques."],"عدد تعديلات حسب الاتفاق":["Revisions as agreed","Nombre de révisions selon accord"],"ناقشي مشروعك":["Discuss your project","Discuter de votre projet"],"كل تعديل إضافي بعد استنفاد تعديلات الباقة: 5$ = 500 دج. كل رسالة = تعديل واحد.":["Each additional revision after using the package allowance costs $5 (500 DZD). One message counts as one revision.","Chaque révision supplémentaire après épuisement du forfait coûte 5 $ (500 DZD). Un message compte comme une révision."],"هل أنت مستعدة لبدء مشروعك؟":["Ready to start your project?","Prête à démarrer votre projet ?"],"تواصلي معنا":["Contact us","Contactez-nous"],"نحن هنا لمساعدتك":["We're here to help","Nous sommes là pour vous aider"],"جديد":["New","Nouveau"],"المحادثة":["Chat","Discussion"],"السجل":["History","Historique"],"ابدأ محادثة":["Start a conversation","Démarrer une conversation"],"مرحباً بك 👋":["Welcome 👋","Bienvenue 👋"],"اترك اسمك لبدء محادثة مع فريق NORDA.":["Enter your name to start a conversation with the NORDA team.","Saisissez votre nom pour démarrer une conversation avec l’équipe NORDA."],"الاسم (اختياري)":["Name (optional)","Nom (facultatif)"],"ابدأ المحادثة":["Start chat","Démarrer le chat"],"رقم التذكرة":["Ticket number","Numéro du ticket"],"المحادثات السابقة":["Previous conversations","Conversations précédentes"],"يمكنك مراجعة التذاكر المغلقة.":["You can review closed tickets.","Vous pouvez consulter les tickets clôturés."],"← رجوع":["← Back","← Retour"],"نحوّل أفكار المشاريع إلى مواقع إلكترونية أنيقة وعملية.":["We turn project ideas into elegant, practical websites.","Nous transformons les idées de projets en sites web élégants et pratiques."],"روابط الموقع":["Website links","Liens du site"],"التواصل":["Contact","Contact"],"© 2026 NORDA. جميع الحقوق محفوظة.":["© 2026 NORDA. All rights reserved.","© 2026 NORDA. Tous droits réservés."],"سيتم تحديث محتوى القوالب ومعايناتها لاحقًا.":["Template content and previews will be updated soon.","Le contenu des modèles et leurs aperçus seront bientôt mis à jour."],"مكتبة القوالب قيد التجهيز":["The template library is being prepared","La bibliothèque de modèles est en préparation"],"ستجدين هنا نماذج المواقع وتفاصيل كل قالب وخيارات تخصيصه.":["Here you'll find website examples, details for each template and customization options.","Vous trouverez ici des exemples de sites, les détails de chaque modèle et les options de personnalisation."],"سيتم تحديث تفاصيل الخدمة وآلية تنفيذ المشاريع لاحقًا.":["Service details and the project workflow will be updated soon.","Les détails du service et le processus de réalisation seront bientôt mis à jour."],"تفاصيل الخدمة قيد التجهيز":["Service details are being prepared","Les détails du service sont en préparation"],"يمكنك الاطلاع على الباقات في الصفحة الرئيسية أو مراسلتنا لمناقشة مشروعك.":["You can view the packages on the homepage or contact us to discuss your project.","Vous pouvez consulter les formules sur la page d’accueil ou nous contacter pour discuter de votre projet."],"أرسلي تفاصيل استفسارك أو مشروعك، وسنراجع رسالتك ونرد عليك.":["Send us the details of your question or project. We'll review your message and get back to you.","Envoyez-nous les détails de votre demande ou de votre projet. Nous examinerons votre message et vous répondrons."],"يمكنك التواصل معنا عبر البريد أو حساباتنا الاجتماعية.":["You can contact us by email or through our social accounts.","Vous pouvez nous contacter par e-mail ou via nos réseaux sociaux."],"أرسلي رسالة":["Send a message","Envoyer un message"],"تفاصيل الرسالة":["Message details","Détails du message"],"واستخدام بياناتي للرد على رسالتي.":["and allow my data to be used to reply to my message.","et autoriser l’utilisation de mes données pour répondre à mon message."],"إرسال الرسالة":["Send message","Envoyer le message"],"إجابات على أكثر الأسئلة تكرارًا.":["Answers to the most frequently asked questions.","Réponses aux questions les plus fréquentes."],"نعم. يُحسب كل طلب تغيير منسّق تعديلًا واحدًا. التعديلات تشمل نطاق العمل المتفق عليه، أما إضافة صفحات أو ميزات جديدة خارج النطاق فتُسعَّر بشكل منفصل. كل تعديل إضافي بعد استنفاد تعديلات الباقة: 1$ = 270 دج. 1 رسالة = 1 تعديل (حتى إذا كانت تحتوي أكثر من تعديل).":["Yes. Each organized change request counts as one revision. Revisions cover the agreed scope; additional pages or features outside that scope are priced separately. Each extra revision after the package allowance costs $5 (500 DZD). One message counts as one revision, even if it contains several changes.","Oui. Chaque demande de modification regroupée compte comme une révision. Les révisions couvrent le périmètre convenu ; les pages ou fonctionnalités supplémentaires sont facturées séparément. Chaque révision supplémentaire après épuisement du forfait coûte 5 $ (500 DZD). Un message compte comme une révision, même s’il contient plusieurs modifications."],"أ. الاتفاق على الباقة والتفاصيل المطلوبة. ب. دفع العربون وبدء العمل. ج. تسليم معاينة للموقع للاطلاع فقط. د. تنفيذ التعديلات ضمن عدد تعديلات الباقة. هـ. دفع المبلغ المتبقي. و. تسليم ملفات المشروع وحقوق استخدام المخرجات المتفق عليها، مع استثناء المكونات العامة والعناصر الخارجية الخاضعة لتراخيصها.":["A. Agree on the package and required details. B. Pay the deposit and start the work. C. Receive a preview of the website for review only. D. Complete revisions within the package allowance. E. Pay the remaining balance. F. Receive the project files and the agreed usage rights, excluding general components and third-party assets subject to their own licences.","A. Convenir de la formule et des détails requis. B. Verser l’acompte et commencer le travail. C. Recevoir un aperçu du site pour consultation uniquement. D. Effectuer les révisions dans la limite du forfait. E. Régler le solde. F. Recevoir les fichiers du projet et les droits d’utilisation convenus, à l’exception des composants génériques et des éléments tiers soumis à leurs propres licences."],"التعديل هو أي تغيير في التصميم أو المحتوى ضمن نطاق المشروع المتفق عليه، ويشمل تغيير الشعار. يُحسب كل طلب تغيير تعديلًا واحدًا إذا كان يتعلق بجزء واحد أو بمجموعة تغييرات صغيرة مرسلة معًا. ولا يُعدّ تعديلًا بل طلبًا جديدًا: إضافة صفحات أو أقسام أو ميزات خارج الباقة، أو إعادة تصميم كاملة بعد اعتماد المعاينة، أو استبدال محتوى الموقع بالكامل. تُسعَّر الطلبات الجديدة بالاتفاق قبل تنفيذها. التعديل الإضافي بعد استنفاد تعديلات الباقة بسعر 5$ = 500 دج. 1 رسالة = 1 تعديل (حتى إذا كانت تحتوي أكثر من تعديل). ويمكن للعميل تنفيذ التعديلات بنفسه بعد التسليم لأنه يستلم الملفات المصدرية.":["A revision is a change to the design or content within the agreed project scope, including a logo change. Each request relating to one area, or a small group of changes sent together, counts as one revision. The following are new requests, not revisions: adding pages, sections or features outside the package, a full redesign after preview approval, or replacing all website content. New requests are priced by agreement before work begins. Extra revisions after the package allowance cost $5 (500 DZD) each. One message counts as one revision, even if it contains several changes. After delivery, the client can make changes independently because the source files are provided.","Une révision est une modification du design ou du contenu dans le périmètre convenu, y compris un changement de logo. Chaque demande portant sur un élément, ou un petit groupe de modifications envoyé ensemble, compte comme une révision. Les demandes suivantes sont considérées comme de nouvelles prestations : ajout de pages, de sections ou de fonctionnalités hors forfait, refonte complète après validation de l’aperçu ou remplacement de tout le contenu du site. Les nouvelles demandes sont chiffrées d’un commun accord avant exécution. Les révisions supplémentaires après épuisement du forfait coûtent 5 $ (500 DZD) chacune. Un message compte comme une révision, même s’il contient plusieurs modifications. Après livraison, le client peut effectuer lui-même des modifications, car les fichiers source lui sont remis."],"تفاصيل كل باقة، بما فيها مدة التسليم وعدد التعديلات ومدة الدعم، موجودة في قسم الباقات في الصفحة الرئيسية.":["Details for each package, including delivery time, revisions and support period, are listed in the Packages section on the homepage.","Les détails de chaque formule, notamment le délai de livraison, les révisions et la durée de l’assistance, figurent dans la section Formules de la page d’accueil."],"نجمع فقط ما ترسله إلينا بنفسك: الاسم والبريد الإلكتروني والبلد وموضوع الرسالة ونصها من نماذج التواصل، والاسم والرسائل والملفات المرفقة (PDF أو صور) عبر الدردشة، والمحتوى والمعلومات التي ترسلها لتنفيذ مشروعك.":["We only collect information you send us: your name, email, country, subject and message through contact forms; your name, messages and attached files (PDF or images) through chat; and the content and information you provide for your project.","Nous collectons uniquement les informations que vous nous transmettez : nom, e-mail, pays, objet et message via les formulaires ; nom, messages et fichiers joints (PDF ou images) via le chat ; ainsi que le contenu et les informations fournis pour votre projet."],"نحفظ في متصفحك تفضيلاتك (اللغة وصوت التنبيه) ومعرّف الدردشة وآخر تذكرة واسمك إن أدخلته. لا نستخدم ملفات تعريف ارتباط للإعلانات ولا أدوات تتبع، ويمكنك مسح هذه البيانات من إعدادات المتصفح في أي وقت.":["Your browser stores your preferences (language and notification sound), chat ID, latest ticket and your name if entered. We do not use advertising cookies or tracking tools. You can clear this data in your browser settings at any time.","Votre navigateur conserve vos préférences (langue et son de notification), votre identifiant de chat, votre dernier ticket et votre nom si vous l’avez saisi. Nous n’utilisons ni cookies publicitaires ni outils de suivi. Vous pouvez effacer ces données à tout moment dans les paramètres du navigateur."],"السعر بالدينار الجزائري مخصص للعملاء داخل الجزائر، والسعر بالدولار مخصص للعملاء خارج الجزائر. السعران ثابتان كما يظهران في قسم الباقات في الصفحة الرئيسية، ولا يُحتسب أحدهما بتحويل الآخر. ويُحدَّد سعر الباقة المخصصة بعد مناقشة طلبات العميل ونطاق المشروع.":["The DZD price is for customers in Algeria, and the USD price is for customers outside Algeria. Both prices are fixed as displayed in the Packages section on the homepage; neither is calculated by converting the other. The custom package price is agreed after discussing the client's requirements and project scope.","Le prix en DZD s’adresse aux clients en Algérie et le prix en USD aux clients hors d’Algérie. Les deux tarifs sont fixes, tels qu’affichés dans la section Formules de la page d’accueil ; l’un n’est pas calculé par conversion de l’autre. Le prix d’une formule sur mesure est convenu après discussion des besoins du client et du périmètre du projet."],"بعد دفع المبلغ المتبقي يستلم العميل ملفات المشروع في ملف zip وحقوق استخدام المخرجات المتفق عليها، مع استثناء المكونات العامة والعناصر الخارجية الخاضعة لتراخيصها.":["After paying the remaining balance, the client receives the project files in a ZIP archive and the agreed usage rights, excluding general components and third-party assets subject to their own licences.","Après paiement du solde, le client reçoit les fichiers du projet dans une archive ZIP ainsi que les droits d’utilisation convenus, à l’exception des composants génériques et des éléments tiers soumis à leurs propres licences."],"التعديل الإضافي بعد استنفاد تعديلات الباقة بسعر 5$ = 500 دج، ويُدفع قبل تنفيذه. 1 رسالة = 1 تعديل (حتى إذا كانت تحتوي أكثر من تعديل). أما الطلبات الجديدة خارج الباقة فتُسعَّر بالاتفاق قبل التنفيذ.":["An additional revision after using the package allowance costs $5 (500 DZD) and must be paid before work begins. One message counts as one revision, even if it contains several changes. New requests outside the package are priced by agreement before implementation.","Une révision supplémentaire après épuisement du forfait coûte 5 $ (500 DZD) et doit être réglée avant son exécution. Un message compte comme une révision, même s’il contient plusieurs modifications. Les nouvelles demandes hors forfait sont chiffrées d’un commun accord avant leur réalisation."],"إذا تأخر التسليم لسبب من طرفنا، يُعوَّض العميل بـ +7 أيام دعم وتعديل إضافي واحد عن كل 3 أيام تأخير، كما في سياسة الاستخدام.":["If delivery is delayed for a reason on our side, the client receives 7 additional support days and one extra revision for every 3 days of delay, as described in the Terms of Use.","Si la livraison est retardée pour une raison qui nous incombe, le client bénéficie de 7 jours d’assistance supplémentaires et d’une révision additionnelle pour chaque période de 3 jours de retard, conformément aux conditions d’utilisation."],"تفعيل الوضع الليلي":["Enable dark mode","Activer le mode sombre"],"اختيار اللغة":["Choose language","Choisir la langue"],"افتح الدردشة":["Open chat","Ouvrir le chat"],"دردشة NORDA":["NORDA chat","Chat NORDA"],"إغلاق الدردشة":["Close chat","Fermer le chat"],"أقسام الدردشة":["Chat sections","Sections du chat"],"اكتب اسمك":["Enter your name","Saisissez votre nom"],"إزالة الملف":["Remove file","Supprimer le fichier"],"اكتب رسالتك...":["Write your message...","Écrivez votre message..."],"رسالتك":["Your message","Votre message"]});
+Object.assign(DICT,{"موقع متعدد الصفحات (حتى 6 صفحات و 4 أقسام فرعية)":["Multi-page website (up to 6 pages and 4 sub-sections)","Site multipage (jusqu’à 6 pages et 4 sous-sections)"],"تُسلَّم الباقات خلال يومين (الأساسية) و3 أيام (القياسية) و4 أيام (البريميوم). تبدأ المدة بعد دفع العربون واستلام كل المحتوى والمعلومات اللازمة. وأي تأخير من العميل في إرسال المحتوى يمدّ مدة التسليم بقدره.":["Delivery takes 5 days for Basic, 10 days for Standard and 15 days for Premium. The timeline starts after the deposit is paid and all required content and information are received. Any delay by the client in providing content extends the delivery time accordingly.","La livraison prend 5 jours pour Essentielle, 10 jours pour Standard et 15 jours pour Premium. Le délai commence après le paiement de l’acompte et la réception de tous les contenus et renseignements nécessaires. Tout retard du client dans l’envoi des contenus prolonge le délai d’autant."],"تشمل الأساسية تعديلين، والقياسية 4 تعديلات، والبريميوم 6 تعديلات، وكل رسالة واحدة تضم طلباتك تُحسب تعديلًا واحدًا. التعديل الإضافي بعد استنفاد الباقة بسعر 1$. وفي الباقة المخصصة يُحدَّد عدد التعديلات مع كل عميل حسب السعر والنطاق.":["Basic includes 2 revisions, Standard 4 and Premium 6. One message containing your requested changes counts as one revision. Additional revisions after the package allowance cost $5 (500 DZD). For custom packages, the revision count is agreed according to the price and scope.","Essentielle comprend 2 révisions, Standard 4 et Premium 6. Un message regroupant vos demandes compte comme une révision. Les révisions supplémentaires après épuisement du forfait coûtent 5 $ (500 DZD). Pour une formule sur mesure, le nombre de révisions est convenu selon le prix et le périmètre."],"بالتأكيد. الباقة المخصصة لمن لم يجد في الباقات الخصائص التي يحتاجها. يُحدَّد السعر بعد مناقشة طلباتك ونطاق المشروع، ولا يوجد سعر ثابت مسبقًا.":["Absolutely. The custom package is for anyone who cannot find the required features in the listed packages. There is no fixed minimum price; the price is agreed after discussing your project scope.","Bien sûr. La formule sur mesure s’adresse à toute personne qui ne trouve pas les fonctionnalités nécessaires dans les formules proposées. Il n’y a pas de prix minimum fixe ; le tarif est convenu après discussion du périmètre du projet."]});
 var _nordaMotionLabel={ar:'حركة نوردا: فكرة، مخطط، تصميم متجاوب، ثم نمو وإطلاق',en:'NORDA motion: idea, wireframe, responsive design, growth and launch',fr:'Animation NORDA : idée, maquette, design adaptatif, croissance et lancement'};
 var LANGS=['ar','en','fr'],LI={en:0,fr:1};
 function detect(){var u=new URLSearchParams(location.search).get('lang');if(u&&LANGS.indexOf(u)>-1)return u;var s=sget('norda_lang');if(s&&LANGS.indexOf(s)>-1)return s;var n=String((navigator.languages&&navigator.languages[0])||navigator.language||'').toLowerCase();if(n.indexOf('ar')===0)return 'ar';if(n.indexOf('fr')===0)return 'fr';if(n.indexOf('en')===0)return 'en';return 'ar'}
@@ -118,7 +120,7 @@ function applyLang(l){
   if(d._ot===undefined)d._ot=d.title;d.title=tr(d._ot.trim(),l);
   var md=d.querySelector('meta[name=description]');if(md){if(md._o===undefined)md._o=md.content;md.content=tr(md._o.trim(),l)}
   var lt=$1('#langTxt');if(lt)lt.textContent=l.toUpperCase();var opts=d.querySelectorAll('[data-lang-choice]');opts.forEach(function(el){var active=el.getAttribute('data-lang-choice')===l;el.setAttribute('aria-checked',active?'true':'false');});
-  paintSound();if(clog)refreshChatLang();
+  applyCurrency();var themeBtn=$1('#themeToggle');if(themeBtn){var nextTheme=l==='ar'?'تفعيل الوضع الليلي':l==='fr'?'Activer le mode sombre':'Enable dark mode';themeBtn.setAttribute('aria-label',nextTheme);themeBtn.setAttribute('title',nextTheme)}d.dispatchEvent(new Event('norda:language'));paintSound();if(clog)refreshChatLang();
 }
 var lb=$1('#langBtn'),lm=$1('#langMenu'),lp=$1('#langPicker');
 function closeLangMenu(){if(lm)lm.hidden=true;if(lb)lb.setAttribute('aria-expanded','false')}
@@ -129,6 +131,564 @@ if(lb&&lm){
   lm.querySelectorAll('[data-lang-choice]').forEach(function(el){el.addEventListener('click',function(){var n=el.getAttribute('data-lang-choice');if(LANGS.indexOf(n)>-1){sset('norda_lang',n);applyLang(n)}closeLangMenu();lb.focus()})});
 }
 /* أسعار الجزائر بالدينار وأسعار العملاء خارج الجزائر بالدولار، كلٌّ ثابت بشكل مستقل. */
+
+/* Currency preference: package prices are fixed per market, not live FX conversions. */
+var currency=sget('norda_currency')==='usd'?'usd':'dzd';
+function formatDzd(n){
+  if(lang==='ar')return String(n)+' دج';
+  var formatted=new Intl.NumberFormat(lang==='fr'?'fr-FR':'en-US',{maximumFractionDigits:0}).format(n);
+  return formatted+' DZD';
+}
+function applyCurrency(){
+  $('[data-price-dzd][data-price-usd]').forEach(function(el){
+    var amount=currency==='usd'?el.getAttribute('data-price-usd'):el.getAttribute('data-price-dzd');
+    el.textContent=currency==='usd'?'
+function setBusy(b,on){if(b)b.disabled=on}
+function fmtSize(b){return b<1024?b+' B':b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(2)+' MB'}
+function fmtTime(ts){return new Date(ts).toLocaleTimeString(loc(),{hour:'2-digit',minute:'2-digit'})}
+function fmtDate(ts){return new Date(ts).toLocaleDateString(loc(),{year:'numeric',month:'short',day:'numeric'})}
+function esc(s){var x=d.createElement('div');x.textContent=String(s==null?'':s);return x.innerHTML}
+function validEmail(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)}
+/* ===== نظام التذاكر ===== */
+var userId=sget('norda_uid');if(!userId){userId='u_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);sset('norda_uid',userId)}
+var API=CFG.TELEGRAM_API||window.TELEGRAM_API||'';
+var currentTicket=null,pendingFile=null,lastCount=0,shown=0,typing=false,typingTimer=null,sending=false,messageCooldownUntil=0,messageCooldownTimer=null,closedCache=[],detailTicket=null,unread=0,view='new',remoteReady=false;
+            
+var CLOSED_ARCHIVE_KEY='norda_closed_archive';
+
+function archiveClosed(ticket){
+  if(!ticket||!ticket.ticketId)return;
+  var archived=[];
+  try{
+    archived=JSON.parse(sget(CLOSED_ARCHIVE_KEY)||'[]');
+    if(!Array.isArray(archived))archived=[];
+  }catch(e){archived=[]}
+
+  var saved=JSON.parse(JSON.stringify(ticket));
+  saved.status='closed';
+  saved.closedAt=saved.closedAt||Date.now();
+
+  // حفظ معلومات الملفات دون بياناتها الكبيرة
+  (saved.messages||[]).forEach(function(m){
+    if(m.file){
+      m.file={name:m.file.name||'',type:m.file.type||''};
+    }
+  });
+
+  var id=String(saved.ticketId);
+  var index=archived.findIndex(function(t){
+    return String(t.ticketId)===id;
+  });
+
+  if(index>=0)archived[index]=saved;
+  else archived.unshift(saved);
+
+  try{
+    sset(CLOSED_ARCHIVE_KEY,JSON.stringify(archived));
+    closedCache=archived;
+  }catch(e){}
+}
+var cp=$1('#chatPanel'),fab=$1('#chatFab'),clog=$1('#chatLog'),cf=$1('#chatForm'),badge=$1('#fabBadge'),ta=$1('#ch-msg'),fileInput=$1('#fileInput');
+var tabs={'new':$1('#tabNew'),'chat':$1('#tabChat'),'closed':$1('#tabClosed')};
+var soundToggle=$1('#soundToggle'),soundOn=sget('norda_chat_sound')!=='off',ac=null;
+function paintSound(){if(!soundToggle)return;soundToggle.setAttribute('aria-pressed',soundOn?'true':'false');soundToggle.setAttribute('aria-label',t(soundOn?'sound_on':'sound_off'));soundToggle.style.opacity=soundOn?1:.55}
+function unlock(){if(!soundOn)return;var A=window.AudioContext||window.webkitAudioContext;if(!A)return;try{if(!ac)ac=new A();if(ac.state==='suspended')ac.resume()}catch(e){}}
+function tone(f,dl){if(!soundOn||!ac||ac.state!=='running')return;try{var n=ac.currentTime+dl,o=ac.createOscillator(),g=ac.createGain();o.type='sine';o.frequency.setValueAtTime(f,n);g.gain.setValueAtTime(.0001,n);g.gain.exponentialRampToValueAtTime(.12,n+.025);g.gain.exponentialRampToValueAtTime(.0001,n+.2);o.connect(g);g.connect(ac.destination);o.start(n);o.stop(n+.21)}catch(e){}}
+function ding(){tone(880,0);tone(1174,.1)}
+if(soundToggle)soundToggle.addEventListener('click',function(){soundOn=!soundOn;sset('norda_chat_sound',soundOn?'on':'off');paintSound();if(soundOn)unlock()});
+d.addEventListener('pointerdown',unlock,{capture:true,once:true});d.addEventListener('keydown',unlock,{capture:true,once:true});
+function hasOpen(){return !!(currentTicket&&currentTicket.status!=='closed')}
+function toast(k){var el=$1('#chatToast');if(!el)return;el.textContent=t(k);el.classList.add('show');clearTimeout(toast.h);toast.h=setTimeout(function(){el.classList.remove('show')},2800)}
+function setBadge(){if(!badge)return;badge.textContent=unread>9?'9+':unread;badge.classList.toggle('show',unread>0)}
+function persist(){if(!currentTicket)return;var c=JSON.parse(JSON.stringify(currentTicket));(c.messages||[]).forEach(function(m){if(m.file)m.file={name:m.file.name,type:m.file.type}});sset('norda_last_ticket',JSON.stringify(c))}
+function updateTabs(){if(tabs.chat)tabs.chat.setAttribute('aria-disabled',hasOpen()?'false':'true')}
+function setView(v){
+  if(v==='chat'&&!hasOpen())v='new';view=v;
+  $('.tk-v').forEach(function(el){el.classList.toggle('on',el.getAttribute('data-view')===v)});
+  var k=v==='detail'?'closed':v;Object.keys(tabs).forEach(function(x){tabs[x].classList.toggle('on',x===k)});
+  if(v==='chat'){unread=0;setBadge();scrollLog()}
+}
+function scrollLog(){if(clog)setTimeout(function(){clog.scrollTop=clog.scrollHeight},40)}
+function buildBub(m){
+  var b=d.createElement('div');b.className='bub '+(m.from==='user'?'me':'bot');
+  if(m.text){var p=d.createElement('div');p.innerHTML=esc(m.text).replace(/\n/g,'<br>');b.appendChild(p)}
+  var f=m.file;
+  if(f&&(f.name||f.data)){
+    var safe=f.data&&/^(data:|https?:)/i.test(f.data);
+    if(safe&&f.type&&f.type.indexOf('image/')===0){var im=d.createElement('img');im.className='bub-img';im.src=f.data;im.alt=f.name||'';b.appendChild(im)}
+    var a=d.createElement(safe?'a':'div');a.className='bub-file';if(safe){a.href=f.data;a.download=f.name||'file'}a.textContent=f.name||'file';b.appendChild(a);
+  }
+  var tm=d.createElement('span');tm.className='bub-time';tm.textContent=fmtTime(m.time||Date.now());b.appendChild(tm);return b;
+}
+function typingEl(){var e=d.createElement('div');e.className='typing';e.setAttribute('aria-hidden','true');e.innerHTML='<i></i><i></i><i></i>';return e}
+function renderMessages(msgs,force){
+  if(!clog)return;msgs=msgs||[];var tp=clog.querySelector('.typing');if(tp)tp.remove();
+  if(force||!shown||msgs.length<shown){clog.innerHTML='';shown=0;if(!msgs.length)clog.appendChild(buildBub({from:'bot',text:t('chat_hello'),time:Date.now()}))}
+  for(var i=shown;i<msgs.length;i++)clog.appendChild(buildBub(msgs[i]));
+  shown=msgs.length;if(typing)clog.appendChild(typingEl());scrollLog();
+}
+function setTyping(on){typing=on;clearTimeout(typingTimer);if(on)typingTimer=setTimeout(function(){typing=false;var tp=clog.querySelector('.typing');if(tp)tp.remove()},12000)}
+function renderChat(){if(!hasOpen())return;$1('#ticketIdLabel').textContent='#'+currentTicket.ticketId;renderMessages(currentTicket.messages||[],true)}
+async function createTicket(name){
+  try{var r=await fetch(API+'/ticket/new',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({userId:userId,userName:name})});var j=await r.json();
+    if(j.ok&&j.ticket){currentTicket=j.ticket;persist();lastCount=(currentTicket.messages||[]).length;updateTabs();renderChat();return j}}catch(e){}
+  return null;
+}
+async function startNew(){
+  var nm=$1('#ch-name'),btn=$1('#btnNewTicket'),custom=(nm.value||'').trim()||sget('norda_name')||'';if(custom)sset('norda_name',custom);
+  setBusy(btn,true);var j=await createTicket(custom||t('guest'));setBusy(btn,false);
+  if(j){setView('chat');if(!j.existing)toast('ticket_new_msg');setTimeout(function(){ta.focus()},120)}else toast('msg_err');
+}
+async function apiSend(p){var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/message?userId='+encodeURIComponent(userId),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});return r.json()}
+async function loadMessages(){
+  if(!hasOpen()||sending)return;
+  try{var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/messages?userId='+encodeURIComponent(userId));var j=await r.json();if(!j.ok||sending)return;
+    var was=remoteReady;
+    if(j.ticketId&&j.ticketId!==currentTicket.ticketId){currentTicket.ticketId=j.ticketId;$1('#ticketIdLabel').textContent='#'+j.ticketId}
+    if(j.status==='closed'){onClosedRemote();return}
+    var ms=j.messages||[];
+    if(ms.length!==lastCount){var added=ms.length-lastCount,last=ms[ms.length-1];lastCount=ms.length;currentTicket.messages=ms;if(last&&last.from!=='user')typing=false;renderMessages(ms);persist();
+      if(last&&last.from!=='user'&&added>0){if(!cp.classList.contains('open')||view!=='chat'){unread+=Math.max(added,1);setBadge()}if(was)ding()}}
+    remoteReady=true;}catch(e){}
+}
+
+function onClosedRemote(){
+  archiveClosed(currentTicket);
+  currentTicket=null;
+  sdel('norda_last_ticket');
+  setTyping(false);
+  shown=0;
+  updateTabs();
+  setView('closed');
+  loadClosed();
+  toast('ticket_closed_msg');
+}
+function poll(){if(!d.hidden&&hasOpen()&&!sending)loadMessages();setTimeout(poll,cp.classList.contains('open')?1500:8000)}
+function grow(){if(!ta)return;ta.style.height='auto';ta.style.height=Math.min(ta.scrollHeight,110)+'px'}
+function refreshChatSendButton(){var b=$1('#chBtn');if(!b)return;if(messageCooldownTimer)clearTimeout(messageCooldownTimer);var remaining=Math.max(0,messageCooldownUntil-Date.now());b.disabled=sending||remaining>0;if(remaining>0)messageCooldownTimer=setTimeout(refreshChatSendButton,remaining)}
+function clearFile(){var p=$1('#filePreview');if(p){p.style.display='none';$1('#fileNamePreview').textContent='';$1('#fileSizePreview').textContent='';fileInput.value=''}}
+if(cf)cf.addEventListener('submit',async function(e){
+  e.preventDefault();if(sending)return;if(!hasOpen()){toast('ticket_closed_msg');setView('new');return}
+  var btn=$1('#chBtn'),now=Date.now();if(now<messageCooldownUntil){toast('msg_cooldown');refreshChatSendButton();return}
+  var msg=ta.value.trim(),file=pendingFile;if(!msg&&!file)return;
+  var payload={text:msg,file:file?file.data:null,fileName:file?file.name:null,fileType:file?file.type:null};
+  ta.value='';grow();pendingFile=null;clearFile();
+  currentTicket.messages=currentTicket.messages||[];
+  currentTicket.messages.push({from:'user',text:msg,time:Date.now(),file:file?{name:file.name,type:file.type,data:file.data}:null});
+  typing=false;renderMessages(currentTicket.messages);sending=true;messageCooldownUntil=now+3000;setBusy(btn,true);refreshChatSendButton();
+  try{var j=await apiSend(payload);if(j&&j.ok){currentTicket.messages=j.messages||currentTicket.messages;lastCount=currentTicket.messages.length;setTyping(true);renderMessages(currentTicket.messages);persist()}else toast('msg_err')}catch(err){toast('msg_err')}
+  sending=false;refreshChatSendButton();ta.focus();
+});
+if(ta){ta.addEventListener('input',grow);ta.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();if(cf.requestSubmit)cf.requestSubmit();else cf.dispatchEvent(new Event('submit',{cancelable:true}))}})}
+var bc=$1('#btnCloseTicket');
+if(bc)bc.addEventListener('click',async function(){
+  if(!hasOpen())return;if(!confirm(t('ticket_close_confirm')))return;
+  try{var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/close?userId='+encodeURIComponent(userId),{method:'POST'});var j=await r.json();
+    
+if(j.ok){
+  archiveClosed(currentTicket);
+  currentTicket=null;
+  sdel('norda_last_ticket');
+  setTyping(false);
+  shown=0;
+  updateTabs();
+  setView('closed');
+  loadClosed();
+  toast('ticket_close_ok');
+}else toast('msg_err')
+}catch(e){toast('msg_err')}
+});
+/* إرفاق ملف: PDF وصور فقط، الحد 2 ميغا */
+var ba=$1('#btnAttach');if(ba)ba.addEventListener('click',function(){fileInput.click()});
+if(fileInput)fileInput.addEventListener('change',function(){
+  var f=fileInput.files[0];if(!f)return;
+  if(!(f.type==='application/pdf'||f.type.indexOf('image/')===0)){toast('file_type');fileInput.value='';return}
+  if(f.size>2*1024*1024){toast('file_too_big');fileInput.value='';return}
+  var rd=new FileReader();rd.onload=function(){pendingFile={name:f.name,type:f.type,size:f.size,data:rd.result};$1('#filePreview').style.display='flex';$1('#fileNamePreview').textContent=f.name;$1('#fileSizePreview').textContent=fmtSize(f.size)};rd.readAsDataURL(f);
+});
+var fr=$1('#fileRemove');if(fr)fr.addEventListener('click',function(){pendingFile=null;clearFile()});
+
+async function loadClosed(){
+  try{
+    var archived=JSON.parse(sget(CLOSED_ARCHIVE_KEY)||'[]');
+    if(!Array.isArray(archived))archived=[];
+    closedCache=archived;
+
+    var r=await fetch(
+      API+'/ticket/closed/closed?userId='+encodeURIComponent(userId)
+    );
+    var j=await r.json();
+
+    if(j.ok&&Array.isArray(j.tickets)){
+      j.tickets.forEach(function(ticket){
+        archiveClosed(ticket);
+      });
+    }
+  }catch(e){}
+  renderClosed();
+}
+function renderClosed(){
+  var list=$1('#closedList'),cnt=$1('#closedCount');if(!list)return;list.innerHTML='';
+  if(!closedCache.length){list.innerHTML='<p style="text-align:center;color:#6d6862;margin:auto">'+esc(t('no_closed'))+'</p>';if(cnt)cnt.classList.remove('show');return}
+  if(cnt){cnt.textContent=closedCache.length;cnt.classList.add('show')}
+  closedCache.forEach(function(tk){
+    var ms=tk.messages||[],prev='';for(var i=ms.length-1;i>=0;i--){if(ms[i].text){prev=ms[i].text;break}if(ms[i].file){prev=ms[i].file.name||'';break}}
+    var el=d.createElement('div');el.className='ci';
+    el.innerHTML='<b>#'+esc(tk.ticketId)+'</b><small>'+esc(fmtDate(tk.closedAt||tk.updatedAt||Date.now()))+' · '+ms.length+'</small>'+(prev?'<span>'+esc(prev.slice(0,70))+'</span>':'')+'<button class="tk-link" type="button">'+esc(t('view_ticket'))+'</button>';
+    el.querySelector('button').addEventListener('click',function(){detailTicket=tk;renderDetail();setView('detail')});list.appendChild(el);
+  });
+}
+function renderDetail(){if(!detailTicket)return;$1('#detailTicketId').textContent='#'+detailTicket.ticketId;var log=$1('#detailLog');log.innerHTML='';(detailTicket.messages||[]).forEach(function(m){log.appendChild(buildBub(m))});setTimeout(function(){log.scrollTop=log.scrollHeight},40)}
+function refreshChatLang(){if(hasOpen())renderMessages(currentTicket.messages||[],true);renderClosed();if(detailTicket&&view==='detail')renderDetail()}
+var bb=$1('#btnBack');if(bb)bb.addEventListener('click',function(){setView('closed')});
+if(tabs['new'])tabs['new'].addEventListener('click',function(){if(hasOpen())setView('chat');else if(sget('norda_name'))startNew();else{setView('new');$1('#ch-name').focus()}});
+if(tabs.chat)tabs.chat.addEventListener('click',function(){if(hasOpen())setView('chat')});
+if(tabs.closed)tabs.closed.addEventListener('click',function(){setView('closed');loadClosed()});
+var bn=$1('#btnNewTicket');if(bn)bn.addEventListener('click',startNew);
+var chn=$1('#ch-name');if(chn)chn.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();startNew()}});
+function chatOpen(o){
+  cp.classList.toggle('open',o);fab.setAttribute('aria-expanded',o?'true':'false');fab.classList.toggle('hidden',o);
+  if(o){unread=0;setBadge();var nm=$1('#ch-name');if(!nm.value)nm.value=sget('norda_name')||'';if(hasOpen()){loadMessages();if(view==='new')setView('chat')}setTimeout(function(){if(view==='chat')ta.focus();else if(view==='new')nm.focus()},150)}
+}
+if(fab)fab.addEventListener('click',function(){chatOpen(!cp.classList.contains('open'))});
+var cx=$1('#chatX');if(cx)cx.addEventListener('click',function(){chatOpen(false);fab.focus()});
+d.addEventListener('keydown',function(e){if(e.key==='Escape'&&cp&&cp.classList.contains('open')){chatOpen(false);fab.focus()}});
+/* نموذج التواصل المستقل عن نظام التذاكر */
+var cform=$1('#contactForm');
+if(cform)cform.addEventListener('submit',async function(e){
+  e.preventDefault();
+  var nm=$1('#cf-name').value.trim(),em=$1('#cf-email').value.trim(),country=$1('#cf-country')?$1('#cf-country').value.trim():'',sj=$1('#cf-subject').value.trim(),ms=$1('#cf-msg').value.trim(),out=$1('#cfMsg'),btn=$1('#cfBtn'),consent=$1('#cf-consent');
+  out.className='fmsg';if($1('#cf-site').value)return;
+  if(!nm||!em||!country||!sj||!ms){out.textContent=t('msg_req');out.classList.add('err');return}
+  if(!validEmail(em)){out.textContent=t('msg_email');out.classList.add('err');return}
+  if(!consent||!consent.checked){out.textContent='يرجى الموافقة على سياسة الخصوصية قبل الإرسال.';out.classList.add('err');if(consent)consent.focus();return}
+  out.textContent=t('msg_wait');setBusy(btn,true);
+  try{
+    var response=await fetch(API+'/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:nm,email:em,country:country,subject:sj,message:ms,privacyConsent:consent.checked,website:$1('#cf-site').value})});
+    var result=await response.json();
+    if(!response.ok||!result||!result.ok)throw new Error('send');
+    out.textContent=t('msg_ok');out.classList.add('ok');cform.reset();
+  }catch(err){out.textContent=t('msg_err');out.classList.add('err')}
+  setBusy(btn,false);
+});
+/* زر الأسئلة الشائعة يفتح دردشة التذاكر الحالية */
+var faqOpenChat=$1('#faqOpenChat');
+if(faqOpenChat&&fab)faqOpenChat.addEventListener('click',function(){chatOpen(true)});
+/* ===== فلترة الأعمال + ظهور الأقسام ===== */
+var pf=$1('#pf');
+if(pf)pf.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;$('button',pf).forEach(function(x){var active=x===b;x.classList.toggle('on',active);x.setAttribute('aria-pressed',active?'true':'false')});$('#wk .wkc').forEach(function(w){w.hidden=!(b.dataset.f==='all'||w.dataset.c===b.dataset.f)})});
+if('IntersectionObserver' in window&&!reduce){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  $('main h2.t,main p.st,main .card,main .pk,main .wkc,main .steps>.step-item,main .vals>div,main .feat>div,main .faq details,main .split>*,main .dash,main .stats').forEach(function(el,i){el.classList.add('rv');el.style.animationDelay=(i%4)*90+'ms';io.observe(el)});
+}
+/* ===== بطاقات المعرض: تصبح رابطًا عند وجود data-href ===== */
+$('.wkc[data-href]').forEach(function(c){var u=c.getAttribute('data-href');if(!/^https?:\/\//i.test(u))return;c.setAttribute('role','link');c.tabIndex=0;c.style.cursor='pointer';
+  function go(){window.open(u,'_blank','noopener')}
+  c.addEventListener('click',go);c.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();go()}})});
+/* ===== حسابات التواصل (من config.js) ===== */
+var SOC={instagram:'https://instagram.com/',telegram:'https://t.me/'},soc=CFG.SOCIAL||{};
+$('[data-social]').forEach(function(a){var k=a.getAttribute('data-social'),h=String(soc[k]||'').trim().split('/').filter(Boolean).pop()||'';h=h.replace(/^@/,'').replace(/[^\w.]/g,'');if(!h||!SOC[k])return;a.href=SOC[k]+h;a.hidden=false;var x=a.querySelector('[data-social-handle]');if(x)x.textContent='@'+h});
+var sc=$1('#socialCards');if(sc&&!sc.querySelector('[data-social]:not([hidden])'))sc.hidden=true;
+/* ===== قائمة الجوال ===== */
+var mbtn=$1('#menuBtn');
+function menuOpen(o){d.body.classList.toggle('nav-open',o);if(mbtn)mbtn.setAttribute('aria-expanded',o?'true':'false')}
+if(mbtn){mbtn.addEventListener('click',function(){menuOpen(!d.body.classList.contains('nav-open'))});
+  $('#nav a').forEach(function(a){a.addEventListener('click',function(){menuOpen(false)})});
+  d.addEventListener('click',function(e){if(d.body.classList.contains('nav-open')&&!e.target.closest('header'))menuOpen(false)});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.body.classList.contains('nav-open')){menuOpen(false);mbtn.focus()}});
+  window.addEventListener('resize',function(){if(window.innerWidth>1080)menuOpen(false)})}
+/* ===== تشغيل ===== */
+applyLang(lang);
+/* تعبئة موضوع نموذج التواصل عند القدوم من صفحة الباقات */
+var csj=$1('#cf-subject');
+if(csj){var pl=new URLSearchParams(location.search).get('plan'),PN={basic:'الأساسية',standard:'القياسية',premium:'البريميوم',custom:'المخصصة'};if(PN[pl]&&!csj.value)csj.value=t('plan_req')+': '+tr(PN[pl],lang)}
+var last=sget('norda_last_ticket');
+if(last){try{var tk=JSON.parse(last);if(tk&&tk.status==='open'&&tk.ticketId){currentTicket=tk;lastCount=(tk.messages||[]).length;remoteReady=lastCount>0;updateTabs();renderChat();setView('chat');loadMessages()}}catch(e){}}
+loadClosed();poll();
+})();
+
++amount:formatDzd(Number(amount));
+  });
+  var b=$1('#currencyToggle');
+  if(b){
+    b.textContent=currency==='dzd'?(lang==='ar'?'دج':'DZD'):'
+function setBusy(b,on){if(b)b.disabled=on}
+function fmtSize(b){return b<1024?b+' B':b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(2)+' MB'}
+function fmtTime(ts){return new Date(ts).toLocaleTimeString(loc(),{hour:'2-digit',minute:'2-digit'})}
+function fmtDate(ts){return new Date(ts).toLocaleDateString(loc(),{year:'numeric',month:'short',day:'numeric'})}
+function esc(s){var x=d.createElement('div');x.textContent=String(s==null?'':s);return x.innerHTML}
+function validEmail(v){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)}
+/* ===== نظام التذاكر ===== */
+var userId=sget('norda_uid');if(!userId){userId='u_'+Date.now().toString(36)+Math.random().toString(36).slice(2,7);sset('norda_uid',userId)}
+var API=CFG.TELEGRAM_API||window.TELEGRAM_API||'';
+var currentTicket=null,pendingFile=null,lastCount=0,shown=0,typing=false,typingTimer=null,sending=false,messageCooldownUntil=0,messageCooldownTimer=null,closedCache=[],detailTicket=null,unread=0,view='new',remoteReady=false;
+            
+var CLOSED_ARCHIVE_KEY='norda_closed_archive';
+
+function archiveClosed(ticket){
+  if(!ticket||!ticket.ticketId)return;
+  var archived=[];
+  try{
+    archived=JSON.parse(sget(CLOSED_ARCHIVE_KEY)||'[]');
+    if(!Array.isArray(archived))archived=[];
+  }catch(e){archived=[]}
+
+  var saved=JSON.parse(JSON.stringify(ticket));
+  saved.status='closed';
+  saved.closedAt=saved.closedAt||Date.now();
+
+  // حفظ معلومات الملفات دون بياناتها الكبيرة
+  (saved.messages||[]).forEach(function(m){
+    if(m.file){
+      m.file={name:m.file.name||'',type:m.file.type||''};
+    }
+  });
+
+  var id=String(saved.ticketId);
+  var index=archived.findIndex(function(t){
+    return String(t.ticketId)===id;
+  });
+
+  if(index>=0)archived[index]=saved;
+  else archived.unshift(saved);
+
+  try{
+    sset(CLOSED_ARCHIVE_KEY,JSON.stringify(archived));
+    closedCache=archived;
+  }catch(e){}
+}
+var cp=$1('#chatPanel'),fab=$1('#chatFab'),clog=$1('#chatLog'),cf=$1('#chatForm'),badge=$1('#fabBadge'),ta=$1('#ch-msg'),fileInput=$1('#fileInput');
+var tabs={'new':$1('#tabNew'),'chat':$1('#tabChat'),'closed':$1('#tabClosed')};
+var soundToggle=$1('#soundToggle'),soundOn=sget('norda_chat_sound')!=='off',ac=null;
+function paintSound(){if(!soundToggle)return;soundToggle.setAttribute('aria-pressed',soundOn?'true':'false');soundToggle.setAttribute('aria-label',t(soundOn?'sound_on':'sound_off'));soundToggle.style.opacity=soundOn?1:.55}
+function unlock(){if(!soundOn)return;var A=window.AudioContext||window.webkitAudioContext;if(!A)return;try{if(!ac)ac=new A();if(ac.state==='suspended')ac.resume()}catch(e){}}
+function tone(f,dl){if(!soundOn||!ac||ac.state!=='running')return;try{var n=ac.currentTime+dl,o=ac.createOscillator(),g=ac.createGain();o.type='sine';o.frequency.setValueAtTime(f,n);g.gain.setValueAtTime(.0001,n);g.gain.exponentialRampToValueAtTime(.12,n+.025);g.gain.exponentialRampToValueAtTime(.0001,n+.2);o.connect(g);g.connect(ac.destination);o.start(n);o.stop(n+.21)}catch(e){}}
+function ding(){tone(880,0);tone(1174,.1)}
+if(soundToggle)soundToggle.addEventListener('click',function(){soundOn=!soundOn;sset('norda_chat_sound',soundOn?'on':'off');paintSound();if(soundOn)unlock()});
+d.addEventListener('pointerdown',unlock,{capture:true,once:true});d.addEventListener('keydown',unlock,{capture:true,once:true});
+function hasOpen(){return !!(currentTicket&&currentTicket.status!=='closed')}
+function toast(k){var el=$1('#chatToast');if(!el)return;el.textContent=t(k);el.classList.add('show');clearTimeout(toast.h);toast.h=setTimeout(function(){el.classList.remove('show')},2800)}
+function setBadge(){if(!badge)return;badge.textContent=unread>9?'9+':unread;badge.classList.toggle('show',unread>0)}
+function persist(){if(!currentTicket)return;var c=JSON.parse(JSON.stringify(currentTicket));(c.messages||[]).forEach(function(m){if(m.file)m.file={name:m.file.name,type:m.file.type}});sset('norda_last_ticket',JSON.stringify(c))}
+function updateTabs(){if(tabs.chat)tabs.chat.setAttribute('aria-disabled',hasOpen()?'false':'true')}
+function setView(v){
+  if(v==='chat'&&!hasOpen())v='new';view=v;
+  $('.tk-v').forEach(function(el){el.classList.toggle('on',el.getAttribute('data-view')===v)});
+  var k=v==='detail'?'closed':v;Object.keys(tabs).forEach(function(x){tabs[x].classList.toggle('on',x===k)});
+  if(v==='chat'){unread=0;setBadge();scrollLog()}
+}
+function scrollLog(){if(clog)setTimeout(function(){clog.scrollTop=clog.scrollHeight},40)}
+function buildBub(m){
+  var b=d.createElement('div');b.className='bub '+(m.from==='user'?'me':'bot');
+  if(m.text){var p=d.createElement('div');p.innerHTML=esc(m.text).replace(/\n/g,'<br>');b.appendChild(p)}
+  var f=m.file;
+  if(f&&(f.name||f.data)){
+    var safe=f.data&&/^(data:|https?:)/i.test(f.data);
+    if(safe&&f.type&&f.type.indexOf('image/')===0){var im=d.createElement('img');im.className='bub-img';im.src=f.data;im.alt=f.name||'';b.appendChild(im)}
+    var a=d.createElement(safe?'a':'div');a.className='bub-file';if(safe){a.href=f.data;a.download=f.name||'file'}a.textContent=f.name||'file';b.appendChild(a);
+  }
+  var tm=d.createElement('span');tm.className='bub-time';tm.textContent=fmtTime(m.time||Date.now());b.appendChild(tm);return b;
+}
+function typingEl(){var e=d.createElement('div');e.className='typing';e.setAttribute('aria-hidden','true');e.innerHTML='<i></i><i></i><i></i>';return e}
+function renderMessages(msgs,force){
+  if(!clog)return;msgs=msgs||[];var tp=clog.querySelector('.typing');if(tp)tp.remove();
+  if(force||!shown||msgs.length<shown){clog.innerHTML='';shown=0;if(!msgs.length)clog.appendChild(buildBub({from:'bot',text:t('chat_hello'),time:Date.now()}))}
+  for(var i=shown;i<msgs.length;i++)clog.appendChild(buildBub(msgs[i]));
+  shown=msgs.length;if(typing)clog.appendChild(typingEl());scrollLog();
+}
+function setTyping(on){typing=on;clearTimeout(typingTimer);if(on)typingTimer=setTimeout(function(){typing=false;var tp=clog.querySelector('.typing');if(tp)tp.remove()},12000)}
+function renderChat(){if(!hasOpen())return;$1('#ticketIdLabel').textContent='#'+currentTicket.ticketId;renderMessages(currentTicket.messages||[],true)}
+async function createTicket(name){
+  try{var r=await fetch(API+'/ticket/new',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({userId:userId,userName:name})});var j=await r.json();
+    if(j.ok&&j.ticket){currentTicket=j.ticket;persist();lastCount=(currentTicket.messages||[]).length;updateTabs();renderChat();return j}}catch(e){}
+  return null;
+}
+async function startNew(){
+  var nm=$1('#ch-name'),btn=$1('#btnNewTicket'),custom=(nm.value||'').trim()||sget('norda_name')||'';if(custom)sset('norda_name',custom);
+  setBusy(btn,true);var j=await createTicket(custom||t('guest'));setBusy(btn,false);
+  if(j){setView('chat');if(!j.existing)toast('ticket_new_msg');setTimeout(function(){ta.focus()},120)}else toast('msg_err');
+}
+async function apiSend(p){var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/message?userId='+encodeURIComponent(userId),{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(p)});return r.json()}
+async function loadMessages(){
+  if(!hasOpen()||sending)return;
+  try{var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/messages?userId='+encodeURIComponent(userId));var j=await r.json();if(!j.ok||sending)return;
+    var was=remoteReady;
+    if(j.ticketId&&j.ticketId!==currentTicket.ticketId){currentTicket.ticketId=j.ticketId;$1('#ticketIdLabel').textContent='#'+j.ticketId}
+    if(j.status==='closed'){onClosedRemote();return}
+    var ms=j.messages||[];
+    if(ms.length!==lastCount){var added=ms.length-lastCount,last=ms[ms.length-1];lastCount=ms.length;currentTicket.messages=ms;if(last&&last.from!=='user')typing=false;renderMessages(ms);persist();
+      if(last&&last.from!=='user'&&added>0){if(!cp.classList.contains('open')||view!=='chat'){unread+=Math.max(added,1);setBadge()}if(was)ding()}}
+    remoteReady=true;}catch(e){}
+}
+
+function onClosedRemote(){
+  archiveClosed(currentTicket);
+  currentTicket=null;
+  sdel('norda_last_ticket');
+  setTyping(false);
+  shown=0;
+  updateTabs();
+  setView('closed');
+  loadClosed();
+  toast('ticket_closed_msg');
+}
+function poll(){if(!d.hidden&&hasOpen()&&!sending)loadMessages();setTimeout(poll,cp.classList.contains('open')?1500:8000)}
+function grow(){if(!ta)return;ta.style.height='auto';ta.style.height=Math.min(ta.scrollHeight,110)+'px'}
+function refreshChatSendButton(){var b=$1('#chBtn');if(!b)return;if(messageCooldownTimer)clearTimeout(messageCooldownTimer);var remaining=Math.max(0,messageCooldownUntil-Date.now());b.disabled=sending||remaining>0;if(remaining>0)messageCooldownTimer=setTimeout(refreshChatSendButton,remaining)}
+function clearFile(){var p=$1('#filePreview');if(p){p.style.display='none';$1('#fileNamePreview').textContent='';$1('#fileSizePreview').textContent='';fileInput.value=''}}
+if(cf)cf.addEventListener('submit',async function(e){
+  e.preventDefault();if(sending)return;if(!hasOpen()){toast('ticket_closed_msg');setView('new');return}
+  var btn=$1('#chBtn'),now=Date.now();if(now<messageCooldownUntil){toast('msg_cooldown');refreshChatSendButton();return}
+  var msg=ta.value.trim(),file=pendingFile;if(!msg&&!file)return;
+  var payload={text:msg,file:file?file.data:null,fileName:file?file.name:null,fileType:file?file.type:null};
+  ta.value='';grow();pendingFile=null;clearFile();
+  currentTicket.messages=currentTicket.messages||[];
+  currentTicket.messages.push({from:'user',text:msg,time:Date.now(),file:file?{name:file.name,type:file.type,data:file.data}:null});
+  typing=false;renderMessages(currentTicket.messages);sending=true;messageCooldownUntil=now+3000;setBusy(btn,true);refreshChatSendButton();
+  try{var j=await apiSend(payload);if(j&&j.ok){currentTicket.messages=j.messages||currentTicket.messages;lastCount=currentTicket.messages.length;setTyping(true);renderMessages(currentTicket.messages);persist()}else toast('msg_err')}catch(err){toast('msg_err')}
+  sending=false;refreshChatSendButton();ta.focus();
+});
+if(ta){ta.addEventListener('input',grow);ta.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey&&!e.isComposing){e.preventDefault();if(cf.requestSubmit)cf.requestSubmit();else cf.dispatchEvent(new Event('submit',{cancelable:true}))}})}
+var bc=$1('#btnCloseTicket');
+if(bc)bc.addEventListener('click',async function(){
+  if(!hasOpen())return;if(!confirm(t('ticket_close_confirm')))return;
+  try{var r=await fetch(API+'/ticket/'+currentTicket.ticketId+'/close?userId='+encodeURIComponent(userId),{method:'POST'});var j=await r.json();
+    
+if(j.ok){
+  archiveClosed(currentTicket);
+  currentTicket=null;
+  sdel('norda_last_ticket');
+  setTyping(false);
+  shown=0;
+  updateTabs();
+  setView('closed');
+  loadClosed();
+  toast('ticket_close_ok');
+}else toast('msg_err')
+}catch(e){toast('msg_err')}
+});
+/* إرفاق ملف: PDF وصور فقط، الحد 2 ميغا */
+var ba=$1('#btnAttach');if(ba)ba.addEventListener('click',function(){fileInput.click()});
+if(fileInput)fileInput.addEventListener('change',function(){
+  var f=fileInput.files[0];if(!f)return;
+  if(!(f.type==='application/pdf'||f.type.indexOf('image/')===0)){toast('file_type');fileInput.value='';return}
+  if(f.size>2*1024*1024){toast('file_too_big');fileInput.value='';return}
+  var rd=new FileReader();rd.onload=function(){pendingFile={name:f.name,type:f.type,size:f.size,data:rd.result};$1('#filePreview').style.display='flex';$1('#fileNamePreview').textContent=f.name;$1('#fileSizePreview').textContent=fmtSize(f.size)};rd.readAsDataURL(f);
+});
+var fr=$1('#fileRemove');if(fr)fr.addEventListener('click',function(){pendingFile=null;clearFile()});
+
+async function loadClosed(){
+  try{
+    var archived=JSON.parse(sget(CLOSED_ARCHIVE_KEY)||'[]');
+    if(!Array.isArray(archived))archived=[];
+    closedCache=archived;
+
+    var r=await fetch(
+      API+'/ticket/closed/closed?userId='+encodeURIComponent(userId)
+    );
+    var j=await r.json();
+
+    if(j.ok&&Array.isArray(j.tickets)){
+      j.tickets.forEach(function(ticket){
+        archiveClosed(ticket);
+      });
+    }
+  }catch(e){}
+  renderClosed();
+}
+function renderClosed(){
+  var list=$1('#closedList'),cnt=$1('#closedCount');if(!list)return;list.innerHTML='';
+  if(!closedCache.length){list.innerHTML='<p style="text-align:center;color:#6d6862;margin:auto">'+esc(t('no_closed'))+'</p>';if(cnt)cnt.classList.remove('show');return}
+  if(cnt){cnt.textContent=closedCache.length;cnt.classList.add('show')}
+  closedCache.forEach(function(tk){
+    var ms=tk.messages||[],prev='';for(var i=ms.length-1;i>=0;i--){if(ms[i].text){prev=ms[i].text;break}if(ms[i].file){prev=ms[i].file.name||'';break}}
+    var el=d.createElement('div');el.className='ci';
+    el.innerHTML='<b>#'+esc(tk.ticketId)+'</b><small>'+esc(fmtDate(tk.closedAt||tk.updatedAt||Date.now()))+' · '+ms.length+'</small>'+(prev?'<span>'+esc(prev.slice(0,70))+'</span>':'')+'<button class="tk-link" type="button">'+esc(t('view_ticket'))+'</button>';
+    el.querySelector('button').addEventListener('click',function(){detailTicket=tk;renderDetail();setView('detail')});list.appendChild(el);
+  });
+}
+function renderDetail(){if(!detailTicket)return;$1('#detailTicketId').textContent='#'+detailTicket.ticketId;var log=$1('#detailLog');log.innerHTML='';(detailTicket.messages||[]).forEach(function(m){log.appendChild(buildBub(m))});setTimeout(function(){log.scrollTop=log.scrollHeight},40)}
+function refreshChatLang(){if(hasOpen())renderMessages(currentTicket.messages||[],true);renderClosed();if(detailTicket&&view==='detail')renderDetail()}
+var bb=$1('#btnBack');if(bb)bb.addEventListener('click',function(){setView('closed')});
+if(tabs['new'])tabs['new'].addEventListener('click',function(){if(hasOpen())setView('chat');else if(sget('norda_name'))startNew();else{setView('new');$1('#ch-name').focus()}});
+if(tabs.chat)tabs.chat.addEventListener('click',function(){if(hasOpen())setView('chat')});
+if(tabs.closed)tabs.closed.addEventListener('click',function(){setView('closed');loadClosed()});
+var bn=$1('#btnNewTicket');if(bn)bn.addEventListener('click',startNew);
+var chn=$1('#ch-name');if(chn)chn.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();startNew()}});
+function chatOpen(o){
+  cp.classList.toggle('open',o);fab.setAttribute('aria-expanded',o?'true':'false');fab.classList.toggle('hidden',o);
+  if(o){unread=0;setBadge();var nm=$1('#ch-name');if(!nm.value)nm.value=sget('norda_name')||'';if(hasOpen()){loadMessages();if(view==='new')setView('chat')}setTimeout(function(){if(view==='chat')ta.focus();else if(view==='new')nm.focus()},150)}
+}
+if(fab)fab.addEventListener('click',function(){chatOpen(!cp.classList.contains('open'))});
+var cx=$1('#chatX');if(cx)cx.addEventListener('click',function(){chatOpen(false);fab.focus()});
+d.addEventListener('keydown',function(e){if(e.key==='Escape'&&cp&&cp.classList.contains('open')){chatOpen(false);fab.focus()}});
+/* نموذج التواصل المستقل عن نظام التذاكر */
+var cform=$1('#contactForm');
+if(cform)cform.addEventListener('submit',async function(e){
+  e.preventDefault();
+  var nm=$1('#cf-name').value.trim(),em=$1('#cf-email').value.trim(),country=$1('#cf-country')?$1('#cf-country').value.trim():'',sj=$1('#cf-subject').value.trim(),ms=$1('#cf-msg').value.trim(),out=$1('#cfMsg'),btn=$1('#cfBtn'),consent=$1('#cf-consent');
+  out.className='fmsg';if($1('#cf-site').value)return;
+  if(!nm||!em||!country||!sj||!ms){out.textContent=t('msg_req');out.classList.add('err');return}
+  if(!validEmail(em)){out.textContent=t('msg_email');out.classList.add('err');return}
+  if(!consent||!consent.checked){out.textContent='يرجى الموافقة على سياسة الخصوصية قبل الإرسال.';out.classList.add('err');if(consent)consent.focus();return}
+  out.textContent=t('msg_wait');setBusy(btn,true);
+  try{
+    var response=await fetch(API+'/contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:nm,email:em,country:country,subject:sj,message:ms,privacyConsent:consent.checked,website:$1('#cf-site').value})});
+    var result=await response.json();
+    if(!response.ok||!result||!result.ok)throw new Error('send');
+    out.textContent=t('msg_ok');out.classList.add('ok');cform.reset();
+  }catch(err){out.textContent=t('msg_err');out.classList.add('err')}
+  setBusy(btn,false);
+});
+/* زر الأسئلة الشائعة يفتح دردشة التذاكر الحالية */
+var faqOpenChat=$1('#faqOpenChat');
+if(faqOpenChat&&fab)faqOpenChat.addEventListener('click',function(){chatOpen(true)});
+/* ===== فلترة الأعمال + ظهور الأقسام ===== */
+var pf=$1('#pf');
+if(pf)pf.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;$('button',pf).forEach(function(x){var active=x===b;x.classList.toggle('on',active);x.setAttribute('aria-pressed',active?'true':'false')});$('#wk .wkc').forEach(function(w){w.hidden=!(b.dataset.f==='all'||w.dataset.c===b.dataset.f)})});
+if('IntersectionObserver' in window&&!reduce){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
+  $('main h2.t,main p.st,main .card,main .pk,main .wkc,main .steps>.step-item,main .vals>div,main .feat>div,main .faq details,main .split>*,main .dash,main .stats').forEach(function(el,i){el.classList.add('rv');el.style.animationDelay=(i%4)*90+'ms';io.observe(el)});
+}
+/* ===== بطاقات المعرض: تصبح رابطًا عند وجود data-href ===== */
+$('.wkc[data-href]').forEach(function(c){var u=c.getAttribute('data-href');if(!/^https?:\/\//i.test(u))return;c.setAttribute('role','link');c.tabIndex=0;c.style.cursor='pointer';
+  function go(){window.open(u,'_blank','noopener')}
+  c.addEventListener('click',go);c.addEventListener('keydown',function(e){if(e.key==='Enter'){e.preventDefault();go()}})});
+/* ===== حسابات التواصل (من config.js) ===== */
+var SOC={instagram:'https://instagram.com/',telegram:'https://t.me/'},soc=CFG.SOCIAL||{};
+$('[data-social]').forEach(function(a){var k=a.getAttribute('data-social'),h=String(soc[k]||'').trim().split('/').filter(Boolean).pop()||'';h=h.replace(/^@/,'').replace(/[^\w.]/g,'');if(!h||!SOC[k])return;a.href=SOC[k]+h;a.hidden=false;var x=a.querySelector('[data-social-handle]');if(x)x.textContent='@'+h});
+var sc=$1('#socialCards');if(sc&&!sc.querySelector('[data-social]:not([hidden])'))sc.hidden=true;
+/* ===== قائمة الجوال ===== */
+var mbtn=$1('#menuBtn');
+function menuOpen(o){d.body.classList.toggle('nav-open',o);if(mbtn)mbtn.setAttribute('aria-expanded',o?'true':'false')}
+if(mbtn){mbtn.addEventListener('click',function(){menuOpen(!d.body.classList.contains('nav-open'))});
+  $('#nav a').forEach(function(a){a.addEventListener('click',function(){menuOpen(false)})});
+  d.addEventListener('click',function(e){if(d.body.classList.contains('nav-open')&&!e.target.closest('header'))menuOpen(false)});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.body.classList.contains('nav-open')){menuOpen(false);mbtn.focus()}});
+  window.addEventListener('resize',function(){if(window.innerWidth>1080)menuOpen(false)})}
+/* ===== تشغيل ===== */
+applyLang(lang);
+/* تعبئة موضوع نموذج التواصل عند القدوم من صفحة الباقات */
+var csj=$1('#cf-subject');
+if(csj){var pl=new URLSearchParams(location.search).get('plan'),PN={basic:'الأساسية',standard:'القياسية',premium:'البريميوم',custom:'المخصصة'};if(PN[pl]&&!csj.value)csj.value=t('plan_req')+': '+tr(PN[pl],lang)}
+var last=sget('norda_last_ticket');
+if(last){try{var tk=JSON.parse(last);if(tk&&tk.status==='open'&&tk.ticketId){currentTicket=tk;lastCount=(tk.messages||[]).length;remoteReady=lastCount>0;updateTabs();renderChat();setView('chat');loadMessages()}}catch(e){}}
+loadClosed();poll();
+})();
+
+;
+    var label=currency==='dzd'
+      ?(lang==='ar'?'التبديل إلى الدولار':lang==='fr'?'Passer au dollar':'Switch to USD')
+      :(lang==='ar'?'التبديل إلى الدينار الجزائري':lang==='fr'?'Passer au dinar algérien':'Switch to DZD');
+    b.setAttribute('aria-label',label);b.setAttribute('title',label);
+    b.setAttribute('aria-pressed',currency==='usd'?'true':'false');
+  }
+}
+var currencyBtn=$1('#currencyToggle');
+if(currencyBtn)currencyBtn.addEventListener('click',function(){
+  currency=currency==='dzd'?'usd':'dzd';sset('norda_currency',currency);applyCurrency();
+});
+
 /* ===== أدوات ===== */
 function setBusy(b,on){if(b)b.disabled=on}
 function fmtSize(b){return b<1024?b+' B':b<1048576?(b/1024).toFixed(1)+' KB':(b/1048576).toFixed(2)+' MB'}
