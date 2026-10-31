@@ -357,7 +357,7 @@ html[dir=rtl] body,html[dir=rtl] button,html[dir=rtl] input,html[dir=rtl] textar
 .lang-menu button{
   display:flex;align-items:center;justify-content:space-between;gap:1rem;
   width:100%;padding:.65rem .75rem;border:0;background:transparent;color:var(--ink);
-  font:700 .875rem "Tajawal","Archivo Variable",sans-serif;text-align:start;cursor:pointer;
+  font-family:inherit;font-size:.875rem;font-weight:700;line-height:1.4;text-align:start;cursor:pointer;
 }
 .lang-menu button span{font:700 .7rem "Archivo Variable",sans-serif;color:var(--ink-50);letter-spacing:.06em}
 .lang-menu button:hover,.lang-menu button[aria-checked=true]{background:var(--accent-soft);color:var(--accent-ink)}
