@@ -182,3 +182,82 @@ a:hover{-webkit-text-decoration-color:var(--accent);text-decoration-color:var(--
 @media(prefers-reduced-motion:reduce){
   *,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}
 }
+
+/* Theme switch */
+#themeToggle{width:2.65rem;height:2.65rem;min-height:2.65rem;padding:0;display:inline-grid;place-items:center;border:1.5px solid var(--ink-25);background:var(--surface);color:var(--ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+#themeToggle:hover{background:var(--accent);border-color:var(--accent);color:#fff;transform:translateY(-2px)}
+#themeToggle svg{width:1.2rem;height:1.2rem}
+:root[data-theme=dark]{
+  --paper:#171615;--surface:#1d1b1a;--ink:#f0eee9;--ink-2:#1d1b1a;
+  --ink-70:#f0eee9b3;--ink-50:#f0eee980;--ink-25:#f0eee940;
+  --tray:#ffffff0d;--accent:#017a5f;--accent-ink:#55c3a1;
+  --accent-soft:#017a5f35;--buy-bg:#017a5f;--buy-fg:#fff;--buy-shadow:#015c3d;
+  --rule:2px solid var(--ink);--hairline:1px solid var(--ink-25)
+}
+:root[data-theme=dark] .header{background:color-mix(in srgb,#171615 92%,transparent)}
+:root[data-theme=dark] .contact-info{background:#0f100f}
+:root[data-theme=dark] .contact-strip{background:#0f100f}
+:root[data-theme=dark] .norda-form input:not([type=checkbox]),:root[data-theme=dark] .norda-form textarea{background:#252321;color:#f0eee9;border-color:#f0eee940}
+:root[data-theme=dark] .package-card--featured{border-color:#017a5f;box-shadow:6px 6px 0 #017a5f}
+:root[data-theme=dark] .hero-art-window{background:#242220}
+:root[data-theme=dark] .hero-art-window span{background:#017a5f25;border-color:#017a5f70}
+/* Floating NORDA chat */
+.norda-chat-fab{position:fixed;z-index:1000;inset-inline-end:1.35rem;bottom:1.35rem;display:flex;align-items:center;gap:.6rem;padding:.9rem 1.15rem;background:#017a5f;color:#fff;border:2px solid #015c3d;border-radius:999px;font:800 .95rem var(--font-body);box-shadow:0 8px 28px #0003;cursor:pointer;transition:transform .25s,background .25s,box-shadow .25s}
+.norda-chat-fab:hover{background:#015c3d;transform:translateY(-3px);box-shadow:0 12px 30px #0004}
+.norda-chat-fab svg{width:1.35rem;height:1.35rem}
+.norda-chat-fab.hidden{display:none}
+.norda-chat-badge{display:none;position:absolute;top:-.35rem;inset-inline-start:-.35rem;min-width:1.25rem;height:1.25rem;padding:0 .25rem;border-radius:99px;background:#d92d20;color:#fff;font:700 .7rem/1.25rem system-ui;text-align:center}
+.norda-chat-badge.show{display:block}
+.norda-chat-panel{position:fixed;z-index:999;inset-inline-end:1.35rem;bottom:1.35rem;width:min(23rem,calc(100vw - 2rem));height:min(38rem,calc(100dvh - 2.7rem));display:flex;flex-direction:column;background:var(--surface);color:var(--ink);border:2px solid var(--ink);box-shadow:0 18px 55px #0004;opacity:0;visibility:hidden;transform:translateY(1rem) scale(.98);transform-origin:bottom;transition:opacity .22s,visibility .22s,transform .22s}
+.norda-chat-panel.open{opacity:1;visibility:visible;transform:translateY(0) scale(1)}
+.norda-chat-head{display:flex;align-items:center;justify-content:space-between;padding:1rem 1.1rem;background:var(--ink);color:var(--paper)}
+.norda-chat-head>div{display:grid;grid-template-columns:auto 1fr;column-gap:.5rem;align-items:center}
+.norda-chat-head strong{font-size:1rem;font-weight:900}
+.norda-chat-head small{grid-column:2;color:var(--ink-50);font-size:.75rem}
+.norda-chat-status{width:.55rem;height:.55rem;border-radius:50%;background:#55c3a1;grid-row:span 2;box-shadow:0 0 0 4px #55c3a125}
+.norda-chat-icon{width:2rem;height:2rem;border:1px solid #ffffff55;background:transparent;color:#fff;font-size:1.5rem;cursor:pointer}
+.norda-chat-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--ink-25)}
+.norda-chat-tabs button{padding:.75rem .25rem;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--ink-70);font:700 .82rem var(--font-body);cursor:pointer}
+.norda-chat-tabs button.on{color:var(--accent-ink);border-bottom-color:var(--accent)}
+.norda-chat-tabs button[aria-disabled=true]{opacity:.45}
+.norda-chat-tabs span{font-size:.7rem}
+.tk-v{display:none;flex:1;min-height:0;overflow:auto;padding:1rem}
+.tk-v.on{display:flex;flex-direction:column;gap:.8rem}
+.norda-chat-welcome{padding:.25rem 0 .5rem}
+.norda-chat-eyebrow{font-size:.7rem;font-weight:900;color:var(--accent-ink);letter-spacing:.08em}
+.norda-chat-welcome h3{font-size:1.35rem;font-weight:900;margin:.35rem 0}
+.norda-chat-welcome p{font-size:.85rem;line-height:1.7;color:var(--ink-70)}
+.norda-chat-label{font-size:.82rem;font-weight:800}
+.norda-chat-input{width:100%;padding:.8rem;border:1px solid var(--ink-25);background:var(--paper);color:var(--ink);font:inherit}
+.norda-chat-primary,#chBtn{padding:.75rem 1rem;border:0;background:var(--accent);color:#fff;font:800 .9rem var(--font-body);cursor:pointer}
+.norda-chat-primary:hover,#chBtn:hover{background:#015c3d}
+.norda-chat-ticket{display:flex;align-items:center;gap:.5rem;font-size:.75rem;color:var(--ink-70)}
+.norda-chat-ticket b{color:var(--accent-ink)}
+.norda-chat-ticket button{margin-inline-start:auto;border:1px solid var(--ink-25);background:transparent;color:var(--ink);padding:.35rem .55rem;font:700 .72rem var(--font-body);cursor:pointer}
+.norda-chat-log{flex:1;min-height:10rem;overflow:auto;display:flex;flex-direction:column;gap:.6rem;padding:.7rem;background:var(--paper);border:1px solid var(--ink-25)}
+.bub{max-width:88%;padding:.65rem .8rem;border:1px solid var(--ink-25);background:var(--surface);font-size:.85rem;line-height:1.65;overflow-wrap:anywhere}
+.bub.me{align-self:flex-start;background:#017a5f;color:#fff;border-color:#017a5f}
+.bub.bot{align-self:flex-end}
+.bub-time{display:block;margin-top:.25rem;font-size:.65rem;opacity:.65}
+.bub-file{display:block;margin-top:.35rem}
+.bub-img{max-width:100%;height:auto;margin-top:.4rem}
+.typing{display:flex;gap:.2rem;padding:.5rem}
+.typing i{width:.35rem;height:.35rem;border-radius:50%;background:var(--accent);animation:nordaTyping .8s infinite alternate}
+.typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+@keyframes nordaTyping{to{opacity:.25;transform:translateY(-3px)}}
+.norda-chat-compose{display:grid;gap:.5rem}
+.norda-chat-compose textarea{width:100%;resize:none;min-height:2.8rem;max-height:7rem;padding:.65rem .75rem;border:1px solid var(--ink-25);background:var(--paper);color:var(--ink);font:inherit}
+.norda-chat-compose-tools{display:flex;align-items:center;gap:.45rem}
+.norda-chat-compose-tools button:not(#chBtn){width:2.25rem;height:2.25rem;border:1px solid var(--ink-25);background:transparent;color:var(--ink);font-size:1.1rem;cursor:pointer}
+.norda-chat-compose-tools #chBtn{margin-inline-start:auto}
+.norda-chat-file-preview{align-items:center;gap:.5rem;padding:.45rem .6rem;background:var(--accent-soft);font-size:.75rem}
+.norda-chat-file-preview small{color:var(--ink-50)}
+.norda-chat-file-preview button{margin-inline-start:auto;border:0;background:transparent;color:var(--ink);font-size:1.2rem}
+.norda-chat-closed-list{display:grid;gap:.55rem}
+.ci{display:grid;gap:.3rem;padding:.7rem;border:1px solid var(--ink-25);background:var(--paper);font-size:.8rem}
+.ci small{color:var(--ink-50)}
+.ci span{color:var(--ink-70)}
+.tk-link{justify-self:start;border:0;background:transparent;color:var(--accent-ink);font:800 .8rem var(--font-body);cursor:pointer}
+.norda-chat-toast{display:none;position:absolute;bottom:5.5rem;inset-inline:1rem;padding:.65rem;background:var(--ink);color:var(--paper);font-size:.8rem;text-align:center}
+.norda-chat-toast.show{display:block}
+@media(max-width:480px){.norda-chat-fab{inset-inline-end:1rem;bottom:1rem}.norda-chat-panel{inset-inline:.5rem;bottom:.5rem;width:auto;height:min(39rem,calc(100dvh - 1rem))}}
