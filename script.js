@@ -117,10 +117,17 @@ function applyLang(l){
   var motion=d.getElementById('nordaMotion');if(motion)motion.setAttribute('aria-label',_nordaMotionLabel[l]||_nordaMotionLabel.ar);
   if(d._ot===undefined)d._ot=d.title;d.title=tr(d._ot.trim(),l);
   var md=d.querySelector('meta[name=description]');if(md){if(md._o===undefined)md._o=md.content;md.content=tr(md._o.trim(),l)}
-  var lt=$1('#langTxt');if(lt)lt.textContent=l==='ar'?'EN':l==='en'?'FR':'عربي';
+  var lt=$1('#langTxt');if(lt)lt.textContent=l.toUpperCase();var opts=d.querySelectorAll('[data-lang-choice]');opts.forEach(function(el){var active=el.getAttribute('data-lang-choice')===l;el.setAttribute('aria-checked',active?'true':'false');});
   paintSound();if(clog)refreshChatLang();
 }
-var lb=$1('#langBtn');if(lb)lb.addEventListener('click',function(){var n=LANGS[(LANGS.indexOf(lang)+1)%LANGS.length];sset('norda_lang',n);applyLang(n)});
+var lb=$1('#langBtn'),lm=$1('#langMenu'),lp=$1('#langPicker');
+function closeLangMenu(){if(lm)lm.hidden=true;if(lb)lb.setAttribute('aria-expanded','false')}
+if(lb&&lm){
+  lb.addEventListener('click',function(e){e.stopPropagation();var opening=lm.hidden;lm.hidden=!opening;lb.setAttribute('aria-expanded',opening?'true':'false')});
+  d.addEventListener('click',function(e){if(lp&&!lp.contains(e.target))closeLangMenu()});
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lm.hidden){closeLangMenu();lb.focus()}});
+  lm.querySelectorAll('[data-lang-choice]').forEach(function(el){el.addEventListener('click',function(){var n=el.getAttribute('data-lang-choice');if(LANGS.indexOf(n)>-1){sset('norda_lang',n);applyLang(n)}closeLangMenu();lb.focus()})});
+}
 /* أسعار الجزائر بالدينار وأسعار العملاء خارج الجزائر بالدولار، كلٌّ ثابت بشكل مستقل. */
 /* ===== أدوات ===== */
 function setBusy(b,on){if(b)b.disabled=on}
