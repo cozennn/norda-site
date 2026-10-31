@@ -439,3 +439,11 @@ html[dir=rtl] body,html[dir=rtl] button,html[dir=rtl] input,html[dir=rtl] select
 @media(max-width:380px){
   .header__tools>a.btn--fill{display:none}
 }
+
+
+/* Homepage hero refinements */
+.home-hero{padding-block:clamp(2.25rem,4vw,3.5rem)}
+.home-hero__accent{text-decoration:none!important}
+.home-hero__lead{max-width:36rem;margin-top:1rem;font-size:clamp(.9rem,1.05vw,1.05rem);line-height:1.8}
+.home-hero__note{max-width:34rem;margin-top:.65rem;color:var(--ink-50);font-size:clamp(.78rem,.9vw,.9rem);line-height:1.7}
+@media(max-width:560px){.home-hero{padding-block:2rem}.home-hero__lead{font-size:.95rem}.home-hero__note{font-size:.82rem}}
