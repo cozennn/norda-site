@@ -22,6 +22,7 @@
   --on-ink-50:#ffffff80;
   --on-ink-65:#ffffffa8;
   --on-ink-20:#ffffff35;
+  --on-ink-35:#ffffff55;
   --accent-hover:#67c9a9;
   --accent-deep:#015c3d;
   --accent-border:#017a5f55;
@@ -213,7 +214,7 @@ a:hover{-webkit-text-decoration-color:var(--accent);text-decoration-color:var(--
   --ink-70:#f0eee9b3;--ink-50:#f0eee980;--ink-25:#f0eee940;
   --tray:#ffffff0d;--accent:#017a5f;--accent-ink:#55c3a1;
   --accent-soft:#017a5f35;--buy-bg:#017a5f;--buy-fg:#fff;--buy-shadow:#015c3d;
-  --rule:2px solid var(--ink);--hairline:1px solid var(--ink-25)
+  --rule:2px solid var(--ink);--hairline:1px solid var(--ink-25);
   --on-accent:#ffffff;
   --on-ink-55:#f0eee98c;
   --on-ink-70:#f0eee9b3;
@@ -221,6 +222,7 @@ a:hover{-webkit-text-decoration-color:var(--accent);text-decoration-color:var(--
   --on-ink-50:#f0eee980;
   --on-ink-65:#f0eee9a8;
   --on-ink-20:#f0eee935;
+  --on-ink-35:#f0eee955;
   --accent-hover:#8edbc1;
   --accent-deep:#015c3d;
   --accent-border:#55c3a155;
@@ -257,7 +259,7 @@ a:hover{-webkit-text-decoration-color:var(--accent);text-decoration-color:var(--
 .norda-chat-head strong{font-size:1rem;font-weight:900}
 .norda-chat-head small{grid-column:2;color:var(--on-ink-65);font-size:.75rem}
 .norda-chat-status{width:.55rem;height:.55rem;border-radius:50%;background:var(--success);grid-row:span 2;box-shadow:0 0 0 4px var(--success)25}
-.norda-chat-icon{width:2rem;height:2rem;border:1px solid #ffffff55;background:transparent;color:var(--on-accent);font-size:1.5rem;cursor:pointer}
+.norda-chat-icon{width:2rem;height:2rem;border:1px solid var(--on-ink-35);background:transparent;color:var(--on-accent);font-size:1.5rem;cursor:pointer}
 .norda-chat-tabs{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--ink-25)}
 .norda-chat-tabs button{padding:.75rem .25rem;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--ink-70);font:700 .82rem var(--font-body);cursor:pointer}
 .norda-chat-tabs button.on{color:var(--accent-ink);border-bottom-color:var(--accent)}
