@@ -1,159 +1,150 @@
 <!doctype html>
-<!-- Kofra — business banking for independent makers — © 2026 Hasib (OVERSHOOT). All rights reserved. Licensed, not sold: see LICENSE.md. -->
-<html lang="en" data-theme="light">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Kofra — business banking for independent makers</title>
-  <meta name="description" content="Kofra is the money app for a one-person studio: a balance runway that projects your next 30 days, cards you can freeze and limit, payments, invoices your clients pay, scheduled bills, savings pots, budgets, cash-flow analytics, statements and a tax jar — light and dark, fully animated.">
-  <meta name="theme-color" content="#eeedf3">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Kofra — business banking for independent makers">
-  <meta property="og:description" content="Balance runway, cards, payments, invoices, pots and budgets in one animated money dashboard.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171615">
+  <meta name="description" content="NorDa creates thoughtful, responsive websites for businesses, creators and growing brands.">
+  <title>NorDa — Websites made for what’s next</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400..700&family=Manrope:wght@400..800&display=swap" rel="stylesheet">
-  <script>
-    /* Before first paint: the saved theme, so the page never flashes the
-       wrong colours. The shell is hidden only under html.js; the failsafe
-       shows it if the script never runs. Under ?record the page waits for
-       the rig and ignores saved choices. */
-    (function (d) {
-      d.classList.add('js');
-      var rec = /[?&]record\b/.test(location.search);
-      if (rec) d.classList.add('is-record');
-      try {
-        if (!rec) {
-          var t = JSON.parse(localStorage.getItem('kofra:theme') || '"light"');
-          d.dataset.theme = t === 'system' ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : t;
-          if (localStorage.getItem('kofra:signedOut') === '1') d.classList.add('is-signed-out');
-        }
-      } catch (e) {}
-      if (!rec) setTimeout(function () { d.classList.add('failsafe'); }, 4000);
-    })(document.documentElement);
-  </script>
-  <script type="module" crossorigin="" src="assets/index-CivrpM9e.js"></script>
-  <link rel="stylesheet" crossorigin="" href="assets/index-s8PL2X4V.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./app.js" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
-  <div class="app">
-    <aside class="side">
-      <a class="brand" href="#/overview" aria-label="Kofra — overview">
-        <span class="brand__mark" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="M6 4.5v15"></path><path d="M6 12c3.8 0 6.4-2.4 7.2-7.5"></path><path d="M6 12c3.8 0 6.4 2.4 7.2 7.5"></path><circle cx="17.6" cy="12" r="2.1"></circle></svg></span>
-        <span class="brand__text">Kofra<small>Saltmarsh Clayworks</small></span>
-      </a>
-      <nav class="nav" aria-label="Main">
-        <div class="nav__track">
-          <span class="nav__pill" aria-hidden="true"></span>
-          <p class="nav__label">Money</p>
-          <a class="nav__item" href="#/overview" data-route="overview"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="9" rx="2"></rect><rect x="13.5" y="3.5" width="7" height="5" rx="2"></rect><rect x="13.5" y="11.5" width="7" height="9" rx="2"></rect><rect x="3.5" y="15.5" width="7" height="5" rx="2"></rect></svg><span>Overview</span></a>
-          <a class="nav__item" href="#/transactions" data-route="transactions"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M4 8h14.5M15 4.5 18.5 8 15 11.5"></path><path d="M20 16H5.5M9 12.5 5.5 16 9 19.5"></path></svg><span>Transactions</span><b class="nav__count" data-count="transactions"></b></a>
-          <div class="nav__group" data-group="payments">
-            <a class="nav__item" href="#/payments" data-route="payments"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5 3.5 10.6l6.6 2.8 2.8 6.6z"></path><path d="m10.1 13.4 4.2-4.2"></path></svg><span>Payments</span><b class="nav__count" data-count="payments"></b><i class="nav__chev" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="m9.5 6 6 6-6 6"></path></svg></i></a>
-            <div class="nav__sub">
-              <a class="nav__subitem" href="#/payments/send" data-sub="payments/send">Send money</a>
-              <a class="nav__subitem" href="#/payments/requests" data-sub="payments/requests">Invoices</a>
-              <a class="nav__subitem" href="#/payments/scheduled" data-sub="payments/scheduled">Scheduled</a>
-            </div>
-          </div>
-          <a class="nav__item" href="#/cards" data-route="cards"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"></rect><path d="M3 10h18M7 15h3"></path></svg><span>Cards</span></a>
-          <p class="nav__label">Plan</p>
-          <div class="nav__group" data-group="analytics">
-            <a class="nav__item" href="#/analytics" data-route="analytics"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M4.5 19.5h15"></path><path d="M7.5 16v-4.5M12 16V7.5M16.5 16v-6.5"></path></svg><span>Analytics</span><i class="nav__chev" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="m9.5 6 6 6-6 6"></path></svg></i></a>
-            <div class="nav__sub">
-              <a class="nav__subitem" href="#/analytics/cashflow" data-sub="analytics/cashflow">Cash flow</a>
-              <a class="nav__subitem" href="#/analytics/spending" data-sub="analytics/spending">Spending</a>
-              <a class="nav__subitem" href="#/analytics/income" data-sub="analytics/income">Income</a>
-            </div>
-          </div>
-          <a class="nav__item" href="#/budgets" data-route="budgets"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M4.5 17a8.5 8.5 0 1 1 15 0"></path><path d="m12 13 3.5-4"></path><circle cx="12" cy="13.5" r="1.4"></circle></svg><span>Budgets</span><b class="nav__count nav__count--warn" data-count="budgets"></b></a>
-          <a class="nav__item" href="#/pots" data-route="pots"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M7 4.5h10M8 4.5v2.2c-1.9 1.1-3 3-3 5.3v5.5A2.5 2.5 0 0 0 7.5 20h9a2.5 2.5 0 0 0 2.5-2.5V12c0-2.3-1.1-4.2-3-5.3V4.5"></path><path d="M5 13.5h14"></path></svg><span>Pots</span></a>
-          <p class="nav__label">Records</p>
-          <a class="nav__item" href="#/contacts" data-route="contacts"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8.5" r="3.5"></circle><path d="M3 19.5c.6-3.2 3-5 6-5s5.4 1.8 6 5"></path><path d="M15.5 5.2a3.5 3.5 0 0 1 0 6.6M17.5 14.8c1.8.6 3 2.2 3.5 4.7"></path></svg><span>Contacts</span></a>
-          <a class="nav__item" href="#/statements" data-route="statements"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h7.5l4.5 4.5v12.5h-12z"></path><path d="M13.5 3.5V8h5M9 12.5h6M9 16h4"></path></svg><span>Statements</span></a>
-          <div class="nav__group" data-group="settings">
-            <a class="nav__item" href="#/settings" data-route="settings"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="M12 2.8l2 2.1 2.9-.4.7 2.8 2.6 1.4-1 2.8 1 2.8-2.6 1.4-.7 2.8-2.9-.4-2 2.1-2-2.1-2.9.4-.7-2.8-2.6-1.4 1-2.8-1-2.8 2.6-1.4.7-2.8 2.9.4Z"></path></svg><span>Settings</span><i class="nav__chev" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="m9.5 6 6 6-6 6"></path></svg></i></a>
-            <div class="nav__sub">
-              <a class="nav__subitem" href="#/settings/profile" data-sub="settings/profile">Profile</a>
-              <a class="nav__subitem" href="#/settings/security" data-sub="settings/security">Security</a>
-              <a class="nav__subitem" href="#/settings/notifications" data-sub="settings/notifications">Notifications</a>
-              <a class="nav__subitem" href="#/settings/plan" data-sub="settings/plan">Plan &amp; data</a>
-            </div>
-          </div>
-          <a class="nav__item" href="#/help" data-route="help"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"></circle><circle cx="12" cy="12" r="3.6"></circle><path d="m6 6 3.4 3.4M14.6 14.6 18 18M18 6l-3.4 3.4M9.4 14.6 6 18"></path></svg><span>Help</span></a>
-          <button type="button" class="nav__item nav__more" aria-label="More pages" aria-haspopup="menu" aria-expanded="false"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><circle cx="5.5" cy="12" r="1.3"></circle><circle cx="12" cy="12" r="1.3"></circle><circle cx="18.5" cy="12" r="1.3"></circle></svg><span>More</span></button>
+  <header class="site-header" id="top">
+    <a class="brand" href="#top" aria-label="NorDa home">
+      <span class="brand-mark" aria-hidden="true">N</span>
+      <span class="brand-name">NorDa</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#services" data-i18n="nav_services">Services</a>
+      <a href="#work" data-i18n="nav_work">Selected work</a>
+      <a href="#pricing" data-i18n="nav_pricing">Pricing</a>
+      <a href="#contact" data-i18n="nav_contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <label class="sr-only" for="language-select" data-i18n="language_label">Language</label>
+      <select id="language-select" class="language-select" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="fr">FR</option>
+        <option value="ar">ع</option>
+      </select>
+      <button class="theme-toggle" type="button" aria-label="Toggle theme" aria-pressed="false">
+        <span aria-hidden="true">◐</span>
+      </button>
+      <a class="header-cta" href="#contact" data-i18n="start_project">Start a project</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" id="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span><span data-i18n="hero_eyebrow">Independent web design studio</span></p>
+        <h1 data-i18n="hero_title">A better website<br><span>starts with a clear idea.</span></h1>
+        <p class="hero-description" data-i18n="hero_description">NorDa designs and builds modern, responsive websites that help businesses present their value and turn visitors into customers.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact" data-i18n="hero_cta">Tell us about your project <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="#work" data-i18n="hero_secondary">Explore our work <span aria-hidden="true">↓</span></a>
         </div>
-      </nav>
-      <div class="side__foot">
-        <a class="jar" id="tax-jar" href="#/pots"></a>
-        <button type="button" class="me" id="btn-me" aria-label="Account menu" aria-haspopup="menu" aria-expanded="false"></button>
+        <div class="hero-note"><span class="note-line"></span><span data-i18n="hero_note">Thoughtful design. Practical development. No unnecessary complexity.</span></div>
       </div>
-    </aside>
-
-    <div class="main-col">
-      <header class="top">
-        <a class="top__brand" href="#/overview" aria-label="Kofra — overview"><span class="brand__mark" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="M6 4.5v15"></path><path d="M6 12c3.8 0 6.4-2.4 7.2-7.5"></path><path d="M6 12c3.8 0 6.4 2.4 7.2 7.5"></path><circle cx="17.6" cy="12" r="2.1"></circle></svg></span>Kofra</a>
-        <button type="button" class="finder-btn" id="btn-find" aria-label="Search (⌘K)"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg><span>Search payments, people, invoices…</span><kbd>⌘K</kbd></button>
-        <span class="top__spacer"></span>
-        <div class="top__tools">
-          <span class="clock" id="clock" title="Studio time"><i aria-hidden="true"></i><span id="clock-day"></span><b id="clock-time"></b></span>
-          <button type="button" class="ibtn ibtn--glass" id="btn-theme" aria-label="Switch to dark theme"></button>
-          <button type="button" class="ibtn ibtn--glass" id="btn-bell" aria-label="Notifications" aria-haspopup="dialog" aria-expanded="false"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l1.5 2h-15z"></path><path d="M10 20.5a2 2 0 0 0 4 0"></path></svg><span class="dot-badge" id="bell-badge" hidden=""></span></button>
-          <button type="button" class="btn btn--primary top__new magnetic" id="btn-new" aria-label="Move money" aria-haspopup="menu" aria-expanded="false"><svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><path d="M4 8h14.5M15 4.5 18.5 8 15 11.5"></path><path d="M20 16H5.5M9 12.5 5.5 16 9 19.5"></path></svg><span>Move money</span></button>
+      <div class="hero-visual" aria-label="Abstract NorDa website interface preview">
+        <div class="visual-glow"></div>
+        <div class="preview-window">
+          <div class="preview-topbar"><span></span><span></span><span></span><i>norda.studio</i></div>
+          <div class="preview-content">
+            <div class="preview-kicker">DIGITAL PRESENCE / 2026</div>
+            <div class="preview-heading"><span>Make your</span><strong>next move.</strong></div>
+            <div class="preview-rule"></div>
+            <div class="preview-bottom"><span>DESIGN WITH PURPOSE</span><span>01 — 03</span></div>
+          </div>
         </div>
-      </header>
+        <div class="floating-chip chip-top">UI / UX <span>✳</span></div>
+        <div class="floating-chip chip-bottom"><span class="chip-dot"></span> Built to work everywhere</div>
+      </div>
+      <div class="hero-index"><span>01</span><span class="index-line"></span><span>04</span></div>
+    </section>
 
-      <main id="main" class="main">
-        <section class="view" data-view="overview" hidden=""></section>
-        <section class="view" data-view="transactions" hidden=""></section>
-        <section class="view" data-view="payments" hidden=""></section>
-        <section class="view" data-view="cards" hidden=""></section>
-        <section class="view" data-view="analytics" hidden=""></section>
-        <section class="view" data-view="budgets" hidden=""></section>
-        <section class="view" data-view="pots" hidden=""></section>
-        <section class="view" data-view="contacts" hidden=""></section>
-        <section class="view" data-view="statements" hidden=""></section>
-        <section class="view" data-view="settings" hidden=""></section>
-        <section class="view" data-view="help" hidden=""></section>
-      </main>
-    </div>
-  </div>
+    <section class="intro-strip section-shell" aria-label="NorDa approach">
+      <p data-i18n="intro_text">A focused digital partner for businesses ready to look their best online.</p>
+      <span>DESIGN <b>·</b> BUILD <b>·</b> GROW</span>
+    </section>
 
-  <div class="signin" id="signin" hidden="">
-    <div class="signin__panel">
-      <span class="brand__mark signin__mark" aria-hidden="true"><svg viewbox="0 0 24 24"><path d="M6 4.5v15"></path><path d="M6 12c3.8 0 6.4-2.4 7.2-7.5"></path><path d="M6 12c3.8 0 6.4 2.4 7.2 7.5"></path><circle cx="17.6" cy="12" r="2.1"></circle></svg></span>
-      <h1 class="signin__title">Welcome back to Kofra</h1>
-      <p class="signin__sub">Sign in to Saltmarsh Clayworks.</p>
-      <form class="signin__form" novalidate="">
-        <label class="field"><span class="field__label">Email</span><input name="email" type="email" autocomplete="username"></label>
-        <label class="field"><span class="field__label">Password</span><input name="password" type="password" autocomplete="current-password" placeholder="Any 4+ characters for the demo"></label>
-        <p class="mform__err" role="alert"></p>
-        <button type="submit" class="btn btn--primary signin__go">Sign in</button>
+    <section class="content-section section-shell" id="services">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="services_eyebrow">What we do</p><h2 data-i18n="services_title">Digital work,<br>made <em>clear.</em></h2></div>
+        <p data-i18n="services_intro">From a first online presence to a sharper customer experience, we make the process straightforward and the result purposeful.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card"><span class="card-number">01</span><div class="service-icon" aria-hidden="true">↗</div><h3 data-i18n="service_one_title">Business websites</h3><p data-i18n="service_one_text">Professional websites that explain what you do and make it easy for customers to reach you.</p><a href="#contact" class="card-link" data-i18n="service_link">Discuss this service <span>↗</span></a></article>
+        <article class="service-card"><span class="card-number">02</span><div class="service-icon" aria-hidden="true">▤</div><h3 data-i18n="service_two_title">Landing pages</h3><p data-i18n="service_two_text">Focused pages for a product, campaign or offer, designed around one clear next step.</p><a href="#contact" class="card-link" data-i18n="service_link">Discuss this service <span>↗</span></a></article>
+        <article class="service-card"><span class="card-number">03</span><div class="service-icon" aria-hidden="true">⌘</div><h3 data-i18n="service_three_title">Custom web experiences</h3><p data-i18n="service_three_text">Purpose-built interfaces and lightweight web tools shaped around your workflow.</p><a href="#contact" class="card-link" data-i18n="service_link">Discuss this service <span>↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="work-section section-shell" id="work">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="work_eyebrow">Selected work</p><h2 data-i18n="work_title">Made to feel<br><em>distinct.</em></h2></div>
+        <a class="text-link" href="#contact" data-i18n="work_cta">Have something in mind? ↗</a>
+      </div>
+      <div class="work-grid">
+        <a class="work-card work-card-large" href="#contact"><div class="work-art work-art-one"><div class="art-window"><span>STUDIO / 01</span><strong>Shape<br>your story.</strong><i>↗</i></div></div><div class="work-meta"><div><h3 data-i18n="work_one_title">Brand & business website</h3><p data-i18n="work_one_type">Website design · Development</p></div><span>↗</span></div></a>
+        <a class="work-card" href="#contact"><div class="work-art work-art-two"><div class="art-panel"><span>YOUR NEXT CHAPTER</span><strong>Less noise.<br>More focus.</strong><div class="art-circle">N</div></div></div><div class="work-meta"><div><h3 data-i18n="work_two_title">Product landing page</h3><p data-i18n="work_two_type">Art direction · Landing page</p></div><span>↗</span></div></a>
+      </div>
+      <p class="section-footnote" data-i18n="work_note">Concept previews are illustrative. Project details will be added as work is published.</p>
+    </section>
+
+    <section class="process-section section-shell" id="process">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="process_eyebrow">How we work</p><h2 data-i18n="process_title">Simple steps.<br><em>Solid results.</em></h2></div>
+        <p data-i18n="process_intro">A clear process keeps the project moving and makes sure we stay aligned from the first message to delivery.</p>
+      </div>
+      <ol class="process-list">
+        <li><span>01</span><div><h3 data-i18n="process_one_title">Share your idea</h3><p data-i18n="process_one_text">Tell us what you need, who it is for and what success should look like.</p></div><span class="process-arrow">↗</span></li>
+        <li><span>02</span><div><h3 data-i18n="process_two_title">Design & build</h3><p data-i18n="process_two_text">We shape the visual direction, build the pages and keep you updated.</p></div><span class="process-arrow">↗</span></li>
+        <li><span>03</span><div><h3 data-i18n="process_three_title">Review & launch</h3><p data-i18n="process_three_text">Review the result, request included revisions and receive your finished website files.</p></div><span class="process-arrow">↗</span></li>
+      </ol>
+    </section>
+
+    <section class="pricing-section section-shell" id="pricing">
+      <div class="section-heading">
+        <div><p class="eyebrow" data-i18n="pricing_eyebrow">Straightforward pricing</p><h2 data-i18n="pricing_title">The right scope.<br><em>Clear value.</em></h2></div>
+        <div class="currency-switch" role="group" aria-label="Price currency"><button type="button" class="is-active" data-currency="DZD">DZD</button><button type="button" data-currency="USD">USD</button></div>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card"><p class="price-tier">01 / <span data-i18n="basic_name">Basic</span></p><h3 data-i18n="basic_title">A clear start</h3><p class="price-description" data-i18n="basic_text">A clean, focused website for a simple online presence.</p><div class="price-value" data-price-dzd="5450" data-price-usd="40">5,450 <small>DZD</small></div><p class="delivery" data-i18n="basic_delivery">Delivery in 5 days</p><a href="#contact" class="button button-outline" data-i18n="choose_plan">Choose Basic ↗</a></article>
+        <article class="price-card price-card-featured"><p class="price-tier">02 / <span data-i18n="standard_name">Standard</span><span class="popular-label" data-i18n="popular">POPULAR</span></p><h3 data-i18n="standard_title">Room to grow</h3><p class="price-description" data-i18n="standard_text">A more complete website with extra sections and detail.</p><div class="price-value" data-price-dzd="10900" data-price-usd="80">10,900 <small>DZD</small></div><p class="delivery" data-i18n="standard_delivery">Delivery in 10 days</p><a href="#contact" class="button button-primary" data-i18n="choose_plan">Choose Standard ↗</a></article>
+        <article class="price-card"><p class="price-tier">03 / <span data-i18n="premium_name">Premium</span></p><h3 data-i18n="premium_title">Built around you</h3><p class="price-description" data-i18n="premium_text">A tailored experience for projects with broader requirements.</p><div class="price-value" data-price-dzd="16350" data-price-usd="120">16,350 <small>DZD</small></div><p class="delivery" data-i18n="premium_delivery">Delivery in 15 days</p><a href="#contact" class="button button-outline" data-i18n="choose_plan">Choose Premium ↗</a></article>
+      </div>
+      <p class="pricing-note" data-i18n="pricing_note">Need a different scope? Custom packages are available. Additional revisions beyond the included allowance are charged separately.</p>
+    </section>
+
+    <section class="contact-section section-shell" id="contact">
+      <div class="contact-copy"><p class="eyebrow" data-i18n="contact_eyebrow">Start a conversation</p><h2 data-i18n="contact_title">Have a project?<br><em>Let’s make it real.</em></h2><p data-i18n="contact_text">Tell us a little about what you have in mind. We’ll get back to you with the next steps.</p><a class="contact-email" href="mailto:norda@duck.com">norda@duck.com <span>↗</span></a></div>
+      <form class="contact-form" id="contact-form">
+        <label for="contact-name" data-i18n="form_name">Your name</label><input id="contact-name" name="name" autocomplete="name" required placeholder="Name">
+        <label for="contact-email" data-i18n="form_email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+        <label for="contact-service" data-i18n="form_service">What do you need?</label><select id="contact-service" name="service" required><option value="" data-i18n="form_choose">Choose a service</option><option value="Business website">Business website</option><option value="Landing page">Landing page</option><option value="Custom web experience">Custom web experience</option><option value="Other">Something else</option></select>
+        <label for="contact-message" data-i18n="form_message">A little about your project</label><textarea id="contact-message" name="message" rows="4" required placeholder="Tell us about your idea..."></textarea>
+        <label class="privacy-check"><input type="checkbox" name="privacy" required><span data-i18n="privacy_consent">I agree to the privacy policy.</span></label>
+        <button class="button button-primary form-submit" type="submit"><span data-i18n="send_message">Send project request</span><span>↗</span></button>
+        <p class="form-status" role="status" aria-live="polite"></p>
       </form>
-      <p class="signin__note">Demo account — nothing here moves real money.</p>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div class="scrim" aria-hidden="true"></div>
-  <div class="pop-layer"></div>
-
-  <dialog class="finder" id="finder" aria-label="Search Kofra">
-    <div class="finder__bar">
-      <svg class="ico" viewbox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 4 4"></path></svg>
-      <input id="finder-q" type="text" role="combobox" aria-expanded="true" aria-controls="finder-list" aria-autocomplete="list" placeholder="A payee, an amount, an invoice number, a page…" autocomplete="off" spellcheck="false">
-      <kbd>esc</kbd>
-    </div>
-    <ul class="finder__list" id="finder-list" role="listbox" aria-label="Results"></ul>
-  </dialog>
-  <dialog class="modal" id="modal"></dialog>
-  <dialog class="drawer" id="drawer"></dialog>
-
-  <div class="toast" role="status" aria-live="polite">
-    <span class="toast__ico"></span><span class="toast__msg"></span>
-    <button type="button" class="toast__undo" hidden="">Undo</button>
-  </div>
-
+  <footer class="site-footer section-shell">
+    <div class="footer-main"><a class="brand" href="#top"><span class="brand-mark">N</span><span class="brand-name">NorDa</span></a><p data-i18n="footer_line">A thoughtful web presence for your next step.</p><a href="mailto:norda@duck.com">norda@duck.com ↗</a></div>
+    <div class="footer-bottom"><span>© <span id="current-year">2026</span> NorDa. <span data-i18n="rights">All rights reserved.</span></span><div><a href="./policies.html#privacy" data-i18n="privacy">Privacy</a><a href="./policies.html#terms" data-i18n="terms">Terms</a><a href="#top" data-i18n="back_top">Back to top ↑</a></div></div>
+  </footer>
 </body>
 </html>
