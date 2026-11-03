@@ -16,6 +16,8 @@ export async function onRequestPost({ request, env }) {
   const name = String(data.name || "").trim().slice(0, 80);
   const email = String(data.email || "").trim().slice(0, 120);
   const subject = String(data.subject || "").trim().slice(0, 120);
+  const country = String(data.country || "").trim().slice(0, 80);
+  const address = String(data.address || "").trim().slice(0, 180);
   const message = String(data.message || "").trim().slice(0, 1500);
   if (!name || !email || !subject || !message || data.privacyConsent !== true) return json({ ok: false }, 400);
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return json({ ok: false }, 400);
@@ -24,7 +26,9 @@ export async function onRequestPost({ request, env }) {
     "📩 رسالة تواصل جديدة | NORDA", "",
     "الاسم: " + name,
     "البريد الإلكتروني: " + email,
-    "الموضوع: " + subject, "",
+    "الموضوع: " + subject,
+    "البلد: " + (country || "غير محدد"),
+    "العنوان: " + (address || "غير محدد"), "",
     "الرسالة:", message, "",
     "موافقة سياسة الخصوصية: نعم"
   ].join("\n");
