@@ -143,7 +143,7 @@
   function applyCurrency(currency) {
     currentCurrency = currency === "USD" ? "USD" : "DZD";
     document.querySelectorAll(".price-value[data-price-dzd]").forEach((element) => {
-      const amount = Number(element.dataset[currentCurrency.toLowerCase()]);
+      const amount = Number(currentCurrency === "DZD" ? element.dataset.priceDzd : element.dataset.priceUsd);
       const formatted = new Intl.NumberFormat(currentLanguage === "ar" ? "en-US" : currentLanguage === "fr" ? "fr-FR" : "en-US").format(amount);
       element.innerHTML = currentCurrency === "DZD" ? formatted + " <small>DZD</small>" : "$" + formatted + " <small>USD</small>";
     });
