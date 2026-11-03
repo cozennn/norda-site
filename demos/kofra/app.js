@@ -23,7 +23,7 @@
       basic_delivery:"Delivery in 5 days",standard_name:"Standard",standard_title:"Room to grow",standard_text:"A more complete website with extra sections and detail.",
       standard_delivery:"Delivery in 10 days",premium_name:"Premium",premium_title:"Built around you",premium_text:"A tailored experience for projects with broader requirements.",
       premium_delivery:"Delivery in 15 days",choose_plan:"Choose plan ↗",popular:"POPULAR",
-      pricing_note:"Need a different scope? Custom packages are available. Additional revisions beyond the included allowance are charged separately.",
+      pricing_note:"Need a different scope? Custom packages are available. Additional revisions cost 500 DZD in Algeria or $5 internationally.",custom_name:"Custom",custom_title:"Your own scope",custom_text:"A tailored package based on your requirements, features and timeline.",custom_price:"On request",custom_delivery:"Timeline agreed together",custom_cta:"Discuss your project ↗",
       contact_eyebrow:"Start a conversation",contact_title:"Have a project?<br><em>Let’s make it real.</em>",contact_text:"Tell us a little about what you have in mind. We’ll get back to you with the next steps.",
       form_name:"Your name",form_email:"Email address",form_service:"What do you need?",form_choose:"Choose a service",form_message:"A little about your project",
       privacy_consent:"I agree to the privacy policy.",send_message:"Send project request",rights:"All rights reserved.",privacy:"Privacy",terms:"Terms",back_top:"Back to top ↑",
@@ -51,7 +51,7 @@
       basic_delivery:"Livraison en 5 jours",standard_name:"Standard",standard_title:"Pour évoluer",standard_text:"Un site plus complet avec davantage de sections et de détails.",
       standard_delivery:"Livraison en 10 jours",premium_name:"Premium",premium_title:"Pensé pour vous",premium_text:"Une expérience personnalisée pour les projets aux besoins plus larges.",
       premium_delivery:"Livraison en 15 jours",choose_plan:"Choisir cette offre ↗",popular:"POPULAIRE",
-      pricing_note:"Besoin d’un autre périmètre ? Des offres personnalisées sont possibles. Les retouches supplémentaires sont facturées séparément.",
+      pricing_note:"Besoin d’un autre périmètre ? Des offres personnalisées sont possibles. Les retouches supplémentaires coûtent 500 DZD en Algérie ou 5 $ à l’international.",custom_name:"Sur mesure",custom_title:"Votre propre périmètre",custom_text:"Une offre adaptée à vos besoins, fonctionnalités et délais.",custom_price:"Sur devis",custom_delivery:"Délai à convenir",custom_cta:"Parler de votre projet ↗",
       contact_eyebrow:"Parlons de votre projet",contact_title:"Un projet en tête ?<br><em>Concrétisons-le.</em>",contact_text:"Présentez-nous brièvement votre idée. Nous vous répondrons avec les prochaines étapes.",
       form_name:"Votre nom",form_email:"Adresse e-mail",form_service:"De quoi avez-vous besoin ?",form_choose:"Choisir un service",form_message:"Quelques mots sur votre projet",
       privacy_consent:"J’accepte la politique de confidentialité.",send_message:"Envoyer la demande",rights:"Tous droits réservés.",privacy:"Confidentialité",terms:"Conditions",back_top:"Retour en haut ↑",
@@ -79,7 +79,7 @@
       basic_delivery:"التسليم خلال 5 أيام",standard_name:"Standard",standard_title:"مساحة للنمو",standard_text:"موقع أكثر تكاملاً مع أقسام وتفاصيل إضافية.",
       standard_delivery:"التسليم خلال 10 أيام",premium_name:"Premium",premium_title:"مصمم وفق احتياجك",premium_text:"تجربة مخصصة للمشاريع ذات المتطلبات الأوسع.",
       premium_delivery:"التسليم خلال 15 يومًا",choose_plan:"اختر الباقة ↗",popular:"الأكثر طلبًا",
-      pricing_note:"تحتاج إلى نطاق مختلف؟ تتوفر باقات مخصصة. التعديلات الإضافية خارج العدد المشمول تُحتسب بشكل منفصل.",
+      pricing_note:"تحتاج إلى نطاق مختلف؟ تتوفر باقات مخصصة. التعديل الإضافي بعد استنفاد تعديلات الباقة: 500 DZD داخل الجزائر أو 5$ خارجها.",custom_name:"مخصصة",custom_title:"حسب احتياجك",custom_text:"باقة مصممة وفق متطلباتك والميزات والمدة المناسبة لمشروعك.",custom_price:"حسب الطلب",custom_delivery:"يُحدد موعد التسليم بالاتفاق",custom_cta:"ناقش مشروعك ↗",
       contact_eyebrow:"لنبدأ الحديث",contact_title:"لديك مشروع؟<br><em>لنحوّله إلى واقع.</em>",contact_text:"أخبرنا باختصار عما تفكر فيه، وسنرد عليك بالخطوات التالية.",
       form_name:"اسمك",form_email:"البريد الإلكتروني",form_service:"ما الخدمة التي تحتاجها؟",form_choose:"اختر الخدمة",form_message:"أخبرنا قليلًا عن مشروعك",
       privacy_consent:"أوافق على سياسة الخصوصية.",send_message:"إرسال طلب المشروع",rights:"جميع الحقوق محفوظة.",privacy:"الخصوصية",terms:"الشروط",back_top:"العودة للأعلى ↑",
@@ -198,9 +198,9 @@
       const payload = {
         name: String(formData.get("name") || "").trim(),
         email: String(formData.get("email") || "").trim(),
-        service: String(formData.get("service") || "").trim(),
+        subject: String(formData.get("service") || "").trim() || "Project request",
         message: String(formData.get("message") || "").trim(),
-        privacy: formData.get("privacy") === "on"
+        privacyConsent: formData.get("privacy") === "on"
       };
       try {
         const response = await fetch("/api/contact", {
@@ -208,7 +208,8 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
         });
-        if (!response.ok) throw new Error("Request failed");
+        const result = await response.json();
+        if (!response.ok || !result.ok) throw new Error("Request failed");
         status.textContent = dictionary.form_success;
         contactForm.reset();
       } catch (error) {
